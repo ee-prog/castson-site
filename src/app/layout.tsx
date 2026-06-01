@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Cinzel, Raleway } from "next/font/google";
+import { Cinzel } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
@@ -9,12 +9,6 @@ import ThemeObserver from "@/components/theme-observer";
 const cinzel = Cinzel({
   variable: "--font-cinzel",
   subsets: ["latin"],
-});
-
-const raleway = Raleway({
-  variable: "--font-raleway",
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -60,7 +54,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${cinzel.variable} ${raleway.variable} h-full antialiased dark`}
+      className={`${cinzel.variable} h-full antialiased dark`}
     >
       <body className="min-h-full flex flex-col bg-zinc-950 text-zinc-100 font-sans selection:bg-emerald-500/30 selection:text-emerald-200 relative">
         <ThemeObserver />
