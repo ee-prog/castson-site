@@ -48,7 +48,7 @@ export default function Work() {
   return (
     <div data-theme="light" className="mx-auto max-w-5xl px-4 py-20 sm:px-6 lg:px-8 pt-32">
       {/* Page Header */}
-      <div className="max-w-3xl">
+      <div className="max-w-3xl fade-up-element">
         <span className="text-[10px] font-bold uppercase tracking-widest text-emerald-600 dark:text-emerald-400 font-mono">02 / Selected Work</span>
         <h1 className="text-4xl font-extrabold tracking-tight text-zinc-900 dark:text-white sm:text-5xl uppercase mt-2 font-display">
           Projects & Work
@@ -60,16 +60,18 @@ export default function Work() {
 
       {/* Projects Grid */}
       <div className="mt-16 space-y-12">
-        {projects.map((project) => {
+        {projects.map((project, index) => {
           const Icon = project.icon;
           return (
             <div
               key={project.id}
-              className="group relative rounded-sm border border-zinc-200 dark:border-white/5 bg-zinc-50 dark:bg-zinc-900/20 hover:bg-zinc-100 dark:hover:bg-zinc-900/40 p-8 hover:border-emerald-500/20 dark:hover:border-emerald-500/20 transition-all duration-300 theme-transition"
+              className={`group relative rounded-sm border border-zinc-200 dark:border-white/5 bg-zinc-50 dark:bg-zinc-900/20 p-8 card-hover-effect fade-up-element ${
+                index === 0 ? "delay-100" : index === 1 ? "delay-200" : index === 2 ? "delay-300" : "delay-400"
+              } theme-transition`}
             >
               <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-zinc-200 dark:border-white/5 pb-6 theme-transition">
                 <div className="flex items-center gap-4">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-sm bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-sm bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20 group-hover:scale-105 transition-transform duration-300">
                     <Icon className="h-6 w-6" />
                   </div>
                   <div>
@@ -107,7 +109,7 @@ export default function Work() {
                     {project.tech.map((tag) => (
                       <span
                         key={tag}
-                        className="px-2.5 py-1 rounded-sm text-xs font-light bg-zinc-100 dark:bg-zinc-900 text-zinc-600 dark:text-zinc-400 border border-zinc-200 dark:border-white/5 theme-transition"
+                        className="px-2.5 py-1 rounded-sm text-xs font-light bg-zinc-100 dark:bg-zinc-900 text-zinc-600 dark:text-zinc-400 border border-zinc-200 dark:border-white/5 theme-transition hover:border-emerald-500/20 hover:text-emerald-500 transition-colors"
                       >
                         {tag}
                       </span>

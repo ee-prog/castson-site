@@ -22,21 +22,21 @@ export default function Contact() {
   return (
     <div data-theme="light" className="mx-auto max-w-5xl px-4 py-20 sm:px-6 lg:px-8 pt-32">
       {/* Page Header */}
-      <div className="max-w-3xl">
-        <h1 className="text-4xl font-extrabold tracking-tight text-zinc-900 dark:text-white sm:text-5xl">
+      <div className="max-w-3xl fade-up-element">
+        <h1 className="text-4xl font-extrabold tracking-tight text-zinc-900 dark:text-white sm:text-5xl uppercase font-display">
           Get in Touch
         </h1>
-        <p className="mt-6 text-lg text-zinc-600 dark:text-zinc-400">
+        <p className="mt-6 text-lg text-zinc-600 dark:text-zinc-400 font-light leading-relaxed">
           Have a project, system integration problem, or operational workflow challenge you want to discuss? Let&apos;s talk.
         </p>
       </div>
 
       <div className="mt-16 grid grid-cols-1 gap-12 lg:grid-cols-3">
         {/* Left Column: Direct Info */}
-        <div className="space-y-8">
+        <div className="space-y-8 fade-up-element delay-100">
           <div>
-            <h2 className="text-xl font-bold text-zinc-900 dark:text-white">Direct Communication</h2>
-            <p className="mt-3 text-sm text-zinc-600 dark:text-zinc-400">
+            <h2 className="text-xl font-bold text-zinc-900 dark:text-white font-display uppercase">Direct Communication</h2>
+            <p className="mt-3 text-sm text-zinc-600 dark:text-zinc-400 font-light">
               For systems advisory, custom integration projects, or speaking opportunities, reach out directly.
             </p>
           </div>
@@ -63,7 +63,7 @@ export default function Contact() {
 
           {/* Hard Boundary Disclaimer */}
           <div className="rounded-xl border border-red-500/20 bg-red-500/5 p-4 text-xs text-red-950 dark:text-zinc-400 space-y-2 theme-transition">
-            <span className="font-semibold text-red-600 dark:text-red-400 block uppercase tracking-wider">BraveHeart Support Boundary</span>
+            <span className="font-semibold text-red-600 dark:text-red-400 block uppercase tracking-wider">[BraveHeart Support Boundary]</span>
             <p>
               This is Ripley&apos;s advisory contact surface. If you are a student or client looking for course bookings, pricing adjustments, compliance documentation, or BraveHeart First Aid support, please route your query through the official BraveHeart First Aid channel.
             </p>
@@ -71,7 +71,7 @@ export default function Contact() {
         </div>
 
         {/* Right Column: Contact Form */}
-        <div className="lg:col-span-2">
+        <div className="lg:col-span-2 fade-up-element delay-200">
           {submitted ? (
             <div className="rounded-2xl border border-emerald-500/20 bg-emerald-500/5 p-8 text-center space-y-4 theme-transition">
               <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400">
@@ -154,7 +154,7 @@ export default function Contact() {
               <div className="pt-2">
                 <button
                   type="submit"
-                  className="group flex w-full items-center justify-center gap-2 rounded-lg bg-zinc-950 dark:bg-emerald-500 hover:bg-zinc-800 dark:hover:bg-emerald-400 py-3 text-sm font-semibold text-white dark:text-zinc-950 transition-colors shadow-lg shadow-emerald-500/10"
+                  className="group interactive-hover flex w-full items-center justify-center gap-2 rounded-lg bg-zinc-950 dark:bg-emerald-500 hover:bg-zinc-800 dark:hover:bg-emerald-400 py-3 text-sm font-semibold text-white dark:text-zinc-950 shadow-lg shadow-emerald-500/10 hover:scale-[1.01] active:scale-[0.99] transition-all duration-300 cursor-pointer"
                 >
                   Send Message
                   <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />

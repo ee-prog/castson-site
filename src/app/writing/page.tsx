@@ -23,21 +23,23 @@ export default function Writing() {
   return (
     <div data-theme="dark" className="mx-auto max-w-5xl px-4 py-20 sm:px-6 lg:px-8">
       {/* Page Header */}
-      <div className="max-w-3xl">
-        <h1 className="text-4xl font-extrabold tracking-tight text-zinc-900 dark:text-white sm:text-5xl">
+      <div className="max-w-3xl fade-up-element">
+        <h1 className="text-4xl font-extrabold tracking-tight text-zinc-900 dark:text-white sm:text-5xl uppercase font-display">
           Writing & Notes
         </h1>
-        <p className="mt-6 text-lg text-zinc-600 dark:text-zinc-400">
+        <p className="mt-6 text-lg text-zinc-600 dark:text-zinc-400 font-light leading-relaxed">
           Thoughts, technical walkthroughs, and logs on building systems, automating workflows, and operational efficiency.
         </p>
       </div>
 
       {/* Posts List */}
       <div className="mt-16 space-y-10 max-w-3xl">
-        {posts.map((post) => (
+        {posts.map((post, index) => (
           <article
             key={post.slug}
-            className="group relative flex flex-col items-start rounded-2xl border border-zinc-200 dark:border-white/5 bg-zinc-50 dark:bg-zinc-900/10 p-6 hover:bg-zinc-100 dark:hover:bg-zinc-900/30 hover:border-emerald-500/20 dark:hover:border-emerald-500/20 transition-all duration-300 theme-transition"
+            className={`group relative flex flex-col items-start rounded-2xl border border-zinc-200 dark:border-white/5 bg-zinc-50 dark:bg-zinc-900/10 p-6 card-hover-effect fade-up-element ${
+              index === 0 ? "delay-100" : index === 1 ? "delay-200" : "delay-300"
+            } theme-transition`}
           >
             <div className="flex items-center gap-3 text-xs text-zinc-500">
               <span className="flex items-center gap-1">

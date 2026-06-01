@@ -92,15 +92,15 @@ export default async function Post({ params }: { params: Params }) {
       {/* Back Button */}
       <Link
         href="/writing"
-        className="inline-flex items-center gap-1.5 text-sm text-zinc-600 dark:text-zinc-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors mb-8 group theme-transition"
+        className="inline-flex items-center gap-1.5 text-sm text-zinc-600 dark:text-zinc-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors mb-8 group theme-transition fade-up-element delay-100 active:scale-95"
       >
         <ArrowLeft className="h-4 w-4 transition-transform group-hover:-translate-x-0.5" />
         Back to writing
       </Link>
 
       {/* Header */}
-      <header className="border-b border-zinc-200 dark:border-white/5 pb-8 mb-10 theme-transition">
-        <h1 className="text-3xl font-extrabold tracking-tight text-zinc-900 dark:text-white sm:text-4xl">
+      <header className="border-b border-zinc-200 dark:border-white/5 pb-8 mb-10 theme-transition fade-up-element delay-150">
+        <h1 className="text-3xl font-extrabold tracking-tight text-zinc-900 dark:text-white sm:text-4xl uppercase font-display">
           {post.title}
         </h1>
         <div className="flex items-center gap-4 text-xs text-zinc-500 mt-4">
@@ -117,7 +117,7 @@ export default async function Post({ params }: { params: Params }) {
       </header>
 
       {/* Main Content */}
-      <div className="text-zinc-800 dark:text-zinc-300 leading-relaxed space-y-6 text-base theme-transition">
+      <div className="text-zinc-800 dark:text-zinc-300 leading-relaxed space-y-6 text-base theme-transition fade-up-element delay-200">
         {post.content}
       </div>
     </article>

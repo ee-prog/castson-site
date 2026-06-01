@@ -122,7 +122,7 @@ export default function Home() {
               <div className="pt-4 flex items-center gap-6">
                 <Link
                   href={activeSlide.link}
-                  className="group inline-flex items-center gap-1.5 rounded-sm bg-white text-black px-6 py-3.5 text-xs font-bold uppercase tracking-wider hover:bg-emerald-400 hover:text-black transition-all duration-300"
+                  className="group interactive-hover inline-flex items-center gap-1.5 rounded-sm bg-white text-black px-6 py-3.5 text-xs font-bold uppercase tracking-wider hover:bg-emerald-400 hover:text-black hover:scale-[1.02] active:scale-[0.98] transition-all duration-300"
                 >
                   Explore Details
                   <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
@@ -167,7 +167,7 @@ export default function Home() {
               <button 
                 onClick={prevSlide}
                 disabled={isTransitioning}
-                className="w-10 h-10 border border-white/5 bg-zinc-950/60 text-zinc-400 hover:text-emerald-400 hover:border-emerald-500/20 flex items-center justify-center rounded-sm transition-all duration-300 cursor-pointer"
+                className="w-10 h-10 border border-white/5 bg-zinc-950/60 text-zinc-400 hover:text-emerald-400 hover:border-emerald-500/20 flex items-center justify-center rounded-sm transition-all duration-300 cursor-pointer active:scale-90"
                 aria-label="Previous slide"
               >
                 <ChevronLeft className="h-4 w-4" />
@@ -175,7 +175,7 @@ export default function Home() {
               <button 
                 onClick={nextSlide}
                 disabled={isTransitioning}
-                className="w-10 h-10 border border-white/5 bg-zinc-950/60 text-zinc-400 hover:text-emerald-400 hover:border-emerald-500/20 flex items-center justify-center rounded-sm transition-all duration-300 cursor-pointer"
+                className="w-10 h-10 border border-white/5 bg-zinc-950/60 text-zinc-400 hover:text-emerald-400 hover:border-emerald-500/20 flex items-center justify-center rounded-sm transition-all duration-300 cursor-pointer active:scale-90"
                 aria-label="Next slide"
               >
                 <ChevronRight className="h-4 w-4" />
@@ -191,7 +191,7 @@ export default function Home() {
       <section data-theme="light" className="py-40 sm:py-48 min-h-[90vh] flex items-center border-y border-zinc-200/10 dark:border-white/[0.03] bg-background theme-transition">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 relative z-20">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-8">
-            <div className="lg:pr-8">
+            <div className="lg:pr-8 fade-up-element delay-100">
               <span className="text-[10px] font-bold uppercase tracking-widest text-emerald-500 font-mono">01 / Capabilities</span>
               <h2 className="text-2xl font-bold tracking-tight text-zinc-900 dark:text-white uppercase mt-2 font-display">What We Do</h2>
               <p className="mt-4 text-xs sm:text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed font-light">
@@ -200,7 +200,7 @@ export default function Home() {
             </div>
 
             {/* Capabilities grid lines */}
-            <div className="lg:col-span-2 grid grid-cols-1 md:grid-cols-3 border border-zinc-200 dark:border-white/[0.03] bg-zinc-50 dark:bg-zinc-950/20 rounded-sm overflow-hidden divide-y md:divide-y-0 md:divide-x divide-zinc-200 dark:divide-white/[0.03] theme-transition">
+            <div className="lg:col-span-2 grid grid-cols-1 md:grid-cols-3 border border-zinc-200 dark:border-white/[0.03] bg-zinc-50 dark:bg-zinc-950/20 rounded-sm overflow-hidden divide-y md:divide-y-0 md:divide-x divide-zinc-200 dark:divide-white/[0.03] theme-transition fade-up-element delay-200">
               
               {/* Card 1 */}
               <div className="p-6 flex flex-col justify-between hover:bg-zinc-100/50 dark:hover:bg-white/[0.01] transition-colors duration-300 group">
@@ -257,7 +257,7 @@ export default function Home() {
 
       {/* 4. Dynamic Call to Action */}
       <section data-theme="dark" className="py-32 bg-zinc-950/40 border-t border-zinc-200/10 dark:border-white/[0.03] relative theme-transition">
-        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 text-center relative z-20">
+        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 text-center relative z-20 fade-up-element delay-100">
           <span className="text-[10px] font-bold uppercase tracking-widest text-emerald-400 font-mono">02 / Advisory</span>
           <h2 className="text-4xl sm:text-5xl font-extrabold tracking-tighter text-white uppercase mt-4 mb-6 font-display">
             Let&apos;s build something reliable.
@@ -268,13 +268,13 @@ export default function Home() {
           <div className="flex items-center justify-center gap-6">
             <Link
               href="/contact"
-              className="rounded-sm bg-white text-black px-6 py-3.5 text-xs font-bold uppercase tracking-wider hover:bg-emerald-400 hover:text-black transition-colors duration-300"
+              className="interactive-hover rounded-sm bg-white text-black px-6 py-3.5 text-xs font-bold uppercase tracking-wider hover:bg-emerald-400 hover:text-black hover:scale-[1.02] active:scale-[0.98] transition-all duration-300"
             >
               Get in Touch
             </Link>
             <Link 
               href="/work" 
-              className="text-xs font-bold uppercase tracking-wider text-white hover:text-emerald-400 transition-colors duration-300 pb-1 border-b border-white/10 hover:border-emerald-400/30"
+              className="text-xs font-bold uppercase tracking-wider text-white hover:text-emerald-400 hover:translate-x-0.5 transition-all duration-300 pb-1 border-b border-white/10 hover:border-emerald-400/30"
             >
               View Our Work
             </Link>

@@ -3,7 +3,6 @@ import { Cinzel } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
-import CustomCursor from "@/components/custom-cursor";
 import ThemeObserver from "@/components/theme-observer";
 
 const cinzel = Cinzel({
@@ -58,7 +57,6 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col bg-zinc-950 text-zinc-100 font-sans selection:bg-emerald-500/30 selection:text-emerald-200 relative">
         <ThemeObserver />
-        <CustomCursor />
         <Navbar />
         <main className="flex-1 flex flex-col w-full">
           {children}
