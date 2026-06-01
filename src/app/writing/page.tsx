@@ -15,7 +15,7 @@ export const posts = [
     title: "Automating BraveHeart First Aid Operations",
     date: "May 15, 2026",
     readTime: "6 min read",
-    summary: "A technical walkthrough of how I built the Ripley automation engine to synchronize Acuity courses, Monday boards, and instructor shifts.",
+    summary: "A technical walkthrough of how we built the Ripley automation engine to synchronize Acuity courses, Monday boards, and instructor shifts.",
   }
 ];
 

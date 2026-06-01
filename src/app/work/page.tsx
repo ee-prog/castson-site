@@ -8,7 +8,7 @@ const projects = [
     role: "Founder & Operations Architect",
     timeline: "2020 - Present",
     icon: Shield,
-    description: "A leading regional first-aid and safety training provider. In this role, I designed and managed the primary booking flows, custom student database integrations, and overall business operations.",
+    description: "A leading regional first-aid and safety training provider. For this organization, we designed the primary booking flows, custom student database integrations, and overall business operations.",
     tech: ["Business Operations", "Customer Experience Flow", "Logistics Planning"],
     scope: "A regional first-aid training provider handling complex student booking allocations, instructor rosters, and payroll audits. Transitioned daily operations from manual spreadsheets into a custom, software-driven dispatch flow."
   },
@@ -54,7 +54,7 @@ export default function Work() {
           Projects & Work
         </h1>
         <p className="mt-6 text-lg text-zinc-400 font-light leading-relaxed">
-          A look at the operations I lead, the custom automation software I develop, and the creative projects I participate in.
+          A look at the operations we design, the custom automation architecture we develop, and the client systems we orchestrate.
         </p>
       </div>
 

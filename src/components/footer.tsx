@@ -10,11 +10,11 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <div className="flex items-center gap-2">
-              <span className="text-lg font-semibold text-white">Eli Castson</span>
+              <span className="text-lg font-semibold text-white">Eliasson</span>
               <span className="h-1.5 w-1.5 rounded-full bg-emerald-500"></span>
             </div>
             <p className="mt-3 text-sm text-zinc-400 max-w-xs">
-              Entrepreneur, builder, and operator specializing in business automation and operations design.
+              Practical AI operating models, workflow orchestration, and systems integration advisory.
             </p>
           </div>
           <div>
@@ -31,16 +31,16 @@ export default function Footer() {
             <h4 className="text-xs font-semibold uppercase tracking-wider text-zinc-300">Connect</h4>
             <div className="mt-4 space-y-2 text-sm">
               <p className="text-zinc-400">
-                Primary: <a href="mailto:ee@castson.com" className="hover:text-emerald-400 transition-colors">ee@castson.com</a>
+                Advisory inquiries: <a href="mailto:ee@castson.com" className="hover:text-emerald-400 transition-colors">ee@castson.com</a>
               </p>
               <p className="text-xs text-zinc-600">
-                This is the personal portfolio and web presence of Eli Castson. For BraveHeart First Aid business inquiries, please visit BraveHeart First Aid directly.
+                This is the official site of Eliasson, an advisory practice for systems and AI operations. For BraveHeart First Aid student and booking inquiries, please visit BraveHeart First Aid directly.
               </p>
             </div>
           </div>
         </div>
         <div className="mt-8 border-t border-white/5 pt-8 flex flex-col sm:flex-row items-center justify-between text-xs gap-4">
-          <p>© {year} Eli Castson. All rights reserved.</p>
+          <p>© {year} Eliasson. All rights reserved.</p>
           <div className="flex gap-4">
             <span className="text-zinc-600">Built with Next.js & Tailwind CSS</span>
           </div>

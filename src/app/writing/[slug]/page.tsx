@@ -14,7 +14,7 @@ const postsContent = {
           In modern business operations, it is common to see teams bending their operational workflows to fit within the constraints of their software. A team buys a CRM or a scheduling tool, discovers it doesn&apos;t support their specific payroll reporting workflow, and ends up running manual double-entry spreadsheets to make up the difference.
         </p>
         <p>
-          This is what I call the <strong>&quot;Software-First Trap.&quot;</strong> Instead of allowing the software to dictate how a business is run, operators should focus on building <strong>Systems Over Software</strong>.
+          This is what we call the <strong>&quot;Software-First Trap.&quot;</strong> Instead of allowing the software to dictate how a business is run, operators should focus on building <strong>Systems Over Software</strong>.
         </p>
         
         <h3 className="text-xl font-bold text-white mt-8 mb-4">The Logic of Orchestration</h3>
@@ -48,12 +48,12 @@ const postsContent = {
           Running a first-aid training business involves complex logistics: managing physical classroom locations, coordinating instructor availability, keeping track of certification expiries, and reconciling payroll with schedules.
         </p>
         <p>
-          When I founded <strong>BraveHeart First Aid</strong>, we quickly realized that manual coordination was the biggest bottleneck to our growth. If an instructor called in sick, updating the class bookings, notifying the students, and logging the shift adjustments in our payroll spreadsheet took hours of admin work.
+          In scaling <strong>BraveHeart First Aid</strong>, it quickly became clear that manual coordination was the biggest bottleneck to growth. If an instructor called in sick, updating the class bookings, notifying the students, and logging the shift adjustments in the payroll spreadsheet took hours of admin work.
         </p>
         
         <h3 className="text-xl font-bold text-white mt-8 mb-4">Enter the Ripley Dashboard</h3>
         <p>
-          To solve this, I designed and developed <strong>Ripley</strong> (our internal Autobot system). Built with a combination of Python server tasks, Node.js scripts, and a Supabase PostgreSQL backend, Ripley acts as our automated dispatch and operational coordinator.
+          To solve this, Eliasson designed and developed <strong>Ripley</strong> (the internal Autobot system). Built with a combination of Python server tasks, Node.js scripts, and a Supabase PostgreSQL backend, Ripley acts as the automated dispatch and operational coordinator.
         </p>
         <p>
           Here is how the core pipeline operates:

@@ -18,35 +18,36 @@ const raleway = Raleway({
 
 export const metadata: Metadata = {
   title: {
-    default: "Eli Castson | Entrepreneur, Builder & Operator",
-    template: "%s | Eli Castson",
+    default: "Eliasson | Systems & AI Operations",
+    template: "%s | Eliasson",
   },
-  description: "Personal portfolio of Eli Castson. Entrepreneur, builder, and operator specializing in business automation, system design, and operational workflows.",
+  description: "Eliasson is an advisory and operations practice specializing in practical AI-enabled operating models, operational data flows, and agentic workflows.",
   keywords: [
-    "Eli Castson",
-    "Castson",
-    "BraveHeart First Aid",
-    "Ripley Automation",
+    "Eliasson",
+    "Systems & AI Operations",
+    "AI Operating Models",
+    "Agentic Workflows",
     "Business Automation",
     "System Design",
-    "Operations Operator"
+    "Operations Design",
+    "Ripley Automation"
   ],
-  authors: [{ name: "Eli Castson", url: "https://castson.com" }],
-  creator: "Eli Castson",
-  metadataBase: new URL("https://castson.com"),
+  authors: [{ name: "Eliasson", url: "https://eliasson.co" }],
+  creator: "Eliasson",
+  metadataBase: new URL("https://eliasson.co"),
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://castson.com",
-    title: "Eli Castson | Entrepreneur, Builder & Operator",
-    description: "Personal portfolio of Eli Castson. Entrepreneur, builder, and operator specializing in business automation, system design, and operational workflows.",
-    siteName: "Eli Castson Web Presence",
+    url: "https://eliasson.co",
+    title: "Eliasson | Systems & AI Operations",
+    description: "Eliasson is an advisory and operations practice specializing in practical AI-enabled operating models, operational data flows, and agentic workflows.",
+    siteName: "Eliasson",
     // [NEEDS ELI INPUT: Open Graph image asset path if available, e.g. /og-image.png. Marked as missing for now.]
   },
   twitter: {
     card: "summary_large_image",
-    title: "Eli Castson | Entrepreneur, Builder & Operator",
-    description: "Personal portfolio of Eli Castson, founder of BraveHeart First Aid, focusing on business automation and operations design.",
+    title: "Eliasson | Systems & AI Operations",
+    description: "Eliasson is an advisory and operations practice specializing in practical AI-enabled operating models, operational data flows, and agentic workflows.",
   },
 };
 

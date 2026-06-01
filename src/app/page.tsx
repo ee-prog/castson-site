@@ -159,7 +159,7 @@ export default function Home() {
             
             {/* Quick status */}
             <div className="text-[10px] font-mono text-zinc-500">
-              [ Eli Castson Portfolio — Version 2.0 ]
+              [ Eliasson — Systems & AI Operations ]
             </div>
 
             {/* Arrow keys */}
@@ -193,9 +193,9 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-8">
             <div className="lg:pr-8">
               <span className="text-[10px] font-bold uppercase tracking-widest text-emerald-400 font-mono">01 / Capabilities</span>
-              <h2 className="text-2xl font-bold tracking-tight text-white uppercase mt-2 font-display">What I Do</h2>
+              <h2 className="text-2xl font-bold tracking-tight text-white uppercase mt-2 font-display">What We Do</h2>
               <p className="mt-4 text-xs sm:text-sm text-zinc-400 leading-relaxed font-light">
-                I map complex manual workflows into reliable, automated logic. I bridge the gap between business operations and technical software engineering.
+                We map complex manual workflows into reliable, automated logic. We bridge the gap between business operations and technical software engineering.
               </p>
             </div>
 
@@ -276,7 +276,7 @@ export default function Home() {
               href="/work" 
               className="text-xs font-bold uppercase tracking-wider text-white hover:text-emerald-400 transition-colors duration-300 pb-1 border-b border-white/10 hover:border-emerald-400/30"
             >
-              View My Work
+              View Our Work
             </Link>
           </div>
         </div>

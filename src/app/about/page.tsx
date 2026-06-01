@@ -9,10 +9,10 @@ export default function About() {
       <div className="max-w-3xl">
         <span className="text-[10px] font-bold uppercase tracking-widest text-emerald-400 font-mono">01 / Profile</span>
         <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl uppercase mt-2 font-display">
-          About Eli Castson
+          About Eliasson
         </h1>
         <p className="mt-6 text-lg text-zinc-400 font-light leading-relaxed">
-          I work with leaders to reduce the friction that growth creates. My perspective is operational, not theoretical. I actively lead, invest, and build to make execution strong enough to protect the magic.
+          We work with leaders to reduce the friction that growth creates. Our perspective is operational, not theoretical. We actively lead, invest, and build to make execution strong enough to protect the magic.
         </p>
       </div>
 
@@ -34,17 +34,17 @@ export default function About() {
           <section className="space-y-4">
             <h2 className="text-xl font-bold uppercase tracking-wider text-white font-display">Operational Perspective</h2>
             <p className="text-zinc-400 leading-relaxed font-light text-sm">
-              I actively lead and invest in complex founder-led businesses. Currently, I serve as CEO of an event operations platform undergoing a full digital transformation. I test what I believe in inside real businesses, with real consequences.
+              We actively invest in and lead complex founder-led businesses. Our principal, Eli Castson, currently serves as CEO of an event operations platform undergoing a full digital transformation. We test what we believe in inside real businesses, with real consequences.
             </p>
             <p className="text-zinc-400 leading-relaxed font-light text-sm">
-              Before that, I built my perspective inside global organizations including **La Prairie**, **TBWA**, and **MediaCom**, working across heritage brands, creative environments, and large-scale media operations.
+              Before that, Eli built his perspective inside global organizations including **La Prairie**, **TBWA**, and **MediaCom**, working across heritage brands, creative environments, and large-scale media operations. Today, Eliasson applies those lessons to scale growing organizations.
             </p>
           </section>
 
           <section className="space-y-4">
             <h2 className="text-xl font-bold uppercase tracking-wider text-white font-display">Practical AI Operating Models</h2>
             <p className="text-zinc-400 leading-relaxed font-light text-sm">
-              Instead of focusing on isolated AI experiments, I help leaders design and implement structured, AI-enabled operating models. I build the operational layer around AI tools: detailing where AI fits into the work, what needs to be orchestrated, what controls are needed, and how the organization scales beyond pilots.
+              Instead of focusing on isolated AI experiments, Eliasson helps leaders design and implement structured, AI-enabled operating models. We build the operational layer around AI tools: detailing where AI fits into the work, what needs to be orchestrated, what controls are needed, and how the organization scales beyond pilots.
             </p>
             <p className="text-zinc-400 leading-relaxed font-light text-sm">
               This includes mapping out data flows, identifying human-in-the-loop governance points, and establishing early agentic workflows that turn a portfolio of opportunities into executable change.
@@ -54,10 +54,10 @@ export default function About() {
           <section className="space-y-4">
             <h2 className="text-xl font-bold uppercase tracking-wider text-white font-display">Protecting the Magic</h2>
             <p className="text-zinc-400 leading-relaxed font-light text-sm">
-              I care about velocity, but not at the expense of what makes a business special. The goal is not to make a company more mechanical. It is to make execution strong enough to protect the magic.
+              We care about velocity, but not at the expense of what makes a business special. The goal of Eliasson is not to make a company more mechanical. It is to make execution strong enough to protect the magic.
             </p>
             <p className="text-zinc-400 leading-relaxed font-light text-sm">
-              Through advisory, system integrations, and development of custom dispatch platforms like **Ripley**, I design operational models where technology exists solely to liberate creative, operational, and customer-facing teams.
+              Through advisory, system integrations, and development of custom dispatch platforms like **Ripley**, we design operational models where technology exists solely to liberate creative, operational, and customer-facing teams.
             </p>
           </section>
 
@@ -73,7 +73,7 @@ export default function About() {
                 <Monitor className="h-5 w-5 text-emerald-400 shrink-0" />
                 <div>
                   <h4 className="text-xs font-bold text-white uppercase tracking-wider">Identity Lanes</h4>
-                  <p className="text-xs text-zinc-500 mt-1 font-light">CEO, Operations Leader, AI Systems Developer</p>
+                  <p className="text-xs text-zinc-500 mt-1 font-light">Systems Advisory, AI Operations Practice, Tech Integration</p>
                 </div>
               </div>
 

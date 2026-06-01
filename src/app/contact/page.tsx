@@ -37,7 +37,7 @@ export default function Contact() {
           <div>
             <h2 className="text-xl font-bold text-white">Direct Communication</h2>
             <p className="mt-3 text-sm text-zinc-400">
-              For personal advisory, custom systems design, or speaking opportunities, reach out directly.
+              For systems advisory, custom integration projects, or speaking opportunities, reach out directly.
             </p>
           </div>
 
@@ -65,7 +65,7 @@ export default function Contact() {
           <div className="rounded-xl border border-red-500/10 bg-red-500/5 p-4 text-xs text-zinc-400 space-y-2">
             <span className="font-semibold text-red-400 block uppercase tracking-wider">BraveHeart Support Boundary</span>
             <p>
-              This is Eli Castson&apos;s personal contact surface. If you are a student or client looking for course bookings, pricing adjustments, compliance documentation, or BraveHeart First Aid support, please route your query through the official BraveHeart First Aid channel.
+              This is Eliasson&apos;s advisory contact surface. If you are a student or client looking for course bookings, pricing adjustments, compliance documentation, or BraveHeart First Aid support, please route your query through the official BraveHeart First Aid channel.
             </p>
           </div>
         </div>
@@ -79,7 +79,7 @@ export default function Contact() {
               </div>
               <h2 className="text-xl font-bold text-white">Message Sent Successfully!</h2>
               <p className="text-sm text-zinc-400 max-w-sm mx-auto">
-                Thank you for reaching out. Eli will review your message and get back to you shortly.
+                Thank you for reaching out. We will review your message and get back to you shortly.
               </p>
               <button
                 onClick={() => setSubmitted(false)}
@@ -147,7 +147,7 @@ export default function Contact() {
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   className="w-full rounded-lg border border-white/10 bg-zinc-950 px-4 py-3 text-sm text-white placeholder-zinc-600 focus:border-emerald-500 focus:outline-none transition-colors resize-none"
-                  placeholder="Tell me about your business workflows or systems..."
+                  placeholder="Tell us about your business workflows or systems..."
                 />
               </div>
 
