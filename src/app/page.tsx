@@ -193,8 +193,8 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-8">
             <div className="lg:pr-8 fade-up-element delay-100">
               <span className="text-[10px] font-bold uppercase tracking-widest text-emerald-500 font-mono">01 / Capabilities</span>
-              <h2 className="text-2xl font-bold tracking-tight text-zinc-900 dark:text-white uppercase mt-2 font-display">What We Do</h2>
-              <p className="mt-4 text-xs sm:text-sm text-zinc-800 dark:text-zinc-300 leading-relaxed font-light">
+              <h2 className="text-2xl font-bold tracking-tight text-zinc-950 dark:text-white uppercase mt-2 font-display">What We Do</h2>
+              <p className="mt-4 text-xs sm:text-sm text-zinc-900 dark:text-zinc-200 leading-relaxed font-light">
                 We map complex manual workflows into reliable, automated logic. We bridge the gap between business operations and technical software engineering.
               </p>
             </div>
@@ -208,14 +208,12 @@ export default function Home() {
                   <div className="text-emerald-500 group-hover:scale-110 transition-transform duration-300 w-8 h-8 flex items-center">
                     <Cpu className="h-5 w-5" />
                   </div>
-                  <h3 className="text-sm font-bold text-zinc-900 dark:text-white uppercase tracking-wider mt-4">System Integration</h3>
-                  <p className="mt-2 text-xs text-zinc-800 dark:text-zinc-300 leading-relaxed font-light">
+                  <h3 className="text-sm font-bold text-zinc-950 dark:text-white uppercase tracking-wider mt-4">System Integration</h3>
+                  <p className="mt-2 text-xs text-zinc-900 dark:text-zinc-200 leading-relaxed font-light">
                     Connecting CRM boards, booking engines, schedules, and custom APIs into a unified ledger.
                   </p>
                 </div>
-                <div className="mt-8 text-[10px] font-mono text-zinc-500 dark:text-zinc-600 group-hover:text-emerald-500 transition-colors">
-                  [APIs & Webhooks]
-                </div>
+                <div className="mt-8 text-[10px] font-mono text-zinc-500 dark:text-zinc-600 group-hover:text-emerald-500 transition-colors">[APIs & Webhooks]</div>
               </div>
 
               {/* Card 2 */}
@@ -224,14 +222,12 @@ export default function Home() {
                   <div className="text-emerald-500 group-hover:scale-110 transition-transform duration-300 w-8 h-8 flex items-center">
                     <Settings className="h-5 w-5" />
                   </div>
-                  <h3 className="text-sm font-bold text-zinc-900 dark:text-white uppercase tracking-wider mt-4">Workflow Automation</h3>
-                  <p className="mt-2 text-xs text-zinc-800 dark:text-zinc-300 leading-relaxed font-light">
+                  <h3 className="text-sm font-bold text-zinc-950 dark:text-white uppercase tracking-wider mt-4">Workflow Automation</h3>
+                  <p className="mt-2 text-xs text-zinc-900 dark:text-zinc-200 leading-relaxed font-light">
                     Designing event-driven background scripts, automated alerts, and timesheet reconcilers.
                   </p>
                 </div>
-                <div className="mt-8 text-[10px] font-mono text-zinc-500 dark:text-zinc-600 group-hover:text-emerald-500 transition-colors">
-                  [Python / Node.js]
-                </div>
+                <div className="mt-8 text-[10px] font-mono text-zinc-500 dark:text-zinc-600 group-hover:text-emerald-500 transition-colors">[Python / Node.js]</div>
               </div>
 
               {/* Card 3 */}
@@ -240,14 +236,12 @@ export default function Home() {
                   <div className="text-emerald-500 group-hover:scale-110 transition-transform duration-300 w-8 h-8 flex items-center">
                     <Laptop className="h-5 w-5" />
                   </div>
-                  <h3 className="text-sm font-bold text-zinc-900 dark:text-white uppercase tracking-wider mt-4">AI Operating Models</h3>
-                  <p className="mt-2 text-xs text-zinc-800 dark:text-zinc-300 leading-relaxed font-light">
+                  <h3 className="text-sm font-bold text-zinc-950 dark:text-white uppercase tracking-wider mt-4">AI Operating Models</h3>
+                  <p className="mt-2 text-xs text-zinc-900 dark:text-zinc-200 leading-relaxed font-light">
                     Transitioning companies from isolated AI pilots to executable, structured agentic systems with clear human control points.
                   </p>
                 </div>
-                <div className="mt-8 text-[10px] font-mono text-zinc-500 dark:text-zinc-600 group-hover:text-emerald-500 transition-colors">
-                  [Agentic Pipelines]
-                </div>
+                <div className="mt-8 text-[10px] font-mono text-zinc-500 dark:text-zinc-600 group-hover:text-emerald-500 transition-colors">[Agentic Pipelines]</div>
               </div>
 
             </div>

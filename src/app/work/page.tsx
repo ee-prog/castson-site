@@ -50,10 +50,10 @@ export default function Work() {
       {/* Page Header */}
       <div className="max-w-3xl fade-up-element">
         <span className="text-[10px] font-bold uppercase tracking-widest text-emerald-600 dark:text-emerald-400 font-mono">02 / Selected Work</span>
-        <h1 className="text-4xl font-extrabold tracking-tight text-zinc-900 dark:text-white sm:text-5xl uppercase mt-2 font-display">
+        <h1 className="text-4xl font-extrabold tracking-tight text-zinc-955 dark:text-white sm:text-5xl uppercase mt-2 font-display">
           Projects & Work
         </h1>
-        <p className="mt-6 text-lg text-zinc-800 dark:text-zinc-300 font-light leading-relaxed">
+        <p className="mt-6 text-lg text-zinc-900 dark:text-zinc-200 font-light leading-relaxed">
           A look at the operations we design, the custom automation architecture we develop, and the client systems we orchestrate.
         </p>
       </div>
@@ -75,10 +75,10 @@ export default function Work() {
                     <Icon className="h-6 w-6" />
                   </div>
                   <div>
-                    <h2 className="text-2xl font-bold text-zinc-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors font-display">
+                    <h2 className="text-2xl font-bold text-zinc-950 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors font-display">
                       {project.title}
                     </h2>
-                    <p className="text-xs text-zinc-700 dark:text-zinc-455 font-mono uppercase tracking-wider mt-0.5">{project.role}</p>
+                    <p className="text-xs text-zinc-800 dark:text-zinc-400 font-mono uppercase tracking-wider mt-0.5">{project.role}</p>
                   </div>
                 </div>
                 <div className="text-right">
@@ -91,25 +91,25 @@ export default function Work() {
               <div className="mt-6 grid grid-cols-1 lg:grid-cols-3 gap-8">
                 {/* Info */}
                 <div className="lg:col-span-2 space-y-4">
-                  <p className="text-zinc-800 dark:text-zinc-300 leading-relaxed text-sm font-light">
+                  <p className="text-zinc-900 dark:text-zinc-200 leading-relaxed text-sm font-light">
                     {project.description}
                   </p>
                   
                   {/* Scope Summary */}
-                  <div className="rounded-sm border border-zinc-200 dark:border-zinc-900 bg-zinc-100 dark:bg-zinc-950/40 p-4 text-xs text-zinc-800 dark:text-zinc-350 font-light font-mono theme-transition">
-                    <span className="text-emerald-600 dark:text-emerald-400 font-bold uppercase tracking-widest block mb-1.5">[System Scope]</span>
+                  <div className="rounded-sm border border-zinc-200 dark:border-zinc-900 bg-zinc-100 dark:bg-zinc-950/40 p-4 text-xs text-zinc-900 dark:text-zinc-200 font-light font-mono theme-transition">
+                    <span className="text-emerald-700 dark:text-emerald-400 font-bold uppercase tracking-widest block mb-1.5">[System Scope]</span>
                     {project.scope}
                   </div>
                 </div>
 
                 {/* Tech Tags */}
                 <div>
-                  <h3 className="text-xs font-bold uppercase tracking-wider text-zinc-850 dark:text-zinc-400 mb-3 font-mono">[Focus / Tech]</h3>
+                  <h3 className="text-xs font-bold uppercase tracking-wider text-zinc-950 dark:text-zinc-400 mb-3 font-mono">[Focus / Tech]</h3>
                   <div className="flex flex-wrap gap-2">
                     {project.tech.map((tag) => (
                       <span
                         key={tag}
-                        className="px-2.5 py-1 rounded-sm text-xs font-light bg-zinc-100 dark:bg-zinc-900 text-zinc-700 dark:text-zinc-350 border border-zinc-200 dark:border-white/5 theme-transition hover:border-emerald-500/20 hover:text-emerald-500 transition-colors"
+                        className="px-2.5 py-1 rounded-sm text-xs font-light bg-zinc-100 dark:bg-zinc-900 text-zinc-850 dark:text-zinc-200 border border-zinc-200 dark:border-white/5 theme-transition hover:border-emerald-500/20 hover:text-emerald-500 transition-colors"
                       >
                         {tag}
                       </span>
