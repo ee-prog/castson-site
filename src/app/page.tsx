@@ -188,7 +188,7 @@ export default function Home() {
       </section>
 
       {/* 3. Capabilities Section */}
-      <section data-theme="light" className="py-24 border-y border-zinc-200/10 dark:border-white/[0.03] bg-background theme-transition">
+      <section data-theme="light" className="py-40 sm:py-48 min-h-[90vh] flex items-center border-y border-zinc-200/10 dark:border-white/[0.03] bg-background theme-transition">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 relative z-20">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-8">
             <div className="lg:pr-8">

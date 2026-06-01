@@ -17,7 +17,7 @@ const postsContent = {
           This is what we call the <strong>&quot;Software-First Trap.&quot;</strong> Instead of allowing the software to dictate how a business is run, operators should focus on building <strong>Systems Over Software</strong>.
         </p>
         
-        <h3 className="text-xl font-bold text-white mt-8 mb-4">The Logic of Orchestration</h3>
+        <h3 className="text-xl font-bold text-zinc-900 dark:text-white mt-8 mb-4">The Logic of Orchestration</h3>
         <p>
           Software platforms like Monday.js, Acuity, and Connecteam are excellent at their primary responsibilities. Monday is a great board manager; Acuity is a solid calendar booking surface; Connecteam is ideal for mobile timeclock punches.
         </p>
@@ -25,11 +25,11 @@ const postsContent = {
           However, they are not designed to know about each other. The magic happens in the <em>orchestration layer</em>. By writing lightweight backend integrations (using Python or TypeScript) and utilizing tools like Supabase as a shared operational state, you can glue these platforms together.
         </p>
         
-        <blockquote className="border-l-2 border-emerald-500 pl-4 my-6 italic text-zinc-300">
+        <blockquote className="border-l-2 border-emerald-500 pl-4 my-6 italic text-zinc-700 dark:text-zinc-300">
           The goal is not to write a massive custom SaaS app. The goal is to build lightweight, event-driven pipes that synchronize your existing tools, allowing your team to work on what they do best without manual data double-entry.
         </blockquote>
 
-        <h3 className="text-xl font-bold text-white mt-8 mb-4">Core Principles of Clean Workflows</h3>
+        <h3 className="text-xl font-bold text-zinc-900 dark:text-white mt-8 mb-4">Core Principles of Clean Workflows</h3>
         <ul className="list-disc pl-6 space-y-2">
           <li><strong>Single Source of Truth:</strong> Decide which platform owns which data. If a customer books a class, Acuity owns the initial booking event. Do not let other boards override this.</li>
           <li><strong>Idempotency:</strong> Write sync scripts so that they can fail and rerun without creating duplicate database rows or duplicate emails.</li>
@@ -51,7 +51,7 @@ const postsContent = {
           In scaling <strong>BraveHeart First Aid</strong>, it quickly became clear that manual coordination was the biggest bottleneck to growth. If an instructor called in sick, updating the class bookings, notifying the students, and logging the shift adjustments in the payroll spreadsheet took hours of admin work.
         </p>
         
-        <h3 className="text-xl font-bold text-white mt-8 mb-4">Enter the Ripley Dashboard</h3>
+        <h3 className="text-xl font-bold text-zinc-900 dark:text-white mt-8 mb-4">Enter the Ripley Dashboard</h3>
         <p>
           To solve this, we designed and developed <strong>Ripley</strong> (the internal Autobot system). Built with a combination of Python server tasks, Node.js scripts, and a Supabase PostgreSQL backend, Ripley acts as the automated dispatch and operational coordinator.
         </p>
@@ -65,12 +65,12 @@ const postsContent = {
           <li><strong>Operational Alerts:</strong> Auto-generated weekly emails summarize operations, and instructor alerts are triggered instantly on schedule updates.</li>
         </ol>
 
-        <blockquote className="border-l-2 border-emerald-500 pl-4 my-6 italic text-zinc-300">
+        <blockquote className="border-l-2 border-emerald-500 pl-4 my-6 italic text-zinc-700 dark:text-zinc-300">
           Result: Admin overhead was reduced by over 70%, allowing us to focus entirely on course quality and student experience, rather than fighting software APIs.
         </blockquote>
 
-        <div className="mt-8 p-4 rounded-xl border border-yellow-500/20 bg-yellow-500/5 text-sm text-zinc-300">
-          <span className="font-semibold text-yellow-400">Systems Metric Input Needed:</span> [NEEDS ELI INPUT: Provide accurate metrics and technical summary of the Ripley system output]
+        <div className="mt-8 p-4 rounded-xl border border-yellow-500/20 bg-yellow-500/5 text-sm text-zinc-800 dark:text-zinc-300">
+          <span className="font-semibold text-yellow-600 dark:text-yellow-400">Systems Metric Input Needed:</span> [NEEDS ELI INPUT: Provide accurate metrics and technical summary of the Ripley system output]
         </div>
       </>
     )
@@ -92,15 +92,15 @@ export default async function Post({ params }: { params: Params }) {
       {/* Back Button */}
       <Link
         href="/writing"
-        className="inline-flex items-center gap-1.5 text-sm text-zinc-400 hover:text-emerald-400 transition-colors mb-8 group"
+        className="inline-flex items-center gap-1.5 text-sm text-zinc-600 dark:text-zinc-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors mb-8 group theme-transition"
       >
         <ArrowLeft className="h-4 w-4 transition-transform group-hover:-translate-x-0.5" />
         Back to writing
       </Link>
 
       {/* Header */}
-      <header className="border-b border-white/5 pb-8 mb-10">
-        <h1 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
+      <header className="border-b border-zinc-200 dark:border-white/5 pb-8 mb-10 theme-transition">
+        <h1 className="text-3xl font-extrabold tracking-tight text-zinc-900 dark:text-white sm:text-4xl">
           {post.title}
         </h1>
         <div className="flex items-center gap-4 text-xs text-zinc-500 mt-4">
@@ -108,7 +108,7 @@ export default async function Post({ params }: { params: Params }) {
             <Calendar className="h-3.5 w-3.5" />
             {post.date}
           </span>
-          <span className="h-1 w-1 rounded-full bg-zinc-700"></span>
+          <span className="h-1 w-1 rounded-full bg-zinc-300 dark:bg-zinc-700"></span>
           <span className="flex items-center gap-1">
             <Clock className="h-3.5 w-3.5" />
             {post.readTime}
@@ -117,7 +117,7 @@ export default async function Post({ params }: { params: Params }) {
       </header>
 
       {/* Main Content */}
-      <div className="text-zinc-300 leading-relaxed space-y-6 text-base">
+      <div className="text-zinc-800 dark:text-zinc-300 leading-relaxed space-y-6 text-base theme-transition">
         {post.content}
       </div>
     </article>
