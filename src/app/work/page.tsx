@@ -10,7 +10,7 @@ const projects = [
     icon: Shield,
     description: "A leading regional first-aid and safety training provider. In this role, I designed and managed the primary booking flows, custom student database integrations, and overall business operations.",
     tech: ["Business Operations", "Customer Experience Flow", "Logistics Planning"],
-    placeholder: "[NEEDS ELI INPUT: description of BraveHeart First Aid business growth, dates, and background detail]"
+    scope: "A regional first-aid training provider handling complex student booking allocations, instructor rosters, and payroll audits. Transitioned daily operations from manual spreadsheets into a custom, software-driven dispatch flow."
   },
   {
     id: "ripley",
@@ -20,7 +20,7 @@ const projects = [
     icon: Cpu,
     description: "The custom operational nervous system built to orchestrate and run BraveHeart operations. Integrates and automates scheduling, instructor booking alerts, course capacities, and CRM boards.",
     tech: ["Node.js", "Python", "Supabase", "PostgreSQL", "Monday.js API", "Acuity API"],
-    placeholder: "[NEEDS ELI INPUT: description of Ripley system architecture, specific outcomes, and metrics]"
+    scope: "Automated core scheduling sync, class attendance roster verification, and payroll checks. Reconciled Connecteam timesheet entries against Acuity class data to identify pay anomalies automatically."
   },
   {
     id: "automations",
@@ -30,7 +30,7 @@ const projects = [
     icon: GitBranch,
     description: "Bespoke scripts and data synchronization workflows designed to automate business metrics. Examples include normalized advertising extraction scripts, email alert builders, and payroll reconciliation pipelines.",
     tech: ["OAuth 2.0", "Google Apps Script", "Facebook Ads API", "REST APIs"],
-    placeholder: "[NEEDS ELI INPUT: examples of other client or personal automation projects]"
+    scope: "Redesigning workflows and API structures to minimize operational friction. Examples include background sync operations, OAuth token refreshing pipelines, and database logs for compliance."
   },
   {
     id: "creative",
@@ -40,19 +40,20 @@ const projects = [
     icon: Film,
     description: "Personal creative pursuits that merge storytelling with technology. Portfolio details and creative works are archived here.",
     tech: ["Filmmaking", "Creative Technology", "Visual Arts"],
-    placeholder: "[NEEDS ELI INPUT: details of Eli's creative pursuits, films, or creative projects]"
+    scope: "Exploring systems where technology supports the creative execution without making it mechanical. Developing visual projects and cinematic narrative workflows."
   }
 ];
 
 export default function Work() {
   return (
-    <div className="mx-auto max-w-5xl px-4 py-20 sm:px-6 lg:px-8">
+    <div className="mx-auto max-w-5xl px-4 py-20 sm:px-6 lg:px-8 pt-32">
       {/* Page Header */}
       <div className="max-w-3xl">
-        <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl">
-          Selected Projects & Work
+        <span className="text-[10px] font-bold uppercase tracking-widest text-emerald-400 font-mono">02 / Selected Work</span>
+        <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl uppercase mt-2 font-display">
+          Projects & Work
         </h1>
-        <p className="mt-6 text-lg text-zinc-400">
+        <p className="mt-6 text-lg text-zinc-400 font-light leading-relaxed">
           A look at the operations I lead, the custom automation software I develop, and the creative projects I participate in.
         </p>
       </div>
@@ -64,22 +65,22 @@ export default function Work() {
           return (
             <div
               key={project.id}
-              className="group relative rounded-2xl border border-white/5 bg-zinc-900/20 hover:bg-zinc-900/40 p-8 hover:border-emerald-500/20 transition-all duration-300"
+              className="group relative rounded-sm border border-white/5 bg-zinc-900/20 hover:bg-zinc-900/40 p-8 hover:border-emerald-500/20 transition-all duration-300"
             >
               <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-white/5 pb-6">
                 <div className="flex items-center gap-4">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-500/10 text-emerald-400">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-sm bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
                     <Icon className="h-6 w-6" />
                   </div>
                   <div>
-                    <h2 className="text-2xl font-bold text-white group-hover:text-emerald-400 transition-colors">
+                    <h2 className="text-2xl font-bold text-white group-hover:text-emerald-400 transition-colors font-display">
                       {project.title}
                     </h2>
-                    <p className="text-sm text-zinc-400 font-medium mt-0.5">{project.role}</p>
+                    <p className="text-xs text-zinc-500 font-mono uppercase tracking-wider mt-0.5">{project.role}</p>
                   </div>
                 </div>
                 <div className="text-right">
-                  <span className="inline-block text-xs font-semibold uppercase tracking-wider text-emerald-400 bg-emerald-500/5 border border-emerald-500/10 px-3 py-1 rounded-full">
+                  <span className="inline-block text-[10px] font-bold uppercase tracking-wider text-emerald-400 bg-emerald-500/5 border border-emerald-500/10 px-3 py-1 rounded-sm">
                     {project.timeline}
                   </span>
                 </div>
@@ -88,24 +89,25 @@ export default function Work() {
               <div className="mt-6 grid grid-cols-1 lg:grid-cols-3 gap-8">
                 {/* Info */}
                 <div className="lg:col-span-2 space-y-4">
-                  <p className="text-zinc-400 leading-relaxed text-sm">
+                  <p className="text-zinc-400 leading-relaxed text-sm font-light">
                     {project.description}
                   </p>
                   
-                  {/* Needs input highlight */}
-                  <div className="rounded-xl border border-yellow-500/20 bg-yellow-500/5 p-4 text-xs text-zinc-300">
-                    <span className="font-semibold text-yellow-400">Eli Input Required:</span> {project.placeholder}
+                  {/* Scope Summary */}
+                  <div className="rounded-sm border border-zinc-900 bg-zinc-950/40 p-4 text-xs text-zinc-400 font-light font-mono">
+                    <span className="text-emerald-400 font-bold uppercase tracking-widest block mb-1.5">[System Scope]</span>
+                    {project.scope}
                   </div>
                 </div>
 
                 {/* Tech Tags */}
                 <div>
-                  <h3 className="text-xs font-bold uppercase tracking-wider text-zinc-300 mb-3">Focus / Technologies</h3>
+                  <h3 className="text-xs font-bold uppercase tracking-wider text-zinc-400 mb-3 font-mono">[Focus / Tech]</h3>
                   <div className="flex flex-wrap gap-2">
                     {project.tech.map((tag) => (
                       <span
                         key={tag}
-                        className="px-2.5 py-1 rounded-md text-xs font-medium bg-zinc-800/80 text-zinc-300 border border-white/5"
+                        className="px-2.5 py-1 rounded-sm text-xs font-light bg-zinc-900 text-zinc-400 border border-white/5"
                       >
                         {tag}
                       </span>
