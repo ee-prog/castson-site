@@ -6,8 +6,20 @@ import { ArrowRight, Cpu, Laptop, Settings, ChevronLeft, ChevronRight } from "lu
 
 const SLIDES = [
   {
-    id: "braveheart",
+    id: "ai-operations",
     index: "01",
+    eyebrow: "AI Systems Architect",
+    title: "AI Operating Models",
+    subtitle: "Orchestrating agentic workflows and practical AI execution.",
+    description: "Helping organizations move from isolated AI experiments toward structured, AI-enabled operating models—designing the data flows, human-in-the-loop controls, and orchestration layers needed to scale beyond pilots.",
+    link: "/contact",
+    accentColor: "from-emerald-500/10 via-zinc-950 to-zinc-950",
+    glowColor: "bg-emerald-500/5",
+    badge: "AI Architecture"
+  },
+  {
+    id: "braveheart",
+    index: "02",
     eyebrow: "Founder & Operator",
     title: "BraveHeart First Aid",
     subtitle: "Direct-to-consumer operations & course delivery infrastructure.",
@@ -19,7 +31,7 @@ const SLIDES = [
   },
   {
     id: "ripley",
-    index: "02",
+    index: "03",
     eyebrow: "Core System Architect",
     title: "Ripley / Autobot Engine",
     subtitle: "Custom data parser & database sync coordinator.",
@@ -28,18 +40,6 @@ const SLIDES = [
     accentColor: "from-emerald-500/10 via-zinc-950 to-zinc-950",
     glowColor: "bg-emerald-500/5",
     badge: "Backend Integrations"
-  },
-  {
-    id: "ai-operations",
-    index: "03",
-    eyebrow: "AI Systems Architect",
-    title: "AI Operating Models",
-    subtitle: "Orchestrating agentic workflows and practical AI execution.",
-    description: "Helping organizations move from isolated AI experiments toward structured, AI-enabled operating models—designing the data flows, human-in-the-loop controls, and orchestration layers needed to scale beyond pilots.",
-    link: "/contact",
-    accentColor: "from-emerald-500/10 via-zinc-950 to-zinc-950",
-    glowColor: "bg-emerald-500/5",
-    badge: "AI Architecture"
   }
 ];
 
