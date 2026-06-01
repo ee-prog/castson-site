@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { ArrowRight, Cpu, Laptop, Settings, Sparkles } from "lucide-react";
+import RipleyVisualizer from "@/components/ripley-visualizer";
 
 export default function Home() {
   return (
@@ -48,6 +49,19 @@ export default function Home() {
               </Link>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Ripley Automation Visualizer Section */}
+      <section className="py-20 border-b border-white/5 bg-zinc-950/25 relative">
+        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+          <div className="max-w-2xl mb-12">
+            <h2 className="text-2xl font-bold tracking-tight text-white sm:text-3xl">Ripley in Action</h2>
+            <p className="mt-4 text-zinc-400">
+              Select one of the trigger workflows below to simulate how the Ripley automation engine coordinates real-time data sync, database transactions, and dispatch notifications.
+            </p>
+          </div>
+          <RipleyVisualizer />
         </div>
       </section>
 
