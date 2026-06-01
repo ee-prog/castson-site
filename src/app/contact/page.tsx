@@ -26,7 +26,7 @@ export default function Contact() {
         <h1 className="text-4xl font-extrabold tracking-tight text-zinc-900 dark:text-white sm:text-5xl uppercase font-display">
           Get in Touch
         </h1>
-        <p className="mt-6 text-lg text-zinc-600 dark:text-zinc-400 font-light leading-relaxed">
+        <p className="mt-6 text-lg text-zinc-800 dark:text-zinc-300 font-light leading-relaxed">
           Have a project, system integration problem, or operational workflow challenge you want to discuss? Let&apos;s talk.
         </p>
       </div>
@@ -36,7 +36,7 @@ export default function Contact() {
         <div className="space-y-8 fade-up-element delay-100">
           <div>
             <h2 className="text-xl font-bold text-zinc-900 dark:text-white font-display uppercase">Direct Communication</h2>
-            <p className="mt-3 text-sm text-zinc-600 dark:text-zinc-400 font-light">
+            <p className="mt-3 text-sm text-zinc-800 dark:text-zinc-300 font-light">
               For systems advisory, custom integration projects, or speaking opportunities, reach out directly.
             </p>
           </div>
@@ -45,7 +45,7 @@ export default function Contact() {
             <div className="flex items-center gap-3 p-4 rounded-xl border border-zinc-200 dark:border-white/5 bg-zinc-100/50 dark:bg-zinc-900/20 theme-transition">
               <Mail className="h-5 w-5 text-emerald-600 dark:text-emerald-400" />
               <div>
-                <h3 className="text-xs font-semibold text-zinc-500 dark:text-zinc-400 uppercase tracking-wider">Email</h3>
+                <h3 className="text-xs font-semibold text-zinc-700 dark:text-zinc-450 uppercase tracking-wider">Email</h3>
                 <a href="mailto:ee@castson.com" className="text-sm font-semibold text-zinc-900 dark:text-white hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
                   ee@castson.com
                 </a>
@@ -55,7 +55,7 @@ export default function Contact() {
             <div className="flex items-center gap-3 p-4 rounded-xl border border-zinc-200 dark:border-white/5 bg-zinc-100/50 dark:bg-zinc-900/20 theme-transition">
               <MessageSquare className="h-5 w-5 text-emerald-600 dark:text-emerald-400" />
               <div>
-                <h3 className="text-xs font-semibold text-zinc-500 dark:text-zinc-400 uppercase tracking-wider">General Response Time</h3>
+                <h3 className="text-xs font-semibold text-zinc-700 dark:text-zinc-450 uppercase tracking-wider">General Response Time</h3>
                 <p className="text-sm font-semibold text-zinc-900 dark:text-white">24-48 hours</p>
               </div>
             </div>
