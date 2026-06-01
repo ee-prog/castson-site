@@ -24,13 +24,13 @@ const projects = [
   },
   {
     id: "automations",
-    title: "Selected Automation Integrations",
+    title: "AI & Automation Architecture",
     role: "Systems Consultant",
     timeline: "Ongoing",
     icon: GitBranch,
-    description: "Bespoke scripts and data synchronization workflows designed to automate business metrics. Examples include normalized advertising extraction scripts, email alert builders, and payroll reconciliation pipelines.",
-    tech: ["OAuth 2.0", "Google Apps Script", "Facebook Ads API", "REST APIs"],
-    scope: "Redesigning workflows and API structures to minimize operational friction. Examples include background sync operations, OAuth token refreshing pipelines, and database logs for compliance."
+    description: "Designing AI-enabled operating structures and workflow automation. Focused on integrating workflow redesigns, governance controls, operational data flows, and early agentic pipelines into service operations.",
+    tech: ["AI Architecture", "Agentic Pipelines", "OAuth 2.0", "REST APIs"],
+    scope: "Helping leaders turn AI opportunities into executable architectures. Setting up system governance, structured data flows, and clear ownership models for scaled AI adoption."
   },
   {
     id: "creative",

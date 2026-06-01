@@ -30,16 +30,16 @@ const SLIDES = [
     badge: "Backend Integrations"
   },
   {
-    id: "advisory",
+    id: "ai-operations",
     index: "03",
-    eyebrow: "Systems Practitioner",
-    title: "Workflow Engineering",
-    subtitle: "Bespoke automation pipelines & data reconciliation.",
-    description: "Providing advisory on OAuth integrations, payroll auditing, marketing extraction pipelines, and connecting API services for maximum operational velocity.",
+    eyebrow: "AI Systems Architect",
+    title: "AI Operating Models",
+    subtitle: "Orchestrating agentic workflows and practical AI execution.",
+    description: "Helping organizations move from isolated AI experiments toward structured, AI-enabled operating models—designing the data flows, human-in-the-loop controls, and orchestration layers needed to scale beyond pilots.",
     link: "/contact",
     accentColor: "from-emerald-500/10 via-zinc-950 to-zinc-950",
     glowColor: "bg-emerald-500/5",
-    badge: "API Advisory"
+    badge: "AI Architecture"
   }
 ];
 
@@ -240,13 +240,13 @@ export default function Home() {
                   <div className="text-emerald-400 group-hover:scale-110 transition-transform duration-300 w-8 h-8 flex items-center">
                     <Laptop className="h-5 w-5" />
                   </div>
-                  <h3 className="text-sm font-bold text-white uppercase tracking-wider mt-4">Business Ops</h3>
+                  <h3 className="text-sm font-bold text-white uppercase tracking-wider mt-4">AI Operating Models</h3>
                   <p className="mt-2 text-xs text-zinc-400 leading-relaxed font-light">
-                    Optimizing instructor logistics, scheduling grids, bi-weekly payroll runs, and lead funnels.
+                    Transitioning companies from isolated AI pilots to executable, structured agentic systems with clear human control points.
                   </p>
                 </div>
                 <div className="mt-8 text-[10px] font-mono text-zinc-600 group-hover:text-emerald-400 transition-colors">
-                  [Scaling Loops]
+                  [Agentic Pipelines]
                 </div>
               </div>
 

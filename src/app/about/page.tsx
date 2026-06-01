@@ -42,12 +42,22 @@ export default function About() {
           </section>
 
           <section className="space-y-4">
+            <h2 className="text-xl font-bold uppercase tracking-wider text-white font-display">Practical AI Operating Models</h2>
+            <p className="text-zinc-400 leading-relaxed font-light text-sm">
+              Instead of focusing on isolated AI experiments, I help leaders design and implement structured, AI-enabled operating models. I build the operational layer around AI tools: detailing where AI fits into the work, what needs to be orchestrated, what controls are needed, and how the organization scales beyond pilots.
+            </p>
+            <p className="text-zinc-400 leading-relaxed font-light text-sm">
+              This includes mapping out data flows, identifying human-in-the-loop governance points, and establishing early agentic workflows that turn a portfolio of opportunities into executable change.
+            </p>
+          </section>
+
+          <section className="space-y-4">
             <h2 className="text-xl font-bold uppercase tracking-wider text-white font-display">Protecting the Magic</h2>
             <p className="text-zinc-400 leading-relaxed font-light text-sm">
               I care about velocity, but not at the expense of what makes a business special. The goal is not to make a company more mechanical. It is to make execution strong enough to protect the magic.
             </p>
             <p className="text-zinc-400 leading-relaxed font-light text-sm">
-              Through advisory, system integrations, and development of custom dispatch platforms like **Ripley**, I design operational models where technology exists solely to liberate creative and customer-facing teams.
+              Through advisory, system integrations, and development of custom dispatch platforms like **Ripley**, I design operational models where technology exists solely to liberate creative, operational, and customer-facing teams.
             </p>
           </section>
 
@@ -63,7 +73,7 @@ export default function About() {
                 <Monitor className="h-5 w-5 text-emerald-400 shrink-0" />
                 <div>
                   <h4 className="text-xs font-bold text-white uppercase tracking-wider">Identity Lanes</h4>
-                  <p className="text-xs text-zinc-500 mt-1 font-light">CEO, Operations Leader, Systems Developer</p>
+                  <p className="text-xs text-zinc-500 mt-1 font-light">CEO, Operations Leader, AI Systems Developer</p>
                 </div>
               </div>
 
@@ -71,7 +81,7 @@ export default function About() {
                 <Award className="h-5 w-5 text-emerald-400 shrink-0" />
                 <div>
                   <h4 className="text-xs font-bold text-white uppercase tracking-wider">Core Focus</h4>
-                  <p className="text-xs text-zinc-500 mt-1 font-light">TypeScript / Next.js / Python / PostgreSQL / Supabase / Workflow Audits</p>
+                  <p className="text-xs text-zinc-500 mt-1 font-light">TypeScript / Python / PostgreSQL / Supabase / AI Architecture & Agentic Workflows</p>
                 </div>
               </div>
 
