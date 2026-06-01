@@ -20,13 +20,13 @@ export default function Contact() {
   };
 
   return (
-    <div className="mx-auto max-w-5xl px-4 py-20 sm:px-6 lg:px-8">
+    <div data-theme="light" className="mx-auto max-w-5xl px-4 py-20 sm:px-6 lg:px-8 pt-32">
       {/* Page Header */}
       <div className="max-w-3xl">
-        <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl">
+        <h1 className="text-4xl font-extrabold tracking-tight text-zinc-900 dark:text-white sm:text-5xl">
           Get in Touch
         </h1>
-        <p className="mt-6 text-lg text-zinc-400">
+        <p className="mt-6 text-lg text-zinc-600 dark:text-zinc-400">
           Have a project, system integration problem, or operational workflow challenge you want to discuss? Let&apos;s talk.
         </p>
       </div>
@@ -35,35 +35,35 @@ export default function Contact() {
         {/* Left Column: Direct Info */}
         <div className="space-y-8">
           <div>
-            <h2 className="text-xl font-bold text-white">Direct Communication</h2>
-            <p className="mt-3 text-sm text-zinc-400">
+            <h2 className="text-xl font-bold text-zinc-900 dark:text-white">Direct Communication</h2>
+            <p className="mt-3 text-sm text-zinc-600 dark:text-zinc-400">
               For systems advisory, custom integration projects, or speaking opportunities, reach out directly.
             </p>
           </div>
 
           <div className="space-y-4">
-            <div className="flex items-center gap-3 p-4 rounded-xl border border-white/5 bg-zinc-900/20">
-              <Mail className="h-5 w-5 text-emerald-400" />
+            <div className="flex items-center gap-3 p-4 rounded-xl border border-zinc-200 dark:border-white/5 bg-zinc-100/50 dark:bg-zinc-900/20 theme-transition">
+              <Mail className="h-5 w-5 text-emerald-600 dark:text-emerald-400" />
               <div>
-                <h3 className="text-xs font-semibold text-zinc-400 uppercase tracking-wider">Email</h3>
-                <a href="mailto:ee@castson.com" className="text-sm font-semibold text-white hover:text-emerald-400 transition-colors">
+                <h3 className="text-xs font-semibold text-zinc-500 dark:text-zinc-400 uppercase tracking-wider">Email</h3>
+                <a href="mailto:ee@castson.com" className="text-sm font-semibold text-zinc-900 dark:text-white hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
                   ee@castson.com
                 </a>
               </div>
             </div>
             
-            <div className="flex items-center gap-3 p-4 rounded-xl border border-white/5 bg-zinc-900/20">
-              <MessageSquare className="h-5 w-5 text-emerald-400" />
+            <div className="flex items-center gap-3 p-4 rounded-xl border border-zinc-200 dark:border-white/5 bg-zinc-100/50 dark:bg-zinc-900/20 theme-transition">
+              <MessageSquare className="h-5 w-5 text-emerald-600 dark:text-emerald-400" />
               <div>
-                <h3 className="text-xs font-semibold text-zinc-400 uppercase tracking-wider">General Response Time</h3>
-                <p className="text-sm font-semibold text-white">24-48 hours</p>
+                <h3 className="text-xs font-semibold text-zinc-500 dark:text-zinc-400 uppercase tracking-wider">General Response Time</h3>
+                <p className="text-sm font-semibold text-zinc-900 dark:text-white">24-48 hours</p>
               </div>
             </div>
           </div>
 
           {/* Hard Boundary Disclaimer */}
-          <div className="rounded-xl border border-red-500/10 bg-red-500/5 p-4 text-xs text-zinc-400 space-y-2">
-            <span className="font-semibold text-red-400 block uppercase tracking-wider">BraveHeart Support Boundary</span>
+          <div className="rounded-xl border border-red-500/20 bg-red-500/5 p-4 text-xs text-red-950 dark:text-zinc-400 space-y-2 theme-transition">
+            <span className="font-semibold text-red-600 dark:text-red-400 block uppercase tracking-wider">BraveHeart Support Boundary</span>
             <p>
               This is Ripley&apos;s advisory contact surface. If you are a student or client looking for course bookings, pricing adjustments, compliance documentation, or BraveHeart First Aid support, please route your query through the official BraveHeart First Aid channel.
             </p>
@@ -73,26 +73,26 @@ export default function Contact() {
         {/* Right Column: Contact Form */}
         <div className="lg:col-span-2">
           {submitted ? (
-            <div className="rounded-2xl border border-emerald-500/20 bg-emerald-500/5 p-8 text-center space-y-4">
-              <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-emerald-500/10 text-emerald-400">
+            <div className="rounded-2xl border border-emerald-500/20 bg-emerald-500/5 p-8 text-center space-y-4 theme-transition">
+              <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400">
                 <Send className="h-6 w-6" />
               </div>
-              <h2 className="text-xl font-bold text-white">Message Sent Successfully!</h2>
-              <p className="text-sm text-zinc-400 max-w-sm mx-auto">
+              <h2 className="text-xl font-bold text-zinc-900 dark:text-white">Message Sent Successfully!</h2>
+              <p className="text-sm text-zinc-600 dark:text-zinc-400 max-w-sm mx-auto">
                 Thank you for reaching out. We will review your message and get back to you shortly.
               </p>
               <button
                 onClick={() => setSubmitted(false)}
-                className="mt-4 text-xs font-semibold text-emerald-400 hover:underline"
+                className="mt-4 text-xs font-semibold text-emerald-600 dark:text-emerald-400 hover:underline"
               >
                 Send another message
               </button>
             </div>
           ) : (
-            <form onSubmit={handleSubmit} className="rounded-2xl border border-white/5 bg-zinc-900/10 p-8 space-y-6">
+            <form onSubmit={handleSubmit} className="rounded-2xl border border-zinc-200 dark:border-white/5 bg-zinc-100/30 dark:bg-zinc-900/10 p-8 space-y-6 theme-transition">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="name" className="block text-xs font-bold uppercase tracking-wider text-zinc-400 mb-2">
+                  <label htmlFor="name" className="block text-xs font-bold uppercase tracking-wider text-zinc-800 dark:text-zinc-400 mb-2">
                     Name
                   </label>
                   <input
@@ -101,12 +101,12 @@ export default function Contact() {
                     required
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="w-full rounded-lg border border-white/10 bg-zinc-950 px-4 py-3 text-sm text-white placeholder-zinc-600 focus:border-emerald-500 focus:outline-none transition-colors"
+                    className="w-full rounded-lg border border-zinc-200 dark:border-white/10 bg-white dark:bg-zinc-950 px-4 py-3 text-sm text-zinc-900 dark:text-white placeholder-zinc-400 dark:placeholder-zinc-600 focus:border-emerald-600 dark:focus:border-emerald-500 focus:outline-none transition-colors"
                     placeholder="Jane Doe"
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-xs font-bold uppercase tracking-wider text-zinc-400 mb-2">
+                  <label htmlFor="email" className="block text-xs font-bold uppercase tracking-wider text-zinc-800 dark:text-zinc-400 mb-2">
                     Email Address
                   </label>
                   <input
@@ -115,14 +115,14 @@ export default function Contact() {
                     required
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="w-full rounded-lg border border-white/10 bg-zinc-950 px-4 py-3 text-sm text-white placeholder-zinc-600 focus:border-emerald-500 focus:outline-none transition-colors"
+                    className="w-full rounded-lg border border-zinc-200 dark:border-white/10 bg-white dark:bg-zinc-950 px-4 py-3 text-sm text-zinc-900 dark:text-white placeholder-zinc-400 dark:placeholder-zinc-600 focus:border-emerald-600 dark:focus:border-emerald-500 focus:outline-none transition-colors"
                     placeholder="jane@example.com"
                   />
                 </div>
               </div>
 
               <div>
-                <label htmlFor="subject" className="block text-xs font-bold uppercase tracking-wider text-zinc-400 mb-2">
+                <label htmlFor="subject" className="block text-xs font-bold uppercase tracking-wider text-zinc-800 dark:text-zinc-400 mb-2">
                   Subject
                 </label>
                 <input
@@ -131,13 +131,13 @@ export default function Contact() {
                   required
                   value={formData.subject}
                   onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                  className="w-full rounded-lg border border-white/10 bg-zinc-950 px-4 py-3 text-sm text-white placeholder-zinc-600 focus:border-emerald-500 focus:outline-none transition-colors"
+                  className="w-full rounded-lg border border-zinc-200 dark:border-white/10 bg-white dark:bg-zinc-950 px-4 py-3 text-sm text-zinc-900 dark:text-white placeholder-zinc-400 dark:placeholder-zinc-600 focus:border-emerald-600 dark:focus:border-emerald-500 focus:outline-none transition-colors"
                   placeholder="System Integration Advisory / Speaking"
                 />
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-xs font-bold uppercase tracking-wider text-zinc-400 mb-2">
+                <label htmlFor="message" className="block text-xs font-bold uppercase tracking-wider text-zinc-800 dark:text-zinc-400 mb-2">
                   Message
                 </label>
                 <textarea
@@ -146,7 +146,7 @@ export default function Contact() {
                   rows={5}
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  className="w-full rounded-lg border border-white/10 bg-zinc-950 px-4 py-3 text-sm text-white placeholder-zinc-600 focus:border-emerald-500 focus:outline-none transition-colors resize-none"
+                  className="w-full rounded-lg border border-zinc-200 dark:border-white/10 bg-white dark:bg-zinc-950 px-4 py-3 text-sm text-zinc-900 dark:text-white placeholder-zinc-400 dark:placeholder-zinc-600 focus:border-emerald-600 dark:focus:border-emerald-500 focus:outline-none transition-colors resize-none"
                   placeholder="Tell us about your business workflows or systems..."
                 />
               </div>
@@ -154,7 +154,7 @@ export default function Contact() {
               <div className="pt-2">
                 <button
                   type="submit"
-                  className="group flex w-full items-center justify-center gap-2 rounded-lg bg-emerald-500 hover:bg-emerald-400 py-3 text-sm font-semibold text-zinc-950 transition-colors shadow-lg shadow-emerald-500/10"
+                  className="group flex w-full items-center justify-center gap-2 rounded-lg bg-zinc-950 dark:bg-emerald-500 hover:bg-zinc-800 dark:hover:bg-emerald-400 py-3 text-sm font-semibold text-white dark:text-zinc-950 transition-colors shadow-lg shadow-emerald-500/10"
                 >
                   Send Message
                   <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />

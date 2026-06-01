@@ -46,14 +46,14 @@ const projects = [
 
 export default function Work() {
   return (
-    <div data-theme="dark" className="mx-auto max-w-5xl px-4 py-20 sm:px-6 lg:px-8 pt-32">
+    <div data-theme="light" className="mx-auto max-w-5xl px-4 py-20 sm:px-6 lg:px-8 pt-32">
       {/* Page Header */}
       <div className="max-w-3xl">
-        <span className="text-[10px] font-bold uppercase tracking-widest text-emerald-400 font-mono">02 / Selected Work</span>
-        <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl uppercase mt-2 font-display">
+        <span className="text-[10px] font-bold uppercase tracking-widest text-emerald-600 dark:text-emerald-400 font-mono">02 / Selected Work</span>
+        <h1 className="text-4xl font-extrabold tracking-tight text-zinc-900 dark:text-white sm:text-5xl uppercase mt-2 font-display">
           Projects & Work
         </h1>
-        <p className="mt-6 text-lg text-zinc-400 font-light leading-relaxed">
+        <p className="mt-6 text-lg text-zinc-600 dark:text-zinc-400 font-light leading-relaxed">
           A look at the operations we design, the custom automation architecture we develop, and the client systems we orchestrate.
         </p>
       </div>
@@ -65,22 +65,22 @@ export default function Work() {
           return (
             <div
               key={project.id}
-              className="group relative rounded-sm border border-white/5 bg-zinc-900/20 hover:bg-zinc-900/40 p-8 hover:border-emerald-500/20 transition-all duration-300"
+              className="group relative rounded-sm border border-zinc-200 dark:border-white/5 bg-zinc-50 dark:bg-zinc-900/20 hover:bg-zinc-100 dark:hover:bg-zinc-900/40 p-8 hover:border-emerald-500/20 dark:hover:border-emerald-500/20 transition-all duration-300 theme-transition"
             >
-              <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-white/5 pb-6">
+              <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-zinc-200 dark:border-white/5 pb-6 theme-transition">
                 <div className="flex items-center gap-4">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-sm bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-sm bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
                     <Icon className="h-6 w-6" />
                   </div>
                   <div>
-                    <h2 className="text-2xl font-bold text-white group-hover:text-emerald-400 transition-colors font-display">
+                    <h2 className="text-2xl font-bold text-zinc-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors font-display">
                       {project.title}
                     </h2>
                     <p className="text-xs text-zinc-500 font-mono uppercase tracking-wider mt-0.5">{project.role}</p>
                   </div>
                 </div>
                 <div className="text-right">
-                  <span className="inline-block text-[10px] font-bold uppercase tracking-wider text-emerald-400 bg-emerald-500/5 border border-emerald-500/10 px-3 py-1 rounded-sm">
+                  <span className="inline-block text-[10px] font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400 bg-emerald-500/5 border border-emerald-500/20 px-3 py-1 rounded-sm">
                     {project.timeline}
                   </span>
                 </div>
@@ -89,25 +89,25 @@ export default function Work() {
               <div className="mt-6 grid grid-cols-1 lg:grid-cols-3 gap-8">
                 {/* Info */}
                 <div className="lg:col-span-2 space-y-4">
-                  <p className="text-zinc-400 leading-relaxed text-sm font-light">
+                  <p className="text-zinc-700 dark:text-zinc-400 leading-relaxed text-sm font-light">
                     {project.description}
                   </p>
                   
                   {/* Scope Summary */}
-                  <div className="rounded-sm border border-zinc-900 bg-zinc-950/40 p-4 text-xs text-zinc-400 font-light font-mono">
-                    <span className="text-emerald-400 font-bold uppercase tracking-widest block mb-1.5">[System Scope]</span>
+                  <div className="rounded-sm border border-zinc-200 dark:border-zinc-900 bg-zinc-100 dark:bg-zinc-950/40 p-4 text-xs text-zinc-650 dark:text-zinc-400 font-light font-mono theme-transition">
+                    <span className="text-emerald-600 dark:text-emerald-400 font-bold uppercase tracking-widest block mb-1.5">[System Scope]</span>
                     {project.scope}
                   </div>
                 </div>
 
                 {/* Tech Tags */}
                 <div>
-                  <h3 className="text-xs font-bold uppercase tracking-wider text-zinc-400 mb-3 font-mono">[Focus / Tech]</h3>
+                  <h3 className="text-xs font-bold uppercase tracking-wider text-zinc-800 dark:text-zinc-400 mb-3 font-mono">[Focus / Tech]</h3>
                   <div className="flex flex-wrap gap-2">
                     {project.tech.map((tag) => (
                       <span
                         key={tag}
-                        className="px-2.5 py-1 rounded-sm text-xs font-light bg-zinc-900 text-zinc-400 border border-white/5"
+                        className="px-2.5 py-1 rounded-sm text-xs font-light bg-zinc-100 dark:bg-zinc-900 text-zinc-600 dark:text-zinc-400 border border-zinc-200 dark:border-white/5 theme-transition"
                       >
                         {tag}
                       </span>
