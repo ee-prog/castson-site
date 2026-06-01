@@ -13,8 +13,8 @@ const SLIDES = [
     subtitle: "Direct-to-consumer operations & course delivery infrastructure.",
     description: "Architected the booking logic, Acuity schedule integrations, customer rosters, and automated alerts that transitioned regional operations into a software-driven dispatch flow.",
     link: "/work",
-    accentColor: "from-emerald-500/20 via-zinc-950 to-zinc-950",
-    glowColor: "bg-emerald-500/10",
+    accentColor: "from-emerald-500/10 via-zinc-950 to-zinc-950",
+    glowColor: "bg-emerald-500/5",
     badge: "Operations & Scaling"
   },
   {
@@ -25,8 +25,8 @@ const SLIDES = [
     subtitle: "Custom data parser & database sync coordinator.",
     description: "Built event-driven sync scripts and PostgreSQL triggers connecting timesheets, CRM leads, and course capacities into a single state model.",
     link: "/work",
-    accentColor: "from-blue-500/20 via-zinc-950 to-zinc-950",
-    glowColor: "bg-blue-500/10",
+    accentColor: "from-emerald-500/10 via-zinc-950 to-zinc-950",
+    glowColor: "bg-emerald-500/5",
     badge: "Backend Integrations"
   },
   {
@@ -37,8 +37,8 @@ const SLIDES = [
     subtitle: "Bespoke automation pipelines & data reconciliation.",
     description: "Providing advisory on OAuth integrations, payroll auditing, marketing extraction pipelines, and connecting API services for maximum operational velocity.",
     link: "/contact",
-    accentColor: "from-purple-500/20 via-zinc-950 to-zinc-950",
-    glowColor: "bg-purple-500/10",
+    accentColor: "from-emerald-500/10 via-zinc-950 to-zinc-950",
+    glowColor: "bg-emerald-500/5",
     badge: "API Advisory"
   }
 ];
@@ -67,7 +67,7 @@ export default function Home() {
   const activeSlide = SLIDES[currentSlide];
 
   return (
-    <div className="relative w-full min-h-screen bg-[#050505] overflow-hidden flex flex-col pt-20">
+    <div className="relative w-full min-h-screen bg-zinc-950 overflow-hidden flex flex-col pt-20">
       
       {/* 1. Structural Grid Lines */}
       <div className="absolute inset-y-0 inset-x-0 mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 pointer-events-none z-10 flex justify-between">
@@ -256,7 +256,7 @@ export default function Home() {
       </section>
 
       {/* 4. Dynamic Call to Action */}
-      <section className="py-32 bg-[#060608] relative">
+      <section className="py-32 bg-zinc-950/40 border-t border-white/[0.03] relative">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 text-center relative z-20">
           <span className="text-[10px] font-bold uppercase tracking-widest text-emerald-400 font-mono">02 / Advisory</span>
           <h2 className="text-4xl sm:text-5xl font-extrabold tracking-tighter text-white uppercase mt-4 mb-6 font-display">
