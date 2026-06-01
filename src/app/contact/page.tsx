@@ -65,7 +65,7 @@ export default function Contact() {
           <div className="rounded-xl border border-red-500/10 bg-red-500/5 p-4 text-xs text-zinc-400 space-y-2">
             <span className="font-semibold text-red-400 block uppercase tracking-wider">BraveHeart Support Boundary</span>
             <p>
-              This is Eliasson&apos;s advisory contact surface. If you are a student or client looking for course bookings, pricing adjustments, compliance documentation, or BraveHeart First Aid support, please route your query through the official BraveHeart First Aid channel.
+              This is Ripley&apos;s advisory contact surface. If you are a student or client looking for course bookings, pricing adjustments, compliance documentation, or BraveHeart First Aid support, please route your query through the official BraveHeart First Aid channel.
             </p>
           </div>
         </div>

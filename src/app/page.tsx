@@ -159,7 +159,7 @@ export default function Home() {
             
             {/* Quick status */}
             <div className="text-[10px] font-mono text-zinc-500">
-              [ Eliasson — Systems & AI Operations ]
+              [ Ripley — Systems & AI Operations ]
             </div>
 
             {/* Arrow keys */}

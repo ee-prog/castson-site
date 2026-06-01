@@ -18,12 +18,12 @@ const raleway = Raleway({
 
 export const metadata: Metadata = {
   title: {
-    default: "Eliasson | Systems & AI Operations",
-    template: "%s | Eliasson",
+    default: "Ripley | Systems & AI Operations",
+    template: "%s | Ripley",
   },
-  description: "Eliasson is an advisory and operations practice specializing in practical AI-enabled operating models, operational data flows, and agentic workflows.",
+  description: "Ripley is an advisory and operations practice specializing in practical AI-enabled operating models, operational data flows, and agentic workflows.",
   keywords: [
-    "Eliasson",
+    "Ripley",
     "Systems & AI Operations",
     "AI Operating Models",
     "Agentic Workflows",
@@ -32,22 +32,22 @@ export const metadata: Metadata = {
     "Operations Design",
     "Ripley Automation"
   ],
-  authors: [{ name: "Eliasson", url: "https://eliasson.co" }],
-  creator: "Eliasson",
-  metadataBase: new URL("https://eliasson.co"),
+  authors: [{ name: "Ripley", url: "https://ripley.co" }],
+  creator: "Ripley",
+  metadataBase: new URL("https://ripley.co"),
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://eliasson.co",
-    title: "Eliasson | Systems & AI Operations",
-    description: "Eliasson is an advisory and operations practice specializing in practical AI-enabled operating models, operational data flows, and agentic workflows.",
-    siteName: "Eliasson",
+    url: "https://ripley.co",
+    title: "Ripley | Systems & AI Operations",
+    description: "Ripley is an advisory and operations practice specializing in practical AI-enabled operating models, operational data flows, and agentic workflows.",
+    siteName: "Ripley",
     // [NEEDS ELI INPUT: Open Graph image asset path if available, e.g. /og-image.png. Marked as missing for now.]
   },
   twitter: {
     card: "summary_large_image",
-    title: "Eliasson | Systems & AI Operations",
-    description: "Eliasson is an advisory and operations practice specializing in practical AI-enabled operating models, operational data flows, and agentic workflows.",
+    title: "Ripley | Systems & AI Operations",
+    description: "Ripley is an advisory and operations practice specializing in practical AI-enabled operating models, operational data flows, and agentic workflows.",
   },
 };
 

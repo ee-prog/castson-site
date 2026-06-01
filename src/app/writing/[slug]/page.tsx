@@ -53,7 +53,7 @@ const postsContent = {
         
         <h3 className="text-xl font-bold text-white mt-8 mb-4">Enter the Ripley Dashboard</h3>
         <p>
-          To solve this, Eliasson designed and developed <strong>Ripley</strong> (the internal Autobot system). Built with a combination of Python server tasks, Node.js scripts, and a Supabase PostgreSQL backend, Ripley acts as the automated dispatch and operational coordinator.
+          To solve this, we designed and developed <strong>Ripley</strong> (the internal Autobot system). Built with a combination of Python server tasks, Node.js scripts, and a Supabase PostgreSQL backend, Ripley acts as the automated dispatch and operational coordinator.
         </p>
         <p>
           Here is how the core pipeline operates:
