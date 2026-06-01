@@ -46,7 +46,7 @@ const projects = [
 
 export default function Work() {
   return (
-    <div className="mx-auto max-w-5xl px-4 py-20 sm:px-6 lg:px-8 pt-32">
+    <div data-theme="dark" className="mx-auto max-w-5xl px-4 py-20 sm:px-6 lg:px-8 pt-32">
       {/* Page Header */}
       <div className="max-w-3xl">
         <span className="text-[10px] font-bold uppercase tracking-widest text-emerald-400 font-mono">02 / Selected Work</span>

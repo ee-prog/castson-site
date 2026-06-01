@@ -67,7 +67,7 @@ export default function Home() {
   const activeSlide = SLIDES[currentSlide];
 
   return (
-    <div className="relative w-full min-h-screen bg-zinc-950 overflow-hidden flex flex-col pt-20">
+    <div className="relative w-full min-h-screen bg-transparent overflow-hidden flex flex-col pt-20">
       
       {/* 1. Structural Grid Lines */}
       <div className="absolute inset-y-0 inset-x-0 mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 pointer-events-none z-10 flex justify-between">
@@ -78,7 +78,7 @@ export default function Home() {
       </div>
 
       {/* 2. Fullscreen Showcase Slideshow (Hero) */}
-      <section className="relative h-[80vh] sm:h-[85vh] min-h-[500px] border-b border-white/[0.03] flex items-center">
+      <section data-theme="dark" className="relative h-[80vh] sm:h-[85vh] min-h-[500px] border-b border-zinc-200/10 dark:border-white/[0.03] flex items-center theme-transition">
         {/* Glowing background gradient that updates depending on slide */}
         <div className={`absolute inset-0 bg-gradient-to-br ${activeSlide.accentColor} transition-all duration-1000 ease-in-out -z-10`} />
         
@@ -188,64 +188,64 @@ export default function Home() {
       </section>
 
       {/* 3. Capabilities Section */}
-      <section className="py-24 border-b border-white/[0.03] bg-[#070707]/30">
+      <section data-theme="light" className="py-24 border-y border-zinc-200/10 dark:border-white/[0.03] bg-background theme-transition">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 relative z-20">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-8">
             <div className="lg:pr-8">
-              <span className="text-[10px] font-bold uppercase tracking-widest text-emerald-400 font-mono">01 / Capabilities</span>
-              <h2 className="text-2xl font-bold tracking-tight text-white uppercase mt-2 font-display">What We Do</h2>
-              <p className="mt-4 text-xs sm:text-sm text-zinc-400 leading-relaxed font-light">
+              <span className="text-[10px] font-bold uppercase tracking-widest text-emerald-500 font-mono">01 / Capabilities</span>
+              <h2 className="text-2xl font-bold tracking-tight text-zinc-900 dark:text-white uppercase mt-2 font-display">What We Do</h2>
+              <p className="mt-4 text-xs sm:text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed font-light">
                 We map complex manual workflows into reliable, automated logic. We bridge the gap between business operations and technical software engineering.
               </p>
             </div>
 
             {/* Capabilities grid lines */}
-            <div className="lg:col-span-2 grid grid-cols-1 md:grid-cols-3 border border-white/[0.03] bg-zinc-950/20 rounded-sm overflow-hidden divide-y md:divide-y-0 md:divide-x divide-white/[0.03]">
+            <div className="lg:col-span-2 grid grid-cols-1 md:grid-cols-3 border border-zinc-200 dark:border-white/[0.03] bg-zinc-50 dark:bg-zinc-950/20 rounded-sm overflow-hidden divide-y md:divide-y-0 md:divide-x divide-zinc-200 dark:divide-white/[0.03] theme-transition">
               
               {/* Card 1 */}
-              <div className="p-6 flex flex-col justify-between hover:bg-white/[0.01] transition-colors duration-300 group">
+              <div className="p-6 flex flex-col justify-between hover:bg-zinc-100/50 dark:hover:bg-white/[0.01] transition-colors duration-300 group">
                 <div>
-                  <div className="text-emerald-400 group-hover:scale-110 transition-transform duration-300 w-8 h-8 flex items-center">
+                  <div className="text-emerald-500 group-hover:scale-110 transition-transform duration-300 w-8 h-8 flex items-center">
                     <Cpu className="h-5 w-5" />
                   </div>
-                  <h3 className="text-sm font-bold text-white uppercase tracking-wider mt-4">System Integration</h3>
-                  <p className="mt-2 text-xs text-zinc-400 leading-relaxed font-light">
+                  <h3 className="text-sm font-bold text-zinc-900 dark:text-white uppercase tracking-wider mt-4">System Integration</h3>
+                  <p className="mt-2 text-xs text-zinc-600 dark:text-zinc-400 leading-relaxed font-light">
                     Connecting CRM boards, booking engines, schedules, and custom APIs into a unified ledger.
                   </p>
                 </div>
-                <div className="mt-8 text-[10px] font-mono text-zinc-600 group-hover:text-emerald-400 transition-colors">
+                <div className="mt-8 text-[10px] font-mono text-zinc-500 dark:text-zinc-600 group-hover:text-emerald-500 transition-colors">
                   [APIs & Webhooks]
                 </div>
               </div>
 
               {/* Card 2 */}
-              <div className="p-6 flex flex-col justify-between hover:bg-white/[0.01] transition-colors duration-300 group">
+              <div className="p-6 flex flex-col justify-between hover:bg-zinc-100/50 dark:hover:bg-white/[0.01] transition-colors duration-300 group">
                 <div>
-                  <div className="text-emerald-400 group-hover:scale-110 transition-transform duration-300 w-8 h-8 flex items-center">
+                  <div className="text-emerald-500 group-hover:scale-110 transition-transform duration-300 w-8 h-8 flex items-center">
                     <Settings className="h-5 w-5" />
                   </div>
-                  <h3 className="text-sm font-bold text-white uppercase tracking-wider mt-4">Workflow Automation</h3>
-                  <p className="mt-2 text-xs text-zinc-400 leading-relaxed font-light">
+                  <h3 className="text-sm font-bold text-zinc-900 dark:text-white uppercase tracking-wider mt-4">Workflow Automation</h3>
+                  <p className="mt-2 text-xs text-zinc-600 dark:text-zinc-400 leading-relaxed font-light">
                     Designing event-driven background scripts, automated alerts, and timesheet reconcilers.
                   </p>
                 </div>
-                <div className="mt-8 text-[10px] font-mono text-zinc-600 group-hover:text-emerald-400 transition-colors">
+                <div className="mt-8 text-[10px] font-mono text-zinc-500 dark:text-zinc-600 group-hover:text-emerald-500 transition-colors">
                   [Python / Node.js]
                 </div>
               </div>
 
               {/* Card 3 */}
-              <div className="p-6 flex flex-col justify-between hover:bg-white/[0.01] transition-colors duration-300 group">
+              <div className="p-6 flex flex-col justify-between hover:bg-zinc-100/50 dark:hover:bg-white/[0.01] transition-colors duration-300 group">
                 <div>
-                  <div className="text-emerald-400 group-hover:scale-110 transition-transform duration-300 w-8 h-8 flex items-center">
+                  <div className="text-emerald-500 group-hover:scale-110 transition-transform duration-300 w-8 h-8 flex items-center">
                     <Laptop className="h-5 w-5" />
                   </div>
-                  <h3 className="text-sm font-bold text-white uppercase tracking-wider mt-4">AI Operating Models</h3>
-                  <p className="mt-2 text-xs text-zinc-400 leading-relaxed font-light">
+                  <h3 className="text-sm font-bold text-zinc-900 dark:text-white uppercase tracking-wider mt-4">AI Operating Models</h3>
+                  <p className="mt-2 text-xs text-zinc-600 dark:text-zinc-400 leading-relaxed font-light">
                     Transitioning companies from isolated AI pilots to executable, structured agentic systems with clear human control points.
                   </p>
                 </div>
-                <div className="mt-8 text-[10px] font-mono text-zinc-600 group-hover:text-emerald-400 transition-colors">
+                <div className="mt-8 text-[10px] font-mono text-zinc-500 dark:text-zinc-600 group-hover:text-emerald-500 transition-colors">
                   [Agentic Pipelines]
                 </div>
               </div>
@@ -256,7 +256,7 @@ export default function Home() {
       </section>
 
       {/* 4. Dynamic Call to Action */}
-      <section className="py-32 bg-zinc-950/40 border-t border-white/[0.03] relative">
+      <section data-theme="dark" className="py-32 bg-zinc-950/40 border-t border-zinc-200/10 dark:border-white/[0.03] relative theme-transition">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 text-center relative z-20">
           <span className="text-[10px] font-bold uppercase tracking-widest text-emerald-400 font-mono">02 / Advisory</span>
           <h2 className="text-4xl sm:text-5xl font-extrabold tracking-tighter text-white uppercase mt-4 mb-6 font-display">

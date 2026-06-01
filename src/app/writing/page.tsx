@@ -21,7 +21,7 @@ export const posts = [
 
 export default function Writing() {
   return (
-    <div className="mx-auto max-w-5xl px-4 py-20 sm:px-6 lg:px-8">
+    <div data-theme="dark" className="mx-auto max-w-5xl px-4 py-20 sm:px-6 lg:px-8">
       {/* Page Header */}
       <div className="max-w-3xl">
         <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl">

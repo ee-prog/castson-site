@@ -18,15 +18,18 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [hoveredIdx, setHoveredIdx] = useState<number | null>(null);
 
-  // Disable body scroll when menu is open
+  // Disable body scroll when menu is open and toggle menu-open class
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = "hidden";
+      document.documentElement.classList.add("menu-open");
     } else {
       document.body.style.overflow = "unset";
+      document.documentElement.classList.remove("menu-open");
     }
     return () => {
       document.body.style.overflow = "unset";
+      document.documentElement.classList.remove("menu-open");
     };
   }, [isOpen]);
 
