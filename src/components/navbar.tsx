@@ -7,10 +7,11 @@ import { ArrowUpRight } from "lucide-react";
 
 const navItems = [
   { name: "Home", href: "/" },
+  { name: "The BraveHeart Experiment", href: "/braveheart" },
+  { name: "Ripley", href: "/ripley" },
+  { name: "Field Notes", href: "/field-notes" },
+  { name: "Now", href: "/now" },
   { name: "About", href: "/about" },
-  { name: "Work & Projects", href: "/work" },
-  { name: "Writing", href: "/writing" },
-  { name: "Contact", href: "/contact" },
 ];
 
 export default function Navbar() {
@@ -141,7 +142,7 @@ export default function Navbar() {
               <span className="text-[10px] font-bold uppercase tracking-widest text-emerald-400 font-mono">
                 [Inquiries]
               </span>
-              <h4 className="text-white text-sm font-bold uppercase mt-2">Systems Advisory</h4>
+              <h4 className="text-white text-sm font-bold uppercase mt-2">Castson</h4>
               <a 
                 href="mailto:ee@castson.com" 
                 className="group flex items-center gap-1.5 text-zinc-400 hover:text-white transition-colors mt-2 text-sm"
