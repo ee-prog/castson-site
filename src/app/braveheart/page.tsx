@@ -100,7 +100,7 @@ export default function BraveHeart() {
                 <li>• When a process saves time or quietly creates more work.</li>
               </ul>
 
-              <p className="text-lg font-serif text-white italic pt-2">
+              <p className="text-lg text-white font-medium pt-2">
                 &ldquo;Ownership removes abstraction. There is nowhere to hide.&rdquo;
               </p>
             </div>
@@ -134,7 +134,7 @@ export default function BraveHeart() {
                 First aid training has a moral centre. The work is practical, local, and human.
               </p>
               
-              <blockquote className="border-l-2 border-emerald-400 pl-6 my-6 italic text-white font-display text-xl">
+              <blockquote className="border-l-2 border-emerald-400 pl-6 my-6 text-white text-xl font-medium">
                 &ldquo;People come to class carrying a simple hope: that if someone needs help, they won’t feel frozen.&rdquo;
               </blockquote>
 
@@ -211,7 +211,7 @@ export default function BraveHeart() {
                 <p>
                   The next phase is underway. Automation, custom software, AI-assisted workflows, decision support, knowledge infrastructure, marketing systems, reporting, and internal tools.
                 </p>
-                <p className="border-l border-emerald-400/40 pl-4 text-zinc-400 italic font-serif">
+                <p className="border-l border-emerald-400/40 pl-4 text-zinc-400 opacity-80">
                   The goal is not to replace people. The goal is to remove drag around people. To reduce manual coordination, make the right work easier to see, and support judgment instead of overwhelming it.
                 </p>
                 <p>

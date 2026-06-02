@@ -91,7 +91,7 @@ export default function Home() {
                 I helped brands communicate, sell, grow, and adapt.
               </p>
               
-              <p className="border-l border-white/10 pl-4 italic text-zinc-400 font-light font-serif">
+              <p className="border-l border-white/10 pl-4 text-zinc-400 font-light opacity-80">
                 Some of the work was interesting. Some of it was useful. Some of it, if I am honest, was hard to feel proud of.
               </p>
 
@@ -140,7 +140,7 @@ export default function Home() {
 
             <div className="bg-zinc-900/30 border border-white/5 rounded-sm p-8 sm:p-10 relative overflow-hidden space-y-6 fade-up-element visible">
               <div className="absolute top-0 right-0 w-32 h-32 bg-emerald-500/5 rounded-full blur-2xl"></div>
-              <p className="text-xl sm:text-2xl text-white font-light italic font-serif leading-relaxed">
+              <p className="text-xl sm:text-2xl text-white font-medium leading-relaxed">
                 &ldquo;Somewhere, someday, someone may stay alive because a person took a course from the company I now run.&rdquo;
               </p>
               <p className="text-zinc-400 text-sm font-light">
@@ -266,7 +266,7 @@ export default function Home() {
                 Each step helped. Each step also revealed the next constraint.
               </p>
 
-              <blockquote className="border-l border-white/15 pl-4 italic text-zinc-400 font-light">
+              <blockquote className="border-l border-white/15 pl-4 text-zinc-400 font-light opacity-80">
                 Eventually, the pattern became clear. The business was outgrowing almost every platform it touched. Not because the platforms were bad. Because the company was becoming more specific. More understood. More alive.
               </blockquote>
 
@@ -294,7 +294,7 @@ export default function Home() {
                 Only recently did the real automation phase begin. That matters.
               </p>
               
-              <p className="border-l-2 border-emerald-400 pl-4 italic text-zinc-400 font-serif">
+              <p className="border-l-2 border-emerald-400 pl-4 text-zinc-400 opacity-80">
                 The mistake would have been to automate the mess. Instead, the work was to clarify the business first. A business has to become understandable before it can become automated.
               </p>
 
@@ -507,7 +507,7 @@ export default function Home() {
               <p>
                 I share the shape of the transformation: the questions, decisions, lessons, patterns, and mistakes once they become useful.
               </p>
-              <p className="border-l border-white/15 pl-4 text-zinc-400 italic font-serif">
+              <p className="border-l border-white/15 pl-4 text-zinc-400 opacity-80">
                 I do not share private information, customer data, staff matters, operational vulnerabilities, or anything that belongs inside the company.
               </p>
               <p className="text-white font-medium">
