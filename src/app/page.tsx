@@ -409,32 +409,44 @@ export default function Home() {
             <div className="lg:col-span-7 space-y-6 text-zinc-300 font-light leading-relaxed text-sm sm:text-base fade-up-element visible">
               <span className="text-[9px] font-mono tracking-widest uppercase text-emerald-400">[ Identity ]</span>
               <h2 className="text-3xl font-bold uppercase text-white font-display">
-                What Castson Inc. is becoming
+                What Castson Inc. is building
               </h2>
               <p className="text-lg text-zinc-200">
                 Castson Inc. is becoming an acquisition and operating company for meaningful service businesses.
               </p>
               <p>
-                The work is simple to describe and difficult to do:
+                The model is simple:
               </p>
               
               <div className="space-y-3 pl-4 border-l border-white/10 text-xs font-mono text-zinc-400">
-                <p>• Acquire or operate a business with real purpose and hidden leverage.</p>
-                <p>• Clarify how it actually works.</p>
+                <p>• Acquire or operate companies with real purpose and hidden leverage.</p>
+                <p>• Clarify how they actually work.</p>
                 <p>• Remove drag.</p>
                 <p>• Reduce owner dependency.</p>
-                <p>• Build the software, automation, AI, and marketing systems it actually needs.</p>
-                <p>• Make the company more capable without making it less human.</p>
+                <p>• Build the software, automation, AI, and marketing systems they actually need.</p>
+                <p>• Make them more capable without making them less human.</p>
               </div>
 
-              <p className="border-t border-white/5 pt-4 text-zinc-400">
-                This is not about making traditional businesses look like technology companies. It is about giving good businesses better operating systems.
-              </p>
+              <div className="space-y-3 border-t border-white/5 pt-4 text-zinc-400">
+                <p>
+                  The work may look like AI transformation from the outside.
+                </p>
+                <p>
+                  But the focus is narrower and deeper:
+                </p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5 text-xs font-mono text-zinc-400 pl-4">
+                  <div>• Ownership.</div>
+                  <div>• Operating systems.</div>
+                  <div>• Service businesses.</div>
+                  <div>• First-principles design.</div>
+                  <div>• Modern leverage.</div>
+                </div>
+              </div>
 
-              <div className="space-y-1 text-xs font-mono text-zinc-500">
+              <div className="space-y-1 text-xs font-mono text-zinc-500 pt-2 border-t border-white/5">
                 <p>BraveHeart is the first proof.</p>
                 <p>Ripley is the operating layer emerging from it.</p>
-                <p className="text-white">castson.com is the public record.</p>
+                <p className="text-white">castson.com is the record.</p>
               </div>
             </div>
 
