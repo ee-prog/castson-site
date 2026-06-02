@@ -304,3 +304,18 @@ blockquote {
 .btn-scale-hover:active {
   transform: translateY(0) scale(0.99);
 }
+
+/* Light mode specific typography colors (Dior spacing lessons) */
+html:not(.dark) body,
+html:not(.dark) main p:not(.font-mono) {
+  color: #888888 !important;
+}
+
+html:not(.dark) h2,
+html:not(.dark) h3,
+html:not(.dark) h4,
+html:not(.dark) h5,
+html:not(.dark) h6,
+html:not(.dark) .font-subheading {
+  color: #262626 !important;
+}
