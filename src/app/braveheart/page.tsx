@@ -135,7 +135,7 @@ export default function BraveHeart() {
               </p>
               
               <blockquote className="border-l-2 border-emerald-400 pl-6 my-6 italic text-white font-display text-xl">
-                &ldquo;People come into a classroom because someday they may need to act when someone else cannot.&rdquo;
+                &ldquo;People come to class carrying a simple hope: that if someone needs help, they won’t feel frozen.&rdquo;
               </blockquote>
 
               <p>
