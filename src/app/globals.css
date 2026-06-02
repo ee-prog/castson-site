@@ -17,17 +17,17 @@
 }
 
 .dark {
-  --background: #0a0a09;
+  --background: #181818;
   --foreground: #eeece6;
-  --card: #12110f;
+  --card: #222222;
   --card-foreground: #eeece6;
   --primary: #c5a880;
-  --primary-foreground: #0a0a09;
-  --secondary: #1c1a17;
+  --primary-foreground: #181818;
+  --secondary: #2d2d2d;
   --secondary-foreground: #eeece6;
-  --muted: #1c1a17;
+  --muted: #2d2d2d;
   --muted-foreground: #8a857f;
-  --border: #1c1a17;
+  --border: #2c2c2c;
 }
 
 @theme {
@@ -63,9 +63,9 @@
   --color-zinc-500: #78716c;
   --color-zinc-600: #57534e;
   --color-zinc-700: #44403c;
-  --color-zinc-800: #1c1a17; /* Warm dark gray */
-  --color-zinc-900: #12110f; /* Warm slate charcoal */
-  --color-zinc-950: #0a0a09; /* Warm pitch black */
+  --color-zinc-800: #2d2d2d; /* Neutral dark gray */
+  --color-zinc-900: #222222; /* Neutral slate charcoal */
+  --color-zinc-950: #181818; /* Neutral pitch black */
 
   --font-heading: var(--font-heading), system-ui, sans-serif;
   --font-body: var(--font-body), system-ui, sans-serif;
