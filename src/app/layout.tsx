@@ -70,13 +70,13 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://castson.com",
     title: "Eli Castson | Castson Inc.",
-    description: "Eli Castson builds and partners with place-based experience brands rooted in service, taste, and story. Castson Inc. is the vehicle. BraveHeart is the first proof. Ripley is the operating layer.",
+    description: "Eli Castson builds and partners with place-based experience brands rooted in service, taste, and story. Castson Inc. is the vehicle. BraveHeart is the operating proof. Ripley is the operating layer.",
     siteName: "Eli Castson",
   },
   twitter: {
     card: "summary_large_image",
     title: "Eli Castson | Castson Inc.",
-    description: "Eli Castson builds and partners with place-based experience brands rooted in service, taste, and story. Castson Inc. is the vehicle. BraveHeart is the first proof. Ripley is the operating layer.",
+    description: "Eli Castson builds and partners with place-based experience brands rooted in service, taste, and story. Castson Inc. is the vehicle. BraveHeart is the operating proof. Ripley is the operating layer.",
   },
 };
 

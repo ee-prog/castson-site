@@ -103,7 +103,7 @@ export default function About() {
             <div className="space-y-2 pt-6 border-t border-zinc-200 dark:border-white/5 text-zinc-650 dark:text-zinc-400 text-xs font-mono">
               <div className="flex items-start gap-2">
                 <ArrowRight className="h-4 w-4 shrink-0 text-emerald-500 mt-0.5" strokeWidth={1.5} aria-hidden="true" />
-                <span><strong className="text-zinc-900 dark:text-white">BraveHeart</strong> is the initial proof.</span>
+                <span><strong className="text-zinc-900 dark:text-white">BraveHeart</strong> is the operating proof.</span>
               </div>
               <div className="flex items-start gap-2">
                 <ArrowRight className="h-4 w-4 shrink-0 text-emerald-500 mt-0.5" strokeWidth={1.5} aria-hidden="true" />
@@ -132,9 +132,9 @@ export default function About() {
                   </p>
                 </div>
 
-                {/* First Proof */}
+                {/* Acquired Company */}
                 <div className="space-y-1">
-                  <span className="text-[9px] font-mono text-emerald-600 dark:text-emerald-400 uppercase tracking-widest block">FIRST PROOF</span>
+                  <span className="text-[9px] font-mono text-emerald-600 dark:text-emerald-400 uppercase tracking-widest block">ACQUIRED COMPANY</span>
                   <p className="text-xs text-zinc-900 dark:text-white font-medium">
                     BraveHeart First Aid
                   </p>

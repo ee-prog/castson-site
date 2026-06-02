@@ -40,7 +40,7 @@ export default function BraveHeart() {
         
         <div className="mx-auto max-w-5xl w-full px-4 sm:px-6 lg:px-8 relative z-20">
           <div className="max-w-3xl space-y-6">
-            <span className="text-[10px] font-bold uppercase tracking-widest text-emerald-400 font-mono">01 / First Acquisition</span>
+            <span className="text-[10px] font-bold uppercase tracking-widest text-emerald-400 font-mono">01 / In Practice</span>
             <h1 className="text-white font-display">
               BraveHeart
             </h1>
@@ -59,7 +59,7 @@ export default function BraveHeart() {
             {/* Left: Narrative */}
             <div className="lg:col-span-7 space-y-6 text-zinc-300 font-light leading-relaxed text-sm sm:text-base">
               <p className="text-lg text-white">
-                BraveHeart was the first company I acquired and operated. It taught me what ownership demands: standards, timing, care, and systems that work when people depend on them.
+                BraveHeart is a company I acquired and now operate. The work is practical, local, and serious: standards, timing, care, and systems have to hold.
               </p>
 
               <p>

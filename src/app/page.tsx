@@ -75,6 +75,16 @@ export default function Home() {
                 <span>Ownership</span>
               </span>
             </div>
+
+            <div className="pt-6 fade-up-element visible">
+              <Link 
+                href="/contact" 
+                className="group inline-flex items-center gap-2 text-xs font-mono font-bold uppercase text-emerald-400 hover:text-white transition-colors tracking-widest"
+              >
+                <span>Start a Conversation</span>
+                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" strokeWidth={1.5} aria-hidden="true" />
+              </Link>
+            </div>
           </div>
         </div>
       </section>
@@ -139,12 +149,12 @@ export default function Home() {
           <div className="max-w-4xl space-y-12">
             
             <div className="border-l-2 border-emerald-400 pl-6 space-y-4 fade-up-element visible">
-              <span className="text-[9px] font-mono tracking-widest uppercase text-emerald-400">[ The First Acquisition ]</span>
+              <span className="text-[9px] font-mono tracking-widest uppercase text-emerald-400">[ In Practice ]</span>
               <h2 className="text-2xl sm:text-3xl font-medium text-white">
                 BraveHeart First Aid
               </h2>
               <p className="text-zinc-300 font-light leading-relaxed">
-                BraveHeart was the first company I acquired and operated. It taught me what ownership demands: standards, timing, care, and systems that work when people depend on them.
+                BraveHeart is the acquired company where the operating thesis is already real. It taught me what ownership demands: standards, timing, care, and systems that work when people depend on them.
               </p>
             </div>
 
@@ -193,7 +203,7 @@ export default function Home() {
                   </li>
                 </ul>
                 <div className="space-y-1 text-xs font-mono text-zinc-500">
-                  <p>BraveHeart was the first acquisition.</p>
+                  <p>BraveHeart is the acquired company under operation.</p>
                   <p>Ripley is the operating layer I am building underneath the work.</p>
                   <p className="text-white">castson.com is the record.</p>
                 </div>
@@ -482,7 +492,7 @@ export default function Home() {
               </div>
 
               <div className="space-y-1 text-xs font-mono text-zinc-500 pt-2 border-t border-white/5">
-                <p>BraveHeart was the first acquisition.</p>
+                <p>BraveHeart is the acquired company under operation.</p>
                 <p>Ripley is the operating layer I am building underneath the work.</p>
                 <p className="text-white">castson.com is the record.</p>
               </div>
@@ -560,27 +570,27 @@ export default function Home() {
                   [ Information Signal Grid ]
                 </span>
                 <div className="space-y-3 text-xs font-mono">
-                  <div className="flex justify-between border-b border-white/5 pb-1 text-emerald-400">
+                  <div className="flex justify-between gap-4 border-b border-white/5 pb-1 text-emerald-400">
                     <span>The Questions & Decisions</span>
                     <span>[Shared]</span>
                   </div>
-                  <div className="flex justify-between border-b border-white/5 pb-1 text-emerald-400">
+                  <div className="flex justify-between gap-4 border-b border-white/5 pb-1 text-emerald-400">
                     <span>Lessons & Patterns</span>
                     <span>[Shared]</span>
                   </div>
-                  <div className="flex justify-between border-b border-white/5 pb-1 text-emerald-400">
+                  <div className="flex justify-between gap-4 border-b border-white/5 pb-1 text-emerald-400">
                     <span>Mistakes (when useful)</span>
                     <span>[Shared]</span>
                   </div>
-                  <div className="flex justify-between border-b border-white/5 pb-1 text-red-400/70">
+                  <div className="flex justify-between gap-4 border-b border-white/5 pb-1 text-red-400/70">
                     <span>Private & Staff Matters</span>
                     <span>[Private]</span>
                   </div>
-                  <div className="flex justify-between border-b border-white/5 pb-1 text-red-400/70">
+                  <div className="flex justify-between gap-4 border-b border-white/5 pb-1 text-red-400/70">
                     <span>Customer Data</span>
                     <span>[Private]</span>
                   </div>
-                  <div className="flex justify-between border-b border-white/5 pb-1 text-red-400/70">
+                  <div className="flex justify-between gap-4 border-b border-white/5 pb-1 text-red-400/70">
                     <span>Operational Vulnerabilities</span>
                     <span>[Private]</span>
                   </div>

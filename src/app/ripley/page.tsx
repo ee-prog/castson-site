@@ -129,19 +129,19 @@ export default function Ripley() {
               </p>
 
               <div className="space-y-3 font-mono text-xs text-zinc-400">
-                <div className="flex justify-between border-b border-white/5 pb-1">
+                <div className="flex justify-between gap-4 border-b border-white/5 pb-1">
                   <span>Solid code</span>
                   <span className="text-white">stable processes</span>
                 </div>
-                <div className="flex justify-between border-b border-white/5 pb-1">
+                <div className="flex justify-between gap-4 border-b border-white/5 pb-1">
                   <span>Human-in-the-loop</span>
                   <span className="text-white">judgment</span>
                 </div>
-                <div className="flex justify-between border-b border-white/5 pb-1">
+                <div className="flex justify-between gap-4 border-b border-white/5 pb-1">
                   <span>Automation</span>
                   <span className="text-white">repetition</span>
                 </div>
-                <div className="flex justify-between border-b border-white/5 pb-1">
+                <div className="flex justify-between gap-4 border-b border-white/5 pb-1">
                   <span>AI</span>
                   <span className="text-white">leverage</span>
                 </div>
