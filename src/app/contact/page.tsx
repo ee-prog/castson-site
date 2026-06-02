@@ -62,12 +62,12 @@ export default function Contact() {
               
               <div className="grid grid-cols-1 gap-3 font-mono text-xs text-zinc-400">
                 {[
-                  "A business owner thinking about succession.",
-                  "An investor interested in AI-enabled operating companies.",
-                  "An operator working through similar questions.",
-                  "An executive exploring what modern operational leverage could mean.",
-                  "A technical collaborator who thinks deeply about systems.",
-                  "A builder interested in meaningful service businesses."
+                  "A business owner thinking about succession or transition.",
+                  "A property holder or operator looking for a strategic partner.",
+                  "An investor interested in place-based experience brands.",
+                  "An operator exploring operations behind premium service.",
+                  "A creative collaborator who shares this taste for place.",
+                  "A builder interested in hospitality, tourism, and legacy brands."
                 ].map((item, idx) => (
                   <div key={idx} className="flex items-start gap-2.5 p-3.5 border border-white/5 bg-zinc-900/20 rounded-sm">
                     <span className="text-emerald-400 font-bold mt-0.5">•</span>

@@ -48,7 +48,7 @@ export default function Home() {
             </h1>
 
             <p className="text-lg sm:text-xl text-zinc-300 font-light leading-relaxed max-w-2xl pt-2">
-              Castson Inc. exists to acquire, operate, and rebuild meaningful service businesses for the AI era.
+              Castson Inc. builds and partners with place-based experience brands rooted in service, taste, and story. The work is creative on the surface and operational underneath.
             </p>
 
             <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-[10px] font-mono text-zinc-500 uppercase tracking-widest pt-2">
@@ -58,11 +58,11 @@ export default function Home() {
               </span>
               <span className="flex items-center gap-1.5">
                 <span className="h-1 w-1 bg-emerald-400 rounded-full"></span>
-                <span>Ripley Operating Layer</span>
+                <span>Ripley</span>
               </span>
               <span className="flex items-center gap-1.5">
                 <span className="h-1 w-1 bg-emerald-400 rounded-full"></span>
-                <span>castson.com record</span>
+                <span>castson.com</span>
               </span>
             </div>
           </div>
@@ -134,28 +134,28 @@ export default function Home() {
                 Then I bought a first aid training company.
               </h2>
               <p className="text-zinc-300 font-light leading-relaxed">
-                Not because it was glamorous. Because it mattered.
+                It was not glamorous. It was serious.
               </p>
             </div>
 
             <div className="bg-zinc-900/30 border border-white/5 rounded-sm p-8 sm:p-10 relative overflow-hidden space-y-6 fade-up-element visible">
               <div className="absolute top-0 right-0 w-32 h-32 bg-emerald-500/5 rounded-full blur-2xl"></div>
               <p className="text-xl sm:text-2xl text-white font-medium leading-relaxed">
-                &ldquo;Somewhere, someday, someone may stay alive because a person took a course from the company I now run.&rdquo;
+                &ldquo;Trust is operational: timing, people, standards, communication, and care all have to work at once.&rdquo;
               </p>
               <p className="text-zinc-400 text-sm font-light">
-                That changed something in me.
+                That changed my view of systems.
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-zinc-300 font-light text-sm sm:text-base leading-relaxed fade-up-element visible">
               <div className="space-y-4">
-                <h4 className="text-xs font-mono font-bold uppercase text-emerald-400 tracking-wider">[ In June 2025, I acquired BraveHeart First Aid ]</h4>
+                <h4 className="text-xs font-mono font-bold uppercase text-emerald-400 tracking-wider">[ The Standard of Care ]</h4>
                 <p>
-                  At first, I thought it would become a living case study for my consulting work. A real business where I could test ideas about operations, marketing, systems, technology, and transformation.
+                  First aid training has a moral centre. It is work done under pressure. At first, I thought of it as a case study for systems and software. But ownership quickly taught me something deeper.
                 </p>
                 <p>
-                  Instead, it became something more serious. It became a place to ask better questions.
+                  It taught me that standard of care is everything. If the student isn&apos;t supported, if the timing is off, if the instructors don&apos;t have what they need, the system fails.
                 </p>
               </div>
               <div className="space-y-4 rounded-sm border border-white/5 bg-zinc-950/40 p-6">
@@ -182,12 +182,10 @@ export default function Home() {
                     <span className="text-white font-medium">And what becomes possible when you rebuild from there?</span>
                   </li>
                 </ul>
-                <div className="space-y-1 text-xs font-mono text-zinc-400">
-                  <p>That is the work now.</p>
-                  <p>BraveHeart is the proof.</p>
+                <div className="space-y-1 text-xs font-mono text-zinc-500">
+                  <p>BraveHeart is the initial proof.</p>
                   <p>Ripley is the operating layer.</p>
-                  <p>Castson Inc. is the vehicle.</p>
-                  <p className="text-white">castson.com is where I leave the trail.</p>
+                  <p className="text-white">castson.com is the record.</p>
                 </div>
               </div>
             </div>
@@ -329,6 +327,7 @@ export default function Home() {
       </section>
 
       {/* Every Organization is an Operating System */}
+      {/* Every Experience has a System */}
       <section className="py-24 border-b border-white/[0.03] theme-transition">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 relative z-20">
           <div className="max-w-4xl space-y-12">
@@ -336,36 +335,36 @@ export default function Home() {
             <div className="space-y-4 fade-up-element visible">
               <span className="text-[9px] font-mono tracking-widest uppercase text-emerald-400">[ System Mechanics ]</span>
               <h2 className="text-3xl font-extrabold uppercase text-white font-display">
-                Every organization is an operating system.
+                Every experience is supported by a system.
               </h2>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 text-zinc-300 font-light text-sm sm:text-base leading-relaxed fade-up-element visible">
               <div className="space-y-6">
                 <p>
-                  Most people look at a business and see employees, customers, problems, and tasks.
+                  Most people look at a hotel, a travel service, or a product and see only the front of house.
                 </p>
                 <p className="text-white font-medium text-lg font-display">
-                  I tend to see something else:
+                  I tend to see the underlying coordination:
                 </p>
                 <div className="flex flex-wrap gap-2">
-                  {["Information flows", "Bottlenecks", "Feedback loops", "State changes", "Decision points", "Hidden dependencies", "Operating models"].map((term) => (
+                  {["Information flows", "Service standards", "Feedback loops", "Timing & Rhythm", "Decision points", "Operational drag", "Legacy transition"].map((term) => (
                     <span key={term} className="text-xs font-mono tracking-wide px-3 py-1 bg-white/5 border border-white/5 rounded-sm text-white">
                       {term}
                     </span>
                   ))}
                 </div>
                 <p>
-                  A company is not just a brand, a team, or a set of services. It is a living system.
+                  A distinct brand is not just a logo or a story. It is a living system that makes standard of care possible.
                 </p>
               </div>
 
               <div className="space-y-4 border border-white/5 bg-zinc-950/60 p-6 rounded-sm">
                 <span className="text-[9px] font-mono text-zinc-500 uppercase tracking-widest block border-b border-white/5 pb-2">
-                  [ System Drift Analysis ]
+                  [ Operational Friction ]
                 </span>
                 <p className="text-xs text-zinc-400">
-                  And most systems drift:
+                  And most operations drift over time:
                 </p>
                 <ul className="space-y-2 text-xs font-mono text-zinc-400">
                   <li className="flex items-start gap-1.5">
@@ -374,23 +373,23 @@ export default function Home() {
                   </li>
                   <li className="flex items-start gap-1.5">
                     <span className="text-red-500 font-bold">-</span>
-                    <span>They inherit habits.</span>
+                    <span>They inherit old habits.</span>
                   </li>
                   <li className="flex items-start gap-1.5">
                     <span className="text-red-500 font-bold">-</span>
-                    <span>They preserve old decisions.</span>
+                    <span>They compromise on standards.</span>
                   </li>
                   <li className="flex items-start gap-1.5">
                     <span className="text-red-500 font-bold">-</span>
-                    <span>They make simple things complicated.</span>
+                    <span>They make simple coordination complicated.</span>
                   </li>
                   <li className="flex items-start gap-1.5">
                     <span className="text-red-500 font-bold">-</span>
-                    <span>They ask people to remember what the business itself should know.</span>
+                    <span>They ask staff to compensate for what the system itself should handle.</span>
                   </li>
                 </ul>
                 <p className="pt-2 text-xs font-mono text-white border-t border-white/5 mt-4">
-                  I am interested in reversing that. Finding the truth of the system. Then building from there.
+                  I am interested in resolving that. Designing the systems that support hospitality.
                 </p>
               </div>
             </div>
@@ -399,7 +398,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* What Castson Inc. is becoming */}
+      {/* What Castson Inc. is building */}
       <section className="py-24 bg-zinc-950/40 relative theme-transition border-b border-white/[0.03]">
         <div className="absolute inset-0 bg-gradient-to-t from-emerald-500/[0.01] via-transparent to-transparent pointer-events-none"></div>
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 relative z-20">
@@ -412,40 +411,40 @@ export default function Home() {
                 What Castson Inc. is building
               </h2>
               <p className="text-lg text-zinc-200">
-                Castson Inc. is becoming an acquisition and operating company for meaningful service businesses.
+                Castson Inc. is becoming a home for experience brands rooted in place.
               </p>
               <p>
-                The model is simple:
+                The model is straightforward:
               </p>
               
               <div className="space-y-3 pl-4 border-l border-white/10 text-xs font-mono text-zinc-400">
-                <p>• Acquire or operate companies with real purpose and hidden leverage.</p>
-                <p>• Clarify how they actually work.</p>
-                <p>• Remove drag.</p>
-                <p>• Reduce owner dependency.</p>
-                <p>• Build the software, automation, AI, and marketing systems they actually need.</p>
-                <p>• Make them more capable without making them less human.</p>
+                <p>• Find businesses with real taste, service, place, or reputation.</p>
+                <p>• Preserve what makes them distinct.</p>
+                <p>• Strengthen the story and standards.</p>
+                <p>• Build the systems behind the experience.</p>
+                <p>• Make the business more capable without making it generic.</p>
               </div>
 
               <div className="space-y-3 border-t border-white/5 pt-4 text-zinc-400">
-                <p>
-                  The work may look like AI transformation from the outside.
+                <p className="text-white font-medium">
+                  We build the systems behind the experience so the front of house can feel effortless.
                 </p>
                 <p>
-                  But the focus is narrower and deeper:
+                  The focus is quiet:
                 </p>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5 text-xs font-mono text-zinc-400 pl-4">
-                  <div>• Ownership.</div>
-                  <div>• Operating systems.</div>
-                  <div>• Service businesses.</div>
-                  <div>• First-principles design.</div>
-                  <div>• Modern leverage.</div>
+                <div className="grid grid-cols-2 gap-1.5 text-xs font-mono text-zinc-400 pl-4">
+                  <div>• Place</div>
+                  <div>• Service</div>
+                  <div>• Standards</div>
+                  <div>• Story</div>
+                  <div>• Ownership</div>
+                  <div>• Operating Systems</div>
                 </div>
               </div>
 
               <div className="space-y-1 text-xs font-mono text-zinc-500 pt-2 border-t border-white/5">
-                <p>BraveHeart is the first proof.</p>
-                <p>Ripley is the operating layer emerging from it.</p>
+                <p>BraveHeart is the initial proof.</p>
+                <p>Ripley is the operating layer.</p>
                 <p className="text-white">castson.com is the record.</p>
               </div>
             </div>
@@ -460,27 +459,27 @@ export default function Home() {
                 <ul className="space-y-4 text-xs font-mono text-zinc-400">
                   <li className="flex items-start gap-2">
                     <span className="text-emerald-400 font-bold">?</span>
-                    <span>Can a small service business gain the operational leverage of a much larger one?</span>
+                    <span>What makes a place worth travelling for?</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-emerald-400 font-bold">?</span>
-                    <span>Can AI create real value when it is built on clarity instead of chaos?</span>
+                    <span>How do you scale care without making it feel standardized?</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-emerald-400 font-bold">?</span>
-                    <span>Can custom software become practical for companies that used to be too small to justify it?</span>
+                    <span>Can better systems make hospitality feel more human, not less?</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-emerald-400 font-bold">?</span>
-                    <span>Can a business hold more of its own intelligence instead of keeping so much of it in the owner’s head?</span>
+                    <span>How do you preserve the character of a place while making the business stronger?</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-emerald-400 font-bold">?</span>
-                    <span>Can marketing, operations, scheduling, finance, and customer experience become one connected picture?</span>
+                    <span>What should technology handle quietly, and what should remain human?</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-emerald-400 font-bold">?</span>
-                    <span>Can meaningful companies build excellent systems without losing their soul?</span>
+                    <span>How do you build operational leverage that makes a brand more distinctive, not more generic?</span>
                   </li>
                 </ul>
               </div>
@@ -559,12 +558,15 @@ export default function Home() {
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 relative z-20">
           <div className="space-y-12">
             <div className="text-center space-y-4 max-w-2xl mx-auto">
-              <span className="text-[9px] font-mono tracking-widest uppercase text-emerald-400">[ Next Steps ]</span>
+              <span className="text-[9px] font-mono tracking-widest uppercase text-emerald-400">[ Start a Conversation ]</span>
               <h2 className="text-3xl font-bold uppercase text-white font-display">
-                Explore the System
+                Start a Conversation
               </h2>
               <p className="text-zinc-400 font-light text-sm">
-                Follow the experiment, read the notes, or connect directly to discuss operations and systems.
+                If you own, operate, or are building an experience business rooted in place, I’d be interested in the conversation.
+              </p>
+              <p className="text-[10px] text-zinc-500 font-mono uppercase tracking-widest pt-1">
+                Especially if the work involves hospitality, tourism, property, service, product, or legacy transition.
               </p>
             </div>
 

@@ -17,19 +17,19 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Castson Inc. | Systems & AI Operations",
+    default: "Castson Inc. | Experience Brands & Operations",
     template: "%s | Castson Inc.",
   },
-  description: "Castson Inc. is an advisory and operations practice specializing in practical AI-enabled operating models, operational data flows, and agentic workflows.",
+  description: "Castson Inc. builds and partners with place-based experience brands rooted in service, taste, and story.",
   keywords: [
     "Castson Inc.",
-    "Systems & AI Operations",
-    "AI Operating Models",
-    "Agentic Workflows",
-    "Business Automation",
-    "System Design",
-    "Operations Design",
-    "Castson Inc. Automation"
+    "Experience Brands",
+    "Hospitality Operations",
+    "Service Design",
+    "Operational Standards",
+    "Tourism Succession",
+    "BraveHeart First Aid",
+    "Ripley Operating Layer"
   ],
   authors: [{ name: "Castson Inc.", url: "https://castson.com" }],
   creator: "Castson Inc.",
@@ -38,8 +38,8 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://castson.com",
-    title: "Castson Inc. | Systems & AI Operations",
-    description: "Castson Inc. is an advisory and operations practice specializing in practical AI-enabled operating models, operational data flows, and agentic workflows.",
+    title: "Castson Inc. | Experience Brands & Operations",
+    description: "Castson Inc. builds and partners with place-based experience brands rooted in service, taste, and story.",
     siteName: "Castson Inc.",
     // [NEEDS ELI INPUT: Open Graph image asset path if available, e.g. /og-image.png. Marked as missing for now.]
   },

@@ -123,7 +123,7 @@ export default function BraveHeart() {
           <div className="max-w-3xl space-y-8">
             
             <div className="space-y-4">
-              <span className="text-[9px] font-mono tracking-widest uppercase text-emerald-400">[ Moral Center ]</span>
+              <span className="text-[9px] font-mono tracking-widest uppercase text-emerald-400">[ Moral Centre ]</span>
               <h2 className="text-3xl font-bold uppercase text-white font-display">
                 Why BraveHeart matters
               </h2>

@@ -92,9 +92,9 @@ export default function About() {
             </div>
 
             <p className="border-t border-white/5 pt-6 text-zinc-400 text-xs font-mono">
-              • <strong>BraveHeart</strong> is where I am doing that now.<br />
-              • <strong>Ripley</strong> is the operating layer emerging from it.<br />
-              • <strong>castson.com</strong> is where I keep the record.
+              • <strong>BraveHeart</strong> is the initial proof.<br />
+              • <strong>Ripley</strong> is the operating layer.<br />
+              • <strong>castson.com</strong> is the record.
             </p>
 
           </div>
@@ -110,7 +110,7 @@ export default function About() {
                 <div className="space-y-1">
                   <span className="text-[9px] font-mono text-emerald-400 uppercase tracking-widest block">FOCUS</span>
                   <p className="text-xs text-white font-medium leading-relaxed">
-                    Acquiring and rebuilding meaningful service businesses
+                    Acquiring and building experience brands rooted in place
                   </p>
                 </div>
 
@@ -132,7 +132,7 @@ export default function About() {
                     Ripley
                   </p>
                   <p className="text-[11px] text-zinc-400 font-light leading-relaxed">
-                    Custom software, automation, and AI-assisted workflows
+                    Custom software, automation, and systems
                   </p>
                 </div>
 
