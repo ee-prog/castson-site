@@ -27,7 +27,7 @@ export default function Contact() {
             Contact
           </h1>
           <p className="mt-4 text-xl sm:text-2xl text-zinc-700 dark:text-zinc-300 font-light">
-            Start a conversation.
+            Connect with Eli Castson.
           </p>
         </div>
 
@@ -38,7 +38,7 @@ export default function Contact() {
           <div className="lg:col-span-6 space-y-8 text-zinc-800 dark:text-zinc-300 font-light leading-relaxed text-sm sm:text-base fade-up-element visible">
             <div className="space-y-4">
               <p className="text-lg text-zinc-900 dark:text-white font-normal">
-                Start with the right conversation.
+                I look for patient, operating-led partnerships.
               </p>
               <p>
                 I am interested in people building, operating, selling, or stewarding businesses where place, service, taste, and standards matter.
