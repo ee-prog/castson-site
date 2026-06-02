@@ -66,13 +66,17 @@
   --color-zinc-800: #1c1a17; /* Warm dark gray */
   --color-zinc-900: #12110f; /* Warm slate charcoal */
   --color-zinc-950: #0a0a09; /* Warm pitch black */
+
+  --font-sans: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular, Roboto Mono, Menlo, Monaco, Consolas, monospace;
+  --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
 }
 
 body {
   background-color: var(--background);
   color: var(--foreground);
   transition: background-color 0.8s cubic-bezier(0.25, 1, 0.5, 1), color 0.8s cubic-bezier(0.25, 1, 0.5, 1);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  font-family: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
   overflow-x: hidden;
 }
 
@@ -101,9 +105,15 @@ html:not(.dark):not(.menu-open) header button span {
   background-color: #0a0a09;
 }
 
-h1, h2, h3, h4, h5, h6, .font-display {
-  font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+/* Default headings and display font use Primary: Geist Sans */
+h2, h3, h4, h5, h6, .font-display {
+  font-family: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   font-weight: 400 !important;
+}
+
+/* Hero name / page hero title & editorial pull quotes use native system serif */
+h1, blockquote, .font-serif {
+  font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif !important;
 }
 
 
