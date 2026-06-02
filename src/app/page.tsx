@@ -162,23 +162,23 @@ export default function Home() {
                 <h4 className="text-xs font-mono font-bold uppercase text-emerald-400 tracking-wider mb-2">[ The Core Questions ]</h4>
                 <ul className="space-y-2 text-xs font-mono text-zinc-400 border-b border-white/5 pb-4 mb-4">
                   <li className="flex items-start gap-2">
-                    <ChevronRight className="h-4 w-4 shrink-0 text-emerald-500" />
+                    <ChevronRight className="h-4 w-4 shrink-0 text-emerald-500" strokeWidth={1.5} aria-hidden="true" />
                     <span>What makes a business work?</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <ChevronRight className="h-4 w-4 shrink-0 text-emerald-500" />
+                    <ChevronRight className="h-4 w-4 shrink-0 text-emerald-500" strokeWidth={1.5} aria-hidden="true" />
                     <span>What makes it harder than it needs to be?</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <ChevronRight className="h-4 w-4 shrink-0 text-emerald-500" />
+                    <ChevronRight className="h-4 w-4 shrink-0 text-emerald-500" strokeWidth={1.5} aria-hidden="true" />
                     <span>Why do so many organizations grow by accumulating complexity?</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <ChevronRight className="h-4 w-4 shrink-0 text-emerald-500" />
+                    <ChevronRight className="h-4 w-4 shrink-0 text-emerald-500" strokeWidth={1.5} aria-hidden="true" />
                     <span>What happens when you strip a company back to what is actually true?</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <ChevronRight className="h-4 w-4 shrink-0 text-emerald-500" />
+                    <ChevronRight className="h-4 w-4 shrink-0 text-emerald-500" strokeWidth={1.5} aria-hidden="true" />
                     <span className="text-white font-medium">And what becomes possible when you rebuild from there?</span>
                   </li>
                 </ul>
@@ -587,7 +587,7 @@ export default function Home() {
                 </div>
                 <div className="flex items-center gap-1 text-[10px] font-mono font-bold uppercase text-emerald-400 group-hover:text-white transition-colors relative z-10">
                   <span>Explore BraveHeart</span>
-                  <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
+                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" strokeWidth={1.5} aria-hidden="true" />
                 </div>
               </Link>
 
@@ -608,7 +608,7 @@ export default function Home() {
                 </div>
                 <div className="flex items-center gap-1 text-[10px] font-mono font-bold uppercase text-emerald-400 group-hover:text-white transition-colors relative z-10">
                   <span>Read Field Notes</span>
-                  <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
+                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" strokeWidth={1.5} aria-hidden="true" />
                 </div>
               </Link>
 
@@ -629,7 +629,7 @@ export default function Home() {
                 </div>
                 <div className="flex items-center gap-1 text-[10px] font-mono font-bold uppercase text-emerald-400 group-hover:text-white transition-colors relative z-10">
                   <span>Connect Directly</span>
-                  <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
+                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" strokeWidth={1.5} aria-hidden="true" />
                 </div>
               </Link>
 

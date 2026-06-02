@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { ArrowRight, Send, HelpCircle } from "lucide-react";
+import { ArrowRight, Send } from "lucide-react";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -87,7 +87,7 @@ export default function Contact() {
             {submitted ? (
               <div className="rounded-sm border border-emerald-500/20 bg-emerald-500/5 p-8 text-center space-y-4 theme-transition">
                 <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-emerald-500/10 text-emerald-400">
-                  <Send className="h-6 w-6" />
+                  <Send className="h-6 w-6" strokeWidth={1.5} aria-hidden="true" />
                 </div>
                 <h2 className="text-xl font-bold text-white font-display uppercase">Message Sent Successfully</h2>
                 <p className="text-xs text-zinc-400 max-w-sm mx-auto font-mono">
@@ -169,7 +169,7 @@ export default function Contact() {
                     className="group interactive-hover flex w-full items-center justify-center gap-2 rounded-sm bg-white hover:bg-emerald-400 text-black py-3.5 text-xs font-bold uppercase tracking-wider transition-all duration-300 cursor-pointer active:scale-95"
                   >
                     <span>Send Message</span>
-                    <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+                    <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" strokeWidth={1.5} aria-hidden="true" />
                   </button>
                 </div>
               </form>

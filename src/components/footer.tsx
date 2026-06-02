@@ -47,7 +47,7 @@ export default function Footer() {
                 className="group inline-flex items-center gap-1 text-xs font-bold uppercase tracking-wider text-white hover:text-emerald-400 transition-colors"
               >
                 <span>Start a conversation</span>
-                <ArrowUpRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 text-emerald-400" />
+                <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 text-emerald-400" strokeWidth={1.5} aria-hidden="true" />
               </a>
             </div>
           </div>

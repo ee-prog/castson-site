@@ -78,7 +78,7 @@ export default function Now() {
                     "Owner-dependency reduction"
                   ].map((item) => (
                     <div key={item} className="flex items-center gap-1">
-                      <ChevronRight className="h-3.5 w-3.5 text-emerald-500" />
+                      <ChevronRight className="h-4 w-4 text-emerald-500" strokeWidth={1.5} aria-hidden="true" />
                       <span>{item}</span>
                     </div>
                   ))}

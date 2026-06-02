@@ -244,7 +244,7 @@ export default function Ripley() {
                   "Reduced dependency"
                 ].map((mod) => (
                   <div key={mod} className="flex items-center gap-1 p-2 bg-zinc-950/60 border border-white/5 rounded-sm">
-                    <ChevronRight className="h-3.5 w-3.5 text-emerald-500 shrink-0" />
+                    <ChevronRight className="h-4 w-4 text-emerald-500 shrink-0" strokeWidth={1.5} aria-hidden="true" />
                     <span>{mod}</span>
                   </div>
                 ))}

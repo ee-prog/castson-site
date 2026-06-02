@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import { ArrowUpRight, Award, Compass, Monitor } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 
 export default function About() {
   return (
@@ -154,7 +154,7 @@ export default function About() {
                   href="/contact"
                   className="interactive-hover flex w-full items-center justify-center gap-1.5 rounded-sm bg-white text-black py-3 text-center text-xs font-bold uppercase tracking-wider hover:bg-emerald-400 transition-all duration-300"
                 >
-                  START A CONVERSATION <ArrowUpRight className="h-4 w-4" />
+                  START A CONVERSATION <ArrowUpRight className="h-4 w-4" strokeWidth={1.5} aria-hidden="true" />
                 </Link>
               </div>
             </div>

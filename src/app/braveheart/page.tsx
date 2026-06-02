@@ -192,7 +192,7 @@ export default function BraveHeart() {
                 <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs font-mono text-zinc-400">
                   {["A clearer website", "Better booking flow", "Improved scheduling", "Course operations", "Customer emails", "Cleaner workflows", "SEO & Paid search", "Operational dashboards"].map((c) => (
                     <li key={c} className="flex items-center gap-1">
-                      <ChevronRight className="h-3.5 w-3.5 text-emerald-500" />
+                      <ChevronRight className="h-4 w-4 text-emerald-500" strokeWidth={1.5} aria-hidden="true" />
                       <span>{c}</span>
                     </li>
                   ))}
