@@ -102,41 +102,60 @@ export default function About() {
           {/* Right Column - Side Info Card */}
           <div className="lg:col-span-4 lg:sticky lg:top-28 space-y-6 fade-up-element visible">
             <div className="rounded-sm border border-white/5 bg-zinc-900/20 p-6 space-y-6 theme-transition">
-              <h3 className="text-xs font-bold uppercase tracking-wider text-zinc-300 font-mono">[Quick Facts]</h3>
+              <h3 className="text-xs font-bold uppercase tracking-wider text-zinc-300 font-mono">[ QUICK FACTS ]</h3>
               
-              <div className="space-y-4">
-                <div className="flex gap-3">
-                  <Monitor className="h-5 w-5 text-emerald-400 shrink-0" />
-                  <div>
-                    <h4 className="text-xs font-bold text-white uppercase tracking-wider">Identity Lanes</h4>
-                    <p className="text-xs text-zinc-400 mt-1 font-light">Operator, Builder, Systems & Creative Technologist</p>
-                  </div>
+              <div className="space-y-6">
+                
+                {/* Focus */}
+                <div className="space-y-1">
+                  <span className="text-[9px] font-mono text-emerald-400 uppercase tracking-widest block">FOCUS</span>
+                  <p className="text-xs text-white font-medium leading-relaxed">
+                    Acquiring and rebuilding meaningful service businesses
+                  </p>
                 </div>
 
-                <div className="flex gap-3">
-                  <Award className="h-5 w-5 text-emerald-400 shrink-0" />
-                  <div>
-                    <h4 className="text-xs font-bold text-white uppercase tracking-wider">Acquisition</h4>
-                    <p className="text-xs text-zinc-400 mt-1 font-light">BraveHeart First Aid (acquired June 2025)</p>
-                  </div>
+                {/* First Proof */}
+                <div className="space-y-1">
+                  <span className="text-[9px] font-mono text-emerald-400 uppercase tracking-widest block">FIRST PROOF</span>
+                  <p className="text-xs text-white font-medium">
+                    BraveHeart First Aid
+                  </p>
+                  <p className="text-[11px] text-zinc-400 font-light">
+                    Acquired June 2025
+                  </p>
                 </div>
 
-                <div className="flex gap-3">
-                  <Compass className="h-5 w-5 text-emerald-400 shrink-0" />
-                  <div>
-                    <h4 className="text-xs font-bold text-white uppercase tracking-wider font-mono">Location</h4>
-                    <p className="text-xs text-zinc-400 mt-1 font-light">Nova Scotia, Canada (shaping: 18 years in Switzerland)</p>
-                  </div>
+                {/* Operating Layer */}
+                <div className="space-y-1">
+                  <span className="text-[9px] font-mono text-emerald-400 uppercase tracking-widest block">OPERATING LAYER</span>
+                  <p className="text-xs text-white font-medium">
+                    Ripley
+                  </p>
+                  <p className="text-[11px] text-zinc-400 font-light leading-relaxed">
+                    Custom software, automation, and AI-assisted workflows
+                  </p>
                 </div>
+
+                {/* Location */}
+                <div className="space-y-1">
+                  <span className="text-[9px] font-mono text-emerald-400 uppercase tracking-widest block">LOCATION</span>
+                  <p className="text-xs text-white font-medium">
+                    Nova Scotia, Canada
+                  </p>
+                  <p className="text-[11px] text-zinc-400 font-light leading-relaxed">
+                    Deep professional roots in Switzerland
+                  </p>
+                </div>
+
               </div>
 
               <div className="pt-6 border-t border-white/5">
-                <a
-                  href="mailto:ee@castson.com"
-                  className="interactive-hover flex w-full items-center justify-center gap-1 rounded-sm bg-white text-black py-3 text-center text-xs font-bold uppercase tracking-wider hover:bg-emerald-400 transition-all duration-300"
+                <Link
+                  href="/contact"
+                  className="interactive-hover flex w-full items-center justify-center gap-1.5 rounded-sm bg-white text-black py-3 text-center text-xs font-bold uppercase tracking-wider hover:bg-emerald-400 transition-all duration-300"
                 >
-                  Let&apos;s Connect <ArrowUpRight className="h-4 w-4" />
-                </a>
+                  START A CONVERSATION <ArrowUpRight className="h-4 w-4" />
+                </Link>
               </div>
             </div>
           </div>
