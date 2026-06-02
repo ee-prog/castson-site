@@ -139,12 +139,12 @@ export default function Home() {
           <div className="max-w-4xl space-y-12">
             
             <div className="border-l-2 border-emerald-400 pl-6 space-y-4 fade-up-element visible">
-              <span className="text-[9px] font-mono tracking-widest uppercase text-emerald-400">[ The Proof ]</span>
+              <span className="text-[9px] font-mono tracking-widest uppercase text-emerald-400">[ The First Acquisition ]</span>
               <h2 className="text-2xl sm:text-3xl font-bold uppercase text-white font-display">
                 BraveHeart First Aid
               </h2>
               <p className="text-zinc-300 font-light leading-relaxed">
-                BraveHeart was the first acquisition. It taught me what ownership demands: standards, timing, care, and systems that work when people depend on them.
+                BraveHeart was the first company I acquired and operated. It taught me what ownership demands: standards, timing, care, and systems that work when people depend on them.
               </p>
             </div>
 
@@ -162,7 +162,7 @@ export default function Home() {
               <div className="space-y-4">
                 <h4 className="text-xs font-mono font-bold uppercase text-emerald-400 tracking-wider">[ The Standard of Care ]</h4>
                 <p>
-                  First aid training has a moral centre. It is work done under pressure. At first, I thought of it as a case study for systems and software. But ownership quickly taught me something deeper.
+                  First aid training has a moral centre. It is work done under pressure. At first, I thought of it as a proof of ownership and systems discipline. But ownership quickly taught me something deeper.
                 </p>
                 <p>
                   It taught me that standard of care is everything. If the student isn&apos;t supported, if the timing is off, if the instructors don&apos;t have what they need, the system fails.
@@ -618,12 +618,12 @@ export default function Home() {
               >
                 <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff01_1px,transparent_1px),linear-gradient(to_bottom,#ffffff01_1px,transparent_1px)] bg-[size:1.5rem_1.5rem] pointer-events-none"></div>
                 <div className="space-y-4 relative z-10">
-                  <span className="text-[9px] font-mono text-zinc-500 uppercase tracking-widest block">[ Project 01 ]</span>
+                  <span className="text-[9px] font-mono text-zinc-500 uppercase tracking-widest block">[ First Acquisition ]</span>
                   <h3 className="text-lg font-bold uppercase text-white font-display group-hover:text-emerald-400 transition-colors">
-                    The BraveHeart Experiment
+                    The First Acquisition
                   </h3>
                   <p className="text-xs text-zinc-400 font-light leading-relaxed">
-                    A real business, rebuilt from the inside to test operations, technology, and system transformation.
+                    BraveHeart was the first company I acquired and operated, serving as a real lesson in standards, timing, care, and systems.
                   </p>
                 </div>
                 <div className="flex items-center gap-1 text-[10px] font-mono font-bold uppercase text-emerald-400 group-hover:text-white transition-colors relative z-10">

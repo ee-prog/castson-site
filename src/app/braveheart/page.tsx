@@ -40,9 +40,9 @@ export default function BraveHeart() {
         
         <div className="mx-auto max-w-5xl w-full px-4 sm:px-6 lg:px-8 relative z-20">
           <div className="max-w-3xl space-y-6">
-            <span className="text-[10px] font-bold uppercase tracking-widest text-emerald-400 font-mono">01 / The Active Sandbox</span>
+            <span className="text-[10px] font-bold uppercase tracking-widest text-emerald-400 font-mono">01 / First Acquisition</span>
             <h1 className="text-4xl sm:text-6xl font-extrabold uppercase tracking-tighter text-white leading-none font-display">
-              The BraveHeart Experiment
+              BraveHeart
             </h1>
             <p className="text-xl sm:text-2xl text-zinc-300 font-light font-display">
               A real business, rebuilt from the inside.
@@ -59,7 +59,11 @@ export default function BraveHeart() {
             {/* Left: Narrative */}
             <div className="lg:col-span-7 space-y-6 text-zinc-300 font-light leading-relaxed text-sm sm:text-base">
               <p className="text-lg text-white">
-                BraveHeart First Aid is the first full expression of this work. It is not a simulation.
+                BraveHeart was the first company I acquired and operated. It taught me what ownership demands: standards, timing, care, and systems that work when people depend on them.
+              </p>
+
+              <p>
+                First aid training is serious work. The student has to be supported. The instructor has to be prepared. The timing, equipment, communication, and certification process all have to work. Ownership made those standards real.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-4 py-4 px-6 rounded-sm bg-zinc-900/20 border border-white/5 font-mono text-xs text-zinc-400">

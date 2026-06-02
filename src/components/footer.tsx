@@ -24,7 +24,7 @@ export default function Footer() {
           <div className="space-y-2 text-xs font-mono text-zinc-400">
             <div className="flex items-center gap-2">
               <span className="h-1 w-1 bg-emerald-500"></span>
-              <span>BraveHeart is the experiment.</span>
+              <span>BraveHeart is the first acquisition.</span>
             </div>
             <div className="flex items-center gap-2">
               <span className="h-1 w-1 bg-emerald-500"></span>

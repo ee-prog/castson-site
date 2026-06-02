@@ -7,7 +7,7 @@ import { ArrowUpRight } from "lucide-react";
 
 const navItems = [
   { name: "Home", href: "/" },
-  { name: "The BraveHeart Experiment", href: "/braveheart" },
+  { name: "BraveHeart", href: "/braveheart" },
   { name: "Ripley", href: "/ripley" },
   { name: "Field Notes", href: "/field-notes" },
   { name: "Now", href: "/now" },
