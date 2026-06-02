@@ -50,30 +50,26 @@ export default function Home() {
 
             {/* Title */}
             <h1 className="text-white font-display fade-up-element visible">
-              I build companies where taste, service, and operations meet.
+              I build value in businesses with character.
             </h1>
 
-            <p className="text-lg sm:text-xl text-zinc-300 font-light leading-relaxed max-w-2xl pt-2">
-              Castson Inc. is the vehicle for that work: acquiring, partnering with, and developing experience-led businesses with distinct character and room to become stronger.
-            </p>
+            <div className="space-y-4 text-lg sm:text-xl text-zinc-300 font-light leading-relaxed max-w-2xl pt-2">
+              <p>
+                Through Castson Inc., I work with companies as an owner, operator, and partner.
+              </p>
+              <p>
+                I strengthen the brand, improve the service, and build the systems underneath.
+              </p>
+            </div>
 
-            <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-[10px] font-mono text-zinc-500 uppercase tracking-widest pt-4">
-              <span className="flex items-center gap-1.5">
-                <span className="h-1 w-1 bg-emerald-400 rounded-full"></span>
-                <span>Taste</span>
-              </span>
-              <span className="flex items-center gap-1.5">
-                <span className="h-1 w-1 bg-emerald-400 rounded-full"></span>
-                <span>Service</span>
-              </span>
-              <span className="flex items-center gap-1.5">
-                <span className="h-1 w-1 bg-emerald-400 rounded-full"></span>
-                <span>Systems</span>
-              </span>
-              <span className="flex items-center gap-1.5">
-                <span className="h-1 w-1 bg-emerald-400 rounded-full"></span>
-                <span>Ownership</span>
-              </span>
+            <div className="flex flex-wrap items-center gap-x-3 gap-y-2 text-[10px] font-mono text-zinc-500 uppercase tracking-widest pt-4">
+              <span>Brand</span>
+              <span className="text-zinc-700">/</span>
+              <span>Service</span>
+              <span className="text-zinc-700">/</span>
+              <span>Systems</span>
+              <span className="text-zinc-700">/</span>
+              <span>Ownership</span>
             </div>
 
             <div className="pt-6 fade-up-element visible">
