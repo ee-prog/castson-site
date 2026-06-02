@@ -46,9 +46,14 @@ export default function Contact() {
           
           {/* Left Column: Direct Info & Targets */}
           <div className="lg:col-span-6 space-y-8 text-zinc-300 font-light leading-relaxed text-sm sm:text-base fade-up-element visible">
-            <p className="text-lg text-white font-normal">
-              I am not trying to build a large audience. But I am interested in the right conversations.
-            </p>
+            <div className="space-y-4">
+              <p className="text-lg text-white font-normal">
+                I am not trying to build a large audience.
+              </p>
+              <p className="text-zinc-300">
+                But I am interested in the right conversations.
+              </p>
+            </div>
             
             <div className="space-y-4">
               <span className="text-[9px] font-mono text-zinc-500 uppercase tracking-widest block border-b border-white/5 pb-2">
@@ -73,7 +78,7 @@ export default function Contact() {
             </div>
 
             <div className="border-l border-emerald-400/40 pl-4 py-1 text-xs font-mono text-zinc-400">
-              No pitch required. Just signal.
+              If something here connects with something you are building, operating, buying, or trying to understand, I would be glad to hear from you.
             </div>
           </div>
 
