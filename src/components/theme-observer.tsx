@@ -8,7 +8,7 @@ export default function ThemeObserver() {
 
   useEffect(() => {
     // 1. Apply theme immediately based on route pathname
-    const lightThemeRoutes: string[] = [];
+    const lightThemeRoutes = ["/about", "/contact", "/field-notes"];
     const isLight = lightThemeRoutes.some(
       (route) => pathname === route || pathname.startsWith(route + "/")
     );

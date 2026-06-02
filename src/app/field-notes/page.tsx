@@ -73,23 +73,23 @@ export default function FieldNotes() {
       
       {/* Structural Grid Lines */}
       <div className="absolute inset-y-0 inset-x-0 mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 pointer-events-none z-10 flex justify-between">
-        <div className="w-[1px] h-full bg-white/[0.02] animate-grid-line delay-100 opacity-0"></div>
-        <div className="w-[1px] h-full bg-white/[0.02] hidden md:block animate-grid-line delay-300 opacity-0"></div>
-        <div className="w-[1px] h-full bg-white/[0.02] hidden md:block animate-grid-line delay-550 opacity-0"></div>
-        <div className="w-[1px] h-full bg-white/[0.02] animate-grid-line delay-700 opacity-0"></div>
+        <div className="w-[1px] h-full bg-zinc-950/[0.03] dark:bg-white/[0.02] animate-grid-line delay-100 opacity-0"></div>
+        <div className="w-[1px] h-full bg-zinc-950/[0.03] dark:bg-white/[0.02] hidden md:block animate-grid-line delay-300 opacity-0"></div>
+        <div className="w-[1px] h-full bg-zinc-950/[0.03] dark:bg-white/[0.02] hidden md:block animate-grid-line delay-550 opacity-0"></div>
+        <div className="w-[1px] h-full bg-zinc-950/[0.03] dark:bg-white/[0.02] animate-grid-line delay-700 opacity-0"></div>
       </div>
 
       {/* Header */}
-      <section className="relative py-12 md:py-24 border-b border-white/[0.03] theme-transition">
-        <div className="absolute top-1/4 right-1/4 -z-10 h-[500px] w-[500px] rounded-full bg-emerald-500/5 blur-[120px]" />
+      <section className="relative py-12 md:py-24 border-b border-zinc-200 dark:border-white/[0.03] theme-transition">
+        <div className="absolute top-1/4 right-1/4 -z-10 h-[500px] w-[500px] rounded-full bg-emerald-500/[0.02] dark:bg-emerald-500/5 blur-[120px]" />
         
         <div className="mx-auto max-w-5xl w-full px-4 sm:px-6 lg:px-8 relative z-20">
           <div className="max-w-3xl space-y-6">
-            <span className="text-[10px] font-bold uppercase tracking-widest text-emerald-400 font-mono">03 / The Archive</span>
-            <h1 className="text-4xl sm:text-6xl font-extrabold uppercase tracking-tighter text-white leading-none font-display">
+            <span className="text-[10px] font-bold uppercase tracking-widest text-emerald-600 dark:text-emerald-400 font-mono">03 / The Archive</span>
+            <h1 className="text-4xl sm:text-6xl font-extrabold uppercase tracking-tighter text-foreground leading-none font-display">
               Field Notes
             </h1>
-            <p className="text-xl sm:text-2xl text-zinc-300 font-light font-display">
+            <p className="text-xl sm:text-2xl text-zinc-700 dark:text-zinc-300 font-light font-display">
               Notes from inside the work.
             </p>
           </div>
@@ -97,9 +97,9 @@ export default function FieldNotes() {
       </section>
 
       {/* Sub-Header / Philosophy */}
-      <section className="py-8 md:py-12 border-b border-white/[0.03] bg-zinc-950/10 theme-transition">
+      <section className="py-8 md:py-12 border-b border-zinc-200 dark:border-white/[0.03] bg-zinc-100/30 dark:bg-zinc-950/10 theme-transition">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 relative z-20">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 text-xs font-mono text-zinc-500 uppercase tracking-widest">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 text-xs font-mono text-zinc-600 dark:text-zinc-500 uppercase tracking-widest">
             <div className="space-y-2">
               <div className="flex items-start gap-2">
                 <span>—</span>
@@ -132,21 +132,21 @@ export default function FieldNotes() {
               <article key={theme.index} className="space-y-6 fade-up-element visible">
                 {/* Meta details */}
                 <div className="flex items-center gap-3">
-                  <span className="text-[10px] font-mono text-emerald-400 border border-emerald-500/20 bg-emerald-500/[0.02] px-2 py-0.5 rounded-sm">
+                  <span className="text-[10px] font-mono text-emerald-600 dark:text-emerald-400 border border-emerald-500/30 dark:border-emerald-500/20 bg-emerald-50/50 dark:bg-emerald-500/[0.02] px-2 py-0.5 rounded-sm">
                     Theme {theme.index}
                   </span>
-                  <span className="h-[1px] flex-1 bg-white/5"></span>
+                  <span className="h-[1px] flex-1 bg-zinc-200 dark:bg-white/5"></span>
                 </div>
 
                 {/* Title */}
-                <h2 className="text-xl sm:text-2xl font-bold uppercase text-white font-display leading-tight">
+                <h2 className="text-xl sm:text-2xl font-bold uppercase text-zinc-900 dark:text-white font-display leading-tight">
                   {theme.title}
                 </h2>
 
                 {/* Content paragraphs */}
-                <div className="text-zinc-300 font-light text-sm sm:text-base leading-relaxed space-y-4">
+                <div className="text-zinc-800 dark:text-zinc-300 font-light text-sm sm:text-base leading-relaxed space-y-4">
                   {theme.content.map((para, i) => (
-                    <p key={i} className={para.startsWith("Then") || para.startsWith("The better") || para.startsWith("It means") || para.startsWith("The first layer") || para.startsWith("Each one") ? "text-white font-medium" : ""}>
+                    <p key={i} className={para.startsWith("Then") || para.startsWith("The better") || para.startsWith("It means") || para.startsWith("The first layer") || para.startsWith("Each one") ? "text-zinc-950 dark:text-white font-medium" : ""}>
                       {para}
                     </p>
                   ))}
