@@ -43,7 +43,7 @@ export default function About() {
               Before acquiring BraveHeart First Aid, I worked across creative direction, advertising, programmatic media, consulting, digital transformation, and technology. For years, I helped organizations change from the outside.
             </p>
 
-            <p className="border-l border-white/10 pl-4 text-zinc-400 italic">
+            <p className="border-l border-white/10 pl-4 text-zinc-400 italic font-serif">
               That gave me range. But ownership changed the work.
             </p>
 
