@@ -67,7 +67,9 @@
   --color-zinc-900: #12110f; /* Warm slate charcoal */
   --color-zinc-950: #0a0a09; /* Warm pitch black */
 
-  --font-sans: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-heading: var(--font-heading), system-ui, sans-serif;
+  --font-body: var(--font-body), system-ui, sans-serif;
+  --font-sans: var(--font-body), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   --font-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular, Roboto Mono, Menlo, Monaco, Consolas, monospace;
 }
 
@@ -75,7 +77,7 @@ body {
   background-color: var(--background);
   color: var(--foreground);
   transition: background-color 0.8s cubic-bezier(0.25, 1, 0.5, 1), color 0.8s cubic-bezier(0.25, 1, 0.5, 1);
-  font-family: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  font-family: var(--font-body), system-ui, sans-serif;
   overflow-x: hidden;
 }
 
@@ -104,9 +106,9 @@ html:not(.dark):not(.menu-open) header button span {
   background-color: #0a0a09;
 }
 
-/* Headings, display font, and quotes use Primary: Geist Sans */
-h1, h2, h3, h4, h5, h6, .font-display, blockquote, .font-serif {
-  font-family: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+/* Headings, display font, and quotes use Atacama */
+h1, h2, h3, h4, h5, h6, .font-display, .font-heading, blockquote {
+  font-family: var(--font-heading), system-ui, sans-serif;
 }
 
 blockquote {
