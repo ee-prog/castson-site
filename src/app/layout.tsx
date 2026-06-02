@@ -1,14 +1,8 @@
 import type { Metadata } from "next";
-import { Cinzel } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import ThemeObserver from "@/components/theme-observer";
-
-const cinzel = Cinzel({
-  variable: "--font-cinzel",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: {
@@ -53,7 +47,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${cinzel.variable} h-full antialiased dark`}
+      className="h-full antialiased dark"
     >
       <body className="min-h-full flex flex-col font-sans selection:bg-emerald-500/30 selection:text-emerald-200 relative">
         <ThemeObserver />
