@@ -66,17 +66,65 @@ export default function Colophon() {
               </div>
             </div>
 
-            <div className="space-y-3 pt-4">
+            <div className="space-y-6 pt-4">
               <span className="text-[10px] font-mono text-zinc-500 uppercase tracking-widest block border-b border-white/5 pb-2">
-                [ Tools ]
+                [ Technical Specifications ]
               </span>
-              <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 text-xs font-mono text-zinc-400">
-                {["Next.js", "TypeScript", "Tailwind CSS", "Vercel", "Lucide icons", "Antigravity"].map((tool) => (
-                  <div key={tool} className="flex items-center gap-1.5 p-2 border border-white/5 bg-zinc-900/10 rounded-sm">
-                    <span className="h-1 w-1 bg-emerald-400"></span>
-                    <span>{tool}</span>
+              
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 text-xs font-mono">
+                
+                {/* Build */}
+                <div className="space-y-2">
+                  <span className="text-zinc-500 block uppercase tracking-wider font-bold">[ Build ]</span>
+                  <div className="space-y-1.5 text-zinc-400">
+                    {["Next.js", "TypeScript", "Tailwind CSS"].map((tool) => (
+                      <div key={tool} className="flex items-center gap-2">
+                        <span className="h-1 w-1 bg-emerald-400 rounded-full"></span>
+                        <span>{tool}</span>
+                      </div>
+                    ))}
                   </div>
-                ))}
+                </div>
+
+                {/* Infrastructure */}
+                <div className="space-y-2">
+                  <span className="text-zinc-500 block uppercase tracking-wider font-bold">[ Infrastructure ]</span>
+                  <div className="space-y-1.5 text-zinc-400">
+                    {["Vercel", "GitHub", "Resend"].map((tool) => (
+                      <div key={tool} className="flex items-center gap-2">
+                        <span className="h-1 w-1 bg-emerald-400 rounded-full"></span>
+                        <span>{tool}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Design */}
+                <div className="space-y-2">
+                  <span className="text-zinc-500 block uppercase tracking-wider font-bold">[ Design ]</span>
+                  <div className="space-y-1.5 text-zinc-400">
+                    {["Figma", "Lucide icons"].map((tool) => (
+                      <div key={tool} className="flex items-center gap-2">
+                        <span className="h-1 w-1 bg-emerald-400 rounded-full"></span>
+                        <span>{tool}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Agent Harness */}
+                <div className="space-y-2">
+                  <span className="text-zinc-500 block uppercase tracking-wider font-bold">[ Agent Harness ]</span>
+                  <div className="space-y-1.5 text-zinc-400">
+                    {["Antigravity"].map((tool) => (
+                      <div key={tool} className="flex items-center gap-2">
+                        <span className="h-1 w-1 bg-emerald-400 rounded-full"></span>
+                        <span>{tool}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
               </div>
             </div>
 
