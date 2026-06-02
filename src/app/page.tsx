@@ -620,10 +620,10 @@ export default function Home() {
                 <div className="space-y-4 relative z-10">
                   <span className="text-[9px] font-mono text-zinc-500 uppercase tracking-widest block">[ Acquired Company ]</span>
                   <h3 className="text-lg font-medium text-white group-hover:text-emerald-400 transition-colors">
-                    Acquired & Operating
+                    Acquired &<br />Operating
                   </h3>
                   <p className="text-xs text-zinc-400 font-light leading-relaxed">
-                    BraveHeart is a real company I acquired and now operate. It sharpens the standard: timing, care, communication, and systems have to work when people depend on them.
+                    BraveHeart is a company I acquired and now operate. Its standard is practical: timing, care, communication, and systems have to work when people depend on them.
                   </p>
                 </div>
                 <div className="flex items-center gap-1 text-[10px] font-mono font-bold uppercase text-emerald-400 group-hover:text-white transition-colors relative z-10">
