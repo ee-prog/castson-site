@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, ChevronRight, ArrowRight } from "lucide-react";
 
 export default function About() {
   return (
@@ -84,24 +84,33 @@ export default function About() {
                 I like bringing things back to first principles:
               </p>
               
-              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs font-mono text-zinc-600 dark:text-zinc-400 pl-4">
-                <li className="list-disc">I like finding the real shape of a problem.</li>
-                <li className="list-disc">I like removing what does not belong.</li>
-                <li className="list-disc">I like building systems that make people more capable.</li>
+              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs font-mono text-zinc-650 dark:text-zinc-400 pl-2">
+                <li className="flex items-start gap-1.5">
+                  <ChevronRight className="h-4 w-4 shrink-0 text-emerald-500 mt-0.5" strokeWidth={1.5} aria-hidden="true" />
+                  <span>I like finding the real shape of a problem.</span>
+                </li>
+                <li className="flex items-start gap-1.5">
+                  <ChevronRight className="h-4 w-4 shrink-0 text-emerald-500 mt-0.5" strokeWidth={1.5} aria-hidden="true" />
+                  <span>I like removing what does not belong.</span>
+                </li>
+                <li className="flex items-start gap-1.5">
+                  <ChevronRight className="h-4 w-4 shrink-0 text-emerald-500 mt-0.5" strokeWidth={1.5} aria-hidden="true" />
+                  <span>I like building systems that make people more capable.</span>
+                </li>
               </ul>
             </div>
 
             <div className="space-y-2 pt-6 border-t border-zinc-200 dark:border-white/5 text-zinc-650 dark:text-zinc-400 text-xs font-mono">
-              <div className="flex items-center gap-2">
-                <span className="h-1.5 w-1.5 bg-emerald-500 rounded-full shrink-0"></span>
+              <div className="flex items-start gap-2">
+                <ArrowRight className="h-4 w-4 shrink-0 text-emerald-500 mt-0.5" strokeWidth={1.5} aria-hidden="true" />
                 <span><strong className="text-zinc-900 dark:text-white">BraveHeart</strong> is the initial proof.</span>
               </div>
-              <div className="flex items-center gap-2">
-                <span className="h-1.5 w-1.5 bg-emerald-500 rounded-full shrink-0"></span>
+              <div className="flex items-start gap-2">
+                <ArrowRight className="h-4 w-4 shrink-0 text-emerald-500 mt-0.5" strokeWidth={1.5} aria-hidden="true" />
                 <span><strong className="text-zinc-900 dark:text-white">Ripley</strong> is the operating layer.</span>
               </div>
-              <div className="flex items-center gap-2">
-                <span className="h-1.5 w-1.5 bg-emerald-500 rounded-full shrink-0"></span>
+              <div className="flex items-start gap-2">
+                <ArrowRight className="h-4 w-4 shrink-0 text-emerald-500 mt-0.5" strokeWidth={1.5} aria-hidden="true" />
                 <span><strong className="text-zinc-900 dark:text-white">castson.com</strong> is the record.</span>
               </div>
             </div>

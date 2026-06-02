@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { ChevronRight } from "lucide-react";
+import { ChevronRight, ArrowRight } from "lucide-react";
 
 function ImagePlaceholder({ label }: { label: string }) {
   const refCode = label
@@ -157,7 +157,7 @@ export default function Now() {
                   "Then see what the pattern wants to become next."
                 ].map((d, idx) => (
                   <li key={idx} className="flex gap-2.5 items-start">
-                    <span className="text-emerald-500 font-bold font-mono">→</span>
+                    <ArrowRight className="h-4 w-4 shrink-0 text-emerald-500 mt-0.5" strokeWidth={1.5} aria-hidden="true" />
                     <span className={idx === 6 || idx === 7 ? "text-white font-medium" : ""}>{d}</span>
                   </li>
                 ))}

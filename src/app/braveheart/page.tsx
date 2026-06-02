@@ -107,15 +107,15 @@ export default function BraveHeart() {
               
               <ul className="space-y-2 text-xs font-mono text-zinc-400 pl-4 border-l border-white/10 list-none">
                 <li className="flex items-start gap-2">
-                  <span className="text-emerald-500 font-bold shrink-0">—</span>
+                  <ChevronRight className="h-4 w-4 shrink-0 text-emerald-500 mt-0.5" strokeWidth={1.5} aria-hidden="true" />
                   <span>When a customer can trust the path, or they cannot.</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-emerald-500 font-bold shrink-0">—</span>
+                  <ChevronRight className="h-4 w-4 shrink-0 text-emerald-500 mt-0.5" strokeWidth={1.5} aria-hidden="true" />
                   <span>When an instructor is ready to teach, or they are not.</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-emerald-500 font-bold shrink-0">—</span>
+                  <ChevronRight className="h-4 w-4 shrink-0 text-emerald-500 mt-0.5" strokeWidth={1.5} aria-hidden="true" />
                   <span>When a process creates clarity, or quietly creates more work.</span>
                 </li>
               </ul>

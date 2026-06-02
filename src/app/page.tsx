@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import { ArrowRight, ChevronRight } from "lucide-react";
+import { ArrowRight, ChevronRight, Check, Minus } from "lucide-react";
 
 function ImagePlaceholder({ label }: { label: string }) {
   const refCode = label
@@ -378,23 +378,23 @@ export default function Home() {
                 </p>
                 <ul className="space-y-2 text-xs font-mono text-zinc-400">
                   <li className="flex items-start gap-1.5">
-                    <span className="text-red-500 font-bold">-</span>
+                    <Minus className="h-4 w-4 shrink-0 text-red-500 mt-0.5" strokeWidth={1.5} aria-hidden="true" />
                     <span>They collect assumptions.</span>
                   </li>
                   <li className="flex items-start gap-1.5">
-                    <span className="text-red-500 font-bold">-</span>
+                    <Minus className="h-4 w-4 shrink-0 text-red-500 mt-0.5" strokeWidth={1.5} aria-hidden="true" />
                     <span>They inherit old habits.</span>
                   </li>
                   <li className="flex items-start gap-1.5">
-                    <span className="text-red-500 font-bold">-</span>
+                    <Minus className="h-4 w-4 shrink-0 text-red-500 mt-0.5" strokeWidth={1.5} aria-hidden="true" />
                     <span>They compromise on standards.</span>
                   </li>
                   <li className="flex items-start gap-1.5">
-                    <span className="text-red-500 font-bold">-</span>
+                    <Minus className="h-4 w-4 shrink-0 text-red-500 mt-0.5" strokeWidth={1.5} aria-hidden="true" />
                     <span>They make simple coordination complicated.</span>
                   </li>
                   <li className="flex items-start gap-1.5">
-                    <span className="text-red-500 font-bold">-</span>
+                    <Minus className="h-4 w-4 shrink-0 text-red-500 mt-0.5" strokeWidth={1.5} aria-hidden="true" />
                     <span>They ask staff to compensate for what the system itself should handle.</span>
                   </li>
                 </ul>
@@ -429,23 +429,23 @@ export default function Home() {
               
               <ul className="space-y-3 pl-4 border-l border-white/10 text-xs font-mono text-zinc-400 list-none">
                 <li className="flex items-start gap-2">
-                  <span className="text-emerald-500 font-bold shrink-0">—</span>
+                  <Check className="h-4 w-4 shrink-0 text-emerald-500 mt-0.5" strokeWidth={1.5} aria-hidden="true" />
                   <span>Find businesses with real taste, service, place, or reputation.</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-emerald-500 font-bold shrink-0">—</span>
+                  <Check className="h-4 w-4 shrink-0 text-emerald-500 mt-0.5" strokeWidth={1.5} aria-hidden="true" />
                   <span>Preserve what makes them distinct.</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-emerald-500 font-bold shrink-0">—</span>
+                  <Check className="h-4 w-4 shrink-0 text-emerald-500 mt-0.5" strokeWidth={1.5} aria-hidden="true" />
                   <span>Strengthen the story and standards.</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-emerald-500 font-bold shrink-0">—</span>
+                  <Check className="h-4 w-4 shrink-0 text-emerald-500 mt-0.5" strokeWidth={1.5} aria-hidden="true" />
                   <span>Build the systems behind the experience.</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-emerald-500 font-bold shrink-0">—</span>
+                  <Check className="h-4 w-4 shrink-0 text-emerald-500 mt-0.5" strokeWidth={1.5} aria-hidden="true" />
                   <span>Make the business more capable without making it generic.</span>
                 </li>
               </ul>
