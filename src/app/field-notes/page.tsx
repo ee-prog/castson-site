@@ -86,7 +86,7 @@ export default function FieldNotes() {
         <div className="mx-auto max-w-5xl w-full px-4 sm:px-6 lg:px-8 relative z-20">
           <div className="max-w-3xl space-y-6">
             <span className="text-[10px] font-bold uppercase tracking-widest text-emerald-600 dark:text-emerald-400 font-mono">03 / The Archive</span>
-            <h1 className="text-4xl sm:text-6xl font-normal tracking-tighter text-foreground leading-none font-display">
+            <h1 className="text-foreground font-display">
               Field Notes
             </h1>
             <p className="text-xl sm:text-2xl text-zinc-700 dark:text-zinc-300 font-light">

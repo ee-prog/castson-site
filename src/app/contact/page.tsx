@@ -23,7 +23,7 @@ export default function Contact() {
         {/* Page Header */}
         <div className="max-w-3xl fade-up-element visible">
           <span className="text-[10px] font-bold uppercase tracking-widest text-emerald-600 dark:text-emerald-400 font-mono">06 / Connect</span>
-          <h1 className="text-4xl sm:text-6xl font-normal tracking-tighter text-foreground leading-none font-display mt-2">
+          <h1 className="text-foreground font-display mt-2">
             Contact
           </h1>
           <p className="mt-4 text-xl sm:text-2xl text-zinc-700 dark:text-zinc-300 font-light">
@@ -121,7 +121,7 @@ export default function Contact() {
                       name="name"
                       required
                       maxLength={100}
-                      className="w-full rounded-sm border border-zinc-200 dark:border-white/10 bg-white dark:bg-zinc-950 px-4 py-3 text-sm text-zinc-900 dark:text-white placeholder-zinc-400 dark:placeholder-zinc-700 focus:border-emerald-500 focus:outline-none transition-colors font-sans"
+                      className="w-full form-input-luxury text-zinc-900 dark:text-white placeholder-zinc-450 dark:placeholder-zinc-600 focus:outline-none"
                       placeholder="Jane Doe"
                     />
                     {state?.fieldErrors?.name && (
@@ -138,7 +138,7 @@ export default function Contact() {
                       name="email"
                       required
                       maxLength={254}
-                      className="w-full rounded-sm border border-zinc-200 dark:border-white/10 bg-white dark:bg-zinc-950 px-4 py-3 text-sm text-zinc-900 dark:text-white placeholder-zinc-400 dark:placeholder-zinc-700 focus:border-emerald-500 focus:outline-none transition-colors font-sans"
+                      className="w-full form-input-luxury text-zinc-900 dark:text-white placeholder-zinc-450 dark:placeholder-zinc-600 focus:outline-none"
                       placeholder="jane@example.com"
                     />
                     {state?.fieldErrors?.email && (
@@ -157,7 +157,7 @@ export default function Contact() {
                     name="subject"
                     required
                     maxLength={150}
-                    className="w-full rounded-sm border border-zinc-200 dark:border-white/10 bg-white dark:bg-zinc-950 px-4 py-3 text-sm text-zinc-900 dark:text-white placeholder-zinc-400 dark:placeholder-zinc-700 focus:border-emerald-500 focus:outline-none transition-colors font-sans"
+                    className="w-full form-input-luxury text-zinc-900 dark:text-white placeholder-zinc-450 dark:placeholder-zinc-600 focus:outline-none"
                     placeholder="e.g., succession inquiry / operator peer"
                   />
                   {state?.fieldErrors?.subject && (
@@ -175,7 +175,7 @@ export default function Contact() {
                     required
                     rows={5}
                     maxLength={5000}
-                    className="w-full rounded-sm border border-zinc-200 dark:border-white/10 bg-white dark:bg-zinc-950 px-4 py-3 text-sm text-zinc-900 dark:text-white placeholder-zinc-400 dark:placeholder-zinc-700 focus:border-emerald-500 focus:outline-none transition-colors resize-none font-sans"
+                    className="w-full form-input-luxury text-zinc-900 dark:text-white placeholder-zinc-450 dark:placeholder-zinc-600 focus:outline-none resize-none"
                     placeholder="Introduce yourself and your system questions..."
                   />
                   {state?.fieldErrors?.message && (

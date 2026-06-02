@@ -49,7 +49,7 @@ export default function Home() {
             </div>
 
             {/* Title */}
-            <h1 className="text-4xl sm:text-6xl font-normal tracking-tighter text-white leading-none font-display fade-up-element visible">
+            <h1 className="text-white font-display fade-up-element visible">
               I build companies where taste, service, and operations meet.
             </h1>
 

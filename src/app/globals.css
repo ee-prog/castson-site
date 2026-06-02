@@ -106,18 +106,61 @@ html:not(.dark):not(.menu-open) header button span {
   background-color: #0a0a09;
 }
 
-/* Headings, display font, and quotes use Atacama */
-h1, .font-display, .font-heading, blockquote {
+/* Display / Headings use Atacama */
+h1, h2, .font-display, .font-heading {
   font-family: var(--font-heading), system-ui, sans-serif;
+  font-weight: 400;
+  letter-spacing: -0.02em;
 }
 
-/* Sub-headers use Helix */
-h2, h3, h4, h5, h6, .font-subheading {
+h1 {
+  font-size: clamp(2.5rem, 6.5vw, 6rem); /* 40px to 96px */
+  line-height: 0.95;
+}
+
+h2 {
+  font-size: clamp(1.75rem, 4vw, 3rem); /* 28px to 48px */
+  line-height: 1.05;
+}
+
+/* Sub-headers and Quotes use Helix */
+h3, h4, h5, h6, .font-subheading, blockquote {
   font-family: var(--font-body), system-ui, sans-serif;
+  font-weight: 500;
+  line-height: 1.35;
+}
+
+h3 {
+  font-size: clamp(1.25rem, 2.5vw, 1.75rem); /* 20px to 28px */
 }
 
 blockquote {
   font-style: normal;
+}
+
+/* Luxury Form Inputs (Dior style) */
+.form-input-luxury {
+  background-color: transparent !important;
+  border: none !important;
+  border-bottom: 1px solid rgba(168, 162, 158, 0.3) !important;
+  border-radius: 0px !important;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+  padding-top: 0.85rem !important;
+  padding-bottom: 0.85rem !important;
+  font-family: var(--font-body), system-ui, sans-serif !important;
+  font-size: 0.875rem !important;
+  transition: border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.dark .form-input-luxury {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.form-input-luxury:focus {
+  border-bottom-color: #b59367 !important; /* sand-gold accent */
+  outline: none !important;
+  box-shadow: none !important;
 }
 
 

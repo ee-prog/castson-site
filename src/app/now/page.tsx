@@ -41,7 +41,7 @@ export default function Now() {
         <div className="mx-auto max-w-5xl w-full px-4 sm:px-6 lg:px-8 relative z-20">
           <div className="max-w-3xl space-y-6">
             <span className="text-[10px] font-bold uppercase tracking-widest text-emerald-400 font-mono">04 / Active Work</span>
-            <h1 className="text-4xl sm:text-6xl font-normal tracking-tighter text-white leading-none font-display">
+            <h1 className="text-white font-display">
               Now
             </h1>
             <p className="text-xl sm:text-2xl text-zinc-300 font-light">
