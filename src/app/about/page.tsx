@@ -94,7 +94,7 @@ export default function About() {
             <p className="border-t border-white/5 pt-6 text-zinc-400 text-xs font-mono">
               • <strong>BraveHeart</strong> is where I am doing that now.<br />
               • <strong>Ripley</strong> is the operating layer emerging from it.<br />
-              • <strong>Castson</strong> is where I keep the record.
+              • <strong>Castson Inc.</strong> is where I keep the record.
             </p>
 
           </div>

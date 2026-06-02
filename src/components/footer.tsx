@@ -12,7 +12,7 @@ export default function Footer() {
           {/* Brand Col */}
           <div className="space-y-3">
             <div className="flex items-center gap-2">
-              <span className="text-xl font-bold uppercase tracking-widest text-white font-display">Castson</span>
+              <span className="text-xl font-bold uppercase tracking-widest text-white font-display">Castson Inc.</span>
               <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
             </div>
             <p className="text-xs font-mono text-zinc-400 uppercase tracking-widest">
@@ -56,7 +56,7 @@ export default function Footer() {
 
         {/* Bottom copyright */}
         <div className="mt-12 border-t border-white/5 pt-8 flex flex-col sm:flex-row items-center justify-between text-[10px] font-mono gap-4 text-zinc-650">
-          <p>© {year} Castson. All rights reserved.</p>
+          <p>© {year} Castson Inc. All rights reserved.</p>
           <div className="flex gap-4">
             <span>Built with Next.js & Tailwind v4</span>
           </div>

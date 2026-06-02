@@ -47,7 +47,7 @@ export default function Navbar() {
             className="group flex items-center gap-2 relative z-50"
           >
             <span className="text-lg font-bold uppercase tracking-widest text-white transition-colors group-hover:text-emerald-400 font-display">
-              Castson
+              Castson Inc.
             </span>
             <span className="flex h-1.5 w-1.5 rounded-full bg-emerald-400 group-hover:animate-ping"></span>
           </Link>
@@ -142,7 +142,7 @@ export default function Navbar() {
               <span className="text-[10px] font-bold uppercase tracking-widest text-emerald-400 font-mono">
                 [Inquiries]
               </span>
-              <h4 className="text-white text-sm font-bold uppercase mt-2">Castson</h4>
+              <h4 className="text-white text-sm font-bold uppercase mt-2">Castson Inc.</h4>
               <a 
                 href="mailto:ee@castson.com" 
                 className="group flex items-center gap-1.5 text-zinc-400 hover:text-white transition-colors mt-2 text-sm"
@@ -178,7 +178,7 @@ export default function Navbar() {
 
         {/* Bottom Bar: Copyright details */}
         <div className="w-full shrink-0 border-t border-white/5 pt-6 max-w-5xl mx-auto flex justify-between items-center text-[10px] text-zinc-600 font-mono z-10">
-          <span>© {new Date().getFullYear()} Castson</span>
+          <span>© {new Date().getFullYear()} Castson Inc.</span>
           <span className="hidden sm:block">Built with Next.js & Tailwind v4</span>
         </div>
 

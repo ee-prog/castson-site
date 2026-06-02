@@ -12,36 +12,36 @@ const cinzel = Cinzel({
 
 export const metadata: Metadata = {
   title: {
-    default: "Castson | Systems & AI Operations",
-    template: "%s | Castson",
+    default: "Castson Inc. | Systems & AI Operations",
+    template: "%s | Castson Inc.",
   },
-  description: "Castson is an advisory and operations practice specializing in practical AI-enabled operating models, operational data flows, and agentic workflows.",
+  description: "Castson Inc. is an advisory and operations practice specializing in practical AI-enabled operating models, operational data flows, and agentic workflows.",
   keywords: [
-    "Castson",
+    "Castson Inc.",
     "Systems & AI Operations",
     "AI Operating Models",
     "Agentic Workflows",
     "Business Automation",
     "System Design",
     "Operations Design",
-    "Castson Automation"
+    "Castson Inc. Automation"
   ],
-  authors: [{ name: "Castson", url: "https://castson.com" }],
-  creator: "Castson",
+  authors: [{ name: "Castson Inc.", url: "https://castson.com" }],
+  creator: "Castson Inc.",
   metadataBase: new URL("https://castson.com"),
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "https://castson.com",
-    title: "Castson | Systems & AI Operations",
-    description: "Castson is an advisory and operations practice specializing in practical AI-enabled operating models, operational data flows, and agentic workflows.",
-    siteName: "Castson",
+    title: "Castson Inc. | Systems & AI Operations",
+    description: "Castson Inc. is an advisory and operations practice specializing in practical AI-enabled operating models, operational data flows, and agentic workflows.",
+    siteName: "Castson Inc.",
     // [NEEDS ELI INPUT: Open Graph image asset path if available, e.g. /og-image.png. Marked as missing for now.]
   },
   twitter: {
     card: "summary_large_image",
-    title: "Castson | Systems & AI Operations",
-    description: "Castson is an advisory and operations practice specializing in practical AI-enabled operating models, operational data flows, and agentic workflows.",
+    title: "Castson Inc. | Systems & AI Operations",
+    description: "Castson Inc. is an advisory and operations practice specializing in practical AI-enabled operating models, operational data flows, and agentic workflows.",
   },
 };
 

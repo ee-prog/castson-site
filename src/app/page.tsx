@@ -39,7 +39,7 @@ export default function Home() {
             {/* Eyebrow status pill */}
             <div className="inline-flex items-center gap-2 rounded-full border border-emerald-500/20 bg-emerald-500/[0.02] px-3 py-1 text-[9px] font-bold uppercase tracking-widest text-emerald-400">
               <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-ping"></span>
-              <span>Castson Personal Site</span>
+              <span>Castson Inc. Personal Site</span>
             </div>
 
             {/* Title */}
@@ -372,7 +372,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* What Castson is */}
+      {/* What Castson Inc. is */}
       <section className="py-24 bg-zinc-950/40 relative theme-transition">
         <div className="absolute inset-0 bg-gradient-to-t from-emerald-500/[0.02] via-transparent to-transparent pointer-events-none"></div>
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 relative z-20">
@@ -382,10 +382,10 @@ export default function Home() {
             <div className="lg:col-span-6 space-y-6 text-zinc-300 font-light leading-relaxed text-sm sm:text-base fade-up-element visible">
               <span className="text-[9px] font-mono tracking-widest uppercase text-emerald-400">[ Definition ]</span>
               <h2 className="text-3xl font-bold uppercase text-white font-display">
-                What Castson is
+                What Castson Inc. is
               </h2>
               <p>
-                Castson is the record of that work.
+                Castson Inc. is the record of that work.
               </p>
               <p className="border-l border-emerald-400/40 pl-4 font-mono text-xs text-zinc-400 space-y-2">
                 <span>• The current experiment is <strong>BraveHeart</strong>.</span><br />
