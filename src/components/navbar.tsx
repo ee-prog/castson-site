@@ -47,7 +47,7 @@ export default function Navbar() {
             onClick={() => setIsOpen(false)}
             className="group flex items-center gap-2 relative z-50"
           >
-            <span className="text-lg font-normal uppercase tracking-widest text-white transition-colors group-hover:text-emerald-400 font-display">
+            <span className="text-lg font-normal tracking-widest text-white transition-colors group-hover:text-emerald-400 font-display">
               Castson Inc.
             </span>
             <span className="flex h-1.5 w-1.5 rounded-full bg-emerald-400 group-hover:animate-ping"></span>
@@ -127,7 +127,7 @@ export default function Navbar() {
                     <span className="text-zinc-700 text-sm font-mono tracking-wider">
                       {String(idx).padStart(2, "0")}/
                     </span>
-                    <span className={`text-4xl sm:text-6xl font-normal uppercase tracking-tighter font-display transition-colors duration-300 ${
+                    <span className={`text-4xl sm:text-6xl font-normal tracking-tighter font-display transition-colors duration-300 ${
                       isActive ? "text-emerald-400" : "text-white group-hover:text-emerald-400"
                     }`}>
                       {item.name}

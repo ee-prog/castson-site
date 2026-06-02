@@ -18,7 +18,7 @@ export default function Colophon() {
           {/* Header */}
           <div className="space-y-4">
             <span className="text-[10px] font-bold uppercase tracking-widest text-emerald-400 font-mono">07 / Identity</span>
-            <h1 className="text-4xl sm:text-6xl font-normal uppercase tracking-tighter text-white leading-none font-display">
+            <h1 className="text-4xl sm:text-6xl font-normal tracking-tighter text-white leading-none font-display">
               Colophon
             </h1>
           </div>

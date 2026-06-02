@@ -23,7 +23,7 @@ export default function Contact() {
         {/* Page Header */}
         <div className="max-w-3xl fade-up-element visible">
           <span className="text-[10px] font-bold uppercase tracking-widest text-emerald-600 dark:text-emerald-400 font-mono">06 / Connect</span>
-          <h1 className="text-4xl sm:text-6xl font-normal uppercase tracking-tighter text-foreground leading-none font-display mt-2">
+          <h1 className="text-4xl sm:text-6xl font-normal tracking-tighter text-foreground leading-none font-display mt-2">
             Contact
           </h1>
           <p className="mt-4 text-xl sm:text-2xl text-zinc-700 dark:text-zinc-300 font-light">
@@ -78,7 +78,7 @@ export default function Contact() {
                 <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400">
                   <Send className="h-6 w-6" strokeWidth={1.5} aria-hidden="true" />
                 </div>
-                <h2 className="text-xl font-medium text-zinc-900 dark:text-white uppercase">Message received.</h2>
+                <h2 className="text-xl font-medium text-zinc-900 dark:text-white">Message received.</h2>
                 <p className="text-xs text-zinc-600 dark:text-zinc-400 max-w-sm mx-auto font-mono leading-relaxed">
                   Thanks for the note. If it fits the kind of work I’m focused on, I’ll reply directly.
                 </p>
