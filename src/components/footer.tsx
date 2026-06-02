@@ -1,74 +1,37 @@
 import React from "react";
 import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
 
 export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-white/5 bg-zinc-950 py-16 text-zinc-500 theme-transition mt-auto">
+    <footer className="border-t border-white/5 bg-zinc-950 py-12 text-zinc-500 theme-transition mt-auto">
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8 items-start">
-          
-          {/* Brand Col */}
-          <div className="space-y-3">
-            <div className="flex items-center gap-2">
-              <span className="text-xl font-bold uppercase tracking-widest text-white font-display">Castson Inc.</span>
-              <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-            </div>
-            <p className="text-xs font-mono text-zinc-400 uppercase tracking-widest">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+          <div className="space-y-2">
+            <span className="text-sm font-bold uppercase tracking-widest text-white font-display block">
+              Castson Inc.
+            </span>
+            <p className="text-[10px] font-mono text-zinc-500 uppercase tracking-wider max-w-md">
               Building and partnering with place-based experience businesses.
             </p>
           </div>
-
-          {/* Anatomy Col */}
-          <div className="space-y-2 text-xs font-mono text-zinc-400">
-            <div className="flex items-center gap-2">
-              <span className="h-1 w-1 bg-emerald-500"></span>
-              <span>BraveHeart is the first acquisition.</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <span className="h-1 w-1 bg-emerald-500"></span>
-              <span>Ripley is the operating layer.</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <span className="h-1 w-1 bg-emerald-500"></span>
-              <span>castson.com is the record.</span>
-            </div>
-          </div>
-
-          {/* Summary / Contact Col */}
-          <div className="space-y-4">
-            <p className="text-xs text-zinc-400 leading-relaxed font-light">
-              For owners, operators, property holders, collaborators, and aligned capital.
-            </p>
-            <div className="pt-2">
-              <Link 
-                href="/contact" 
-                className="group inline-flex items-center gap-1 text-xs font-bold uppercase tracking-wider text-white hover:text-emerald-400 transition-colors"
-              >
-                <span>Start a conversation</span>
-                <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 text-emerald-400" strokeWidth={1.5} aria-hidden="true" />
+          
+          <div className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-8 text-[10px] font-mono">
+            <span>© {year} Castson Inc.</span>
+            <div className="flex items-center gap-4">
+              <Link href="/contact" className="hover:text-white transition-colors uppercase tracking-wider">
+                Contact
+              </Link>
+              <span className="text-zinc-800">•</span>
+              <Link href="/colophon" className="hover:text-white transition-colors uppercase tracking-wider">
+                Colophon
               </Link>
             </div>
-          </div>
-
-        </div>
-
-        {/* Bottom copyright */}
-        <div className="mt-12 border-t border-white/5 pt-8 flex flex-col sm:flex-row items-center justify-between text-[10px] font-mono gap-4 text-zinc-600">
-          <p>© {year} Castson Inc. All rights reserved.</p>
-          <div className="flex gap-4 items-center">
-            <Link href="/contact" className="hover:text-white transition-colors">
-              Contact
-            </Link>
-            <span className="text-zinc-800">•</span>
-            <Link href="/colophon" className="hover:text-white transition-colors">
-              Colophon
-            </Link>
           </div>
         </div>
       </div>
     </footer>
   );
 }
+
