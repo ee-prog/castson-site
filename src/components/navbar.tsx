@@ -92,8 +92,7 @@ export default function Navbar() {
             : "-translate-y-full opacity-0 pointer-events-none"
         }`}
       >
-        {/* Subtle grid background inside overlay */}
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff01_1px,transparent_1px),linear-gradient(to_bottom,#ffffff01_1px,transparent_1px)] bg-[size:3rem_3rem] pointer-events-none"></div>
+
 
         {/* Top spacer matching header height */}
         <div className="h-20 w-full shrink-0"></div>

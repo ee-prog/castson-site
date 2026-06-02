@@ -265,8 +265,7 @@ blockquote {
 }
 
 .animate-grid-line {
-  transform-origin: top;
-  animation: revealVertical 2.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  display: none !important;
 }
 
 /* Link Underline transition effect */
