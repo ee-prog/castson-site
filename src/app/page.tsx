@@ -37,15 +37,34 @@ export default function Home() {
         <div className="mx-auto max-w-5xl w-full px-4 sm:px-6 lg:px-8 relative z-20">
           <div className="max-w-3xl space-y-6">
             {/* Eyebrow status pill */}
-            <div className="inline-flex items-center gap-2 rounded-full border border-emerald-500/20 bg-emerald-500/[0.02] px-3 py-1 text-[9px] font-bold uppercase tracking-widest text-emerald-400">
+            <div className="inline-flex items-center gap-2 rounded-full border border-emerald-500/20 bg-emerald-500/[0.02] px-3 py-1 text-[9px] font-bold uppercase tracking-widest text-emerald-400 font-mono">
               <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-ping"></span>
-              <span>Castson Inc. Personal Site</span>
+              <span>Castson Inc.</span>
             </div>
 
             {/* Title */}
             <h1 className="text-4xl sm:text-6xl font-extrabold uppercase tracking-tighter text-white leading-none font-display fade-up-element visible">
               Building from first principles.
             </h1>
+
+            <p className="text-lg sm:text-xl text-zinc-300 font-light leading-relaxed max-w-2xl pt-2">
+              Castson Inc. exists to acquire, operate, and rebuild meaningful service businesses for the AI era.
+            </p>
+
+            <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-[10px] font-mono text-zinc-500 uppercase tracking-widest pt-2">
+              <span className="flex items-center gap-1.5">
+                <span className="h-1 w-1 bg-emerald-400 rounded-full"></span>
+                <span>BraveHeart First Aid</span>
+              </span>
+              <span className="flex items-center gap-1.5">
+                <span className="h-1 w-1 bg-emerald-400 rounded-full"></span>
+                <span>Ripley Operating Layer</span>
+              </span>
+              <span className="flex items-center gap-1.5">
+                <span className="h-1 w-1 bg-emerald-400 rounded-full"></span>
+                <span>castson.com record</span>
+              </span>
+            </div>
           </div>
         </div>
       </section>
@@ -125,22 +144,23 @@ export default function Home() {
                 &ldquo;Somewhere, someday, someone may stay alive because a person took a course from the company I now run.&rdquo;
               </p>
               <p className="text-zinc-400 text-sm font-light">
-                That changed something in me. In June 2025, I acquired BraveHeart First Aid.
+                That changed something in me.
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-zinc-300 font-light text-sm sm:text-base leading-relaxed fade-up-element visible">
               <div className="space-y-4">
+                <h4 className="text-xs font-mono font-bold uppercase text-emerald-400 tracking-wider">[ In June 2025, I acquired BraveHeart First Aid ]</h4>
                 <p>
-                  At first, I thought it would become a living case study for my consulting work. A real business where I could test ideas about operations, marketing, systems, and technology.
+                  At first, I thought it would become a living case study for my consulting work. A real business where I could test ideas about operations, marketing, systems, technology, and transformation.
                 </p>
                 <p>
-                  Instead, it became something more personal. It became a place to ask better questions.
+                  Instead, it became something more serious. It became a place to ask better questions.
                 </p>
               </div>
               <div className="space-y-4 rounded-sm border border-white/5 bg-zinc-950/40 p-6">
                 <h4 className="text-xs font-mono font-bold uppercase text-emerald-400 tracking-wider mb-2">[ The Core Questions ]</h4>
-                <ul className="space-y-2 text-xs font-mono text-zinc-400">
+                <ul className="space-y-2 text-xs font-mono text-zinc-400 border-b border-white/5 pb-4 mb-4">
                   <li className="flex items-start gap-2">
                     <ChevronRight className="h-4 w-4 shrink-0 text-emerald-500" />
                     <span>What makes a business work?</span>
@@ -162,6 +182,13 @@ export default function Home() {
                     <span className="text-white font-medium">And what becomes possible when you rebuild from there?</span>
                   </li>
                 </ul>
+                <div className="space-y-1 text-xs font-mono text-zinc-400">
+                  <p>That is the work now.</p>
+                  <p>BraveHeart is the proof.</p>
+                  <p>Ripley is the operating layer.</p>
+                  <p>Castson Inc. is the vehicle.</p>
+                  <p className="text-white">castson.com is where I leave the trail.</p>
+                </div>
               </div>
             </div>
 
@@ -372,72 +399,229 @@ export default function Home() {
         </div>
       </section>
 
-      {/* What Castson Inc. is */}
-      <section className="py-24 bg-zinc-950/40 relative theme-transition">
-        <div className="absolute inset-0 bg-gradient-to-t from-emerald-500/[0.02] via-transparent to-transparent pointer-events-none"></div>
+      {/* What Castson Inc. is becoming */}
+      <section className="py-24 bg-zinc-950/40 relative theme-transition border-b border-white/[0.03]">
+        <div className="absolute inset-0 bg-gradient-to-t from-emerald-500/[0.01] via-transparent to-transparent pointer-events-none"></div>
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 relative z-20">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
             
             {/* Left: Summary */}
-            <div className="lg:col-span-6 space-y-6 text-zinc-300 font-light leading-relaxed text-sm sm:text-base fade-up-element visible">
-              <span className="text-[9px] font-mono tracking-widest uppercase text-emerald-400">[ Definition ]</span>
+            <div className="lg:col-span-7 space-y-6 text-zinc-300 font-light leading-relaxed text-sm sm:text-base fade-up-element visible">
+              <span className="text-[9px] font-mono tracking-widest uppercase text-emerald-400">[ Identity ]</span>
               <h2 className="text-3xl font-bold uppercase text-white font-display">
-                What Castson Inc. is
+                What Castson Inc. is becoming
               </h2>
-              <p>
-                Castson Inc. is the record of that work.
-              </p>
-              <p className="border-l border-emerald-400/40 pl-4 font-mono text-xs text-zinc-400 space-y-2">
-                <span>• The current experiment is <strong>BraveHeart</strong>.</span><br />
-                <span>• The emerging operating layer is <strong>Ripley</strong>.</span>
+              <p className="text-lg text-zinc-200">
+                Castson Inc. is becoming an acquisition and operating company for meaningful service businesses.
               </p>
               <p>
-                I am documenting the process quietly. Not to perform expertise. To see the progress. And to let the right people find the signal.
+                The work is simple to describe and difficult to do:
+              </p>
+              
+              <div className="space-y-3 pl-4 border-l border-white/10 text-xs font-mono text-zinc-400">
+                <p>• Acquire or operate a business with real purpose and hidden leverage.</p>
+                <p>• Clarify how it actually works.</p>
+                <p>• Remove drag.</p>
+                <p>• Reduce owner dependency.</p>
+                <p>• Build the software, automation, AI, and marketing systems it actually needs.</p>
+                <p>• Make the company more capable without making it less human.</p>
+              </div>
+
+              <p className="border-t border-white/5 pt-4 text-zinc-400">
+                This is not about making traditional businesses look like technology companies. It is about giving good businesses better operating systems.
+              </p>
+
+              <div className="space-y-1 text-xs font-mono text-zinc-500">
+                <p>BraveHeart is the first proof.</p>
+                <p>Ripley is the operating layer emerging from it.</p>
+                <p className="text-white">castson.com is the public record.</p>
+              </div>
+            </div>
+
+            {/* Right: What I am trying to learn */}
+            <div className="lg:col-span-5 space-y-4 fade-up-element visible lg:sticky lg:top-28">
+              <div className="rounded-sm border border-white/5 bg-zinc-900/30 p-6 sm:p-8 space-y-6">
+                <span className="text-[9px] font-mono text-zinc-500 uppercase tracking-widest block border-b border-white/5 pb-2">
+                  [ What I am trying to learn ]
+                </span>
+                
+                <ul className="space-y-4 text-xs font-mono text-zinc-400">
+                  <li className="flex items-start gap-2">
+                    <span className="text-emerald-400 font-bold">?</span>
+                    <span>Can a small service business gain the operational leverage of a much larger one?</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-emerald-400 font-bold">?</span>
+                    <span>Can AI create real value when it is built on clarity instead of chaos?</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-emerald-400 font-bold">?</span>
+                    <span>Can custom software become practical for companies that used to be too small to justify it?</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-emerald-400 font-bold">?</span>
+                    <span>Can a business hold more of its own intelligence instead of keeping so much of it in the owner’s head?</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-emerald-400 font-bold">?</span>
+                    <span>Can marketing, operations, scheduling, finance, and customer experience become one connected picture?</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-emerald-400 font-bold">?</span>
+                    <span>Can meaningful companies build excellent systems without losing their soul?</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* How I share the work */}
+      <section className="py-24 border-b border-white/[0.03] theme-transition">
+        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 relative z-20">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+            
+            {/* Left: Content */}
+            <div className="lg:col-span-7 space-y-6 text-zinc-300 font-light leading-relaxed text-sm sm:text-base fade-up-element visible">
+              <span className="text-[9px] font-mono tracking-widest uppercase text-emerald-400">[ Publication Policy ]</span>
+              <h2 className="text-3xl font-bold uppercase text-white font-display">
+                How I share the work
+              </h2>
+              <p className="text-lg text-zinc-200">
+                castson.com is a selective public record.
+              </p>
+              <p>
+                I share the shape of the transformation: the questions, decisions, lessons, patterns, and mistakes once they become useful.
+              </p>
+              <p className="border-l border-white/15 pl-4 text-zinc-400 italic">
+                I do not share private information, customer data, staff matters, operational vulnerabilities, or anything that belongs inside the company.
+              </p>
+              <p className="text-white font-medium">
+                The goal is not content. The goal is a trail of signal.
               </p>
             </div>
 
-            {/* Right: The Larger Questions List */}
-            <div className="lg:col-span-6 space-y-4 fade-up-element visible">
-              <div className="rounded-sm border border-white/5 bg-zinc-900/30 p-6 sm:p-8 space-y-6">
-                <span className="text-[10px] font-mono text-zinc-500 uppercase tracking-widest block border-b border-white/5 pb-2">
-                  [ The Larger Question is Still Forming ]
+            {/* Right: Visual Checklist */}
+            <div className="lg:col-span-5 space-y-4 fade-up-element visible">
+              <div className="border border-white/5 bg-zinc-950/60 p-6 rounded-sm space-y-4">
+                <span className="text-[9px] font-mono text-zinc-500 uppercase tracking-widest block border-b border-white/5 pb-2">
+                  [ Information Signal Grid ]
                 </span>
-                
-                <h4 className="text-sm font-semibold uppercase tracking-wider text-white">
-                  What can small companies become now?
-                </h4>
-                
-                <ul className="space-y-3 text-xs font-mono text-zinc-400">
-                  <li className="flex items-start gap-2">
-                    <span className="h-1.5 w-1.5 bg-emerald-500 rounded-full mt-1.5 shrink-0"></span>
-                    <span>When custom software can be built faster.</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="h-1.5 w-1.5 bg-emerald-500 rounded-full mt-1.5 shrink-0"></span>
-                    <span>When AI can support judgment, production, analysis, and coordination.</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="h-1.5 w-1.5 bg-emerald-500 rounded-full mt-1.5 shrink-0"></span>
-                    <span>When small teams can begin to operate with the leverage of much larger ones.</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="h-1.5 w-1.5 bg-emerald-500 rounded-full mt-1.5 shrink-0"></span>
-                    <span>When service businesses can become clearer, faster, and more capable without becoming less human.</span>
-                  </li>
-                </ul>
-
-                <div className="pt-4 border-t border-white/5">
-                  <Link 
-                    href="/braveheart"
-                    className="group flex w-full items-center justify-between gap-1 rounded-sm bg-white text-black py-3 px-4 text-center text-xs font-bold uppercase tracking-wider hover:bg-emerald-400 transition-all duration-300"
-                  >
-                    <span>View BraveHeart Experiment</span>
-                    <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-                  </Link>
+                <div className="space-y-3 text-xs font-mono">
+                  <div className="flex justify-between border-b border-white/5 pb-1 text-emerald-400">
+                    <span>The Questions & Decisions</span>
+                    <span>[Shared]</span>
+                  </div>
+                  <div className="flex justify-between border-b border-white/5 pb-1 text-emerald-400">
+                    <span>Lessons & Patterns</span>
+                    <span>[Shared]</span>
+                  </div>
+                  <div className="flex justify-between border-b border-white/5 pb-1 text-emerald-400">
+                    <span>Mistakes (when useful)</span>
+                    <span>[Shared]</span>
+                  </div>
+                  <div className="flex justify-between border-b border-white/5 pb-1 text-red-400/70">
+                    <span>Private & Staff Matters</span>
+                    <span>[Private]</span>
+                  </div>
+                  <div className="flex justify-between border-b border-white/5 pb-1 text-red-400/70">
+                    <span>Customer Data</span>
+                    <span>[Private]</span>
+                  </div>
+                  <div className="flex justify-between border-b border-white/5 pb-1 text-red-400/70">
+                    <span>Operational Vulnerabilities</span>
+                    <span>[Private]</span>
+                  </div>
                 </div>
               </div>
             </div>
 
+          </div>
+        </div>
+      </section>
+
+      {/* Calls to Action */}
+      <section className="py-24 bg-zinc-950/20 theme-transition">
+        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 relative z-20">
+          <div className="space-y-12">
+            <div className="text-center space-y-4 max-w-2xl mx-auto">
+              <span className="text-[9px] font-mono tracking-widest uppercase text-emerald-400">[ Next Steps ]</span>
+              <h2 className="text-3xl font-bold uppercase text-white font-display">
+                Explore the System
+              </h2>
+              <p className="text-zinc-400 font-light text-sm">
+                Follow the experiment, read the notes, or connect directly to discuss operations and systems.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              
+              {/* CTA 1: BraveHeart */}
+              <Link 
+                href="/braveheart"
+                className="group relative rounded-sm border border-white/5 bg-zinc-900/20 p-8 flex flex-col justify-between h-56 hover:border-emerald-400/30 transition-all duration-500 overflow-hidden"
+              >
+                <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff01_1px,transparent_1px),linear-gradient(to_bottom,#ffffff01_1px,transparent_1px)] bg-[size:1.5rem_1.5rem] pointer-events-none"></div>
+                <div className="space-y-4 relative z-10">
+                  <span className="text-[9px] font-mono text-zinc-500 uppercase tracking-widest block">[ Project 01 ]</span>
+                  <h3 className="text-lg font-bold uppercase text-white font-display group-hover:text-emerald-400 transition-colors">
+                    The BraveHeart Experiment
+                  </h3>
+                  <p className="text-xs text-zinc-400 font-light leading-relaxed">
+                    A real business, rebuilt from the inside to test operations, technology, and system transformation.
+                  </p>
+                </div>
+                <div className="flex items-center gap-1 text-[10px] font-mono font-bold uppercase text-emerald-400 group-hover:text-white transition-colors relative z-10">
+                  <span>Explore BraveHeart</span>
+                  <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
+                </div>
+              </Link>
+
+              {/* CTA 2: Field Notes */}
+              <Link 
+                href="/field-notes"
+                className="group relative rounded-sm border border-white/5 bg-zinc-900/20 p-8 flex flex-col justify-between h-56 hover:border-emerald-400/30 transition-all duration-500 overflow-hidden"
+              >
+                <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff01_1px,transparent_1px),linear-gradient(to_bottom,#ffffff01_1px,transparent_1px)] bg-[size:1.5rem_1.5rem] pointer-events-none"></div>
+                <div className="space-y-4 relative z-10">
+                  <span className="text-[9px] font-mono text-zinc-500 uppercase tracking-widest block">[ Insights ]</span>
+                  <h3 className="text-lg font-bold uppercase text-white font-display group-hover:text-emerald-400 transition-colors">
+                    Field Notes
+                  </h3>
+                  <p className="text-xs text-zinc-400 font-light leading-relaxed">
+                    Short, direct observations from building and automating systems inside a real transformation.
+                  </p>
+                </div>
+                <div className="flex items-center gap-1 text-[10px] font-mono font-bold uppercase text-emerald-400 group-hover:text-white transition-colors relative z-10">
+                  <span>Read Field Notes</span>
+                  <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
+                </div>
+              </Link>
+
+              {/* CTA 3: Contact */}
+              <Link 
+                href="/contact"
+                className="group relative rounded-sm border border-white/5 bg-zinc-900/20 p-8 flex flex-col justify-between h-56 hover:border-emerald-400/30 transition-all duration-500 overflow-hidden"
+              >
+                <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff01_1px,transparent_1px),linear-gradient(to_bottom,#ffffff01_1px,transparent_1px)] bg-[size:1.5rem_1.5rem] pointer-events-none"></div>
+                <div className="space-y-4 relative z-10">
+                  <span className="text-[9px] font-mono text-zinc-500 uppercase tracking-widest block">[ Dialog ]</span>
+                  <h3 className="text-lg font-bold uppercase text-white font-display group-hover:text-emerald-400 transition-colors">
+                    Start a Conversation
+                  </h3>
+                  <p className="text-xs text-zinc-400 font-light leading-relaxed">
+                    Reach out for discussion if you are an owner, operator, investor, builder, or collaborator.
+                  </p>
+                </div>
+                <div className="flex items-center gap-1 text-[10px] font-mono font-bold uppercase text-emerald-400 group-hover:text-white transition-colors relative z-10">
+                  <span>Connect Directly</span>
+                  <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
+                </div>
+              </Link>
+
+            </div>
           </div>
         </div>
       </section>

@@ -12,6 +12,7 @@ const navItems = [
   { name: "Field Notes", href: "/field-notes" },
   { name: "Now", href: "/now" },
   { name: "About", href: "/about" },
+  { name: "Contact", href: "/contact" },
 ];
 
 export default function Navbar() {

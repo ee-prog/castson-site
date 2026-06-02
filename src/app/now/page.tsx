@@ -69,8 +69,8 @@ export default function Now() {
                     "Custom internal tools",
                     "AI-assisted workflows",
                     "Automation",
-                    "Facebook content & ads",
-                    "SEO & search optimization",
+                    "Facebook content and advertising systems",
+                    "SEO and paid search optimization",
                     "Operational dashboards",
                     "Scheduling intelligence",
                     "Knowledge systems",
@@ -102,73 +102,59 @@ export default function Now() {
         </div>
       </section>
 
-      {/* What I am trying to prove vs What I am not doing */}
-      <section className="py-20 border-b border-white/[0.03] bg-zinc-950/20 theme-transition">
+      {/* Questions & Direction Section */}
+      <section className="py-20 bg-zinc-950/20 theme-transition border-b border-white/[0.03]">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 relative z-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             
-            {/* What I am trying to prove */}
+            {/* Current Questions */}
             <div className="space-y-6">
               <span className="text-[9px] font-mono text-emerald-400 uppercase tracking-widest block border-b border-white/5 pb-2">
-                [ What I am trying to prove ]
+                [ Current questions ]
               </span>
               
               <ul className="space-y-4 text-xs font-mono text-zinc-300">
-                <li className="flex gap-2">
-                  <span className="text-emerald-500 font-bold">•</span>
-                  <span>That a small service business can be transformed without becoming soulless.</span>
-                </li>
-                <li className="flex gap-2">
-                  <span className="text-emerald-500 font-bold">•</span>
-                  <span>That AI is most useful after clarification.</span>
-                </li>
-                <li className="flex gap-2">
-                  <span className="text-emerald-500 font-bold">•</span>
-                  <span>That custom software can be practical, not precious.</span>
-                </li>
-                <li className="flex gap-2">
-                  <span className="text-emerald-500 font-bold">•</span>
-                  <span>That the future of small business may look less like buying more platforms and more like building operating layers.</span>
-                </li>
-                <li className="flex gap-2">
-                  <span className="text-emerald-500 font-bold">•</span>
-                  <span>That meaningful companies deserve excellent systems.</span>
-                </li>
-                <li className="flex gap-2">
-                  <span className="text-white font-bold">•</span>
-                  <span className="text-white">That owners can move faster when the business becomes clearer.</span>
-                </li>
+                {[
+                  "What work should still require a human?",
+                  "What work should never have required one?",
+                  "Where is the business still relying on memory instead of systems?",
+                  "Where are platforms helping?",
+                  "Where are they hiding the real shape of the work?",
+                  "What should be automated?",
+                  "What should be simplified instead?",
+                  "What should be removed entirely?"
+                ].map((q, idx) => (
+                  <li key={idx} className="flex gap-2.5 items-start">
+                    <span className="text-emerald-500 font-bold font-mono">?</span>
+                    <span>{q}</span>
+                  </li>
+                ))}
               </ul>
             </div>
 
-            {/* What I am not doing */}
+            {/* Current Direction */}
             <div className="space-y-6">
-              <span className="text-[9px] font-mono text-red-400 uppercase tracking-widest block border-b border-white/5 pb-2">
-                [ What I am not doing ]
+              <span className="text-[9px] font-mono text-emerald-400 uppercase tracking-widest block border-b border-white/5 pb-2">
+                [ Current direction ]
               </span>
               
-              <ul className="space-y-4 text-xs font-mono text-zinc-400">
-                <li className="flex gap-2">
-                  <span className="text-red-500 font-bold">x</span>
-                  <span>I am not trying to become an AI influencer.</span>
-                </li>
-                <li className="flex gap-2">
-                  <span className="text-red-500 font-bold">x</span>
-                  <span>I am not building a public persona for its own sake.</span>
-                </li>
-                <li className="flex gap-2">
-                  <span className="text-red-500 font-bold">x</span>
-                  <span>I am not publishing every internal detail.</span>
-                </li>
-                <li className="flex gap-2">
-                  <span className="text-red-500 font-bold">x</span>
-                  <span>I am not sharing private information, competitive vulnerabilities, or operational secrets.</span>
-                </li>
+              <ul className="space-y-4 text-xs font-mono text-zinc-300">
+                {[
+                  "Finish the BraveHeart operating layer.",
+                  "Make the transformation visible.",
+                  "Build systems that are reliable enough to trust.",
+                  "Use AI where it creates leverage.",
+                  "Use code where reliability matters.",
+                  "Use human judgment where responsibility matters.",
+                  "Let the business become clearer, faster, and stronger.",
+                  "Then see what the pattern wants to become next."
+                ].map((d, idx) => (
+                  <li key={idx} className="flex gap-2.5 items-start">
+                    <span className="text-emerald-500 font-bold font-mono">→</span>
+                    <span className={idx === 6 || idx === 7 ? "text-white font-medium" : ""}>{d}</span>
+                  </li>
+                ))}
               </ul>
-
-              <p className="text-xs font-bold text-zinc-500 uppercase font-mono pt-4 border-t border-white/5">
-                This is a public record, not an open diary. The goal is signal. Not noise.
-              </p>
             </div>
 
           </div>

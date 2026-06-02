@@ -32,7 +32,7 @@ export default function Footer() {
             </div>
             <div className="flex items-center gap-2">
               <span className="h-1 w-1 bg-emerald-500"></span>
-              <span>This site is the record.</span>
+              <span>castson.com is the record.</span>
             </div>
           </div>
 
