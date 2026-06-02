@@ -36,7 +36,7 @@ export default function Home() {
       </div>
 
       {/* Hero Section */}
-      <section className="relative py-24 sm:py-32 border-b border-white/[0.03] flex items-center theme-transition">
+      <section className="relative py-12 md:py-32 border-b border-white/[0.03] flex items-center theme-transition">
         {/* Dynamic Glow Orb */}
         <div className="absolute top-1/4 right-1/4 -z-10 h-[500px] w-[500px] rounded-full bg-emerald-500/5 blur-[120px]" />
 
@@ -50,29 +50,29 @@ export default function Home() {
 
             {/* Title */}
             <h1 className="text-4xl sm:text-6xl font-extrabold uppercase tracking-tighter text-white leading-none font-display fade-up-element visible">
-              Eli Castson
+              I build companies where taste, service, and operations meet.
             </h1>
 
             <p className="text-lg sm:text-xl text-zinc-300 font-light leading-relaxed max-w-2xl pt-2">
-              Eli Castson builds and partners with place-based experience brands rooted in service, taste, and story.
+              Castson Inc. is the vehicle for that work: acquiring, partnering with, and developing experience-led businesses with distinct character and room to become stronger.
             </p>
 
-            <p className="text-sm sm:text-base text-zinc-400 font-mono tracking-wide max-w-2xl pt-1">
-              Castson Inc. is the vehicle. BraveHeart is the first proof. Ripley is the operating layer.
-            </p>
-
-            <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-[10px] font-mono text-zinc-500 uppercase tracking-widest pt-2">
+            <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-[10px] font-mono text-zinc-500 uppercase tracking-widest pt-4">
               <span className="flex items-center gap-1.5">
                 <span className="h-1 w-1 bg-emerald-400 rounded-full"></span>
-                <span>BraveHeart First Aid</span>
+                <span>Taste</span>
               </span>
               <span className="flex items-center gap-1.5">
                 <span className="h-1 w-1 bg-emerald-400 rounded-full"></span>
-                <span>Ripley</span>
+                <span>Service</span>
               </span>
               <span className="flex items-center gap-1.5">
                 <span className="h-1 w-1 bg-emerald-400 rounded-full"></span>
-                <span>castson.com</span>
+                <span>Systems</span>
+              </span>
+              <span className="flex items-center gap-1.5">
+                <span className="h-1 w-1 bg-emerald-400 rounded-full"></span>
+                <span>Ownership</span>
               </span>
             </div>
           </div>
@@ -80,9 +80,9 @@ export default function Home() {
       </section>
 
       {/* Swiss to Canada Narrative */}
-      <section className="py-20 border-b border-white/[0.03] theme-transition">
+      <section className="py-12 md:py-20 border-b border-white/[0.03] theme-transition">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 relative z-20">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-start">
             {/* Left Col: Narrative */}
             <div className="lg:col-span-7 space-y-8 text-zinc-300 font-light leading-relaxed text-sm sm:text-base fade-up-element visible">
               <p className="text-lg text-white font-normal font-display">
@@ -134,21 +134,21 @@ export default function Home() {
       </section>
 
       {/* BraveHeart Acquisition */}
-      <section className="py-24 border-b border-white/[0.03] bg-zinc-950/20 theme-transition">
+      <section className="relative py-12 md:py-24 border-b border-white/[0.03] bg-zinc-950/20 theme-transition">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 relative z-20">
           <div className="max-w-4xl space-y-12">
             
             <div className="border-l-2 border-emerald-400 pl-6 space-y-4 fade-up-element visible">
-              <span className="text-[9px] font-mono tracking-widest uppercase text-emerald-400">[ The Pivot ]</span>
+              <span className="text-[9px] font-mono tracking-widest uppercase text-emerald-400">[ The Proof ]</span>
               <h2 className="text-2xl sm:text-3xl font-bold uppercase text-white font-display">
-                Then I bought a first aid training company.
+                BraveHeart First Aid
               </h2>
               <p className="text-zinc-300 font-light leading-relaxed">
-                It was not glamorous. It was serious.
+                BraveHeart was the first acquisition. It taught me what ownership demands: standards, timing, care, and systems that work when people depend on them.
               </p>
             </div>
 
-            <div className="bg-zinc-900/30 border border-white/5 rounded-sm p-8 sm:p-10 relative overflow-hidden space-y-6 fade-up-element visible">
+            <div className="bg-zinc-900/30 border border-white/5 rounded-sm p-6 sm:p-10 relative overflow-hidden space-y-6 fade-up-element visible">
               <div className="absolute top-0 right-0 w-32 h-32 bg-emerald-500/5 rounded-full blur-2xl"></div>
               <p className="text-xl sm:text-2xl text-white font-medium leading-relaxed">
                 &ldquo;Trust is operational: timing, people, standards, communication, and care all have to work at once.&rdquo;
@@ -158,7 +158,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-zinc-300 font-light text-sm sm:text-base leading-relaxed fade-up-element visible">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 text-zinc-300 font-light text-sm sm:text-base leading-relaxed fade-up-element visible">
               <div className="space-y-4">
                 <h4 className="text-xs font-mono font-bold uppercase text-emerald-400 tracking-wider">[ The Standard of Care ]</h4>
                 <p>
@@ -193,8 +193,8 @@ export default function Home() {
                   </li>
                 </ul>
                 <div className="space-y-1 text-xs font-mono text-zinc-500">
-                  <p>BraveHeart is the initial proof.</p>
-                  <p>Ripley is the operating layer.</p>
+                  <p>BraveHeart was the first acquisition.</p>
+                  <p>Ripley is the operating layer I am building underneath the work.</p>
                   <p className="text-white">castson.com is the record.</p>
                 </div>
               </div>
@@ -205,9 +205,9 @@ export default function Home() {
       </section>
 
       {/* Year One: Clarity */}
-      <section className="py-24 border-b border-white/[0.03] theme-transition">
+      <section className="py-12 md:py-24 border-b border-white/[0.03] theme-transition">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 relative z-20">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-start">
             
             {/* Left: Image Placeholder */}
             <div className="lg:col-span-5 space-y-4 order-last lg:order-first fade-up-element visible">
@@ -227,7 +227,7 @@ export default function Home() {
                 The first year was about clarity.
               </p>
               
-              <div className="grid grid-cols-2 gap-4 py-4 text-xs font-mono text-zinc-400 border-y border-white/5">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-4 py-4 text-xs font-mono text-zinc-400 border-y border-white/5">
                 <div className="space-y-2">
                   <div className="flex items-center gap-2">
                     <span className="h-1.5 w-1.5 rounded-full bg-emerald-500"></span>
@@ -288,9 +288,9 @@ export default function Home() {
       </section>
 
       {/* Year Two: Automation */}
-      <section className="py-24 border-b border-white/[0.03] bg-zinc-950/20 theme-transition">
+      <section className="py-12 md:py-24 border-b border-white/[0.03] bg-zinc-950/20 theme-transition">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 relative z-20">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-start">
             
             {/* Left: Narrative */}
             <div className="lg:col-span-7 space-y-6 text-zinc-300 font-light leading-relaxed text-sm sm:text-base fade-up-element visible">
@@ -310,7 +310,7 @@ export default function Home() {
                 Now BraveHeart is entering a new phase:
               </p>
 
-              <div className="grid grid-cols-2 gap-3 py-2 text-xs font-mono">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3 py-2 text-xs font-mono">
                 {["Custom software", "AI-assisted workflows", "Internal tools", "Decision support", "Automation", "Marketing intelligence", "Better reporting", "Tailored systems"].map((t) => (
                   <div key={t} className="flex items-center gap-1.5 text-zinc-400">
                     <span className="h-1 w-1 bg-emerald-400"></span>
@@ -338,7 +338,7 @@ export default function Home() {
 
       {/* Every Organization is an Operating System */}
       {/* Every Experience has a System */}
-      <section className="py-24 border-b border-white/[0.03] theme-transition">
+      <section className="py-12 md:py-24 border-b border-white/[0.03] theme-transition">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 relative z-20">
           <div className="max-w-4xl space-y-12">
             
@@ -349,7 +349,7 @@ export default function Home() {
               </h2>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 text-zinc-300 font-light text-sm sm:text-base leading-relaxed fade-up-element visible">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12 text-zinc-300 font-light text-sm sm:text-base leading-relaxed fade-up-element visible">
               <div className="space-y-6">
                 <p>
                   Most people look at a hotel, a travel service, or a product and see only the front of house.
@@ -409,10 +409,10 @@ export default function Home() {
       </section>
 
       {/* What Castson Inc. is building */}
-      <section className="py-24 bg-zinc-950/40 relative theme-transition border-b border-white/[0.03]">
+      <section className="py-12 md:py-24 bg-zinc-950/40 relative theme-transition border-b border-white/[0.03]">
         <div className="absolute inset-0 bg-gradient-to-t from-emerald-500/[0.01] via-transparent to-transparent pointer-events-none"></div>
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 relative z-20">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-start">
             
             {/* Left: Summary */}
             <div className="lg:col-span-7 space-y-6 text-zinc-300 font-light leading-relaxed text-sm sm:text-base fade-up-element visible">
@@ -482,8 +482,8 @@ export default function Home() {
               </div>
 
               <div className="space-y-1 text-xs font-mono text-zinc-500 pt-2 border-t border-white/5">
-                <p>BraveHeart is the initial proof.</p>
-                <p>Ripley is the operating layer.</p>
+                <p>BraveHeart was the first acquisition.</p>
+                <p>Ripley is the operating layer I am building underneath the work.</p>
                 <p className="text-white">castson.com is the record.</p>
               </div>
             </div>
@@ -529,9 +529,9 @@ export default function Home() {
       </section>
 
       {/* How I share the work */}
-      <section className="py-24 border-b border-white/[0.03] theme-transition">
+      <section className="py-12 md:py-24 border-b border-white/[0.03] theme-transition">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 relative z-20">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-start">
             
             {/* Left: Content */}
             <div className="lg:col-span-7 space-y-6 text-zinc-300 font-light leading-relaxed text-sm sm:text-base fade-up-element visible">
@@ -593,7 +593,7 @@ export default function Home() {
       </section>
 
       {/* Calls to Action */}
-      <section className="py-24 bg-zinc-950/20 theme-transition">
+      <section className="py-12 md:py-24 bg-zinc-950/20 theme-transition">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 relative z-20">
           <div className="space-y-12">
             <div className="text-center space-y-4 max-w-2xl mx-auto">
@@ -614,7 +614,7 @@ export default function Home() {
               {/* CTA 1: BraveHeart */}
               <Link 
                 href="/braveheart"
-                className="group relative rounded-sm border border-white/5 bg-zinc-900/20 p-8 flex flex-col justify-between h-56 hover:border-emerald-400/30 transition-all duration-500 overflow-hidden"
+                className="group relative rounded-sm border border-white/5 bg-zinc-900/20 p-6 sm:p-8 flex flex-col justify-between h-56 hover:border-emerald-400/30 transition-all duration-500 overflow-hidden"
               >
                 <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff01_1px,transparent_1px),linear-gradient(to_bottom,#ffffff01_1px,transparent_1px)] bg-[size:1.5rem_1.5rem] pointer-events-none"></div>
                 <div className="space-y-4 relative z-10">
@@ -635,7 +635,7 @@ export default function Home() {
               {/* CTA 2: Field Notes */}
               <Link 
                 href="/field-notes"
-                className="group relative rounded-sm border border-white/5 bg-zinc-900/20 p-8 flex flex-col justify-between h-56 hover:border-emerald-400/30 transition-all duration-500 overflow-hidden"
+                className="group relative rounded-sm border border-white/5 bg-zinc-900/20 p-6 sm:p-8 flex flex-col justify-between h-56 hover:border-emerald-400/30 transition-all duration-500 overflow-hidden"
               >
                 <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff01_1px,transparent_1px),linear-gradient(to_bottom,#ffffff01_1px,transparent_1px)] bg-[size:1.5rem_1.5rem] pointer-events-none"></div>
                 <div className="space-y-4 relative z-10">
@@ -656,7 +656,7 @@ export default function Home() {
               {/* CTA 3: Contact */}
               <Link 
                 href="/contact"
-                className="group relative rounded-sm border border-white/5 bg-zinc-900/20 p-8 flex flex-col justify-between h-56 hover:border-emerald-400/30 transition-all duration-500 overflow-hidden"
+                className="group relative rounded-sm border border-white/5 bg-zinc-900/20 p-6 sm:p-8 flex flex-col justify-between h-56 hover:border-emerald-400/30 transition-all duration-500 overflow-hidden"
               >
                 <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff01_1px,transparent_1px),linear-gradient(to_bottom,#ffffff01_1px,transparent_1px)] bg-[size:1.5rem_1.5rem] pointer-events-none"></div>
                 <div className="space-y-4 relative z-10">

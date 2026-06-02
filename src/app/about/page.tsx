@@ -16,7 +16,7 @@ export default function About() {
         <div className="w-[1px] h-full bg-white/[0.02] animate-grid-line delay-700 opacity-0"></div>
       </div>
 
-      <div className="mx-auto max-w-5xl px-4 py-20 sm:px-6 lg:px-8 relative z-20">
+      <div className="mx-auto max-w-5xl px-4 py-10 md:py-20 sm:px-6 lg:px-8 relative z-20">
         
         {/* Page Header */}
         <div className="max-w-3xl fade-up-element visible">
@@ -30,7 +30,7 @@ export default function About() {
         </div>
 
         {/* Main Narrative */}
-        <div className="mt-16 grid grid-cols-1 gap-12 lg:grid-cols-12 items-start">
+        <div className="mt-10 md:mt-16 grid grid-cols-1 gap-6 lg:grid-cols-12 items-start">
           
           {/* Left Columns - Story */}
           <div className="lg:col-span-8 space-y-8 text-zinc-300 font-light leading-relaxed text-sm sm:text-base fade-up-element visible">

@@ -80,7 +80,7 @@ export default function FieldNotes() {
       </div>
 
       {/* Header */}
-      <section className="relative py-24 border-b border-white/[0.03] theme-transition">
+      <section className="relative py-12 md:py-24 border-b border-white/[0.03] theme-transition">
         <div className="absolute top-1/4 right-1/4 -z-10 h-[500px] w-[500px] rounded-full bg-emerald-500/5 blur-[120px]" />
         
         <div className="mx-auto max-w-5xl w-full px-4 sm:px-6 lg:px-8 relative z-20">
@@ -97,23 +97,35 @@ export default function FieldNotes() {
       </section>
 
       {/* Sub-Header / Philosophy */}
-      <section className="py-12 border-b border-white/[0.03] bg-zinc-950/10 theme-transition">
+      <section className="py-8 md:py-12 border-b border-white/[0.03] bg-zinc-950/10 theme-transition">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 relative z-20">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-xs font-mono text-zinc-500 uppercase tracking-widest">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 text-xs font-mono text-zinc-500 uppercase tracking-widest">
             <div className="space-y-2">
-              <p>• Short observations from building.</p>
-              <p>• Not trend pieces.</p>
+              <div className="flex items-start gap-2">
+                <span>—</span>
+                <span>Short observations from building.</span>
+              </div>
+              <div className="flex items-start gap-2">
+                <span>—</span>
+                <span>Not trend pieces.</span>
+              </div>
             </div>
             <div className="space-y-2">
-              <p>• Not advice content. Not thought leadership.</p>
-              <p>• Notes from inside a real transformation: what changed, broke, worked, or became obvious.</p>
+              <div className="flex items-start gap-2">
+                <span>—</span>
+                <span>Not advice content. Not thought leadership.</span>
+              </div>
+              <div className="flex items-start gap-2">
+                <span>—</span>
+                <span>Notes from inside a real transformation: what changed, broke, worked, or became obvious.</span>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Themes List */}
-      <section className="py-20 theme-transition">
+      <section className="py-12 md:py-20 theme-transition">
         <div className="mx-auto max-w-3xl px-4 relative z-20">
           <div className="space-y-24">
             {themes.map((theme) => (

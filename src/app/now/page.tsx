@@ -35,7 +35,7 @@ export default function Now() {
       </div>
 
       {/* Header */}
-      <section className="relative py-24 border-b border-white/[0.03] theme-transition">
+      <section className="relative py-12 md:py-24 border-b border-white/[0.03] theme-transition">
         <div className="absolute top-1/4 right-1/4 -z-10 h-[500px] w-[500px] rounded-full bg-emerald-500/5 blur-[120px]" />
         
         <div className="mx-auto max-w-5xl w-full px-4 sm:px-6 lg:px-8 relative z-20">
@@ -52,9 +52,9 @@ export default function Now() {
       </section>
 
       {/* Focus & Roadmap Section */}
-      <section className="py-20 border-b border-white/[0.03] theme-transition">
+      <section className="py-12 md:py-20 border-b border-white/[0.03] theme-transition">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 relative z-20">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-start">
             
             {/* Left: Prose */}
             <div className="lg:col-span-7 space-y-6 text-zinc-300 font-light leading-relaxed text-sm sm:text-base">
@@ -110,9 +110,9 @@ export default function Now() {
       </section>
 
       {/* Questions & Direction Section */}
-      <section className="py-20 bg-zinc-950/20 theme-transition border-b border-white/[0.03]">
+      <section className="py-12 md:py-20 bg-zinc-950/20 theme-transition border-b border-white/[0.03]">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 relative z-20">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12">
             
             {/* Current Questions */}
             <div className="space-y-6">

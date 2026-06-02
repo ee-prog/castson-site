@@ -35,7 +35,7 @@ export default function Ripley() {
       </div>
 
       {/* Header */}
-      <section className="relative py-24 border-b border-white/[0.03] theme-transition">
+      <section className="relative py-12 md:py-24 border-b border-white/[0.03] theme-transition">
         <div className="absolute top-1/4 right-1/4 -z-10 h-[500px] w-[500px] rounded-full bg-emerald-500/5 blur-[120px]" />
         
         <div className="mx-auto max-w-5xl w-full px-4 sm:px-6 lg:px-8 relative z-20">
@@ -52,9 +52,9 @@ export default function Ripley() {
       </section>
 
       {/* Origin Narrative */}
-      <section className="py-20 border-b border-white/[0.03] theme-transition">
+      <section className="py-12 md:py-20 border-b border-white/[0.03] theme-transition">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 relative z-20">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-start">
             
             {/* Left Col: Narrative */}
             <div className="lg:col-span-7 space-y-6 text-zinc-300 font-light leading-relaxed text-sm sm:text-base">
@@ -88,9 +88,9 @@ export default function Ripley() {
       </section>
 
       {/* What Ripley is vs is not */}
-      <section className="py-20 border-b border-white/[0.03] bg-zinc-950/20 theme-transition">
+      <section className="py-12 md:py-20 border-b border-white/[0.03] bg-zinc-950/20 theme-transition">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 relative z-20">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12">
             
             {/* What Ripley Is */}
             <div className="border border-white/5 bg-zinc-900/30 p-8 rounded-sm space-y-6">
@@ -101,7 +101,7 @@ export default function Ripley() {
                 Ripley is an internal operating system being developed inside BraveHeart. It is made of:
               </p>
               
-              <ul className="grid grid-cols-2 gap-2 text-xs font-mono text-zinc-400">
+              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs font-mono text-zinc-400">
                 {["Custom software", "Automation", "AI-assisted workflows", "Operational memory", "Dashboards", "Rules", "Interfaces", "Human judgment"].map((el) => (
                   <li key={el} className="flex items-center gap-1.5">
                     <span className="h-1.5 w-1.5 bg-emerald-500 rounded-full"></span>
@@ -157,9 +157,9 @@ export default function Ripley() {
       </section>
 
       {/* The Principle & Why Now */}
-      <section className="py-20 border-b border-white/[0.03] theme-transition">
+      <section className="py-12 md:py-20 border-b border-white/[0.03] theme-transition">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 relative z-20">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 items-start">
             
             {/* The Principle */}
             <div className="space-y-6">
@@ -213,9 +213,9 @@ export default function Ripley() {
       </section>
 
       {/* What Ripley Supports */}
-      <section className="py-20 border-b border-white/[0.03] bg-zinc-950/20 theme-transition">
+      <section className="py-12 md:py-20 border-b border-white/[0.03] bg-zinc-950/20 theme-transition">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 relative z-20">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-start">
             
             {/* Left: Diagram */}
             <div className="lg:col-span-5 space-y-4 fade-up-element visible">
@@ -235,7 +235,7 @@ export default function Ripley() {
                 Ripley is being developed around the actual needs of BraveHeart. Every module begins with the same question: <strong>What is the business trying to do here?</strong>
               </p>
               
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-3 text-xs font-mono text-zinc-400">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 sm:gap-3 text-xs font-mono text-zinc-400">
                 {[
                   "Course operations",
                   "Instructor coordination",

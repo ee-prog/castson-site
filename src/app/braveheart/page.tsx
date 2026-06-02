@@ -35,7 +35,7 @@ export default function BraveHeart() {
       </div>
 
       {/* Header */}
-      <section className="relative py-24 border-b border-white/[0.03] theme-transition">
+      <section className="relative py-12 md:py-24 border-b border-white/[0.03] theme-transition">
         <div className="absolute top-1/4 right-1/4 -z-10 h-[500px] w-[500px] rounded-full bg-emerald-500/5 blur-[120px]" />
         
         <div className="mx-auto max-w-5xl w-full px-4 sm:px-6 lg:px-8 relative z-20">
@@ -52,9 +52,9 @@ export default function BraveHeart() {
       </section>
 
       {/* Intro Narrative */}
-      <section className="py-20 border-b border-white/[0.03] theme-transition">
+      <section className="py-12 md:py-20 border-b border-white/[0.03] theme-transition">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 relative z-20">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-start">
             
             {/* Left: Narrative */}
             <div className="lg:col-span-7 space-y-6 text-zinc-300 font-light leading-relaxed text-sm sm:text-base">
@@ -62,7 +62,7 @@ export default function BraveHeart() {
                 BraveHeart First Aid is the first full expression of this work. It is not a simulation.
               </p>
 
-              <div className="grid grid-cols-2 gap-4 py-4 px-6 rounded-sm bg-zinc-900/20 border border-white/5 font-mono text-xs text-zinc-400">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-4 py-4 px-6 rounded-sm bg-zinc-900/20 border border-white/5 font-mono text-xs text-zinc-400">
                 <div className="space-y-2">
                   <div className="flex items-center gap-2">
                     <span className="h-1 w-1 bg-emerald-400"></span>
@@ -134,7 +134,7 @@ export default function BraveHeart() {
       </section>
 
       {/* Why BraveHeart Matters */}
-      <section className="py-20 border-b border-white/[0.03] bg-zinc-950/20 theme-transition">
+      <section className="py-12 md:py-20 border-b border-white/[0.03] bg-zinc-950/20 theme-transition">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 relative z-20">
           <div className="max-w-3xl space-y-8">
             
@@ -158,7 +158,7 @@ export default function BraveHeart() {
                 That gives the business a seriousness I had not felt in much of my earlier work. The systems matter because the work matters.
               </p>
 
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 py-4 text-xs font-mono text-zinc-400">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-2 sm:gap-4 py-4 text-xs font-mono text-zinc-400">
                 {["Website", "Booking flow", "Reminders", "Instructor flow", "Follow-ups", "Advertising", "Daily operations", "Student safety"].map((item) => (
                   <div key={item} className="flex items-center gap-1.5 p-3 border border-white/5 bg-zinc-900/30 rounded-sm">
                     <span className="h-1 w-1 bg-emerald-400"></span>
@@ -177,9 +177,9 @@ export default function BraveHeart() {
       </section>
 
       {/* Year One & Year Two Split */}
-      <section className="py-20 border-b border-white/[0.03] theme-transition">
+      <section className="py-12 md:py-20 border-b border-white/[0.03] theme-transition">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 relative z-20">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-16">
             
             {/* Year One: Clarification */}
             <div className="space-y-6">
@@ -245,9 +245,9 @@ export default function BraveHeart() {
       </section>
 
       {/* The Constraint & What I am watching */}
-      <section className="py-20 border-b border-white/[0.03] bg-zinc-950/20 theme-transition">
+      <section className="py-12 md:py-20 border-b border-white/[0.03] bg-zinc-950/20 theme-transition">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 relative z-20">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-start">
             
             {/* Left: The Constraint */}
             <div className="lg:col-span-6 space-y-6 text-zinc-300 font-light leading-relaxed text-sm sm:text-base">

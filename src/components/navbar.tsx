@@ -57,29 +57,30 @@ export default function Navbar() {
           <button
             onClick={() => setIsOpen(!isOpen)}
             type="button"
-            className="group relative z-50 flex flex-col justify-center items-end gap-1.5 w-8 h-8 focus:outline-none cursor-pointer"
+            className="group relative z-50 flex items-center justify-center w-11 h-11 -mr-2.5 focus:outline-none cursor-pointer"
             aria-label="Toggle menu"
           >
-            {/* Top Line */}
-            <span 
-              className={`h-[1px] bg-white transition-all duration-300 ease-out ${
-                isOpen ? "w-6 rotate-45 translate-y-[7px]" : "w-6 group-hover:w-8"
-              }`}
-            />
-            {/* Middle Line */}
-            <span 
-              className={`h-[1px] bg-white transition-all duration-300 ease-out ${
-                isOpen ? "w-0 opacity-0" : "w-4 group-hover:w-8"
-              }`}
-            />
-            {/* Bottom Line */}
-            <span 
-              className={`h-[1px] bg-white transition-all duration-300 ease-out ${
-                isOpen ? "w-6 -rotate-45 -translate-y-[7px]" : "w-5 group-hover:w-8"
-              }`}
-            />
+            <div className="flex flex-col justify-center items-end gap-1.5 w-6 h-6">
+              {/* Top Line */}
+              <span 
+                className={`h-[1px] bg-white transition-all duration-300 ease-out ${
+                  isOpen ? "w-6 rotate-45 translate-y-[7px]" : "w-6 group-hover:w-6"
+                }`}
+              />
+              {/* Middle Line */}
+              <span 
+                className={`h-[1px] bg-white transition-all duration-300 ease-out ${
+                  isOpen ? "w-0 opacity-0" : "w-4 group-hover:w-6"
+                }`}
+              />
+              {/* Bottom Line */}
+              <span 
+                className={`h-[1px] bg-white transition-all duration-300 ease-out ${
+                  isOpen ? "w-6 -rotate-45 -translate-y-[7px]" : "w-5 group-hover:w-6"
+                }`}
+              />
+            </div>
           </button>
-
         </div>
       </header>
 
