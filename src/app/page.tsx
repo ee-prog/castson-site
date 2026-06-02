@@ -618,7 +618,7 @@ export default function Home() {
               >
                 <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff01_1px,transparent_1px),linear-gradient(to_bottom,#ffffff01_1px,transparent_1px)] bg-[size:1.5rem_1.5rem] pointer-events-none"></div>
                 <div className="space-y-4 relative z-10">
-                  <span className="text-[9px] font-mono text-zinc-500 uppercase tracking-widest block">[ First Acquisition ]</span>
+                  <span className="text-[9px] font-mono text-zinc-500 uppercase tracking-widest block">[ Acquired Company ]</span>
                   <h3 className="text-lg font-medium text-white group-hover:text-emerald-400 transition-colors">
                     Acquired & Operating
                   </h3>
