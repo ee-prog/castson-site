@@ -267,7 +267,7 @@ export default function Home() {
               </div>
 
               <p>
-                There were new platforms: Squarespace, Acuity, Monday.com, advertising systems, SEO, paid search, and operational dashboards.
+                There were new platforms: Squarespace, Acuity, Monday.com, advertising systems, search, and operating visibility.
               </p>
               
               <p>

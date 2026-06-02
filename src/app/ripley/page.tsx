@@ -237,14 +237,14 @@ export default function Ripley() {
               
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 sm:gap-3 text-xs font-mono text-zinc-400">
                 {[
-                  "Course operations",
+                  "Delivery standards",
                   "Instructor coordination",
-                  "Customer messaging",
+                  "Communication rhythm",
                   "Scheduling visibility",
                   "Marketing production",
                   "Facebook content/ads",
-                  "SEO & paid search",
-                  "Operational reports",
+                  "Demand signals",
+                  "Operating visibility",
                   "Financial visibility",
                   "Knowledge manager",
                   "Decision support",

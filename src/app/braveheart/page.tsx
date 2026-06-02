@@ -78,13 +78,13 @@ export default function BraveHeart() {
                   </div>
                   <div className="flex items-center gap-2">
                     <span className="h-1 w-1 bg-emerald-400"></span>
-                    <span>Real schedules</span>
+                    <span>Real standards</span>
                   </div>
                 </div>
                 <div className="space-y-2">
                   <div className="flex items-center gap-2">
                     <span className="h-1 w-1 bg-emerald-400"></span>
-                    <span>Real revenue</span>
+                    <span>Real timing</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <span className="h-1 w-1 bg-emerald-400"></span>
@@ -108,15 +108,15 @@ export default function BraveHeart() {
               <ul className="space-y-2 text-xs font-mono text-zinc-400 pl-4 border-l border-white/10 list-none">
                 <li className="flex items-start gap-2">
                   <span className="text-emerald-500 font-bold shrink-0">—</span>
-                  <span>When a customer can book or they cannot.</span>
+                  <span>When a customer can trust the path, or they cannot.</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-emerald-500 font-bold shrink-0">—</span>
-                  <span>When an instructor has what they need or they do not.</span>
+                  <span>When an instructor is ready to teach, or they are not.</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-emerald-500 font-bold shrink-0">—</span>
-                  <span>When a process saves time or quietly creates more work.</span>
+                  <span>When a process creates clarity, or quietly creates more work.</span>
                 </li>
               </ul>
 
@@ -208,9 +208,9 @@ export default function BraveHeart() {
               </div>
 
               <div className="space-y-2 pt-4">
-                <h4 className="text-xs font-mono font-bold uppercase text-zinc-400">[ What Changed First ]</h4>
+                <h4 className="text-xs font-mono font-bold uppercase text-zinc-400">[ What Became Clear ]</h4>
                 <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs font-mono text-zinc-400">
-                  {["Public position", "Customer path", "Schedule logic", "Delivery standards", "Communication rhythm", "Instructor readiness / operating clarity", "Demand signals", "Operating visibility"].map((c) => (
+                  {["Public position", "Customer path", "Schedule logic", "Delivery standards", "Communication rhythm", "Instructor readiness", "Demand signals", "Operating visibility"].map((c) => (
                     <li key={c} className="flex items-center gap-1">
                       <ChevronRight className="h-4 w-4 text-emerald-500" strokeWidth={1.5} aria-hidden="true" />
                       <span>{c}</span>
@@ -229,7 +229,10 @@ export default function BraveHeart() {
               
               <div className="text-zinc-300 font-light text-sm sm:text-base space-y-4">
                 <p>
-                  The next phase is underway. Automation, custom software, AI-assisted workflows, decision support, knowledge infrastructure, marketing systems, reporting, and internal tools.
+                  The next phase is underway.
+                </p>
+                <p>
+                  Now that the business is clearer, the work is to remove drag without removing judgment. Fewer repeated decisions. Better visibility. Stronger handoffs. Systems that support the people doing the work instead of asking them to carry the business in their heads.
                 </p>
                 <p className="border-l border-emerald-400/40 pl-4 text-zinc-400 opacity-80">
                   The goal is not to replace people. The goal is to remove drag around people. To reduce manual coordination, make the right work easier to see, and support judgment instead of overwhelming it.
@@ -265,9 +268,14 @@ export default function BraveHeart() {
               <p>
                 This has been one of the most useful lessons. Outgrowing a platform is not always a failure. Sometimes it means the business has become clearer than the software built to contain it.
               </p>
-              <p className="border-l border-white/10 pl-4 text-zinc-400 text-xs font-mono">
-                Generic tools are useful when you are learning the shape of the business. But once the shape becomes clear, the compromise becomes visible. That is where custom systems begin to make sense. Not because they are impressive, but because they can be more truthful.
-              </p>
+              <div className="border-l border-white/10 pl-4 text-zinc-400 text-xs font-mono space-y-4">
+                <p>
+                  Generic tools are useful when you are still learning the shape of a business. Once the shape becomes clear, the compromise becomes visible.
+                </p>
+                <p>
+                  That is where custom systems begin to make sense — not because they are impressive, but because they can be more truthful to how the business actually works.
+                </p>
+              </div>
             </div>
 
             {/* Right: What I am Watching */}
@@ -280,7 +288,7 @@ export default function BraveHeart() {
                 <ul className="space-y-3 text-xs font-mono text-zinc-300">
                   <li className="flex items-start gap-2">
                     <span className="text-emerald-500 font-bold shrink-0">Q1 //</span>
-                    <span>Can BraveHeart grow without becoming more complicated?</span>
+                    <span>Can BraveHeart grow without becoming harder to run?</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-emerald-500 font-bold shrink-0">Q2 //</span>
@@ -292,11 +300,11 @@ export default function BraveHeart() {
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-emerald-500 font-bold shrink-0">Q4 //</span>
-                    <span>Can marketing, operations, finance, scheduling, and customer experience become part of the same living picture?</span>
+                    <span>Can the work become easier to see before it becomes urgent?</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-white font-bold shrink-0">Q5 //</span>
-                    <span className="text-white">Can a small service company operate with the leverage of a much larger one while staying human?</span>
+                    <span className="text-white">Can a small service company gain leverage without losing its human standard?</span>
                   </li>
                 </ul>
 

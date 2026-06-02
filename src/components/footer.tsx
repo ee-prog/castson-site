@@ -39,7 +39,7 @@ export default function Footer() {
           {/* Summary / Contact Col */}
           <div className="space-y-4">
             <p className="text-xs text-zinc-400 leading-relaxed font-light">
-              For owners, investors, operators, executives, and builders interested in place-based experience brands, service standards, and operational systems.
+              For owners, operators, property holders, and collaborators interested in place-based experience brands, service standards, and operating systems.
             </p>
             <div className="pt-2">
               <a 
@@ -55,7 +55,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom copyright */}
-        <div className="mt-12 border-t border-white/5 pt-8 flex flex-col sm:flex-row items-center justify-between text-[10px] font-mono gap-4 text-zinc-650">
+        <div className="mt-12 border-t border-white/5 pt-8 flex flex-col sm:flex-row items-center justify-between text-[10px] font-mono gap-4 text-zinc-600">
           <p>© {year} Castson Inc. All rights reserved.</p>
           <div className="flex gap-4">
             <span>Built with Next.js & Tailwind v4</span>
