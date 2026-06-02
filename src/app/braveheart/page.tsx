@@ -4,13 +4,20 @@ import React from "react";
 import { ChevronRight } from "lucide-react";
 
 function ImagePlaceholder({ label }: { label: string }) {
+  const refCode = label
+    .toUpperCase()
+    .replace(/[^A-Z0-9\s]/g, "")
+    .trim()
+    .replace(/\s+/g, "-");
+
   return (
-    <div className="w-full aspect-[16/10] bg-zinc-900/40 border border-white/5 rounded-sm flex flex-col items-center justify-center p-6 relative overflow-hidden group theme-transition">
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff02_1px,transparent_1px),linear-gradient(to_bottom,#ffffff02_1px,transparent_1px)] bg-[size:1.5rem_1.5rem] pointer-events-none"></div>
-      <div className="absolute top-4 left-4 text-[9px] font-mono text-zinc-600 uppercase tracking-widest">[ Image Placeholder ]</div>
-      <span className="text-[10px] font-mono text-zinc-400 text-center tracking-widest uppercase px-4 py-2 border border-white/5 bg-zinc-950/80 rounded-sm relative z-10 group-hover:border-emerald-400/30 group-hover:text-emerald-400 transition-all duration-300">
-        {label}
+    <div className="w-full aspect-[16/10] bg-zinc-900/10 border border-white/5 rounded-sm flex flex-col justify-between p-4 relative overflow-hidden group theme-transition">
+      {/* Blueprint grid lines */}
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff01_1px,transparent_1px),linear-gradient(to_bottom,#ffffff01_1px,transparent_1px)] bg-[size:1.5rem_1.5rem] pointer-events-none"></div>
+      <span className="text-[8px] font-mono text-zinc-600 tracking-widest uppercase relative z-10 block">
+        REF // {refCode}
       </span>
+      <div className="w-full h-[1px] bg-white/[0.03] relative z-10"></div>
     </div>
   );
 }
@@ -94,10 +101,19 @@ export default function BraveHeart() {
                 It is easy to talk about transformation from the outside. It is different when the system either works or it does not.
               </p>
               
-              <ul className="space-y-2 text-xs font-mono text-zinc-400 pl-4 border-l border-white/10">
-                <li>• When a customer can book or they cannot.</li>
-                <li>• When an instructor has what they need or they do not.</li>
-                <li>• When a process saves time or quietly creates more work.</li>
+              <ul className="space-y-2 text-xs font-mono text-zinc-400 pl-4 border-l border-white/10 list-none">
+                <li className="flex items-start gap-2">
+                  <span className="text-emerald-500 font-bold shrink-0">—</span>
+                  <span>When a customer can book or they cannot.</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-emerald-500 font-bold shrink-0">—</span>
+                  <span>When an instructor has what they need or they do not.</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-emerald-500 font-bold shrink-0">—</span>
+                  <span>When a process saves time or quietly creates more work.</span>
+                </li>
               </ul>
 
               <p className="text-lg text-white font-medium pt-2">
@@ -259,23 +275,23 @@ export default function BraveHeart() {
                 
                 <ul className="space-y-3 text-xs font-mono text-zinc-300">
                   <li className="flex items-start gap-2">
-                    <span className="text-emerald-500 font-bold">?</span>
+                    <span className="text-emerald-500 font-bold shrink-0">Q1 //</span>
                     <span>Can BraveHeart grow without becoming more complicated?</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-emerald-500 font-bold">?</span>
+                    <span className="text-emerald-500 font-bold shrink-0">Q2 //</span>
                     <span>Can fewer decisions depend on me?</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-emerald-500 font-bold">?</span>
+                    <span className="text-emerald-500 font-bold shrink-0">Q3 //</span>
                     <span>Can the business hold more of its own intelligence?</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-emerald-500 font-bold">?</span>
+                    <span className="text-emerald-500 font-bold shrink-0">Q4 //</span>
                     <span>Can marketing, operations, finance, scheduling, and customer experience become part of the same living picture?</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-white font-bold">?</span>
+                    <span className="text-white font-bold shrink-0">Q5 //</span>
                     <span className="text-white">Can a small service company operate with the leverage of a much larger one while staying human?</span>
                   </li>
                 </ul>

@@ -91,11 +91,20 @@ export default function About() {
               </ul>
             </div>
 
-            <p className="border-t border-white/5 pt-6 text-zinc-400 text-xs font-mono">
-              • <strong>BraveHeart</strong> is the initial proof.<br />
-              • <strong>Ripley</strong> is the operating layer.<br />
-              • <strong>castson.com</strong> is the record.
-            </p>
+            <div className="space-y-2 pt-6 border-t border-white/5 text-zinc-400 text-xs font-mono">
+              <div className="flex items-center gap-2">
+                <span className="h-1.5 w-1.5 bg-emerald-500 rounded-full shrink-0"></span>
+                <span><strong>BraveHeart</strong> is the initial proof.</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="h-1.5 w-1.5 bg-emerald-500 rounded-full shrink-0"></span>
+                <span><strong>Ripley</strong> is the operating layer.</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="h-1.5 w-1.5 bg-emerald-500 rounded-full shrink-0"></span>
+                <span><strong>castson.com</strong> is the record.</span>
+              </div>
+            </div>
 
           </div>
 

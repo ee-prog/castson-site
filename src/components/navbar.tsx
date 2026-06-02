@@ -158,9 +158,9 @@ export default function Navbar() {
                 [Focus]
               </span>
               <p className="text-xs text-zinc-400 leading-relaxed font-light mt-2">
-                AI Operating Models<br />
-                Systems Integration<br />
-                Workflow Orchestration
+                Place-Based Brands<br />
+                Service & Standards<br />
+                Operating Systems
               </p>
             </div>
 

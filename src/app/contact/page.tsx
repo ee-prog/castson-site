@@ -70,7 +70,7 @@ export default function Contact() {
                   "A builder interested in hospitality, tourism, and legacy brands."
                 ].map((item, idx) => (
                   <div key={idx} className="flex items-start gap-2.5 p-3.5 border border-white/5 bg-zinc-900/20 rounded-sm">
-                    <span className="text-emerald-400 font-bold mt-0.5">•</span>
+                    <span className="text-emerald-400 font-bold mt-0.5">—</span>
                     <span>{item}</span>
                   </div>
                 ))}

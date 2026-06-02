@@ -5,7 +5,7 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-white/5 bg-zinc-950 py-16 text-zinc-500 theme-transition">
+    <footer className="border-t border-white/5 bg-zinc-950 py-16 text-zinc-500 theme-transition mt-auto">
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8 items-start">
           
@@ -39,7 +39,7 @@ export default function Footer() {
           {/* Summary / Contact Col */}
           <div className="space-y-4">
             <p className="text-xs text-zinc-400 leading-relaxed font-light">
-              For owners, investors, operators, executives, and builders interested in meaningful service businesses and the next era of operational leverage.
+              For owners, investors, operators, executives, and builders interested in place-based experience brands, service standards, and operational systems.
             </p>
             <div className="pt-2">
               <a 

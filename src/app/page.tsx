@@ -5,14 +5,20 @@ import Link from "next/link";
 import { ArrowRight, ChevronRight } from "lucide-react";
 
 function ImagePlaceholder({ label }: { label: string }) {
+  const refCode = label
+    .toUpperCase()
+    .replace(/[^A-Z0-9\s]/g, "")
+    .trim()
+    .replace(/\s+/g, "-");
+
   return (
-    <div className="w-full aspect-[16/10] bg-zinc-900/40 border border-white/5 rounded-sm flex flex-col items-center justify-center p-6 relative overflow-hidden group theme-transition">
+    <div className="w-full aspect-[16/10] bg-zinc-900/10 border border-white/5 rounded-sm flex flex-col justify-between p-4 relative overflow-hidden group theme-transition">
       {/* Blueprint grid lines */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff02_1px,transparent_1px),linear-gradient(to_bottom,#ffffff02_1px,transparent_1px)] bg-[size:1.5rem_1.5rem] pointer-events-none"></div>
-      <div className="absolute top-4 left-4 text-[9px] font-mono text-zinc-600 uppercase tracking-widest">[ Image Placeholder ]</div>
-      <span className="text-[10px] font-mono text-zinc-400 text-center tracking-widest uppercase px-4 py-2 border border-white/5 bg-zinc-950/80 rounded-sm relative z-10 group-hover:border-emerald-400/30 group-hover:text-emerald-400 transition-all duration-300">
-        {label}
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff01_1px,transparent_1px),linear-gradient(to_bottom,#ffffff01_1px,transparent_1px)] bg-[size:1.5rem_1.5rem] pointer-events-none"></div>
+      <span className="text-[8px] font-mono text-zinc-600 tracking-widest uppercase relative z-10 block">
+        REF // {refCode}
       </span>
+      <div className="w-full h-[1px] bg-white/[0.03] relative z-10"></div>
     </div>
   );
 }
@@ -39,16 +45,20 @@ export default function Home() {
             {/* Eyebrow status pill */}
             <div className="inline-flex items-center gap-2 rounded-full border border-emerald-500/20 bg-emerald-500/[0.02] px-3 py-1 text-[9px] font-bold uppercase tracking-widest text-emerald-400 font-mono">
               <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-ping"></span>
-              <span>Castson Inc.</span>
+              <span>Eli Castson</span>
             </div>
 
             {/* Title */}
             <h1 className="text-4xl sm:text-6xl font-extrabold uppercase tracking-tighter text-white leading-none font-display fade-up-element visible">
-              Building from first principles.
+              Eli Castson
             </h1>
 
             <p className="text-lg sm:text-xl text-zinc-300 font-light leading-relaxed max-w-2xl pt-2">
-              Castson Inc. builds and partners with place-based experience brands rooted in service, taste, and story. The work is creative on the surface and operational underneath.
+              Eli Castson builds and partners with place-based experience brands rooted in service, taste, and story.
+            </p>
+
+            <p className="text-sm sm:text-base text-zinc-400 font-mono tracking-wide max-w-2xl pt-1">
+              Castson Inc. is the vehicle. BraveHeart is the first proof. Ripley is the operating layer.
             </p>
 
             <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-[10px] font-mono text-zinc-500 uppercase tracking-widest pt-2">
@@ -417,13 +427,28 @@ export default function Home() {
                 The model is straightforward:
               </p>
               
-              <div className="space-y-3 pl-4 border-l border-white/10 text-xs font-mono text-zinc-400">
-                <p>• Find businesses with real taste, service, place, or reputation.</p>
-                <p>• Preserve what makes them distinct.</p>
-                <p>• Strengthen the story and standards.</p>
-                <p>• Build the systems behind the experience.</p>
-                <p>• Make the business more capable without making it generic.</p>
-              </div>
+              <ul className="space-y-3 pl-4 border-l border-white/10 text-xs font-mono text-zinc-400 list-none">
+                <li className="flex items-start gap-2">
+                  <span className="text-emerald-500 font-bold shrink-0">—</span>
+                  <span>Find businesses with real taste, service, place, or reputation.</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-emerald-500 font-bold shrink-0">—</span>
+                  <span>Preserve what makes them distinct.</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-emerald-500 font-bold shrink-0">—</span>
+                  <span>Strengthen the story and standards.</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-emerald-500 font-bold shrink-0">—</span>
+                  <span>Build the systems behind the experience.</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-emerald-500 font-bold shrink-0">—</span>
+                  <span>Make the business more capable without making it generic.</span>
+                </li>
+              </ul>
 
               <div className="space-y-3 border-t border-white/5 pt-4 text-zinc-400">
                 <p className="text-white font-medium">
@@ -432,13 +457,27 @@ export default function Home() {
                 <p>
                   The focus is quiet:
                 </p>
-                <div className="grid grid-cols-2 gap-1.5 text-xs font-mono text-zinc-400 pl-4">
-                  <div>• Place</div>
-                  <div>• Service</div>
-                  <div>• Standards</div>
-                  <div>• Story</div>
-                  <div>• Ownership</div>
-                  <div>• Operating Systems</div>
+                <div className="grid grid-cols-2 gap-x-4 gap-y-2 text-xs font-mono text-zinc-400 pl-4">
+                  <div className="flex items-center gap-2">
+                    <span className="h-1 w-1 bg-emerald-500 rounded-full shrink-0"></span>
+                    <span>Place-Based Brands</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <span className="h-1 w-1 bg-emerald-500 rounded-full shrink-0"></span>
+                    <span>Service & Standards</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <span className="h-1 w-1 bg-emerald-500 rounded-full shrink-0"></span>
+                    <span>Operating Systems</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <span className="h-1 w-1 bg-emerald-500 rounded-full shrink-0"></span>
+                    <span>Story</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <span className="h-1 w-1 bg-emerald-500 rounded-full shrink-0"></span>
+                    <span>Ownership</span>
+                  </div>
                 </div>
               </div>
 
@@ -458,27 +497,27 @@ export default function Home() {
                 
                 <ul className="space-y-4 text-xs font-mono text-zinc-400">
                   <li className="flex items-start gap-2">
-                    <span className="text-emerald-400 font-bold">?</span>
+                    <span className="text-emerald-400 font-bold shrink-0">Q1 //</span>
                     <span>What makes a place worth travelling for?</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-emerald-400 font-bold">?</span>
+                    <span className="text-emerald-400 font-bold shrink-0">Q2 //</span>
                     <span>How do you scale care without making it feel standardized?</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-emerald-400 font-bold">?</span>
+                    <span className="text-emerald-400 font-bold shrink-0">Q3 //</span>
                     <span>Can better systems make hospitality feel more human, not less?</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-emerald-400 font-bold">?</span>
+                    <span className="text-emerald-400 font-bold shrink-0">Q4 //</span>
                     <span>How do you preserve the character of a place while making the business stronger?</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-emerald-400 font-bold">?</span>
+                    <span className="text-emerald-400 font-bold shrink-0">Q5 //</span>
                     <span>What should technology handle quietly, and what should remain human?</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-emerald-400 font-bold">?</span>
+                    <span className="text-emerald-400 font-bold shrink-0">Q6 //</span>
                     <span>How do you build operational leverage that makes a brand more distinctive, not more generic?</span>
                   </li>
                 </ul>
