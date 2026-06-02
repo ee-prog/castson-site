@@ -20,11 +20,11 @@ export default function Footer() {
           <div className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-8 text-[10px] font-mono">
             <span>© {year} Castson Inc.</span>
             <div className="flex items-center gap-4">
-              <Link href="/contact" className="hover:text-white transition-colors uppercase tracking-wider">
+              <Link href="/contact" className="hover:text-zinc-950 dark:hover:text-white transition-colors uppercase tracking-wider">
                 Contact
               </Link>
               <span className="text-zinc-800">•</span>
-              <Link href="/colophon" className="hover:text-white transition-colors uppercase tracking-wider">
+              <Link href="/colophon" className="hover:text-zinc-950 dark:hover:text-white transition-colors uppercase tracking-wider">
                 Colophon
               </Link>
             </div>

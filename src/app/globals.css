@@ -319,3 +319,9 @@ html:not(.dark) h6,
 html:not(.dark) .font-subheading {
   color: #262626 !important;
 }
+
+/* Make footer company name adapt to light theme */
+html:not(.dark) footer .font-display {
+  color: #0a0a09 !important;
+}
+
