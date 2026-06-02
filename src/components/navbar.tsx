@@ -148,7 +148,7 @@ export default function Navbar() {
                   onClick={() => setIsOpen(false)}
                   className="group flex items-center gap-1.5 text-zinc-400 hover:text-white transition-colors mt-2 text-sm"
                 >
-                  Start a conversation
+                  Get in touch
                   <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 text-emerald-400" strokeWidth={1.5} aria-hidden="true" />
                 </Link>
               </div>

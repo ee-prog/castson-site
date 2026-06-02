@@ -172,7 +172,7 @@ export default function About() {
                   href="/contact"
                   className="interactive-hover flex w-full items-center justify-center gap-1.5 rounded-sm bg-zinc-950 dark:bg-white text-white dark:text-black py-3 text-center text-xs font-bold uppercase tracking-wider hover:bg-emerald-500 dark:hover:bg-emerald-400 transition-all duration-300"
                 >
-                  START A CONVERSATION <ArrowUpRight className="h-4 w-4" strokeWidth={1.5} aria-hidden="true" />
+                  GET IN TOUCH <ArrowUpRight className="h-4 w-4" strokeWidth={1.5} aria-hidden="true" />
                 </Link>
               </div>
             </div>

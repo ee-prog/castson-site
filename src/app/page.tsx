@@ -603,9 +603,9 @@ export default function Home() {
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 relative z-20">
           <div className="space-y-12">
             <div className="text-center space-y-4 max-w-2xl mx-auto">
-              <span className="text-[9px] font-mono tracking-widest uppercase text-emerald-400">[ Start a Conversation ]</span>
+              <span className="text-[9px] font-mono tracking-widest uppercase text-emerald-400">[ Connect ]</span>
               <h2 className="text-3xl font-medium text-white">
-                Start a Conversation
+                Get in Touch
               </h2>
               <p className="text-zinc-400 font-light text-sm">
                 If you own, operate, or are building an experience business rooted in place, I’d be interested in the conversation.
@@ -668,7 +668,7 @@ export default function Home() {
                 <div className="space-y-4 relative z-10">
                   <span className="text-[9px] font-mono text-zinc-500 uppercase tracking-widest block">[ Dialog ]</span>
                   <h3 className="text-lg font-medium text-white group-hover:text-emerald-400 transition-colors">
-                    Start a Conversation
+                    Send a Message
                   </h3>
                   <p className="text-xs text-zinc-400 font-light leading-relaxed">
                     Reach out for discussion if you are an owner, operator, investor, builder, or collaborator.
