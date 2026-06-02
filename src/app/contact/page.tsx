@@ -1,21 +1,11 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useActionState } from "react";
 import { ArrowRight, Send } from "lucide-react";
+import { sendContactEmail } from "./actions";
 
 export default function Contact() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
-  });
-  const [submitted, setSubmitted] = useState(false);
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setSubmitted(true);
-  };
+  const [state, formAction, isPending] = useActionState(sendContactEmail, null);
 
   return (
     <div className="relative w-full min-h-screen bg-transparent overflow-hidden flex flex-col pt-20">
@@ -83,24 +73,43 @@ export default function Contact() {
 
           {/* Right Column: Contact Form */}
           <div className="lg:col-span-6 fade-up-element visible">
-            {submitted ? (
+            {state?.success ? (
               <div className="rounded-sm border border-emerald-500/20 bg-emerald-500/5 p-8 text-center space-y-4 theme-transition">
                 <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-emerald-500/10 text-emerald-400">
                   <Send className="h-6 w-6" strokeWidth={1.5} aria-hidden="true" />
                 </div>
-                <h2 className="text-xl font-bold text-white font-display uppercase">Message Sent Successfully</h2>
-                <p className="text-xs text-zinc-400 max-w-sm mx-auto font-mono">
-                  Thank you for reaching out. We will review your message and connect if there is a mutual fit.
+                <h2 className="text-xl font-bold text-white font-display uppercase">Message received.</h2>
+                <p className="text-xs text-zinc-400 max-w-sm mx-auto font-mono leading-relaxed">
+                  Thanks for the note. If it fits the kind of work I’m focused on, I’ll reply directly.
                 </p>
-                <button
-                  onClick={() => setSubmitted(false)}
-                  className="mt-4 text-xs font-bold text-emerald-400 hover:underline uppercase font-mono tracking-widest"
+                <a
+                  href="/contact"
+                  className="mt-4 inline-block text-xs font-bold text-emerald-400 hover:underline uppercase font-mono tracking-widest"
                 >
                   Send another message
-                </button>
+                </a>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="rounded-sm border border-white/5 bg-zinc-900/10 p-8 space-y-6 theme-transition">
+              <form action={formAction} className="rounded-sm border border-white/5 bg-zinc-900/10 p-8 space-y-6 theme-transition">
+                
+                {state?.error && (
+                  <div className="rounded-sm border border-red-500/20 bg-red-500/5 p-4 text-xs text-red-400 font-mono">
+                    {state.error}
+                  </div>
+                )}
+
+                {/* Honeypot field (hidden from users) */}
+                <div className="hidden" aria-hidden="true">
+                  <label htmlFor="honeypot">Website</label>
+                  <input
+                    type="text"
+                    id="honeypot"
+                    name="honeypot"
+                    tabIndex={-1}
+                    autoComplete="off"
+                  />
+                </div>
+
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="name" className="block text-[10px] font-bold uppercase tracking-wider text-zinc-400 mb-2 font-mono">
@@ -109,12 +118,15 @@ export default function Contact() {
                     <input
                       type="text"
                       id="name"
+                      name="name"
                       required
-                      value={formData.name}
-                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                      maxLength={100}
                       className="w-full rounded-sm border border-white/10 bg-zinc-950 px-4 py-3 text-sm text-white placeholder-zinc-700 focus:border-emerald-500 focus:outline-none transition-colors font-sans"
                       placeholder="Jane Doe"
                     />
+                    {state?.fieldErrors?.name && (
+                      <p className="mt-1 text-[10px] text-red-400 font-mono">{state.fieldErrors.name}</p>
+                    )}
                   </div>
                   <div>
                     <label htmlFor="email" className="block text-[10px] font-bold uppercase tracking-wider text-zinc-400 mb-2 font-mono">
@@ -123,12 +135,15 @@ export default function Contact() {
                     <input
                       type="email"
                       id="email"
+                      name="email"
                       required
-                      value={formData.email}
-                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                      maxLength={254}
                       className="w-full rounded-sm border border-white/10 bg-zinc-950 px-4 py-3 text-sm text-white placeholder-zinc-700 focus:border-emerald-500 focus:outline-none transition-colors font-sans"
                       placeholder="jane@example.com"
                     />
+                    {state?.fieldErrors?.email && (
+                      <p className="mt-1 text-[10px] text-red-400 font-mono">{state.fieldErrors.email}</p>
+                    )}
                   </div>
                 </div>
 
@@ -139,12 +154,15 @@ export default function Contact() {
                   <input
                     type="text"
                     id="subject"
+                    name="subject"
                     required
-                    value={formData.subject}
-                    onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
+                    maxLength={150}
                     className="w-full rounded-sm border border-white/10 bg-zinc-950 px-4 py-3 text-sm text-white placeholder-zinc-700 focus:border-emerald-500 focus:outline-none transition-colors font-sans"
                     placeholder="e.g., succession inquiry / operator peer"
                   />
+                  {state?.fieldErrors?.subject && (
+                    <p className="mt-1 text-[10px] text-red-400 font-mono">{state.fieldErrors.subject}</p>
+                  )}
                 </div>
 
                 <div>
@@ -153,24 +171,32 @@ export default function Contact() {
                   </label>
                   <textarea
                     id="message"
+                    name="message"
                     required
                     rows={5}
-                    value={formData.message}
-                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                    maxLength={5000}
                     className="w-full rounded-sm border border-white/10 bg-zinc-950 px-4 py-3 text-sm text-white placeholder-zinc-700 focus:border-emerald-500 focus:outline-none transition-colors resize-none font-sans"
                     placeholder="Introduce yourself and your system questions..."
                   />
+                  {state?.fieldErrors?.message && (
+                    <p className="mt-1 text-[10px] text-red-400 font-mono">{state.fieldErrors.message}</p>
+                  )}
                 </div>
 
                 <div className="pt-2">
                   <button
                     type="submit"
-                    className="group interactive-hover flex w-full items-center justify-center gap-2 rounded-sm bg-white hover:bg-emerald-400 text-black py-3.5 text-xs font-bold uppercase tracking-wider transition-all duration-300 cursor-pointer active:scale-95"
+                    disabled={isPending}
+                    className="group interactive-hover flex w-full items-center justify-center gap-2 rounded-sm bg-white hover:bg-emerald-400 disabled:bg-zinc-800 disabled:text-zinc-650 text-black py-3.5 text-xs font-bold uppercase tracking-wider transition-all duration-300 cursor-pointer active:scale-95 disabled:cursor-not-allowed"
                   >
-                    <span>Send Message</span>
-                    <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" strokeWidth={1.5} aria-hidden="true" />
+                    <span>{isPending ? "Sending..." : "Send Message"}</span>
+                    {!isPending && <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" strokeWidth={1.5} aria-hidden="true" />}
                   </button>
                 </div>
+
+                <p className="text-[10px] text-zinc-500 leading-relaxed font-light mt-4 pt-4 border-t border-white/5">
+                  By sending this form, you are sharing the information above so I can read and respond to your message. I do not use contact form submissions for a mailing list unless you explicitly ask.
+                </p>
               </form>
             )}
           </div>
