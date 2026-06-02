@@ -618,12 +618,12 @@ export default function Home() {
               >
                 <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff01_1px,transparent_1px),linear-gradient(to_bottom,#ffffff01_1px,transparent_1px)] bg-[size:1.5rem_1.5rem] pointer-events-none"></div>
                 <div className="space-y-4 relative z-10">
-                  <span className="text-[9px] font-mono text-zinc-500 uppercase tracking-widest block">[ Acquired Company ]</span>
+                  <span className="text-[9px] font-mono text-zinc-500 uppercase tracking-widest block">[ In Practice ]</span>
                   <h3 className="text-lg font-medium text-white group-hover:text-emerald-400 transition-colors">
-                    Acquired &<br />Operating
+                    BraveHeart First Aid
                   </h3>
                   <p className="text-xs text-zinc-400 font-light leading-relaxed">
-                    BraveHeart is a company I acquired and now operate. Its standard is practical: timing, care, communication, and systems have to work when people depend on them.
+                    A company I acquired and now operate. The work is practical, local, and serious: standards, timing, care, and systems have to hold.
                   </p>
                 </div>
                 <div className="flex items-center gap-1 text-[10px] font-mono font-bold uppercase text-emerald-400 group-hover:text-white transition-colors relative z-10">
