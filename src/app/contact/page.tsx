@@ -48,10 +48,10 @@ export default function Contact() {
           <div className="lg:col-span-6 space-y-8 text-zinc-300 font-light leading-relaxed text-sm sm:text-base fade-up-element visible">
             <div className="space-y-4">
               <p className="text-lg text-white font-normal">
-                I am not trying to build a large audience.
+                Start with the right conversation.
               </p>
               <p className="text-zinc-300">
-                But I am interested in the right conversations.
+                I am interested in people building, operating, selling, or stewarding businesses where place, service, taste, and standards matter.
               </p>
             </div>
             
@@ -62,12 +62,11 @@ export default function Contact() {
               
               <div className="grid grid-cols-1 gap-3 font-mono text-xs text-zinc-400">
                 {[
-                  "A business owner thinking about succession or transition.",
-                  "A property holder or operator looking for a strategic partner.",
-                  "An investor interested in place-based experience brands.",
-                  "An operator exploring operations behind premium service.",
-                  "A creative collaborator who shares this taste for place.",
-                  "A builder interested in hospitality, tourism, and legacy brands."
+                  "An owner thinking about succession or transition",
+                  "A property holder looking for an operating partner",
+                  "An operator building a place-based experience business",
+                  "A collaborator working in hospitality, tourism, design, or service",
+                  "An investor aligned with patient, operating-led value creation"
                 ].map((item, idx) => (
                   <div key={idx} className="flex items-start gap-2.5 p-3.5 border border-white/5 bg-zinc-900/20 rounded-sm">
                     <span className="text-emerald-400 font-bold mt-0.5">—</span>
@@ -78,7 +77,7 @@ export default function Contact() {
             </div>
 
             <div className="border-l border-emerald-400/40 pl-4 py-1 text-xs font-mono text-zinc-400">
-              If something here connects with something you are building, operating, buying, or trying to understand, I would be glad to hear from you.
+              If something here connects with what you are building, carrying, or trying to make stronger, send a note.
             </div>
           </div>
 

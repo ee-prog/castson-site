@@ -16,7 +16,7 @@ export default function Footer() {
               <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
             </div>
             <p className="text-xs font-mono text-zinc-400 uppercase tracking-widest">
-              Building from first principles.
+              Building and partnering with place-based experience businesses.
             </p>
           </div>
 
@@ -39,7 +39,7 @@ export default function Footer() {
           {/* Summary / Contact Col */}
           <div className="space-y-4">
             <p className="text-xs text-zinc-400 leading-relaxed font-light">
-              For owners, operators, property holders, and collaborators interested in place-based experience brands, service standards, and operating systems.
+              For owners, operators, property holders, collaborators, and aligned capital.
             </p>
             <div className="pt-2">
               <a 
