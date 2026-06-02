@@ -21,19 +21,16 @@ export default function Colophon() {
             <h1 className="text-4xl sm:text-6xl font-extrabold uppercase tracking-tighter text-white leading-none font-display">
               Colophon
             </h1>
-            <p className="text-zinc-400 text-xs font-mono mt-2 uppercase tracking-wider">
-              Technical & design specifications
-            </p>
           </div>
 
           {/* Body Content */}
           <div className="space-y-8 text-zinc-300 font-light leading-relaxed text-sm sm:text-base">
             <p className="text-lg text-white font-normal leading-relaxed">
-              This site is a public working record for Eli Castson and Castson Inc.: part personal site, part company signal, part archive of ownership, systems, and direction.
+              This site is a working record for Eli Castson and Castson Inc.: part personal site, part company signal, part archive of ownership, systems, and direction.
             </p>
 
             <p>
-              It is built with Next.js, TypeScript, Tailwind CSS, and Vercel.
+              Built with Next.js, TypeScript, Tailwind CSS, and Vercel.
             </p>
 
             <div className="border-l border-white/10 pl-4 py-1 space-y-4 text-xs font-mono text-zinc-400">
@@ -43,7 +40,7 @@ export default function Colophon() {
               </div>
               <div>
                 <span className="text-white block uppercase tracking-wider mb-1 font-bold">[ Design Direction ]</span>
-                Swiss-influenced, mobile-first, restrained, text-forward, and deliberately sparse.
+                Swiss-influenced, mobile-first, restrained, text-forward.
               </div>
               <div>
                 <span className="text-white block uppercase tracking-wider mb-1 font-bold">[ Operating Layer ]</span>
@@ -51,26 +48,22 @@ export default function Colophon() {
                   Ripley is the local AI operating layer behind the work.
                 </p>
                 <p className="mb-2">
-                  She sits inside Eli’s filesystem-first agent workspace: a local operating environment of briefs, drafts, research, skills, decisions, and working files kept inspectable over time.
+                  She sits inside Eli’s filesystem-first agent workspace, where briefs, drafts, research, skills, decisions, and working files stay inspectable.
                 </p>
                 <p className="mb-2">
                   Her current brain is Gemini 3.5, running inside the Antigravity harness.
                 </p>
                 <p>
-                  The point is not automation for its own sake. It is continuity: a way to keep the work held, revisable, and visible over time.
+                  The point is continuity: work held, revised, and made visible over time.
                 </p>
               </div>
               <div>
                 <span className="text-white block uppercase tracking-wider mb-1 font-bold">[ Intent ]</span>
-                This is not a portfolio in the usual sense. It is a record of how the work is being shaped: ownership, operating discipline, and the move toward place-based experience brands.
+                This is not a portfolio in the usual sense. It is a record of ownership, operating discipline, and the move toward place-based experience brands.
               </div>
             </div>
 
-            <div className="space-y-6 pt-4">
-              <span className="text-[10px] font-mono text-zinc-500 uppercase tracking-widest block border-b border-white/5 pb-2">
-                [ Technical Specifications ]
-              </span>
-              
+            <div className="space-y-6 pt-4 border-t border-white/5">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 text-xs font-mono">
                 
                 {/* Build */}
@@ -135,3 +128,4 @@ export default function Colophon() {
     </div>
   );
 }
+
