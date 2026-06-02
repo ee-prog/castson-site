@@ -9,7 +9,7 @@ export default function Footer() {
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
           <div className="space-y-2">
-            <span className="text-sm font-normal tracking-widest text-white font-display block">
+            <span className="text-sm font-normal tracking-widest text-zinc-950 dark:text-white font-display block">
               Castson Inc.
             </span>
             <p className="text-[10px] font-mono text-zinc-500 uppercase tracking-wider max-w-md">
