@@ -59,11 +59,13 @@ export default function Footer() {
         <div className="mt-12 border-t border-white/5 pt-8 flex flex-col sm:flex-row items-center justify-between text-[10px] font-mono gap-4 text-zinc-600">
           <p>© {year} Castson Inc. All rights reserved.</p>
           <div className="flex gap-4 items-center">
+            <Link href="/contact" className="hover:text-white transition-colors">
+              Contact
+            </Link>
+            <span className="text-zinc-800">•</span>
             <Link href="/colophon" className="hover:text-white transition-colors">
               Colophon
             </Link>
-            <span className="text-zinc-800">•</span>
-            <span>Built with Next.js & Tailwind v4</span>
           </div>
         </div>
       </div>

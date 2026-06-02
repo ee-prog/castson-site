@@ -28,12 +28,12 @@ export default function Colophon() {
 
           {/* Body Content */}
           <div className="space-y-8 text-zinc-300 font-light leading-relaxed text-sm sm:text-base">
-            <p className="text-lg text-white font-normal">
-              This site is built with Next.js, TypeScript, Tailwind CSS, and Vercel.
+            <p className="text-lg text-white font-normal leading-relaxed">
+              This site is a public working record for Eli Castson and Castson Inc.: part personal site, part company signal, part archive of ownership, systems, and direction.
             </p>
 
             <p>
-              It is designed as a public working record for Eli Castson and Castson Inc.: part personal site, part company signal, part archive of ownership, systems, and direction.
+              It is built with Next.js, TypeScript, Tailwind CSS, and Vercel.
             </p>
 
             <div className="border-l border-white/10 pl-4 py-1 space-y-4 text-xs font-mono text-zinc-400">
@@ -46,8 +46,19 @@ export default function Colophon() {
                 Swiss-influenced, mobile-first, restrained, text-forward, and deliberately sparse.
               </div>
               <div>
-                <span className="text-white block uppercase tracking-wider mb-1 font-bold">[ Build Process ]</span>
-                The site was designed and iterated with Ripley, a local AI operating layer used for research, drafting, systems thinking, and site development.
+                <span className="text-white block uppercase tracking-wider mb-1 font-bold">[ Operating Layer ]</span>
+                <p className="mb-2 text-zinc-300">
+                  Ripley is the local AI operating layer behind the work.
+                </p>
+                <p className="mb-2">
+                  She sits inside Eli’s filesystem-first agent workspace: a local operating environment of briefs, drafts, research, skills, decisions, and working files kept inspectable over time.
+                </p>
+                <p className="mb-2">
+                  Her current brain is Gemini 3.5, running inside the Antigravity harness.
+                </p>
+                <p>
+                  The point is not automation for its own sake. It is continuity: a way to keep the work held, revisable, and visible over time.
+                </p>
               </div>
               <div>
                 <span className="text-white block uppercase tracking-wider mb-1 font-bold">[ Intent ]</span>
@@ -60,7 +71,7 @@ export default function Colophon() {
                 [ Tools ]
               </span>
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 text-xs font-mono text-zinc-400">
-                {["Next.js", "TypeScript", "Tailwind CSS", "Vercel", "Lucide icons", "Ripley"].map((tool) => (
+                {["Next.js", "TypeScript", "Tailwind CSS", "Vercel", "Lucide icons", "Antigravity"].map((tool) => (
                   <div key={tool} className="flex items-center gap-1.5 p-2 border border-white/5 bg-zinc-900/10 rounded-sm">
                     <span className="h-1 w-1 bg-emerald-400"></span>
                     <span>{tool}</span>

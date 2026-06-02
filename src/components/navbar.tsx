@@ -182,7 +182,15 @@ export default function Navbar() {
         {/* Bottom Bar: Copyright details */}
         <div className="w-full shrink-0 border-t border-white/5 pt-6 max-w-5xl mx-auto flex justify-between items-center text-[10px] text-zinc-600 font-mono z-10">
           <span>© {new Date().getFullYear()} Castson Inc.</span>
-          <span className="hidden sm:block">Built with Next.js & Tailwind v4</span>
+          <div className="flex gap-4 items-center">
+            <Link href="/contact" onClick={() => setIsOpen(false)} className="hover:text-white transition-colors">
+              Contact
+            </Link>
+            <span className="text-zinc-800">•</span>
+            <Link href="/colophon" onClick={() => setIsOpen(false)} className="hover:text-white transition-colors">
+              Colophon
+            </Link>
+          </div>
         </div>
 
       </div>
