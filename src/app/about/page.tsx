@@ -47,7 +47,7 @@ export default function About() {
               That gave me range. But ownership changed the work.
             </p>
 
-            <div className="bg-zinc-100/50 dark:bg-zinc-900/20 border border-zinc-200 dark:border-white/5 p-6 rounded-sm space-y-4">
+            <div className="bg-white dark:bg-zinc-900/20 border border-zinc-200 dark:border-white/5 p-6 rounded-sm space-y-4">
               <span className="text-[9px] font-mono text-emerald-600 dark:text-emerald-400 uppercase tracking-widest block border-b border-zinc-200 dark:border-white/5 pb-2">
                 [ The Reality of Ownership ]
               </span>
@@ -110,7 +110,7 @@ export default function About() {
 
           {/* Right Column - Side Info Card */}
           <div className="lg:col-span-4 lg:sticky lg:top-28 space-y-6 fade-up-element visible">
-            <div className="rounded-sm border border-zinc-200 dark:border-white/5 bg-zinc-100/40 dark:bg-zinc-900/20 p-6 space-y-6 theme-transition">
+            <div className="rounded-sm border border-zinc-200 dark:border-white/5 bg-white dark:bg-zinc-900/20 p-6 space-y-6 theme-transition">
               <h3 className="text-xs font-bold uppercase tracking-wider text-zinc-650 dark:text-zinc-300 font-mono">[ QUICK FACTS ]</h3>
               
               <div className="space-y-6">

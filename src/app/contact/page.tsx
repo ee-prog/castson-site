@@ -58,7 +58,7 @@ export default function Contact() {
                   "A collaborator working in hospitality, tourism, design, or service",
                   "An investor aligned with patient, operating-led value creation"
                 ].map((item, idx) => (
-                  <div key={idx} className="flex items-start gap-2.5 p-3.5 border border-zinc-200 dark:border-white/5 bg-zinc-100/40 dark:bg-zinc-900/20 rounded-sm">
+                  <div key={idx} className="flex items-start gap-2.5 p-3.5 border border-zinc-200 dark:border-white/5 bg-white dark:bg-zinc-900/20 rounded-sm">
                     <span className="text-emerald-600 dark:text-emerald-400 font-bold mt-0.5">—</span>
                     <span>{item}</span>
                   </div>
@@ -90,7 +90,7 @@ export default function Contact() {
                 </a>
               </div>
             ) : (
-              <form action={formAction} className="rounded-sm border border-zinc-200 dark:border-white/5 bg-zinc-100/20 dark:bg-zinc-900/10 p-8 space-y-6 theme-transition">
+              <form action={formAction} className="rounded-sm border border-zinc-200 dark:border-white/5 bg-white dark:bg-zinc-900/10 p-8 space-y-6 theme-transition">
                 
                 {state?.error && (
                   <div className="rounded-sm border border-red-500/20 bg-red-500/5 p-4 text-xs text-red-500 dark:text-red-400 font-mono">
