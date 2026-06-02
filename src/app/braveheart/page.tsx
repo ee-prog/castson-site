@@ -163,7 +163,7 @@ export default function BraveHeart() {
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-2 sm:gap-4 py-4 text-xs font-mono text-zinc-400">
-                {["Website", "Booking flow", "Reminders", "Instructor flow", "Follow-ups", "Advertising", "Daily operations", "Student safety"].map((item) => (
+                {["Trust", "Standards", "Readiness", "Care", "Timing", "Instruction", "Confidence", "Responsibility"].map((item) => (
                   <div key={item} className="flex items-center gap-1.5 p-3 border border-white/5 bg-zinc-900/30 rounded-sm">
                     <span className="h-1 w-1 bg-emerald-400"></span>
                     <span>{item}</span>
