@@ -47,7 +47,7 @@ export default function Navbar() {
             onClick={() => setIsOpen(false)}
             className="group flex items-center gap-2 relative z-50"
           >
-            <span className="text-lg font-bold uppercase tracking-widest text-white transition-colors group-hover:text-emerald-400 font-display">
+            <span className="text-lg font-normal tracking-widest text-zinc-950 dark:text-white transition-colors group-hover:text-emerald-400 font-display">
               Castson Inc.
             </span>
             <span className="flex h-1.5 w-1.5 rounded-full bg-emerald-400 group-hover:animate-ping"></span>
@@ -63,19 +63,19 @@ export default function Navbar() {
             <div className="flex flex-col justify-center items-end gap-1.5 w-6 h-6">
               {/* Top Line */}
               <span 
-                className={`h-[1px] bg-white transition-all duration-300 ease-out ${
+                className={`h-[1px] ${isOpen ? "bg-white" : "bg-zinc-950 dark:bg-white"} transition-all duration-300 ease-out ${
                   isOpen ? "w-6 rotate-45 translate-y-[7px]" : "w-6 group-hover:w-6"
                 }`}
               />
               {/* Middle Line */}
               <span 
-                className={`h-[1px] bg-white transition-all duration-300 ease-out ${
+                className={`h-[1px] ${isOpen ? "bg-white" : "bg-zinc-950 dark:bg-white"} transition-all duration-300 ease-out ${
                   isOpen ? "w-0 opacity-0" : "w-4 group-hover:w-6"
                 }`}
               />
               {/* Bottom Line */}
               <span 
-                className={`h-[1px] bg-white transition-all duration-300 ease-out ${
+                className={`h-[1px] ${isOpen ? "bg-white" : "bg-zinc-950 dark:bg-white"} transition-all duration-300 ease-out ${
                   isOpen ? "w-6 -rotate-45 -translate-y-[7px]" : "w-5 group-hover:w-6"
                 }`}
               />
@@ -92,8 +92,7 @@ export default function Navbar() {
             : "-translate-y-full opacity-0 pointer-events-none"
         }`}
       >
-        {/* Subtle grid background inside overlay */}
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff01_1px,transparent_1px),linear-gradient(to_bottom,#ffffff01_1px,transparent_1px)] bg-[size:3rem_3rem] pointer-events-none"></div>
+
 
         {/* Top spacer matching header height */}
         <div className="h-20 w-full shrink-0"></div>
@@ -127,7 +126,7 @@ export default function Navbar() {
                     <span className="text-zinc-700 text-sm font-mono tracking-wider">
                       {String(idx).padStart(2, "0")}/
                     </span>
-                    <span className={`text-4xl sm:text-6xl font-extrabold uppercase tracking-tighter font-display transition-colors duration-300 ${
+                    <span className={`text-4xl sm:text-6xl font-normal tracking-tighter font-display transition-colors duration-300 ${
                       isActive ? "text-emerald-400" : "text-white group-hover:text-emerald-400"
                     }`}>
                       {item.name}

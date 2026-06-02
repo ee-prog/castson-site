@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import { ChevronRight } from "lucide-react";
 
 const themes = [
   {
@@ -86,10 +87,10 @@ export default function FieldNotes() {
         <div className="mx-auto max-w-5xl w-full px-4 sm:px-6 lg:px-8 relative z-20">
           <div className="max-w-3xl space-y-6">
             <span className="text-[10px] font-bold uppercase tracking-widest text-emerald-600 dark:text-emerald-400 font-mono">03 / The Archive</span>
-            <h1 className="text-4xl sm:text-6xl font-extrabold uppercase tracking-tighter text-foreground leading-none font-display">
+            <h1 className="text-foreground font-display">
               Field Notes
             </h1>
-            <p className="text-xl sm:text-2xl text-zinc-700 dark:text-zinc-300 font-light font-display">
+            <p className="text-xl sm:text-2xl text-zinc-700 dark:text-zinc-300 font-light">
               Notes from inside the work.
             </p>
           </div>
@@ -100,23 +101,23 @@ export default function FieldNotes() {
       <section className="py-8 md:py-12 border-b border-zinc-200 dark:border-white/[0.03] bg-zinc-100/30 dark:bg-zinc-950/10 theme-transition">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 relative z-20">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 text-xs font-mono text-zinc-600 dark:text-zinc-500 uppercase tracking-widest">
-            <div className="space-y-2">
+            <div className="space-y-2 text-zinc-650 dark:text-zinc-400">
               <div className="flex items-start gap-2">
-                <span>—</span>
+                <ChevronRight className="h-4 w-4 shrink-0 text-emerald-500 mt-0.5" strokeWidth={1.5} aria-hidden="true" />
                 <span>Short observations from building.</span>
               </div>
               <div className="flex items-start gap-2">
-                <span>—</span>
+                <ChevronRight className="h-4 w-4 shrink-0 text-emerald-500 mt-0.5" strokeWidth={1.5} aria-hidden="true" />
                 <span>Not trend pieces.</span>
               </div>
             </div>
-            <div className="space-y-2">
+            <div className="space-y-2 text-zinc-650 dark:text-zinc-400">
               <div className="flex items-start gap-2">
-                <span>—</span>
+                <ChevronRight className="h-4 w-4 shrink-0 text-emerald-500 mt-0.5" strokeWidth={1.5} aria-hidden="true" />
                 <span>Not advice content. Not thought leadership.</span>
               </div>
               <div className="flex items-start gap-2">
-                <span>—</span>
+                <ChevronRight className="h-4 w-4 shrink-0 text-emerald-500 mt-0.5" strokeWidth={1.5} aria-hidden="true" />
                 <span>Notes from inside a real transformation: what changed, broke, worked, or became obvious.</span>
               </div>
             </div>
@@ -139,7 +140,7 @@ export default function FieldNotes() {
                 </div>
 
                 {/* Title */}
-                <h2 className="text-xl sm:text-2xl font-bold uppercase text-zinc-900 dark:text-white font-display leading-tight">
+                <h2 className="text-xl sm:text-2xl font-medium text-zinc-900 dark:text-white leading-tight">
                   {theme.title}
                 </h2>
 

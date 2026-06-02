@@ -41,10 +41,10 @@ export default function Ripley() {
         <div className="mx-auto max-w-5xl w-full px-4 sm:px-6 lg:px-8 relative z-20">
           <div className="max-w-3xl space-y-6">
             <span className="text-[10px] font-bold uppercase tracking-widest text-emerald-400 font-mono">02 / System Architecture</span>
-            <h1 className="text-4xl sm:text-6xl font-extrabold uppercase tracking-tighter text-white leading-none font-display">
+            <h1 className="text-white font-display">
               Ripley
             </h1>
-            <p className="text-xl sm:text-2xl text-zinc-300 font-light font-display">
+            <p className="text-xl sm:text-2xl text-zinc-300 font-light">
               The operating layer emerging from the work.
             </p>
           </div>
@@ -164,7 +164,7 @@ export default function Ripley() {
             {/* The Principle */}
             <div className="space-y-6">
               <span className="text-[9px] font-mono tracking-widest uppercase text-emerald-400">[ The Principle ]</span>
-              <h2 className="text-2xl font-bold uppercase text-white font-display">
+              <h2 className="text-2xl font-medium text-white">
                 Do not automate confusion.
               </h2>
               <div className="text-zinc-300 font-light text-sm sm:text-base space-y-4">
@@ -192,7 +192,7 @@ export default function Ripley() {
             {/* Why Now */}
             <div className="space-y-6">
               <span className="text-[9px] font-mono tracking-widest uppercase text-emerald-400">[ Why Now ]</span>
-              <h2 className="text-2xl font-bold uppercase text-white font-display">
+              <h2 className="text-2xl font-medium text-white">
                 The Shift in Boundaries
               </h2>
               <div className="text-zinc-300 font-light text-sm sm:text-base space-y-4">
@@ -228,7 +228,7 @@ export default function Ripley() {
             {/* Right: Modules list */}
             <div className="lg:col-span-7 space-y-6 fade-up-element visible">
               <span className="text-[9px] font-mono tracking-widest uppercase text-emerald-400">[ Supported Operations ]</span>
-              <h2 className="text-2xl font-bold uppercase text-white font-display">
+              <h2 className="text-2xl font-medium text-white">
                 What Ripley supports
               </h2>
               <p className="text-zinc-300 font-light text-sm sm:text-base">

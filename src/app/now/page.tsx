@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { ChevronRight } from "lucide-react";
+import { ChevronRight, ArrowRight } from "lucide-react";
 
 function ImagePlaceholder({ label }: { label: string }) {
   const refCode = label
@@ -41,10 +41,10 @@ export default function Now() {
         <div className="mx-auto max-w-5xl w-full px-4 sm:px-6 lg:px-8 relative z-20">
           <div className="max-w-3xl space-y-6">
             <span className="text-[10px] font-bold uppercase tracking-widest text-emerald-400 font-mono">04 / Active Work</span>
-            <h1 className="text-4xl sm:text-6xl font-extrabold uppercase tracking-tighter text-white leading-none font-display">
+            <h1 className="text-white font-display">
               Now
             </h1>
-            <p className="text-xl sm:text-2xl text-zinc-300 font-light font-display">
+            <p className="text-xl sm:text-2xl text-zinc-300 font-light">
               Current focus.
             </p>
           </div>
@@ -157,7 +157,7 @@ export default function Now() {
                   "Then see what the pattern wants to become next."
                 ].map((d, idx) => (
                   <li key={idx} className="flex gap-2.5 items-start">
-                    <span className="text-emerald-500 font-bold font-mono">→</span>
+                    <ArrowRight className="h-4 w-4 shrink-0 text-emerald-500 mt-0.5" strokeWidth={1.5} aria-hidden="true" />
                     <span className={idx === 6 || idx === 7 ? "text-white font-medium" : ""}>{d}</span>
                   </li>
                 ))}

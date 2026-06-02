@@ -3,13 +3,13 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 :root {
-  --background: #eeece6;
+  --background: #f7f6f3;
   --foreground: #0a0a09;
-  --card: #f5f5f4;
+  --card: #ffffff;
   --card-foreground: #0a0a09;
   --primary: #c5a880;
   --primary-foreground: #0a0a09;
-  --secondary: #f5f5f4;
+  --secondary: #ffffff;
   --secondary-foreground: #0a0a09;
   --muted: #e7e5e4;
   --muted-foreground: #57534e;
@@ -17,17 +17,17 @@
 }
 
 .dark {
-  --background: #0a0a09;
+  --background: #181818;
   --foreground: #eeece6;
-  --card: #12110f;
+  --card: #222222;
   --card-foreground: #eeece6;
   --primary: #c5a880;
-  --primary-foreground: #0a0a09;
-  --secondary: #1c1a17;
+  --primary-foreground: #181818;
+  --secondary: #2d2d2d;
   --secondary-foreground: #eeece6;
-  --muted: #1c1a17;
+  --muted: #2d2d2d;
   --muted-foreground: #8a857f;
-  --border: #1c1a17;
+  --border: #2c2c2c;
 }
 
 @theme {
@@ -63,11 +63,13 @@
   --color-zinc-500: #78716c;
   --color-zinc-600: #57534e;
   --color-zinc-700: #44403c;
-  --color-zinc-800: #1c1a17; /* Warm dark gray */
-  --color-zinc-900: #12110f; /* Warm slate charcoal */
-  --color-zinc-950: #0a0a09; /* Warm pitch black */
+  --color-zinc-800: #2d2d2d; /* Neutral dark gray */
+  --color-zinc-900: #222222; /* Neutral slate charcoal */
+  --color-zinc-950: #181818; /* Neutral pitch black */
 
-  --font-sans: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-heading: var(--font-heading), system-ui, sans-serif;
+  --font-body: var(--font-body), system-ui, sans-serif;
+  --font-sans: var(--font-body), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   --font-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular, Roboto Mono, Menlo, Monaco, Consolas, monospace;
 }
 
@@ -75,7 +77,7 @@ body {
   background-color: var(--background);
   color: var(--foreground);
   transition: background-color 0.8s cubic-bezier(0.25, 1, 0.5, 1), color 0.8s cubic-bezier(0.25, 1, 0.5, 1);
-  font-family: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  font-family: var(--font-body), system-ui, sans-serif;
   overflow-x: hidden;
 }
 
@@ -89,7 +91,7 @@ body {
 /* Make header adapt to light theme */
 html:not(.dark):not(.menu-open) header {
   border-bottom-color: rgba(10, 10, 9, 0.08);
-  background-color: rgba(238, 236, 230, 0.7);
+  background-color: rgba(247, 246, 243, 0.7);
 }
 
 html:not(.dark):not(.menu-open) header span {
@@ -104,13 +106,61 @@ html:not(.dark):not(.menu-open) header button span {
   background-color: #0a0a09;
 }
 
-/* Headings, display font, and quotes use Primary: Geist Sans */
-h1, h2, h3, h4, h5, h6, .font-display, blockquote, .font-serif {
-  font-family: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+/* Display / Headings use Atacama */
+h1, h2, .font-display, .font-heading {
+  font-family: var(--font-heading), system-ui, sans-serif;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 6.5vw, 6rem); /* 40px to 96px */
+  line-height: 0.95;
+}
+
+h2 {
+  font-size: clamp(1.75rem, 4vw, 3rem); /* 28px to 48px */
+  line-height: 1.05;
+}
+
+/* Sub-headers and Quotes use Helix */
+h3, h4, h5, h6, .font-subheading, blockquote {
+  font-family: var(--font-body), system-ui, sans-serif;
+  font-weight: 500;
+  line-height: 1.35;
+}
+
+h3 {
+  font-size: clamp(1.25rem, 2.5vw, 1.75rem); /* 20px to 28px */
 }
 
 blockquote {
   font-style: normal;
+}
+
+/* Luxury Form Inputs (Dior style) */
+.form-input-luxury {
+  background-color: transparent !important;
+  border: none !important;
+  border-bottom: 1px solid rgba(168, 162, 158, 0.3) !important;
+  border-radius: 0px !important;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+  padding-top: 0.85rem !important;
+  padding-bottom: 0.85rem !important;
+  font-family: var(--font-body), system-ui, sans-serif !important;
+  font-size: 0.875rem !important;
+  transition: border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.dark .form-input-luxury {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.form-input-luxury:focus {
+  border-bottom-color: #b59367 !important; /* sand-gold accent */
+  outline: none !important;
+  box-shadow: none !important;
 }
 
 
@@ -215,8 +265,7 @@ blockquote {
 }
 
 .animate-grid-line {
-  transform-origin: top;
-  animation: revealVertical 2.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  display: none !important;
 }
 
 /* Link Underline transition effect */
@@ -254,3 +303,24 @@ blockquote {
 .btn-scale-hover:active {
   transform: translateY(0) scale(0.99);
 }
+
+/* Light mode specific typography colors (Dior spacing lessons) */
+html:not(.dark) body,
+html:not(.dark) main p:not(.font-mono) {
+  color: #888888 !important;
+}
+
+html:not(.dark) h2,
+html:not(.dark) h3,
+html:not(.dark) h4,
+html:not(.dark) h5,
+html:not(.dark) h6,
+html:not(.dark) .font-subheading {
+  color: #262626 !important;
+}
+
+/* Make footer company name adapt to light theme */
+html:not(.dark) footer .font-display {
+  color: #0a0a09 !important;
+}
+

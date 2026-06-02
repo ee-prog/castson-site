@@ -18,7 +18,7 @@ export default function Colophon() {
           {/* Header */}
           <div className="space-y-4">
             <span className="text-[10px] font-bold uppercase tracking-widest text-emerald-400 font-mono">07 / Identity</span>
-            <h1 className="text-4xl sm:text-6xl font-extrabold uppercase tracking-tighter text-white leading-none font-display">
+            <h1 className="text-white font-display">
               Colophon
             </h1>
           </div>
@@ -36,7 +36,7 @@ export default function Colophon() {
             <div className="border-l border-white/10 pl-4 py-1 space-y-4 text-xs font-mono text-zinc-400">
               <div>
                 <span className="text-white block uppercase tracking-wider mb-1 font-bold">[ Typography ]</span>
-                Geist Sans and Geist Mono.
+                Atacama for display. Helix for body text. Geist Mono in use for small system labels and metadata.
               </div>
               <div>
                 <span className="text-white block uppercase tracking-wider mb-1 font-bold">[ Design Direction ]</span>

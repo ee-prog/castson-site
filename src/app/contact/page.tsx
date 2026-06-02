@@ -23,10 +23,10 @@ export default function Contact() {
         {/* Page Header */}
         <div className="max-w-3xl fade-up-element visible">
           <span className="text-[10px] font-bold uppercase tracking-widest text-emerald-600 dark:text-emerald-400 font-mono">06 / Connect</span>
-          <h1 className="text-4xl sm:text-6xl font-extrabold uppercase tracking-tighter text-foreground leading-none font-display mt-2">
+          <h1 className="text-foreground font-display mt-2">
             Contact
           </h1>
-          <p className="mt-4 text-xl sm:text-2xl text-zinc-700 dark:text-zinc-300 font-light font-display">
+          <p className="mt-4 text-xl sm:text-2xl text-zinc-700 dark:text-zinc-300 font-light">
             Start a conversation.
           </p>
         </div>
@@ -58,7 +58,7 @@ export default function Contact() {
                   "A collaborator working in hospitality, tourism, design, or service",
                   "An investor aligned with patient, operating-led value creation"
                 ].map((item, idx) => (
-                  <div key={idx} className="flex items-start gap-2.5 p-3.5 border border-zinc-200 dark:border-white/5 bg-zinc-100/40 dark:bg-zinc-900/20 rounded-sm">
+                  <div key={idx} className="flex items-start gap-2.5 p-3.5 border border-zinc-200 dark:border-white/5 bg-white dark:bg-zinc-900/20 rounded-sm">
                     <span className="text-emerald-600 dark:text-emerald-400 font-bold mt-0.5">—</span>
                     <span>{item}</span>
                   </div>
@@ -78,7 +78,7 @@ export default function Contact() {
                 <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400">
                   <Send className="h-6 w-6" strokeWidth={1.5} aria-hidden="true" />
                 </div>
-                <h2 className="text-xl font-bold text-zinc-900 dark:text-white font-display uppercase">Message received.</h2>
+                <h2 className="text-xl font-medium text-zinc-900 dark:text-white">Message received.</h2>
                 <p className="text-xs text-zinc-600 dark:text-zinc-400 max-w-sm mx-auto font-mono leading-relaxed">
                   Thanks for the note. If it fits the kind of work I’m focused on, I’ll reply directly.
                 </p>
@@ -90,7 +90,7 @@ export default function Contact() {
                 </a>
               </div>
             ) : (
-              <form action={formAction} className="rounded-sm border border-zinc-200 dark:border-white/5 bg-zinc-100/20 dark:bg-zinc-900/10 p-8 space-y-6 theme-transition">
+              <form action={formAction} className="rounded-sm border border-zinc-200 dark:border-white/5 bg-white dark:bg-zinc-900/10 p-8 space-y-6 theme-transition">
                 
                 {state?.error && (
                   <div className="rounded-sm border border-red-500/20 bg-red-500/5 p-4 text-xs text-red-500 dark:text-red-400 font-mono">
@@ -121,7 +121,7 @@ export default function Contact() {
                       name="name"
                       required
                       maxLength={100}
-                      className="w-full rounded-sm border border-zinc-200 dark:border-white/10 bg-white dark:bg-zinc-950 px-4 py-3 text-sm text-zinc-900 dark:text-white placeholder-zinc-400 dark:placeholder-zinc-700 focus:border-emerald-500 focus:outline-none transition-colors font-sans"
+                      className="w-full form-input-luxury text-zinc-900 dark:text-white placeholder-zinc-450 dark:placeholder-zinc-600 focus:outline-none"
                       placeholder="Jane Doe"
                     />
                     {state?.fieldErrors?.name && (
@@ -138,7 +138,7 @@ export default function Contact() {
                       name="email"
                       required
                       maxLength={254}
-                      className="w-full rounded-sm border border-zinc-200 dark:border-white/10 bg-white dark:bg-zinc-950 px-4 py-3 text-sm text-zinc-900 dark:text-white placeholder-zinc-400 dark:placeholder-zinc-700 focus:border-emerald-500 focus:outline-none transition-colors font-sans"
+                      className="w-full form-input-luxury text-zinc-900 dark:text-white placeholder-zinc-450 dark:placeholder-zinc-600 focus:outline-none"
                       placeholder="jane@example.com"
                     />
                     {state?.fieldErrors?.email && (
@@ -157,7 +157,7 @@ export default function Contact() {
                     name="subject"
                     required
                     maxLength={150}
-                    className="w-full rounded-sm border border-zinc-200 dark:border-white/10 bg-white dark:bg-zinc-950 px-4 py-3 text-sm text-zinc-900 dark:text-white placeholder-zinc-400 dark:placeholder-zinc-700 focus:border-emerald-500 focus:outline-none transition-colors font-sans"
+                    className="w-full form-input-luxury text-zinc-900 dark:text-white placeholder-zinc-450 dark:placeholder-zinc-600 focus:outline-none"
                     placeholder="e.g., succession inquiry / operator peer"
                   />
                   {state?.fieldErrors?.subject && (
@@ -175,7 +175,7 @@ export default function Contact() {
                     required
                     rows={5}
                     maxLength={5000}
-                    className="w-full rounded-sm border border-zinc-200 dark:border-white/10 bg-white dark:bg-zinc-950 px-4 py-3 text-sm text-zinc-900 dark:text-white placeholder-zinc-400 dark:placeholder-zinc-700 focus:border-emerald-500 focus:outline-none transition-colors resize-none font-sans"
+                    className="w-full form-input-luxury text-zinc-900 dark:text-white placeholder-zinc-450 dark:placeholder-zinc-600 focus:outline-none resize-none"
                     placeholder="Introduce yourself and your system questions..."
                   />
                   {state?.fieldErrors?.message && (

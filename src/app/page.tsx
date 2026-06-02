@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import { ArrowRight, ChevronRight } from "lucide-react";
+import { ArrowRight, ChevronRight, Check, Minus } from "lucide-react";
 
 function ImagePlaceholder({ label }: { label: string }) {
   const refCode = label
@@ -43,13 +43,13 @@ export default function Home() {
         <div className="mx-auto max-w-5xl w-full px-4 sm:px-6 lg:px-8 relative z-20">
           <div className="max-w-3xl space-y-6">
             {/* Eyebrow status pill */}
-            <div className="inline-flex items-center gap-2 rounded-full border border-emerald-500/20 bg-emerald-500/[0.02] px-3 py-1 text-[9px] font-bold uppercase tracking-widest text-emerald-400 font-mono">
+            <div className="inline-flex items-center gap-2 rounded-sm border border-emerald-500/20 bg-emerald-500/[0.02] px-3 py-1 text-[9px] font-bold uppercase tracking-widest text-emerald-400 font-mono">
               <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-ping"></span>
               <span>Eli Castson</span>
             </div>
 
             {/* Title */}
-            <h1 className="text-4xl sm:text-6xl font-extrabold uppercase tracking-tighter text-white leading-none font-display fade-up-element visible">
+            <h1 className="text-white font-display fade-up-element visible">
               I build companies where taste, service, and operations meet.
             </h1>
 
@@ -140,7 +140,7 @@ export default function Home() {
             
             <div className="border-l-2 border-emerald-400 pl-6 space-y-4 fade-up-element visible">
               <span className="text-[9px] font-mono tracking-widest uppercase text-emerald-400">[ The First Acquisition ]</span>
-              <h2 className="text-2xl sm:text-3xl font-bold uppercase text-white font-display">
+              <h2 className="text-2xl sm:text-3xl font-medium text-white">
                 BraveHeart First Aid
               </h2>
               <p className="text-zinc-300 font-light leading-relaxed">
@@ -220,7 +220,7 @@ export default function Home() {
             {/* Right: Narrative */}
             <div className="lg:col-span-7 space-y-6 text-zinc-300 font-light leading-relaxed text-sm sm:text-base fade-up-element visible">
               <span className="text-[9px] font-mono tracking-widest uppercase text-emerald-400">[ Phase 01: The Foundation ]</span>
-              <h2 className="text-3xl font-bold uppercase text-white font-display">
+              <h2 className="text-3xl font-medium text-white">
                 The first year was not about AI.
               </h2>
               <p className="text-lg text-zinc-200">
@@ -295,7 +295,7 @@ export default function Home() {
             {/* Left: Narrative */}
             <div className="lg:col-span-7 space-y-6 text-zinc-300 font-light leading-relaxed text-sm sm:text-base fade-up-element visible">
               <span className="text-[9px] font-mono tracking-widest uppercase text-emerald-400">[ Phase 02: Scale & Synced State ]</span>
-              <h2 className="text-3xl font-bold uppercase text-white font-display">
+              <h2 className="text-3xl font-medium text-white">
                 Now the automation begins.
               </h2>
               <p className="text-lg text-zinc-200">
@@ -344,7 +344,7 @@ export default function Home() {
             
             <div className="space-y-4 fade-up-element visible">
               <span className="text-[9px] font-mono tracking-widest uppercase text-emerald-400">[ System Mechanics ]</span>
-              <h2 className="text-3xl font-extrabold uppercase text-white font-display">
+              <h2 className="text-3xl font-medium text-white">
                 Every experience is supported by a system.
               </h2>
             </div>
@@ -354,7 +354,7 @@ export default function Home() {
                 <p>
                   Most people look at a hotel, a travel service, or a product and see only the front of house.
                 </p>
-                <p className="text-white font-medium text-lg font-display">
+                <p className="text-white font-medium text-lg">
                   I tend to see the underlying coordination:
                 </p>
                 <div className="flex flex-wrap gap-2">
@@ -378,23 +378,23 @@ export default function Home() {
                 </p>
                 <ul className="space-y-2 text-xs font-mono text-zinc-400">
                   <li className="flex items-start gap-1.5">
-                    <span className="text-red-500 font-bold">-</span>
+                    <Minus className="h-4 w-4 shrink-0 text-red-500 mt-0.5" strokeWidth={1.5} aria-hidden="true" />
                     <span>They collect assumptions.</span>
                   </li>
                   <li className="flex items-start gap-1.5">
-                    <span className="text-red-500 font-bold">-</span>
+                    <Minus className="h-4 w-4 shrink-0 text-red-500 mt-0.5" strokeWidth={1.5} aria-hidden="true" />
                     <span>They inherit old habits.</span>
                   </li>
                   <li className="flex items-start gap-1.5">
-                    <span className="text-red-500 font-bold">-</span>
+                    <Minus className="h-4 w-4 shrink-0 text-red-500 mt-0.5" strokeWidth={1.5} aria-hidden="true" />
                     <span>They compromise on standards.</span>
                   </li>
                   <li className="flex items-start gap-1.5">
-                    <span className="text-red-500 font-bold">-</span>
+                    <Minus className="h-4 w-4 shrink-0 text-red-500 mt-0.5" strokeWidth={1.5} aria-hidden="true" />
                     <span>They make simple coordination complicated.</span>
                   </li>
                   <li className="flex items-start gap-1.5">
-                    <span className="text-red-500 font-bold">-</span>
+                    <Minus className="h-4 w-4 shrink-0 text-red-500 mt-0.5" strokeWidth={1.5} aria-hidden="true" />
                     <span>They ask staff to compensate for what the system itself should handle.</span>
                   </li>
                 </ul>
@@ -417,7 +417,7 @@ export default function Home() {
             {/* Left: Summary */}
             <div className="lg:col-span-7 space-y-6 text-zinc-300 font-light leading-relaxed text-sm sm:text-base fade-up-element visible">
               <span className="text-[9px] font-mono tracking-widest uppercase text-emerald-400">[ Identity ]</span>
-              <h2 className="text-3xl font-bold uppercase text-white font-display">
+              <h2 className="text-3xl font-medium text-white">
                 What Castson Inc. is building
               </h2>
               <p className="text-lg text-zinc-200">
@@ -429,23 +429,23 @@ export default function Home() {
               
               <ul className="space-y-3 pl-4 border-l border-white/10 text-xs font-mono text-zinc-400 list-none">
                 <li className="flex items-start gap-2">
-                  <span className="text-emerald-500 font-bold shrink-0">—</span>
+                  <Check className="h-4 w-4 shrink-0 text-emerald-500 mt-0.5" strokeWidth={1.5} aria-hidden="true" />
                   <span>Find businesses with real taste, service, place, or reputation.</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-emerald-500 font-bold shrink-0">—</span>
+                  <Check className="h-4 w-4 shrink-0 text-emerald-500 mt-0.5" strokeWidth={1.5} aria-hidden="true" />
                   <span>Preserve what makes them distinct.</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-emerald-500 font-bold shrink-0">—</span>
+                  <Check className="h-4 w-4 shrink-0 text-emerald-500 mt-0.5" strokeWidth={1.5} aria-hidden="true" />
                   <span>Strengthen the story and standards.</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-emerald-500 font-bold shrink-0">—</span>
+                  <Check className="h-4 w-4 shrink-0 text-emerald-500 mt-0.5" strokeWidth={1.5} aria-hidden="true" />
                   <span>Build the systems behind the experience.</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-emerald-500 font-bold shrink-0">—</span>
+                  <Check className="h-4 w-4 shrink-0 text-emerald-500 mt-0.5" strokeWidth={1.5} aria-hidden="true" />
                   <span>Make the business more capable without making it generic.</span>
                 </li>
               </ul>
@@ -536,7 +536,7 @@ export default function Home() {
             {/* Left: Content */}
             <div className="lg:col-span-7 space-y-6 text-zinc-300 font-light leading-relaxed text-sm sm:text-base fade-up-element visible">
               <span className="text-[9px] font-mono tracking-widest uppercase text-emerald-400">[ Publication Policy ]</span>
-              <h2 className="text-3xl font-bold uppercase text-white font-display">
+              <h2 className="text-3xl font-medium text-white">
                 How I share the work
               </h2>
               <p className="text-lg text-zinc-200">
@@ -598,7 +598,7 @@ export default function Home() {
           <div className="space-y-12">
             <div className="text-center space-y-4 max-w-2xl mx-auto">
               <span className="text-[9px] font-mono tracking-widest uppercase text-emerald-400">[ Start a Conversation ]</span>
-              <h2 className="text-3xl font-bold uppercase text-white font-display">
+              <h2 className="text-3xl font-medium text-white">
                 Start a Conversation
               </h2>
               <p className="text-zinc-400 font-light text-sm">
@@ -614,16 +614,16 @@ export default function Home() {
               {/* CTA 1: BraveHeart */}
               <Link 
                 href="/braveheart"
-                className="group relative rounded-sm border border-white/5 bg-zinc-900/20 p-6 sm:p-8 flex flex-col justify-between h-56 hover:border-emerald-400/30 transition-all duration-500 overflow-hidden"
+                className="group relative rounded-sm border border-white/5 bg-zinc-900/20 p-6 sm:p-8 flex flex-col justify-between min-h-56 hover:border-emerald-400/30 transition-all duration-500 overflow-hidden"
               >
                 <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff01_1px,transparent_1px),linear-gradient(to_bottom,#ffffff01_1px,transparent_1px)] bg-[size:1.5rem_1.5rem] pointer-events-none"></div>
                 <div className="space-y-4 relative z-10">
-                  <span className="text-[9px] font-mono text-zinc-500 uppercase tracking-widest block">[ First Acquisition ]</span>
-                  <h3 className="text-lg font-bold uppercase text-white font-display group-hover:text-emerald-400 transition-colors">
-                    The First Acquisition
+                  <span className="text-[9px] font-mono text-zinc-500 uppercase tracking-widest block">[ In Practice ]</span>
+                  <h3 className="text-lg font-medium text-white group-hover:text-emerald-400 transition-colors">
+                    BraveHeart First Aid
                   </h3>
                   <p className="text-xs text-zinc-400 font-light leading-relaxed">
-                    BraveHeart was the first company I acquired and operated, serving as a real lesson in standards, timing, care, and systems.
+                    A company I acquired and now operate. The work is practical, local, and serious: standards, timing, care, and systems have to hold.
                   </p>
                 </div>
                 <div className="flex items-center gap-1 text-[10px] font-mono font-bold uppercase text-emerald-400 group-hover:text-white transition-colors relative z-10">
@@ -635,12 +635,12 @@ export default function Home() {
               {/* CTA 2: Field Notes */}
               <Link 
                 href="/field-notes"
-                className="group relative rounded-sm border border-white/5 bg-zinc-900/20 p-6 sm:p-8 flex flex-col justify-between h-56 hover:border-emerald-400/30 transition-all duration-500 overflow-hidden"
+                className="group relative rounded-sm border border-white/5 bg-zinc-900/20 p-6 sm:p-8 flex flex-col justify-between min-h-56 hover:border-emerald-400/30 transition-all duration-500 overflow-hidden"
               >
                 <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff01_1px,transparent_1px),linear-gradient(to_bottom,#ffffff01_1px,transparent_1px)] bg-[size:1.5rem_1.5rem] pointer-events-none"></div>
                 <div className="space-y-4 relative z-10">
                   <span className="text-[9px] font-mono text-zinc-500 uppercase tracking-widest block">[ Insights ]</span>
-                  <h3 className="text-lg font-bold uppercase text-white font-display group-hover:text-emerald-400 transition-colors">
+                  <h3 className="text-lg font-medium text-white group-hover:text-emerald-400 transition-colors">
                     Field Notes
                   </h3>
                   <p className="text-xs text-zinc-400 font-light leading-relaxed">
@@ -656,12 +656,12 @@ export default function Home() {
               {/* CTA 3: Contact */}
               <Link 
                 href="/contact"
-                className="group relative rounded-sm border border-white/5 bg-zinc-900/20 p-6 sm:p-8 flex flex-col justify-between h-56 hover:border-emerald-400/30 transition-all duration-500 overflow-hidden"
+                className="group relative rounded-sm border border-white/5 bg-zinc-900/20 p-6 sm:p-8 flex flex-col justify-between min-h-56 hover:border-emerald-400/30 transition-all duration-500 overflow-hidden"
               >
                 <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff01_1px,transparent_1px),linear-gradient(to_bottom,#ffffff01_1px,transparent_1px)] bg-[size:1.5rem_1.5rem] pointer-events-none"></div>
                 <div className="space-y-4 relative z-10">
                   <span className="text-[9px] font-mono text-zinc-500 uppercase tracking-widest block">[ Dialog ]</span>
-                  <h3 className="text-lg font-bold uppercase text-white font-display group-hover:text-emerald-400 transition-colors">
+                  <h3 className="text-lg font-medium text-white group-hover:text-emerald-400 transition-colors">
                     Start a Conversation
                   </h3>
                   <p className="text-xs text-zinc-400 font-light leading-relaxed">
