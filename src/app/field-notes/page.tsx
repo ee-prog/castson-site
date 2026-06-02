@@ -86,10 +86,10 @@ export default function FieldNotes() {
         <div className="mx-auto max-w-5xl w-full px-4 sm:px-6 lg:px-8 relative z-20">
           <div className="max-w-3xl space-y-6">
             <span className="text-[10px] font-bold uppercase tracking-widest text-emerald-600 dark:text-emerald-400 font-mono">03 / The Archive</span>
-            <h1 className="text-4xl sm:text-6xl font-extrabold uppercase tracking-tighter text-foreground leading-none font-display">
+            <h1 className="text-4xl sm:text-6xl font-normal uppercase tracking-tighter text-foreground leading-none font-display">
               Field Notes
             </h1>
-            <p className="text-xl sm:text-2xl text-zinc-700 dark:text-zinc-300 font-light font-display">
+            <p className="text-xl sm:text-2xl text-zinc-700 dark:text-zinc-300 font-light">
               Notes from inside the work.
             </p>
           </div>
@@ -139,7 +139,7 @@ export default function FieldNotes() {
                 </div>
 
                 {/* Title */}
-                <h2 className="text-xl sm:text-2xl font-bold uppercase text-zinc-900 dark:text-white font-display leading-tight">
+                <h2 className="text-xl sm:text-2xl font-medium uppercase text-zinc-900 dark:text-white leading-tight">
                   {theme.title}
                 </h2>
 

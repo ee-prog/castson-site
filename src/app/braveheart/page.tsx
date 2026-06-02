@@ -41,10 +41,10 @@ export default function BraveHeart() {
         <div className="mx-auto max-w-5xl w-full px-4 sm:px-6 lg:px-8 relative z-20">
           <div className="max-w-3xl space-y-6">
             <span className="text-[10px] font-bold uppercase tracking-widest text-emerald-400 font-mono">01 / First Acquisition</span>
-            <h1 className="text-4xl sm:text-6xl font-extrabold uppercase tracking-tighter text-white leading-none font-display">
+            <h1 className="text-4xl sm:text-6xl font-normal uppercase tracking-tighter text-white leading-none font-display">
               BraveHeart
             </h1>
-            <p className="text-xl sm:text-2xl text-zinc-300 font-light font-display">
+            <p className="text-xl sm:text-2xl text-zinc-300 font-light">
               A real business, rebuilt from the inside.
             </p>
           </div>
@@ -144,7 +144,7 @@ export default function BraveHeart() {
             
             <div className="space-y-4">
               <span className="text-[9px] font-mono tracking-widest uppercase text-emerald-400">[ Moral Centre ]</span>
-              <h2 className="text-3xl font-bold uppercase text-white font-display">
+              <h2 className="text-3xl font-medium uppercase text-white">
                 Why BraveHeart matters
               </h2>
             </div>
@@ -188,7 +188,7 @@ export default function BraveHeart() {
             {/* Year One: Clarification */}
             <div className="space-y-6">
               <span className="text-[9px] font-mono tracking-widest uppercase text-emerald-400">[ Year One ]</span>
-              <h2 className="text-2xl font-bold uppercase text-white font-display">
+              <h2 className="text-2xl font-medium uppercase text-white">
                 Clarification
               </h2>
               
@@ -223,7 +223,7 @@ export default function BraveHeart() {
             {/* Year Two: Acceleration */}
             <div className="space-y-6">
               <span className="text-[9px] font-mono tracking-widest uppercase text-emerald-400">[ Year Two ]</span>
-              <h2 className="text-2xl font-bold uppercase text-white font-display">
+              <h2 className="text-2xl font-medium uppercase text-white">
                 Acceleration
               </h2>
               
@@ -259,7 +259,7 @@ export default function BraveHeart() {
             {/* Left: The Constraint */}
             <div className="lg:col-span-6 space-y-6 text-zinc-300 font-light leading-relaxed text-sm sm:text-base">
               <span className="text-[9px] font-mono tracking-widest uppercase text-emerald-400">[ The Constraint Changed ]</span>
-              <h2 className="text-2xl font-bold uppercase text-white font-display">
+              <h2 className="text-2xl font-medium uppercase text-white">
                 Outgrowing the Platforms
               </h2>
               <p>

@@ -9,13 +9,8 @@ import ThemeObserver from "@/components/theme-observer";
 const atacama = localFont({
   src: [
     {
-      path: "../../public/fonts/atacama/atacama-regular.woff2",
-      weight: "400",
-      style: "normal",
-    },
-    {
-      path: "../../public/fonts/atacama/atacama-bold.woff2",
-      weight: "700",
+      path: "../../public/fonts/atacama/atacama-var.woff2",
+      weight: "100 900",
       style: "normal",
     },
   ],

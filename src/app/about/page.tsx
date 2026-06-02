@@ -21,10 +21,10 @@ export default function About() {
         {/* Page Header */}
         <div className="max-w-3xl fade-up-element visible">
           <span className="text-[10px] font-bold uppercase tracking-widest text-emerald-600 dark:text-emerald-400 font-mono">05 / Profile</span>
-          <h1 className="text-4xl sm:text-6xl font-extrabold uppercase tracking-tighter text-foreground leading-none font-display mt-2">
+          <h1 className="text-4xl sm:text-6xl font-normal uppercase tracking-tighter text-foreground leading-none font-display mt-2">
             Eli Castson
           </h1>
-          <p className="mt-4 text-xl sm:text-2xl text-zinc-700 dark:text-zinc-300 font-light font-display">
+          <p className="mt-4 text-xl sm:text-2xl text-zinc-700 dark:text-zinc-300 font-light">
             Operator, builder, and creative technologist.
           </p>
         </div>
@@ -80,7 +80,7 @@ export default function About() {
             </p>
 
             <div className="space-y-2 pt-2">
-              <p className="text-zinc-900 dark:text-white font-medium font-display text-lg">
+              <p className="text-zinc-900 dark:text-white font-medium text-lg">
                 I like bringing things back to first principles:
               </p>
               

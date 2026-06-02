@@ -49,7 +49,7 @@ export default function Home() {
             </div>
 
             {/* Title */}
-            <h1 className="text-4xl sm:text-6xl font-extrabold uppercase tracking-tighter text-white leading-none font-display fade-up-element visible">
+            <h1 className="text-4xl sm:text-6xl font-normal uppercase tracking-tighter text-white leading-none font-display fade-up-element visible">
               I build companies where taste, service, and operations meet.
             </h1>
 
@@ -140,7 +140,7 @@ export default function Home() {
             
             <div className="border-l-2 border-emerald-400 pl-6 space-y-4 fade-up-element visible">
               <span className="text-[9px] font-mono tracking-widest uppercase text-emerald-400">[ The First Acquisition ]</span>
-              <h2 className="text-2xl sm:text-3xl font-bold uppercase text-white font-display">
+              <h2 className="text-2xl sm:text-3xl font-medium uppercase text-white">
                 BraveHeart First Aid
               </h2>
               <p className="text-zinc-300 font-light leading-relaxed">
@@ -220,7 +220,7 @@ export default function Home() {
             {/* Right: Narrative */}
             <div className="lg:col-span-7 space-y-6 text-zinc-300 font-light leading-relaxed text-sm sm:text-base fade-up-element visible">
               <span className="text-[9px] font-mono tracking-widest uppercase text-emerald-400">[ Phase 01: The Foundation ]</span>
-              <h2 className="text-3xl font-bold uppercase text-white font-display">
+              <h2 className="text-3xl font-medium uppercase text-white">
                 The first year was not about AI.
               </h2>
               <p className="text-lg text-zinc-200">
@@ -295,7 +295,7 @@ export default function Home() {
             {/* Left: Narrative */}
             <div className="lg:col-span-7 space-y-6 text-zinc-300 font-light leading-relaxed text-sm sm:text-base fade-up-element visible">
               <span className="text-[9px] font-mono tracking-widest uppercase text-emerald-400">[ Phase 02: Scale & Synced State ]</span>
-              <h2 className="text-3xl font-bold uppercase text-white font-display">
+              <h2 className="text-3xl font-medium uppercase text-white">
                 Now the automation begins.
               </h2>
               <p className="text-lg text-zinc-200">
@@ -344,7 +344,7 @@ export default function Home() {
             
             <div className="space-y-4 fade-up-element visible">
               <span className="text-[9px] font-mono tracking-widest uppercase text-emerald-400">[ System Mechanics ]</span>
-              <h2 className="text-3xl font-extrabold uppercase text-white font-display">
+              <h2 className="text-3xl font-medium uppercase text-white">
                 Every experience is supported by a system.
               </h2>
             </div>
@@ -354,7 +354,7 @@ export default function Home() {
                 <p>
                   Most people look at a hotel, a travel service, or a product and see only the front of house.
                 </p>
-                <p className="text-white font-medium text-lg font-display">
+                <p className="text-white font-medium text-lg">
                   I tend to see the underlying coordination:
                 </p>
                 <div className="flex flex-wrap gap-2">
@@ -417,7 +417,7 @@ export default function Home() {
             {/* Left: Summary */}
             <div className="lg:col-span-7 space-y-6 text-zinc-300 font-light leading-relaxed text-sm sm:text-base fade-up-element visible">
               <span className="text-[9px] font-mono tracking-widest uppercase text-emerald-400">[ Identity ]</span>
-              <h2 className="text-3xl font-bold uppercase text-white font-display">
+              <h2 className="text-3xl font-medium uppercase text-white">
                 What Castson Inc. is building
               </h2>
               <p className="text-lg text-zinc-200">
@@ -536,7 +536,7 @@ export default function Home() {
             {/* Left: Content */}
             <div className="lg:col-span-7 space-y-6 text-zinc-300 font-light leading-relaxed text-sm sm:text-base fade-up-element visible">
               <span className="text-[9px] font-mono tracking-widest uppercase text-emerald-400">[ Publication Policy ]</span>
-              <h2 className="text-3xl font-bold uppercase text-white font-display">
+              <h2 className="text-3xl font-medium uppercase text-white">
                 How I share the work
               </h2>
               <p className="text-lg text-zinc-200">
@@ -598,7 +598,7 @@ export default function Home() {
           <div className="space-y-12">
             <div className="text-center space-y-4 max-w-2xl mx-auto">
               <span className="text-[9px] font-mono tracking-widest uppercase text-emerald-400">[ Start a Conversation ]</span>
-              <h2 className="text-3xl font-bold uppercase text-white font-display">
+              <h2 className="text-3xl font-medium uppercase text-white">
                 Start a Conversation
               </h2>
               <p className="text-zinc-400 font-light text-sm">
@@ -619,7 +619,7 @@ export default function Home() {
                 <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff01_1px,transparent_1px),linear-gradient(to_bottom,#ffffff01_1px,transparent_1px)] bg-[size:1.5rem_1.5rem] pointer-events-none"></div>
                 <div className="space-y-4 relative z-10">
                   <span className="text-[9px] font-mono text-zinc-500 uppercase tracking-widest block">[ First Acquisition ]</span>
-                  <h3 className="text-lg font-bold uppercase text-white font-display group-hover:text-emerald-400 transition-colors">
+                  <h3 className="text-lg font-medium uppercase text-white group-hover:text-emerald-400 transition-colors">
                     The First Acquisition
                   </h3>
                   <p className="text-xs text-zinc-400 font-light leading-relaxed">
@@ -640,7 +640,7 @@ export default function Home() {
                 <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff01_1px,transparent_1px),linear-gradient(to_bottom,#ffffff01_1px,transparent_1px)] bg-[size:1.5rem_1.5rem] pointer-events-none"></div>
                 <div className="space-y-4 relative z-10">
                   <span className="text-[9px] font-mono text-zinc-500 uppercase tracking-widest block">[ Insights ]</span>
-                  <h3 className="text-lg font-bold uppercase text-white font-display group-hover:text-emerald-400 transition-colors">
+                  <h3 className="text-lg font-medium uppercase text-white group-hover:text-emerald-400 transition-colors">
                     Field Notes
                   </h3>
                   <p className="text-xs text-zinc-400 font-light leading-relaxed">
@@ -661,7 +661,7 @@ export default function Home() {
                 <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff01_1px,transparent_1px),linear-gradient(to_bottom,#ffffff01_1px,transparent_1px)] bg-[size:1.5rem_1.5rem] pointer-events-none"></div>
                 <div className="space-y-4 relative z-10">
                   <span className="text-[9px] font-mono text-zinc-500 uppercase tracking-widest block">[ Dialog ]</span>
-                  <h3 className="text-lg font-bold uppercase text-white font-display group-hover:text-emerald-400 transition-colors">
+                  <h3 className="text-lg font-medium uppercase text-white group-hover:text-emerald-400 transition-colors">
                     Start a Conversation
                   </h3>
                   <p className="text-xs text-zinc-400 font-light leading-relaxed">
