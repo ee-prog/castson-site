@@ -125,7 +125,7 @@ export default function Navbar() {
                     className="group inline-flex items-center gap-4 focus:outline-none"
                   >
                     <span className="text-zinc-700 text-sm font-mono tracking-wider">
-                      {String(idx + 1).padStart(2, "0")}/
+                      {String(idx).padStart(2, "0")}/
                     </span>
                     <span className={`text-4xl sm:text-6xl font-extrabold uppercase tracking-tighter font-display transition-colors duration-300 ${
                       isActive ? "text-emerald-400" : "text-white group-hover:text-emerald-400"
