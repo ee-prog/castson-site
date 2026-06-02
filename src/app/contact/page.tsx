@@ -22,10 +22,10 @@ export default function Contact() {
       
       {/* Structural Grid Lines */}
       <div className="absolute inset-y-0 inset-x-0 mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 pointer-events-none z-10 flex justify-between">
-        <div className="w-[1px] h-full bg-white/[0.02]"></div>
-        <div className="w-[1px] h-full bg-white/[0.02] hidden md:block"></div>
-        <div className="w-[1px] h-full bg-white/[0.02] hidden md:block"></div>
-        <div className="w-[1px] h-full bg-white/[0.02]"></div>
+        <div className="w-[1px] h-full bg-white/[0.02] animate-grid-line delay-100 opacity-0"></div>
+        <div className="w-[1px] h-full bg-white/[0.02] hidden md:block animate-grid-line delay-300 opacity-0"></div>
+        <div className="w-[1px] h-full bg-white/[0.02] hidden md:block animate-grid-line delay-550 opacity-0"></div>
+        <div className="w-[1px] h-full bg-white/[0.02] animate-grid-line delay-700 opacity-0"></div>
       </div>
 
       <div className="mx-auto max-w-5xl px-4 py-20 sm:px-6 lg:px-8 relative z-20">
