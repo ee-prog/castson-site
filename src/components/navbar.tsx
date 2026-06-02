@@ -47,7 +47,7 @@ export default function Navbar() {
             onClick={() => setIsOpen(false)}
             className="group flex items-center gap-2 relative z-50"
           >
-            <span className="text-lg font-normal tracking-widest text-white transition-colors group-hover:text-emerald-400 font-display">
+            <span className="text-lg font-normal tracking-widest text-zinc-950 dark:text-white transition-colors group-hover:text-emerald-400 font-display">
               Castson Inc.
             </span>
             <span className="flex h-1.5 w-1.5 rounded-full bg-emerald-400 group-hover:animate-ping"></span>
@@ -63,19 +63,19 @@ export default function Navbar() {
             <div className="flex flex-col justify-center items-end gap-1.5 w-6 h-6">
               {/* Top Line */}
               <span 
-                className={`h-[1px] bg-white transition-all duration-300 ease-out ${
+                className={`h-[1px] ${isOpen ? "bg-white" : "bg-zinc-950 dark:bg-white"} transition-all duration-300 ease-out ${
                   isOpen ? "w-6 rotate-45 translate-y-[7px]" : "w-6 group-hover:w-6"
                 }`}
               />
               {/* Middle Line */}
               <span 
-                className={`h-[1px] bg-white transition-all duration-300 ease-out ${
+                className={`h-[1px] ${isOpen ? "bg-white" : "bg-zinc-950 dark:bg-white"} transition-all duration-300 ease-out ${
                   isOpen ? "w-0 opacity-0" : "w-4 group-hover:w-6"
                 }`}
               />
               {/* Bottom Line */}
               <span 
-                className={`h-[1px] bg-white transition-all duration-300 ease-out ${
+                className={`h-[1px] ${isOpen ? "bg-white" : "bg-zinc-950 dark:bg-white"} transition-all duration-300 ease-out ${
                   isOpen ? "w-6 -rotate-45 -translate-y-[7px]" : "w-5 group-hover:w-6"
                 }`}
               />
