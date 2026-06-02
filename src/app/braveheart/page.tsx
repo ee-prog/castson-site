@@ -210,7 +210,7 @@ export default function BraveHeart() {
               <div className="space-y-2 pt-4">
                 <h4 className="text-xs font-mono font-bold uppercase text-zinc-400">[ What Changed First ]</h4>
                 <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs font-mono text-zinc-400">
-                  {["A clearer website", "Better booking flow", "Improved scheduling", "Course operations", "Customer emails", "Cleaner workflows", "SEO & Paid search", "Operational dashboards"].map((c) => (
+                  {["Public position", "Customer path", "Schedule logic", "Delivery standards", "Communication rhythm", "Instructor readiness / operating clarity", "Demand signals", "Operating visibility"].map((c) => (
                     <li key={c} className="flex items-center gap-1">
                       <ChevronRight className="h-4 w-4 text-emerald-500" strokeWidth={1.5} aria-hidden="true" />
                       <span>{c}</span>
