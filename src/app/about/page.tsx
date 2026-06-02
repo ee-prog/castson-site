@@ -9,7 +9,7 @@ export default function About() {
       <div className="max-w-3xl fade-up-element">
         <span className="text-[10px] font-bold uppercase tracking-widest text-emerald-600 dark:text-emerald-400 font-mono">01 / Profile</span>
         <h1 className="text-4xl font-extrabold tracking-tight text-zinc-950 dark:text-white sm:text-5xl uppercase mt-2 font-display">
-          About Ripley
+          About Castson
         </h1>
         <p className="mt-6 text-lg text-zinc-900 dark:text-zinc-200 font-light leading-relaxed">
           We work with leaders to reduce the friction that growth creates. Our perspective is operational, not theoretical. We actively lead, invest, and build to make execution strong enough to protect the magic.
@@ -37,14 +37,14 @@ export default function About() {
               We actively invest in and lead complex founder-led businesses. Our principal, Eli Castson, currently serves as CEO of an event operations platform undergoing a full digital transformation. We test what we believe in inside real businesses, with real consequences.
             </p>
             <p className="text-zinc-900 dark:text-zinc-200 leading-relaxed font-light text-sm">
-              Before that, Eli built his perspective inside global organizations including **La Prairie**, **TBWA**, and **MediaCom**, working across heritage brands, creative environments, and large-scale media operations. Today, Ripley applies those lessons to scale growing organizations.
+              Before that, Eli built his perspective inside global organizations including **La Prairie**, **TBWA**, and **MediaCom**, working across heritage brands, creative environments, and large-scale media operations. Today, Castson applies those lessons to scale growing organizations.
             </p>
           </section>
 
           <section className="space-y-4 fade-up-element delay-200">
             <h2 className="text-xl font-bold uppercase tracking-wider text-zinc-950 dark:text-white font-display">Practical AI Operating Models</h2>
             <p className="text-zinc-900 dark:text-zinc-200 leading-relaxed font-light text-sm">
-              Instead of focusing on isolated AI experiments, Ripley helps leaders design and implement structured, AI-enabled operating models. We build the operational layer around AI tools: detailing where AI fits into the work, what needs to be orchestrated, what controls are needed, and how the organization scales beyond pilots.
+              Instead of focusing on isolated AI experiments, Castson helps leaders design and implement structured, AI-enabled operating models. We build the operational layer around AI tools: detailing where AI fits into the work, what needs to be orchestrated, what controls are needed, and how the organization scales beyond pilots.
             </p>
             <p className="text-zinc-900 dark:text-zinc-200 leading-relaxed font-light text-sm">
               This includes mapping out data flows, identifying human-in-the-loop governance points, and establishing early agentic workflows that turn a portfolio of opportunities into executable change.
@@ -54,7 +54,7 @@ export default function About() {
           <section className="space-y-4 fade-up-element delay-250">
             <h2 className="text-xl font-bold uppercase tracking-wider text-zinc-950 dark:text-white font-display">Protecting the Magic</h2>
             <p className="text-zinc-900 dark:text-zinc-200 leading-relaxed font-light text-sm">
-              We care about velocity, but not at the expense of what makes a business special. The goal of Ripley is not to make a company more mechanical. It is to make execution strong enough to protect the magic.
+              We care about velocity, but not at the expense of what makes a business special. The goal of Castson is not to make a company more mechanical. It is to make execution strong enough to protect the magic.
             </p>
             <p className="text-zinc-900 dark:text-zinc-200 leading-relaxed font-light text-sm">
               Through advisory, system integrations, and development of custom dispatch platforms like **Ripley**, we design operational models where technology exists solely to liberate creative, operational, and customer-facing teams.

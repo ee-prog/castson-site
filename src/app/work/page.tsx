@@ -50,7 +50,7 @@ export default function Work() {
       {/* Page Header */}
       <div className="max-w-3xl fade-up-element">
         <span className="text-[10px] font-bold uppercase tracking-widest text-emerald-600 dark:text-emerald-400 font-mono">02 / Selected Work</span>
-        <h1 className="text-4xl font-extrabold tracking-tight text-zinc-955 dark:text-white sm:text-5xl uppercase mt-2 font-display">
+        <h1 className="text-4xl font-extrabold tracking-tight text-zinc-950 dark:text-white sm:text-5xl uppercase mt-2 font-display">
           Projects & Work
         </h1>
         <p className="mt-6 text-lg text-zinc-900 dark:text-zinc-200 font-light leading-relaxed">
@@ -109,7 +109,7 @@ export default function Work() {
                     {project.tech.map((tag) => (
                       <span
                         key={tag}
-                        className="px-2.5 py-1 rounded-sm text-xs font-light bg-zinc-100 dark:bg-zinc-900 text-zinc-850 dark:text-zinc-200 border border-zinc-200 dark:border-white/5 theme-transition hover:border-emerald-500/20 hover:text-emerald-500 transition-colors"
+                        className="px-2.5 py-1 rounded-sm text-xs font-light bg-zinc-100 dark:bg-zinc-900 text-zinc-800 dark:text-zinc-200 border border-zinc-200 dark:border-white/5 theme-transition hover:border-emerald-500/20 hover:text-emerald-500 transition-colors"
                       >
                         {tag}
                       </span>

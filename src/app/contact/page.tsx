@@ -23,7 +23,7 @@ export default function Contact() {
     <div data-theme="light" className="mx-auto max-w-5xl px-4 py-20 sm:px-6 lg:px-8 pt-32">
       {/* Page Header */}
       <div className="max-w-3xl fade-up-element">
-        <h1 className="text-4xl font-extrabold tracking-tight text-zinc-955 dark:text-white sm:text-5xl uppercase font-display">
+        <h1 className="text-4xl font-extrabold tracking-tight text-zinc-950 dark:text-white sm:text-5xl uppercase font-display">
           Get in Touch
         </h1>
         <p className="mt-6 text-lg text-zinc-900 dark:text-zinc-200 font-light leading-relaxed">
@@ -35,7 +35,7 @@ export default function Contact() {
         {/* Left Column: Direct Info */}
         <div className="space-y-8 fade-up-element delay-100">
           <div>
-            <h2 className="text-xl font-bold text-zinc-955 dark:text-white font-display uppercase">Direct Communication</h2>
+            <h2 className="text-xl font-bold text-zinc-950 dark:text-white font-display uppercase">Direct Communication</h2>
             <p className="mt-3 text-sm text-zinc-900 dark:text-zinc-200 font-light">
               For systems advisory, custom integration projects, or speaking opportunities, reach out directly.
             </p>
@@ -45,7 +45,7 @@ export default function Contact() {
             <div className="flex items-center gap-3 p-4 rounded-xl border border-zinc-200 dark:border-white/5 bg-zinc-100/50 dark:bg-zinc-900/20 theme-transition">
               <Mail className="h-5 w-5 text-emerald-600 dark:text-emerald-400" />
               <div>
-                <h3 className="text-xs font-semibold text-zinc-800 dark:text-zinc-450 uppercase tracking-wider">Email</h3>
+                <h3 className="text-xs font-semibold text-zinc-800 dark:text-zinc-400 uppercase tracking-wider">Email</h3>
                 <a href="mailto:ee@castson.com" className="text-sm font-semibold text-zinc-950 dark:text-white hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
                   ee@castson.com
                 </a>
@@ -55,7 +55,7 @@ export default function Contact() {
             <div className="flex items-center gap-3 p-4 rounded-xl border border-zinc-200 dark:border-white/5 bg-zinc-100/50 dark:bg-zinc-900/20 theme-transition">
               <MessageSquare className="h-5 w-5 text-emerald-600 dark:text-emerald-400" />
               <div>
-                <h3 className="text-xs font-semibold text-zinc-800 dark:text-zinc-450 uppercase tracking-wider">General Response Time</h3>
+                <h3 className="text-xs font-semibold text-zinc-800 dark:text-zinc-400 uppercase tracking-wider">General Response Time</h3>
                 <p className="text-sm font-semibold text-zinc-950 dark:text-white">24-48 hours</p>
               </div>
             </div>
@@ -65,7 +65,7 @@ export default function Contact() {
           <div className="rounded-xl border border-red-500/20 bg-red-500/5 p-4 text-xs text-red-950 dark:text-zinc-400 space-y-2 theme-transition">
             <span className="font-semibold text-red-600 dark:text-red-400 block uppercase tracking-wider">[BraveHeart Support Boundary]</span>
             <p>
-              This is Ripley&apos;s advisory contact surface. If you are a student or client looking for course bookings, pricing adjustments, compliance documentation, or BraveHeart First Aid support, please route your query through the official BraveHeart First Aid channel.
+              This is Castson&apos;s advisory contact surface. If you are a student or client looking for course bookings, pricing adjustments, compliance documentation, or BraveHeart First Aid support, please route your query through the official BraveHeart First Aid channel.
             </p>
           </div>
         </div>
@@ -106,7 +106,7 @@ export default function Contact() {
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-xs font-bold uppercase tracking-wider text-zinc-955 dark:text-zinc-400 mb-2">
+                  <label htmlFor="email" className="block text-xs font-bold uppercase tracking-wider text-zinc-950 dark:text-zinc-400 mb-2">
                     Email Address
                   </label>
                   <input

@@ -67,7 +67,7 @@ export default function Home() {
   const activeSlide = SLIDES[currentSlide];
 
   return (
-    <div className="relative w-full min-h-screen bg-transparent overflow-hidden flex flex-col pt-20">
+    <div data-theme="dark" className="relative w-full min-h-screen bg-transparent overflow-hidden flex flex-col pt-20">
       
       {/* 1. Structural Grid Lines */}
       <div className="absolute inset-y-0 inset-x-0 mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 pointer-events-none z-10 flex justify-between">
@@ -78,7 +78,7 @@ export default function Home() {
       </div>
 
       {/* 2. Fullscreen Showcase Slideshow (Hero) */}
-      <section data-theme="dark" className="relative h-[80vh] sm:h-[85vh] min-h-[500px] border-b border-zinc-200/10 dark:border-white/[0.03] flex items-center theme-transition">
+      <section className="relative h-[80vh] sm:h-[85vh] min-h-[500px] border-b border-zinc-200/10 dark:border-white/[0.03] flex items-center theme-transition">
         {/* Glowing background gradient that updates depending on slide */}
         <div className={`absolute inset-0 bg-gradient-to-br ${activeSlide.accentColor} transition-all duration-1000 ease-in-out -z-10`} />
         
@@ -159,7 +159,7 @@ export default function Home() {
             
             {/* Quick status */}
             <div className="text-[10px] font-mono text-zinc-500">
-              [ Ripley — Systems & AI Operations ]
+              [ Castson — Systems & AI Operations ]
             </div>
 
             {/* Arrow keys */}
@@ -188,7 +188,7 @@ export default function Home() {
       </section>
 
       {/* 3. Capabilities Section */}
-      <section data-theme="light" className="py-40 sm:py-48 min-h-[90vh] flex items-center border-y border-zinc-200/10 dark:border-white/[0.03] bg-background theme-transition">
+      <section className="py-40 sm:py-48 min-h-[90vh] flex items-center border-y border-zinc-200/10 dark:border-white/[0.03] bg-background theme-transition">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 relative z-20">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-8">
             <div className="lg:pr-8 fade-up-element delay-100">
@@ -250,7 +250,7 @@ export default function Home() {
       </section>
 
       {/* 4. Dynamic Call to Action */}
-      <section data-theme="dark" className="py-32 bg-zinc-950/40 border-t border-zinc-200/10 dark:border-white/[0.03] relative theme-transition">
+      <section className="py-32 bg-zinc-950/40 border-t border-zinc-200/10 dark:border-white/[0.03] relative theme-transition">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 text-center relative z-20 fade-up-element delay-100">
           <span className="text-[10px] font-bold uppercase tracking-widest text-emerald-400 font-mono">02 / Advisory</span>
           <h2 className="text-4xl sm:text-5xl font-extrabold tracking-tighter text-white uppercase mt-4 mb-6 font-display">
