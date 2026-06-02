@@ -614,7 +614,7 @@ export default function Home() {
               {/* CTA 1: BraveHeart */}
               <Link 
                 href="/braveheart"
-                className="group relative rounded-sm border border-white/5 bg-zinc-900/20 p-6 sm:p-8 flex flex-col justify-between h-56 hover:border-emerald-400/30 transition-all duration-500 overflow-hidden"
+                className="group relative rounded-sm border border-white/5 bg-zinc-900/20 p-6 sm:p-8 flex flex-col justify-between min-h-56 hover:border-emerald-400/30 transition-all duration-500 overflow-hidden"
               >
                 <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff01_1px,transparent_1px),linear-gradient(to_bottom,#ffffff01_1px,transparent_1px)] bg-[size:1.5rem_1.5rem] pointer-events-none"></div>
                 <div className="space-y-4 relative z-10">
@@ -635,7 +635,7 @@ export default function Home() {
               {/* CTA 2: Field Notes */}
               <Link 
                 href="/field-notes"
-                className="group relative rounded-sm border border-white/5 bg-zinc-900/20 p-6 sm:p-8 flex flex-col justify-between h-56 hover:border-emerald-400/30 transition-all duration-500 overflow-hidden"
+                className="group relative rounded-sm border border-white/5 bg-zinc-900/20 p-6 sm:p-8 flex flex-col justify-between min-h-56 hover:border-emerald-400/30 transition-all duration-500 overflow-hidden"
               >
                 <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff01_1px,transparent_1px),linear-gradient(to_bottom,#ffffff01_1px,transparent_1px)] bg-[size:1.5rem_1.5rem] pointer-events-none"></div>
                 <div className="space-y-4 relative z-10">
@@ -656,7 +656,7 @@ export default function Home() {
               {/* CTA 3: Contact */}
               <Link 
                 href="/contact"
-                className="group relative rounded-sm border border-white/5 bg-zinc-900/20 p-6 sm:p-8 flex flex-col justify-between h-56 hover:border-emerald-400/30 transition-all duration-500 overflow-hidden"
+                className="group relative rounded-sm border border-white/5 bg-zinc-900/20 p-6 sm:p-8 flex flex-col justify-between min-h-56 hover:border-emerald-400/30 transition-all duration-500 overflow-hidden"
               >
                 <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff01_1px,transparent_1px),linear-gradient(to_bottom,#ffffff01_1px,transparent_1px)] bg-[size:1.5rem_1.5rem] pointer-events-none"></div>
                 <div className="space-y-4 relative z-10">
