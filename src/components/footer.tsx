@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 
 export default function Footer() {
@@ -42,13 +43,13 @@ export default function Footer() {
               For owners, operators, property holders, collaborators, and aligned capital.
             </p>
             <div className="pt-2">
-              <a 
-                href="mailto:ee@castson.com" 
+              <Link 
+                href="/contact" 
                 className="group inline-flex items-center gap-1 text-xs font-bold uppercase tracking-wider text-white hover:text-emerald-400 transition-colors"
               >
                 <span>Start a conversation</span>
                 <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 text-emerald-400" strokeWidth={1.5} aria-hidden="true" />
-              </a>
+              </Link>
             </div>
           </div>
 

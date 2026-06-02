@@ -145,13 +145,14 @@ export default function Navbar() {
                 [Inquiries]
               </span>
               <h4 className="text-white text-sm font-bold uppercase mt-2">Castson Inc.</h4>
-              <a 
-                href="mailto:ee@castson.com" 
+              <Link 
+                href="/contact" 
+                onClick={() => setIsOpen(false)}
                 className="group flex items-center gap-1.5 text-zinc-400 hover:text-white transition-colors mt-2 text-sm"
               >
-                ee@castson.com
+                Start a conversation
                 <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 text-emerald-400" strokeWidth={1.5} aria-hidden="true" />
-              </a>
+              </Link>
             </div>
 
             <div>
