@@ -27,7 +27,7 @@ export default function Contact() {
             Contact
           </h1>
           <p className="mt-4 text-xl sm:text-2xl text-zinc-700 dark:text-zinc-300 font-light">
-            Connect with Eli Castson.
+            Start with context.
           </p>
         </div>
 
@@ -37,38 +37,53 @@ export default function Contact() {
           {/* Left Column: Direct Info & Targets */}
           <div className="lg:col-span-6 space-y-8 text-zinc-800 dark:text-zinc-300 font-light leading-relaxed text-sm sm:text-base fade-up-element visible">
             <div className="space-y-4">
-              <p className="text-lg text-zinc-900 dark:text-white font-normal">
-                I look for patient, operating-led partnerships.
+              <p>
+                If something here connects with work you are carrying, building, selling, or trying to make clearer, send a note.
               </p>
               <p>
-                I am interested in people building, operating, selling, or stewarding businesses where place, service, taste, and standards matter.
+                The useful messages usually have a few things in common: who you are, what the situation is, and why you think there may be a fit.
               </p>
             </div>
             
             <div className="space-y-4">
               <span className="text-[9px] font-mono text-zinc-500 dark:text-zinc-500 uppercase tracking-widest block border-b border-zinc-200 dark:border-white/5 pb-2">
-                [ Reach out if you are ]
+                [ Interest areas ]
               </span>
               
-              <div className="grid grid-cols-1 gap-3 font-mono text-xs text-zinc-650 dark:text-zinc-400">
+              <div className="space-y-3">
                 {[
-                  "An owner thinking about succession or transition",
-                  "A property holder looking for an operating partner",
-                  "An operator building a place-based experience business",
-                  "A collaborator working in hospitality, tourism, design, or service",
-                  "An investor aligned with patient, operating-led value creation"
+                  {
+                    title: "Ownership or succession",
+                    desc: "A company with character that needs a next chapter."
+                  },
+                  {
+                    title: "Place or property",
+                    desc: "A setting with unrealized potential and the need for an operating partner."
+                  },
+                  {
+                    title: "Brand, service, or systems",
+                    desc: "Work where the experience is strong, but the structure underneath needs to catch up."
+                  },
+                  {
+                    title: "Prior relationships",
+                    desc: "Past clients, collaborators, colleagues, and people I have met in real life."
+                  }
                 ].map((item, idx) => (
-                  <div key={idx} className="flex items-start gap-2.5 p-3.5 border border-zinc-200 dark:border-white/5 bg-white dark:bg-zinc-900/20 rounded-sm">
-                    <span className="text-emerald-600 dark:text-emerald-400 font-bold mt-0.5">—</span>
-                    <span>{item}</span>
+                  <div key={idx} className="p-4 border border-zinc-200 dark:border-white/5 bg-white dark:bg-zinc-900/10 rounded-sm space-y-1">
+                    <h3 className="text-xs font-bold font-mono text-zinc-900 dark:text-white uppercase tracking-wider">
+                      {item.title}
+                    </h3>
+                    <p className="text-xs text-zinc-500 dark:text-zinc-400 font-light">
+                      {item.desc}
+                    </p>
                   </div>
                 ))}
               </div>
             </div>
- 
-            <div className="border-l border-emerald-500/40 dark:border-emerald-400/40 pl-4 py-1 text-xs font-mono text-zinc-500 dark:text-zinc-400">
-              If something here connects with what you are building, carrying, or trying to make stronger, send a note.
-            </div>
+
+            <p className="text-xs font-bold text-zinc-900 dark:text-white font-mono uppercase tracking-widest pt-2">
+              If there is a fit, I will reply directly.
+            </p>
           </div>
 
           {/* Right Column: Contact Form */}
@@ -80,13 +95,13 @@ export default function Contact() {
                 </div>
                 <h2 className="text-xl font-medium text-zinc-900 dark:text-white">Message received.</h2>
                 <p className="text-xs text-zinc-600 dark:text-zinc-400 max-w-sm mx-auto font-mono leading-relaxed">
-                  Thanks for the note. If it fits the kind of work I’m focused on, I’ll reply directly.
+                  If there is a fit, I will reply directly.
                 </p>
                 <a
                   href="/contact"
                   className="mt-4 inline-block text-xs font-bold text-emerald-600 dark:text-emerald-400 hover:underline uppercase font-mono tracking-widest"
                 >
-                  Send another message
+                  Send another note
                 </a>
               </div>
             ) : (
@@ -158,7 +173,7 @@ export default function Contact() {
                     required
                     maxLength={150}
                     className="w-full form-input-luxury text-zinc-900 dark:text-white placeholder-zinc-450 dark:placeholder-zinc-600 focus:outline-none"
-                    placeholder="e.g., succession inquiry / operator peer"
+                    placeholder="What should I know before reading?"
                   />
                   {state?.fieldErrors?.subject && (
                     <p className="mt-1 text-[10px] text-red-500 dark:text-red-400 font-mono">{state.fieldErrors.subject}</p>
@@ -176,7 +191,7 @@ export default function Contact() {
                     rows={5}
                     maxLength={5000}
                     className="w-full form-input-luxury text-zinc-900 dark:text-white placeholder-zinc-450 dark:placeholder-zinc-600 focus:outline-none resize-none"
-                    placeholder="Introduce yourself and your system questions..."
+                    placeholder="Who are you, what is the situation, and why might this connect?"
                   />
                   {state?.fieldErrors?.message && (
                     <p className="mt-1 text-[10px] text-red-500 dark:text-red-400 font-mono">{state.fieldErrors.message}</p>
@@ -189,7 +204,7 @@ export default function Contact() {
                     disabled={isPending}
                     className="group interactive-hover flex w-full items-center justify-center gap-2 rounded-sm bg-zinc-950 dark:bg-white hover:bg-emerald-500 dark:hover:bg-emerald-400 disabled:bg-zinc-800 disabled:text-zinc-650 text-white dark:text-black py-3.5 text-xs font-bold uppercase tracking-wider transition-all duration-300 cursor-pointer active:scale-95 disabled:cursor-not-allowed"
                   >
-                    <span>{isPending ? "Sending..." : "Send Message"}</span>
+                    <span>{isPending ? "Sending..." : "Send note"}</span>
                     {!isPending && <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" strokeWidth={1.5} aria-hidden="true" />}
                   </button>
                 </div>
