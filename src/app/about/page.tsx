@@ -40,7 +40,11 @@ export default function About() {
             </p>
             
             <p>
-              Before acquiring BraveHeart First Aid, I worked across creative direction, advertising, consulting, programmatic media, digital transformation, and technology.
+              Before acquiring BraveHeart First Aid, my work moved across creative direction, advertising, digital transformation, data, and technology.
+            </p>
+
+            <p>
+              Earlier roles sat at the intersection of creative direction, technology, data, and organizational change. The titles varied — Creative Director, Tech &amp; Data; Disruption Officer — but the work was consistent: helping organizations see what was changing, clarify what mattered, and build new ways of operating.
             </p>
 
             <p className="border-l border-zinc-200 dark:border-white/10 pl-4 text-zinc-650 dark:text-zinc-400 opacity-80">
