@@ -78,6 +78,10 @@ body {
   color: var(--foreground);
   transition: background-color 0.8s cubic-bezier(0.25, 1, 0.5, 1), color 0.8s cubic-bezier(0.25, 1, 0.5, 1);
   font-family: var(--font-body), system-ui, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.55;
+  letter-spacing: normal;
   overflow-x: hidden;
 }
 
@@ -106,32 +110,34 @@ html:not(.dark):not(.menu-open) header button span {
   background-color: #0a0a09;
 }
 
-/* Display / Headings use Atacama */
+/* Display / Headings use Atacama — Dior-inspired sizing */
 h1, h2, .font-display, .font-heading {
   font-family: var(--font-heading), system-ui, sans-serif;
   font-weight: 400;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.03em;
 }
 
 h1 {
-  font-size: clamp(2rem, 7vw, 5.5rem);
-  line-height: 1.05;
+  font-size: clamp(1.75rem, 4vw, 3.25rem);
+  line-height: 1.1;
 }
 
 h2 {
-  font-size: clamp(1.45rem, 5vw, 2.75rem);
-  line-height: 1.15;
+  font-size: clamp(1.25rem, 2.5vw, 2rem);
+  line-height: 1.2;
+  letter-spacing: -0.025em;
 }
 
 /* Sub-headers and Quotes use Helix */
 h3, h4, h5, h6, .font-subheading, blockquote {
   font-family: var(--font-body), system-ui, sans-serif;
   font-weight: 500;
-  line-height: 1.35;
+  line-height: 1.4;
+  letter-spacing: -0.01em;
 }
 
 h3 {
-  font-size: clamp(1.25rem, 2.5vw, 1.75rem); /* 20px to 28px */
+  font-size: clamp(1.05rem, 1.8vw, 1.35rem);
 }
 
 blockquote {
@@ -166,9 +172,14 @@ blockquote {
 
 /* Glassmorphism utility */
 .glass {
-  background: rgba(24, 24, 27, 0.65);
+  background: rgba(255, 255, 255, 0.6);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.dark .glass {
+  background: rgba(24, 24, 27, 0.65);
   border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
@@ -177,14 +188,14 @@ blockquote {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #09090b;
+  background: var(--background);
 }
 ::-webkit-scrollbar-thumb {
-  background: #27272a;
+  background: var(--muted);
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #3f3f46;
+  background: var(--muted-foreground);
 }
 
 /* Scroll-driven fade-up animations */
@@ -264,8 +275,21 @@ blockquote {
   }
 }
 
+/* Typewriter cursor blink */
+@keyframes cursor-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
 .animate-grid-line {
   display: none !important;
+}
+
+/* Scroll-driven section theme transitions */
+[data-theme] {
+  transition: background-color 0.8s cubic-bezier(0.25, 1, 0.5, 1),
+              color 0.8s cubic-bezier(0.25, 1, 0.5, 1),
+              border-color 0.8s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 /* Link Underline transition effect */
@@ -310,6 +334,7 @@ html:not(.dark) main p:not(.font-mono) {
   color: #888888 !important;
 }
 
+html:not(.dark) h1,
 html:not(.dark) h2,
 html:not(.dark) h3,
 html:not(.dark) h4,
@@ -317,6 +342,31 @@ html:not(.dark) h5,
 html:not(.dark) h6,
 html:not(.dark) .font-subheading {
   color: #262626 !important;
+}
+
+/* Override Tailwind text-white on headings and their child spans in light mode */
+html:not(.dark) h1 span,
+html:not(.dark) h2 span {
+  color: #262626 !important;
+}
+
+/* Light mode: flip text-white to foreground on key content elements */
+html:not(.dark) .text-white {
+  color: var(--foreground) !important;
+}
+
+/* Light mode: emerald accent adapts to sand-gold */
+html:not(.dark) .text-emerald-400 {
+  color: #b59367 !important;
+}
+
+html:not(.dark) .border-emerald-500\/20,
+html:not(.dark) .border-emerald-400 {
+  border-color: rgba(181, 147, 103, 0.25) !important;
+}
+
+html:not(.dark) .bg-emerald-500\/\[0\.02\] {
+  background-color: rgba(181, 147, 103, 0.03) !important;
 }
 
 /* Make footer company name adapt to light theme */

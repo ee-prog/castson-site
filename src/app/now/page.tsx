@@ -59,41 +59,41 @@ export default function Now() {
             {/* Left: Prose */}
             <div className="lg:col-span-7 space-y-6 text-zinc-300 font-light leading-relaxed text-sm sm:text-base">
               <p className="text-lg text-white">
-                I am currently focused on the accelerated automation and clarification of BraveHeart First Aid.
+                I am currently focused on three connected areas.
               </p>
               
-              <p>
-                The first year was about making the business understandable. The current phase is about building the systems the clarified business now needs.
-              </p>
+              <div className="space-y-6">
+                <div className="border-l-2 border-emerald-400 pl-4 space-y-2">
+                  <span className="text-[9px] font-mono text-emerald-400 uppercase tracking-widest">First</span>
+                  <p>
+                    The accelerated clarification and automation of BraveHeart First Aid.
+                  </p>
+                  <p className="text-xs text-zinc-400">
+                    The first year was about making the business understandable. The current phase is about building the systems the clarified business now needs.
+                  </p>
+                </div>
 
-              <div className="space-y-4 pt-2">
-                <span className="text-[9px] font-mono text-zinc-500 uppercase tracking-widest block border-b border-white/5 pb-2">
-                  [ System Pipeline Scope ]
-                </span>
-                
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs font-mono text-zinc-400">
-                  {[
-                    "Custom internal tools",
-                    "AI-assisted workflows",
-                    "Automation",
-                    "Facebook content and advertising systems",
-                    "Demand signals",
-                    "Operating visibility",
-                    "Scheduling intelligence",
-                    "Knowledge systems",
-                    "Marketing loops",
-                    "Owner-dependency reduction"
-                  ].map((item) => (
-                    <div key={item} className="flex items-center gap-1">
-                      <ChevronRight className="h-4 w-4 text-emerald-500" strokeWidth={1.5} aria-hidden="true" />
-                      <span>{item}</span>
-                    </div>
-                  ))}
+                <div className="border-l-2 border-emerald-400 pl-4 space-y-2">
+                  <span className="text-[9px] font-mono text-emerald-400 uppercase tracking-widest">Second</span>
+                  <p>
+                    The development of Ripley as the operating layer underneath the work: internal tools, AI-assisted workflows, automation, operational memory, decision support, and better visibility.
+                  </p>
+                </div>
+
+                <div className="border-l-2 border-emerald-400 pl-4 space-y-2">
+                  <span className="text-[9px] font-mono text-emerald-400 uppercase tracking-widest">Third</span>
+                  <p>
+                    A small amount of selective advisory work with senior leaders in experience-led businesses where brand, service, standards, and commercial clarity need to come together.
+                  </p>
                 </div>
               </div>
 
+              <p className="text-zinc-400 text-sm font-light border-l border-white/10 pl-4">
+                Current advisory work includes a senior strategic and creative sparring-partner engagement with the CMO of a leading European luxury wellness hospitality brand.
+              </p>
+
               <p className="text-white font-medium border-l border-emerald-400/40 pl-4 font-mono text-xs pt-2">
-                The goal is not to make the company look more technological. The goal is to make it easier to run, easier to understand, and more capable over time.
+                The goal across all of it is the same: make the business clearer, stronger, and more capable without making it generic.
               </p>
             </div>
 
@@ -124,12 +124,13 @@ export default function Now() {
                 {[
                   "What work should still require a human?",
                   "What work should never have required one?",
-                  "Where is the business still relying on memory instead of systems?",
+                  "Where is the business relying on memory instead of systems?",
                   "Where are platforms helping?",
                   "Where are they hiding the real shape of the work?",
                   "What should be automated?",
                   "What should be simplified instead?",
-                  "What should be removed entirely?"
+                  "What should be removed entirely?",
+                  "Where is the brand promise not yet operational?"
                 ].map((q, idx) => (
                   <li key={idx} className="flex gap-2.5 items-start">
                     <span className="text-emerald-500 font-bold font-mono shrink-0">Q{idx + 1} {"//"}</span>
@@ -149,12 +150,12 @@ export default function Now() {
                 {[
                   "Finish the BraveHeart operating layer.",
                   "Make the transformation visible.",
-                  "Build systems that are reliable enough to trust.",
+                  "Build systems reliable enough to trust.",
                   "Use AI where it creates leverage.",
                   "Use code where reliability matters.",
                   "Use human judgment where responsibility matters.",
-                  "Let the business become clearer, faster, and stronger.",
-                  "Then see what the pattern wants to become next."
+                  "Continue selective advisory work where the fit is strong.",
+                  "Let the pattern become clearer before forcing it into a category."
                 ].map((d, idx) => (
                   <li key={idx} className="flex gap-2.5 items-start">
                     <ArrowRight className="h-4 w-4 shrink-0 text-emerald-500 mt-0.5" strokeWidth={1.5} aria-hidden="true" />

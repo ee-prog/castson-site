@@ -27,7 +27,7 @@ export default function Contact() {
             Contact
           </h1>
           <p className="mt-4 text-xl sm:text-2xl text-zinc-700 dark:text-zinc-300 font-light">
-            Start a conversation.
+            Start with the right conversation.
           </p>
         </div>
 
@@ -38,10 +38,7 @@ export default function Contact() {
           <div className="lg:col-span-6 space-y-8 text-zinc-800 dark:text-zinc-300 font-light leading-relaxed text-sm sm:text-base fade-up-element visible">
             <div className="space-y-4">
               <p className="text-lg text-zinc-900 dark:text-white font-normal">
-                Start with the right conversation.
-              </p>
-              <p>
-                I am interested in people building, operating, selling, or stewarding businesses where place, service, taste, and standards matter.
+                I am interested in people building, operating, selling, stewarding, or leading businesses where place, service, taste, and standards matter.
               </p>
             </div>
             
@@ -55,7 +52,8 @@ export default function Contact() {
                   "An owner thinking about succession or transition",
                   "A property holder looking for an operating partner",
                   "An operator building a place-based experience business",
-                  "A collaborator working in hospitality, tourism, design, or service",
+                  "A founder, CEO, or CMO looking for a senior outside sparring partner",
+                  "A collaborator working in hospitality, wellness, tourism, design, property, or service",
                   "An investor aligned with patient, operating-led value creation"
                 ].map((item, idx) => (
                   <div key={idx} className="flex items-start gap-2.5 p-3.5 border border-zinc-200 dark:border-white/5 bg-white dark:bg-zinc-900/20 rounded-sm">
@@ -67,7 +65,7 @@ export default function Contact() {
             </div>
  
             <div className="border-l border-emerald-500/40 dark:border-emerald-400/40 pl-4 py-1 text-xs font-mono text-zinc-500 dark:text-zinc-400">
-              If something here connects with what you are building, carrying, or trying to make stronger, send a note.
+              I am most useful when the work is specific, consequential, and real. If something here connects with what you are building, carrying, or trying to make stronger, send a note.
             </div>
           </div>
 

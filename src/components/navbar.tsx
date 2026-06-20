@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Sun, Moon } from "lucide-react";
 
 const navItems = [
   { name: "Home", href: "/" },
@@ -19,6 +19,23 @@ export default function Navbar() {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const [hoveredIdx, setHoveredIdx] = useState<number | null>(null);
+  const [isDark, setIsDark] = useState(true);
+
+  // Sync isDark state with the actual DOM class
+  useEffect(() => {
+    const sync = () => setIsDark(document.documentElement.classList.contains('dark'));
+    sync();
+    const observer = new MutationObserver(sync);
+    observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
+    return () => observer.disconnect();
+  }, []);
+
+  const toggleTheme = () => {
+    const win = window as Window & { __setTheme?: (mode: string) => void };
+    if (win.__setTheme) {
+      win.__setTheme(isDark ? 'light' : 'dark');
+    }
+  };
 
   // Disable body scroll when menu is open and toggle menu-open class
   useEffect(() => {
@@ -53,34 +70,51 @@ export default function Navbar() {
             <span className="flex h-1.5 w-1.5 rounded-full bg-emerald-400 group-hover:animate-ping"></span>
           </Link>
 
-          {/* Toggle Burger Button */}
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            type="button"
-            className="group relative z-50 flex items-center justify-center w-11 h-11 -mr-2.5 focus:outline-none cursor-pointer"
-            aria-label="Toggle menu"
-          >
-            <div className="flex flex-col justify-center items-end gap-1.5 w-6 h-6">
-              {/* Top Line */}
-              <span 
-                className={`h-[1px] ${isOpen ? "bg-white" : "bg-zinc-950 dark:bg-white"} transition-all duration-300 ease-out ${
-                  isOpen ? "w-6 rotate-45 translate-y-[7px]" : "w-6 group-hover:w-6"
-                }`}
-              />
-              {/* Middle Line */}
-              <span 
-                className={`h-[1px] ${isOpen ? "bg-white" : "bg-zinc-950 dark:bg-white"} transition-all duration-300 ease-out ${
-                  isOpen ? "w-0 opacity-0" : "w-4 group-hover:w-6"
-                }`}
-              />
-              {/* Bottom Line */}
-              <span 
-                className={`h-[1px] ${isOpen ? "bg-white" : "bg-zinc-950 dark:bg-white"} transition-all duration-300 ease-out ${
-                  isOpen ? "w-6 -rotate-45 -translate-y-[7px]" : "w-5 group-hover:w-6"
-                }`}
-              />
-            </div>
-          </button>
+          {/* Actions: Theme Toggle + Burger */}
+          <div className="flex items-center gap-1">
+            {/* Theme Toggle */}
+            <button
+              onClick={toggleTheme}
+              type="button"
+              className="relative z-50 flex items-center justify-center w-10 h-10 text-zinc-500 hover:text-zinc-950 dark:text-zinc-400 dark:hover:text-white transition-colors cursor-pointer focus:outline-none"
+              aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
+            >
+              {isDark ? (
+                <Sun className="h-[18px] w-[18px]" strokeWidth={1.5} />
+              ) : (
+                <Moon className="h-[18px] w-[18px]" strokeWidth={1.5} />
+              )}
+            </button>
+
+            {/* Toggle Burger Button */}
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              type="button"
+              className="group relative z-50 flex items-center justify-center w-11 h-11 -mr-2.5 focus:outline-none cursor-pointer"
+              aria-label="Toggle menu"
+            >
+              <div className="flex flex-col justify-center items-end gap-1.5 w-6 h-6">
+                {/* Top Line */}
+                <span 
+                  className={`h-[1px] ${isOpen ? "bg-white" : "bg-zinc-950 dark:bg-white"} transition-all duration-300 ease-out ${
+                    isOpen ? "w-6 rotate-45 translate-y-[7px]" : "w-6 group-hover:w-6"
+                  }`}
+                />
+                {/* Middle Line */}
+                <span 
+                  className={`h-[1px] ${isOpen ? "bg-white" : "bg-zinc-950 dark:bg-white"} transition-all duration-300 ease-out ${
+                    isOpen ? "w-0 opacity-0" : "w-4 group-hover:w-6"
+                  }`}
+                />
+                {/* Bottom Line */}
+                <span 
+                  className={`h-[1px] ${isOpen ? "bg-white" : "bg-zinc-950 dark:bg-white"} transition-all duration-300 ease-out ${
+                    isOpen ? "w-6 -rotate-45 -translate-y-[7px]" : "w-5 group-hover:w-6"
+                  }`}
+                />
+              </div>
+            </button>
+          </div>
         </div>
       </header>
 

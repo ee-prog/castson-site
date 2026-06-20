@@ -1,11 +1,27 @@
 "use client";
 
-import React from "react";
-import { ChevronRight } from "lucide-react";
+import React, { useState } from "react";
+import { ChevronRight, Plus, Minus } from "lucide-react";
+import { AccordionItem } from "@/components/animations";
 
 const themes = [
   {
     index: "01",
+    title: "Taste is operational.",
+    content: [
+      "A brand is not only what it says.",
+      "It is what happens after the promise is made.",
+      "The timing.",
+      "The handoff.",
+      "The room.",
+      "The wording.",
+      "The follow-up.",
+      "The standard the team can actually hold.",
+      "Taste becomes real when it survives contact with operations."
+    ]
+  },
+  {
+    index: "02",
     title: "A business has to become understandable before it can become automated.",
     content: [
       "The temptation is to automate early.",
@@ -17,7 +33,7 @@ const themes = [
     ]
   },
   {
-    index: "02",
+    index: "03",
     title: "Most software is a temporary teacher.",
     content: [
       "Acuity taught us something about booking.",
@@ -29,7 +45,7 @@ const themes = [
     ]
   },
   {
-    index: "03",
+    index: "04",
     title: "Owner dependency is an information problem.",
     content: [
       "Many businesses appear to have systems until the owner steps away.",
@@ -43,7 +59,16 @@ const themes = [
     ]
   },
   {
-    index: "04",
+    index: "05",
+    title: "Luxury fails when it becomes vague.",
+    content: [
+      "Luxury does not mean saying more beautiful things.",
+      "It means being more precise about what is allowed, what is not allowed, what must be felt, and what must never be left to chance.",
+      "The higher the promise, the less room there is for vagueness."
+    ]
+  },
+  {
+    index: "06",
     title: "AI is not the first layer.",
     content: [
       "AI is powerful.",
@@ -54,7 +79,7 @@ const themes = [
     ]
   },
   {
-    index: "05",
+    index: "07",
     title: "Meaning changes operations.",
     content: [
       "When the function of a company is good, the boring parts become less boring.",
@@ -69,6 +94,8 @@ const themes = [
 ];
 
 export default function FieldNotes() {
+  const [openIndex, setOpenIndex] = useState<number>(0);
+
   return (
     <div className="relative w-full min-h-screen bg-transparent overflow-hidden flex flex-col pt-20">
       
@@ -104,56 +131,84 @@ export default function FieldNotes() {
             <div className="space-y-2 text-zinc-650 dark:text-zinc-400">
               <div className="flex items-start gap-2">
                 <ChevronRight className="h-4 w-4 shrink-0 text-emerald-500 mt-0.5" strokeWidth={1.5} aria-hidden="true" />
-                <span>Short observations from building.</span>
+                <span>Not trend pieces.</span>
               </div>
               <div className="flex items-start gap-2">
                 <ChevronRight className="h-4 w-4 shrink-0 text-emerald-500 mt-0.5" strokeWidth={1.5} aria-hidden="true" />
-                <span>Not trend pieces.</span>
+                <span>Not advice content.</span>
               </div>
             </div>
             <div className="space-y-2 text-zinc-650 dark:text-zinc-400">
               <div className="flex items-start gap-2">
                 <ChevronRight className="h-4 w-4 shrink-0 text-emerald-500 mt-0.5" strokeWidth={1.5} aria-hidden="true" />
-                <span>Not advice content. Not thought leadership.</span>
+                <span>Not thought leadership.</span>
               </div>
               <div className="flex items-start gap-2">
                 <ChevronRight className="h-4 w-4 shrink-0 text-emerald-500 mt-0.5" strokeWidth={1.5} aria-hidden="true" />
-                <span>Notes from inside a real transformation: what changed, broke, worked, or became obvious.</span>
+                <span>Short observations from operating, rebuilding, advising, and making businesses more coherent.</span>
               </div>
             </div>
+          </div>
+          <div className="mt-6 text-xs font-mono text-zinc-500 dark:text-zinc-500">
+            <p>The point is not to explain everything.</p>
+            <p className="text-zinc-900 dark:text-white font-medium mt-1">The point is to leave a trail of judgment.</p>
           </div>
         </div>
       </section>
 
-      {/* Themes List */}
+      {/* Themes List — Accordion */}
       <section className="py-12 md:py-20 theme-transition">
         <div className="mx-auto max-w-3xl px-4 relative z-20">
-          <div className="space-y-24">
-            {themes.map((theme) => (
-              <article key={theme.index} className="space-y-6 fade-up-element visible">
-                {/* Meta details */}
-                <div className="flex items-center gap-3">
-                  <span className="text-[10px] font-mono text-emerald-600 dark:text-emerald-400 border border-emerald-500/30 dark:border-emerald-500/20 bg-emerald-50/50 dark:bg-emerald-500/[0.02] px-2 py-0.5 rounded-sm">
-                    Theme {theme.index}
-                  </span>
-                  <span className="h-[1px] flex-1 bg-zinc-200 dark:bg-white/5"></span>
-                </div>
+          <div className="divide-y divide-zinc-200 dark:divide-white/[0.05] border-y border-zinc-200 dark:border-white/[0.05]">
+            {themes.map((theme, i) => {
+              const isOpen = openIndex === i;
 
-                {/* Title */}
-                <h2 className="text-xl sm:text-2xl font-medium text-zinc-900 dark:text-white leading-tight">
-                  {theme.title}
-                </h2>
+              return (
+                <AccordionItem
+                  key={theme.index}
+                  isOpen={isOpen}
+                  onToggle={() => setOpenIndex(isOpen ? -1 : i)}
+                  className="fade-up-element visible"
+                  trigger={
+                    <div className="flex items-start gap-4 py-6 group">
+                      {/* Index number */}
+                      <span className="text-xs font-mono text-emerald-600 dark:text-emerald-400 pt-1 shrink-0">
+                        {theme.index}
+                      </span>
 
-                {/* Content paragraphs */}
-                <div className="text-zinc-800 dark:text-zinc-300 font-light text-sm sm:text-base leading-relaxed space-y-4">
-                  {theme.content.map((para, i) => (
-                    <p key={i} className={para.startsWith("Then") || para.startsWith("The better") || para.startsWith("It means") || para.startsWith("The first layer") || para.startsWith("Each one") ? "text-zinc-950 dark:text-white font-medium" : ""}>
-                      {para}
-                    </p>
-                  ))}
-                </div>
-              </article>
-            ))}
+                      {/* Title */}
+                      <h2 className={`text-lg sm:text-xl font-medium leading-tight flex-1 transition-colors duration-300 ${
+                        isOpen
+                          ? "text-zinc-900 dark:text-white"
+                          : "text-zinc-600 dark:text-zinc-400 group-hover:text-zinc-900 dark:group-hover:text-white"
+                      }`}>
+                        {theme.title}
+                      </h2>
+
+                      {/* Toggle icon */}
+                      <span className="shrink-0 pt-1 text-emerald-500">
+                        {isOpen ? (
+                          <Minus className="h-4 w-4" strokeWidth={1.5} />
+                        ) : (
+                          <Plus className="h-4 w-4" strokeWidth={1.5} />
+                        )}
+                      </span>
+                    </div>
+                  }
+                >
+                  {/* Expanded content */}
+                  <div className="pb-8 pl-8 sm:pl-10">
+                    <div className="text-zinc-800 dark:text-zinc-300 font-light text-sm sm:text-base leading-relaxed space-y-4 border-l border-emerald-500/20 pl-5">
+                      {theme.content.map((para, j) => (
+                        <p key={j} className={para.startsWith("Then") || para.startsWith("The better") || para.startsWith("It means") || para.startsWith("The first layer") || para.startsWith("Each one") || para.startsWith("Taste becomes") || para.startsWith("The higher") ? "text-zinc-950 dark:text-white font-medium" : ""}>
+                          {para}
+                        </p>
+                      ))}
+                    </div>
+                  </div>
+                </AccordionItem>
+              );
+            })}
           </div>
         </div>
       </section>

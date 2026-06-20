@@ -1,25 +1,75 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useCallback } from "react";
 import { usePathname } from "next/navigation";
 
+/**
+ * ThemeObserver
+ *
+ * Manages the site-wide dark/light theme:
+ * 1. Reads the user's stored preference from localStorage('theme')
+ * 2. Falls back to OS-level prefers-color-scheme
+ * 3. Listens for OS preference changes (e.g. macOS auto dark mode at sunset)
+ * 4. Exposes window.__setTheme('dark'|'light'|'system') for toggle buttons
+ * 5. Re-runs scroll animation observer on route change
+ */
 export default function ThemeObserver() {
   const pathname = usePathname();
 
-  useEffect(() => {
-    // 1. Apply theme immediately based on route pathname
-    const lightThemeRoutes = ["/about", "/contact", "/field-notes"];
-    const isLight = lightThemeRoutes.some(
-      (route) => pathname === route || pathname.startsWith(route + "/")
-    );
+  // Core theme resolver
+  const applyTheme = useCallback(() => {
+    const stored = localStorage.getItem("theme");
+    const prefersDark = window.matchMedia(
+      "(prefers-color-scheme: dark)"
+    ).matches;
 
-    if (isLight) {
-      document.documentElement.classList.remove("dark");
+    let isDark: boolean;
+    if (stored === "dark") {
+      isDark = true;
+    } else if (stored === "light") {
+      isDark = false;
     } else {
-      document.documentElement.classList.add("dark");
+      // 'system' or no preference — follow OS
+      isDark = prefersDark;
     }
 
-    // 2. Scroll Animation Observer Setup (tiny delay to ensure route renders)
+    document.documentElement.classList.toggle("dark", isDark);
+  }, []);
+
+  // Set up theme + OS media query listener
+  useEffect(() => {
+    applyTheme();
+
+    const mq = window.matchMedia("(prefers-color-scheme: dark)");
+    const onChange = () => {
+      // Only react to OS changes if user hasn't locked a preference
+      const stored = localStorage.getItem("theme");
+      if (!stored || stored === "system") {
+        applyTheme();
+      }
+    };
+    mq.addEventListener("change", onChange);
+
+    // Expose a global setter for toggle buttons
+    // Usage: window.__setTheme('dark') / window.__setTheme('light') / window.__setTheme('system')
+    (window as Window & { __setTheme?: (mode: string) => void }).__setTheme = (
+      mode: string
+    ) => {
+      if (mode === "system") {
+        localStorage.removeItem("theme");
+      } else {
+        localStorage.setItem("theme", mode);
+      }
+      applyTheme();
+    };
+
+    return () => {
+      mq.removeEventListener("change", onChange);
+    };
+  }, [applyTheme]);
+
+  // Scroll Animation Observer — re-run on route change
+  useEffect(() => {
     const timeoutId = setTimeout(() => {
       const fadeUpElements = document.querySelectorAll(".fade-up-element");
       let animationObserver: IntersectionObserver | null = null;
