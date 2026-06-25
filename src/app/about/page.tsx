@@ -1,217 +1,135 @@
-"use client";
+import { EditorialImage, PageHeader, TextLink } from "@/components/editorial";
 
-import React from "react";
-import Link from "next/link";
-import { ArrowUpRight, ChevronRight, ArrowRight } from "lucide-react";
+const quickFacts = [
+  {
+    label: "Focus",
+    value: "Acquiring, building, and selectively advising service businesses where standards matter.",
+  },
+  {
+    label: "Operating Company",
+    value: "BraveHeart First Aid",
+    note: "Acquired June 2025",
+  },
+  {
+    label: "Role",
+    value: "CEO / Owner",
+  },
+  {
+    label: "Private Infrastructure",
+    value: "Ripley",
+    note: "Private infrastructure that turns standards, recurring work, and approval rules into usable operating infrastructure.",
+  },
+  {
+    label: "Selective Advisory",
+    value: "Senior strategic and creative sparring-partner work with leaders responsible for brand, service, growth, and transition.",
+  },
+  {
+    label: "Location",
+    value: "Nova Scotia, Canada",
+    note: "Deep professional roots in Switzerland.",
+  },
+];
 
 export default function About() {
   return (
-    <div className="relative w-full min-h-screen bg-transparent overflow-hidden flex flex-col pt-20">
-      
-      {/* Structural Grid Lines */}
-      <div className="absolute inset-y-0 inset-x-0 mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 pointer-events-none z-10 flex justify-between">
-        <div className="w-[1px] h-full bg-zinc-950/[0.03] dark:bg-white/[0.02] animate-grid-line delay-100 opacity-0"></div>
-        <div className="w-[1px] h-full bg-zinc-950/[0.03] dark:bg-white/[0.02] hidden md:block animate-grid-line delay-300 opacity-0"></div>
-        <div className="w-[1px] h-full bg-zinc-950/[0.03] dark:bg-white/[0.02] hidden md:block animate-grid-line delay-550 opacity-0"></div>
-        <div className="w-[1px] h-full bg-zinc-950/[0.03] dark:bg-white/[0.02] animate-grid-line delay-700 opacity-0"></div>
-      </div>
-
-      <div className="mx-auto max-w-5xl px-4 py-10 md:py-20 sm:px-6 lg:px-8 relative z-20">
-        
-        {/* Page Header */}
-        <div className="max-w-3xl fade-up-element visible">
-          <span className="text-[10px] font-bold uppercase tracking-widest text-emerald-600 dark:text-emerald-400 font-mono">05 / Profile</span>
-          <h1 className="text-foreground font-display mt-2">
-            Eli Castson
-          </h1>
-          <p className="mt-4 text-xl sm:text-2xl text-zinc-700 dark:text-zinc-300 font-light">
-            Operator, builder, and selective advisor.
-          </p>
+    <div className="site-shell">
+      <section className="section">
+        <div className="site-container">
+          <PageHeader
+            kicker="05 / Profile"
+            title="Eli Castson"
+            lede="Owner, builder, and selective advisor."
+          />
         </div>
+      </section>
 
-        {/* Main Narrative */}
-        <div className="mt-10 md:mt-16 grid grid-cols-1 gap-6 lg:grid-cols-12 items-start">
-          
-          {/* Left Columns - Story */}
-          <div className="lg:col-span-8 space-y-8 text-zinc-800 dark:text-zinc-300 font-light leading-relaxed text-sm sm:text-base fade-up-element visible">
-            
-            <p>
-              I am based in Nova Scotia and shaped by eighteen years in Switzerland.
-            </p>
-            
-            <p>
-              Before acquiring BraveHeart First Aid, my work moved across creative direction, advertising, digital transformation, data, and technology.
-            </p>
-
-            <p>
-              Earlier roles sat at the intersection of creative direction, technology, data, and organizational change. The titles varied — Creative Director, Tech &amp; Data; Disruption Officer — but the work was consistent: helping organizations see what was changing, clarify what mattered, and build new ways of operating.
-            </p>
-
-            <p className="border-l border-zinc-200 dark:border-white/10 pl-4 text-zinc-650 dark:text-zinc-400 opacity-80">
-              That work moved through Swiss and international environments, including projects connected to UBS, La Prairie, and other premium or complex organizations.
-            </p>
-
-            <p>
-              For years, I helped organizations change from the outside.
-            </p>
-
-            <p>
-              That gave me range.
-            </p>
-
-            <div className="bg-white dark:bg-zinc-900/20 border border-zinc-200 dark:border-white/5 p-6 rounded-sm space-y-4">
-              <span className="text-[9px] font-mono text-emerald-600 dark:text-emerald-400 uppercase tracking-widest block border-b border-zinc-200 dark:border-white/5 pb-2">
-                [ Ownership Changed the Work ]
-              </span>
-              <p className="text-sm font-medium text-zinc-900 dark:text-white">
-                There is no abstraction in operating a real company.
+      <section className="section border-b-0">
+        <div className="site-container grid gap-12 lg:grid-cols-12 lg:gap-16">
+          <div className="lg:col-span-7">
+            <div className="body-copy">
+              <p>I am based in Nova Scotia and shaped by eighteen years in Switzerland.</p>
+              <p>
+                Before acquiring BraveHeart First Aid, I worked across creative direction, advertising, digital transformation, data, and technology.
               </p>
-              
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs font-mono text-zinc-650 dark:text-zinc-400 pt-2">
-                <div className="flex items-center gap-1.5">
-                  <span className="h-1.5 w-1.5 bg-emerald-500 rounded-full"></span>
-                  <span>The system either works or it does not</span>
-                </div>
-                <div className="flex items-center gap-1.5">
-                  <span className="h-1.5 w-1.5 bg-emerald-500 rounded-full"></span>
-                  <span>The customer trusts the path or they do not</span>
-                </div>
-                <div className="flex items-center gap-1.5">
-                  <span className="h-1.5 w-1.5 bg-emerald-500 rounded-full"></span>
-                  <span>The team is supported or they are not</span>
-                </div>
-                <div className="flex items-center gap-1.5">
-                  <span className="h-1.5 w-1.5 bg-emerald-500 rounded-full"></span>
-                  <span>The business becomes clearer or heavier</span>
+              <p>
+                The titles varied — Creative Director, Tech &amp; Data; Disruption Officer — but the work was consistent: helping serious organizations see what was changing, decide what mattered, and build new ways to move.
+              </p>
+              <p className="border-l border-[var(--border-strong)] pl-5">
+                That work moved through Swiss and international environments, including projects connected to UBS, La Prairie, and other premium or complex organizations.
+              </p>
+              <p>For years, I helped organizations change from the outside.</p>
+              <p>Ownership made the standard sharper.</p>
+              <div className="quiet-panel">
+                <span className="section-kicker">Ownership Changed the Work</span>
+                <p className="mobile-pull emphasis">There is no abstraction in operating a real company.</p>
+                <div className="mt-6 grid grid-cols-1 gap-x-8 sm:grid-cols-2 metadata">
+                  {[
+                    "The operating layer either works or it does not",
+                    "The customer trusts the path or they do not",
+                    "The team is supported or they are not",
+                    "The company becomes stronger or heavier",
+                  ].map((item) => (
+                    <div key={item} className="border-t border-[var(--border)] py-3">
+                      {item}
+                    </div>
+                  ))}
                 </div>
               </div>
-            </div>
-
-            <p>
-              That directness now matters to me.
-            </p>
-
-            <div className="space-y-2 pt-2">
-              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs font-mono text-zinc-650 dark:text-zinc-400 pl-2">
-                <li className="flex items-start gap-1.5">
-                  <ChevronRight className="h-4 w-4 shrink-0 text-emerald-500 mt-0.5" strokeWidth={1.5} aria-hidden="true" />
-                  <span>I like finding the real shape of a problem.</span>
-                </li>
-                <li className="flex items-start gap-1.5">
-                  <ChevronRight className="h-4 w-4 shrink-0 text-emerald-500 mt-0.5" strokeWidth={1.5} aria-hidden="true" />
-                  <span>I like removing what does not belong.</span>
-                </li>
-                <li className="flex items-start gap-1.5">
-                  <ChevronRight className="h-4 w-4 shrink-0 text-emerald-500 mt-0.5" strokeWidth={1.5} aria-hidden="true" />
-                  <span>I like building systems that make people more capable.</span>
-                </li>
-              </ul>
-            </div>
-
-            <p>
-              And I like working with people who care about the standard of the thing, not just the appearance of it.
-            </p>
-
-            <div className="space-y-2 pt-6 border-t border-zinc-200 dark:border-white/5 text-zinc-650 dark:text-zinc-400 text-xs font-mono">
-              <div className="flex items-start gap-2">
-                <ArrowRight className="h-4 w-4 shrink-0 text-emerald-500 mt-0.5" strokeWidth={1.5} aria-hidden="true" />
-                <span><strong className="text-zinc-900 dark:text-white">BraveHeart</strong> is the operating proof.</span>
+              <p>That directness now shapes the work.</p>
+              <div className="ruled-list metadata">
+                <div>I like finding the real constraint.</div>
+                <div>I like removing what does not belong.</div>
+                <div>I like building systems that make people more capable.</div>
               </div>
-              <div className="flex items-start gap-2">
-                <ArrowRight className="h-4 w-4 shrink-0 text-emerald-500 mt-0.5" strokeWidth={1.5} aria-hidden="true" />
-                <span><strong className="text-zinc-900 dark:text-white">Ripley</strong> is the operating layer.</span>
-              </div>
-              <div className="flex items-start gap-2">
-                <ArrowRight className="h-4 w-4 shrink-0 text-emerald-500 mt-0.5" strokeWidth={1.5} aria-hidden="true" />
-                <span>Selected advisory work is where that pattern meets other companies, leaders, and decisions.</span>
-              </div>
-              <div className="flex items-start gap-2">
-                <ArrowRight className="h-4 w-4 shrink-0 text-emerald-500 mt-0.5" strokeWidth={1.5} aria-hidden="true" />
-                <span><strong className="text-zinc-900 dark:text-white">Castson.com</strong> is the record.</span>
-              </div>
-            </div>
-
-          </div>
-
-          {/* Right Column - Side Info Card */}
-          <div className="lg:col-span-4 lg:sticky lg:top-28 space-y-6 fade-up-element visible">
-            <div className="rounded-sm border border-zinc-200 dark:border-white/5 bg-white dark:bg-zinc-900/20 p-6 space-y-6 theme-transition">
-              <h3 className="text-xs font-bold uppercase tracking-wider text-zinc-650 dark:text-zinc-300 font-mono">[ QUICK FACTS ]</h3>
-              
-              <div className="space-y-6">
-                
-                {/* Focus */}
-                <div className="space-y-1">
-                  <span className="text-[9px] font-mono text-emerald-600 dark:text-emerald-400 uppercase tracking-widest block">FOCUS</span>
-                  <p className="text-xs text-zinc-900 dark:text-white font-medium leading-relaxed">
-                    Acquiring, building, and selectively advising experience-led businesses with character.
-                  </p>
-                </div>
-
-                {/* Operating Company */}
-                <div className="space-y-1">
-                  <span className="text-[9px] font-mono text-emerald-600 dark:text-emerald-400 uppercase tracking-widest block">OPERATING COMPANY</span>
-                  <p className="text-xs text-zinc-900 dark:text-white font-medium">
-                    BraveHeart First Aid
-                  </p>
-                  <p className="text-[11px] text-zinc-500 dark:text-zinc-400 font-light">
-                    Acquired June 2025
-                  </p>
-                </div>
-
-                {/* Role */}
-                <div className="space-y-1">
-                  <span className="text-[9px] font-mono text-emerald-600 dark:text-emerald-400 uppercase tracking-widest block">ROLE</span>
-                  <p className="text-xs text-zinc-900 dark:text-white font-medium">
-                    CEO / Owner-Operator
-                  </p>
-                </div>
-
-                {/* Operating Layer */}
-                <div className="space-y-1">
-                  <span className="text-[9px] font-mono text-emerald-600 dark:text-emerald-400 uppercase tracking-widest block">OPERATING LAYER</span>
-                  <p className="text-xs text-zinc-900 dark:text-white font-medium">
-                    Ripley
-                  </p>
-                  <p className="text-[11px] text-zinc-500 dark:text-zinc-400 font-light leading-relaxed">
-                    Custom software, automation, AI-assisted workflows, and systems
-                  </p>
-                </div>
-
-                {/* Selective Advisory */}
-                <div className="space-y-1">
-                  <span className="text-[9px] font-mono text-emerald-600 dark:text-emerald-400 uppercase tracking-widest block">SELECTIVE ADVISORY</span>
-                  <p className="text-[11px] text-zinc-500 dark:text-zinc-400 font-light leading-relaxed">
-                    Senior strategic and creative sparring-partner work with leaders responsible for brand, service, systems, and commercial clarity.
-                  </p>
-                </div>
-
-                {/* Location */}
-                <div className="space-y-1">
-                  <span className="text-[9px] font-mono text-emerald-600 dark:text-emerald-400 uppercase tracking-widest block">LOCATION</span>
-                  <p className="text-xs text-zinc-900 dark:text-white font-medium">
-                    Nova Scotia, Canada
-                  </p>
-                  <p className="text-[11px] text-zinc-500 dark:text-zinc-400 font-light leading-relaxed">
-                    Deep professional roots in Switzerland
-                  </p>
-                </div>
-
-              </div>
-
-              <div className="pt-6 border-t border-zinc-200 dark:border-white/5">
-                <Link
-                  href="/contact"
-                  className="interactive-hover flex w-full items-center justify-center gap-1.5 rounded-sm bg-zinc-950 dark:bg-white text-white dark:text-black py-3 text-center text-xs font-bold uppercase tracking-wider hover:bg-emerald-500 dark:hover:bg-emerald-400 transition-all duration-300"
-                >
-                  GET IN TOUCH <ArrowUpRight className="h-4 w-4" strokeWidth={1.5} aria-hidden="true" />
-                </Link>
+              <p>
+                I like working with people who care about the standard of the work, not just the appearance of it.
+              </p>
+              <div className="ruled-list metadata pt-4">
+                <div><strong className="text-[var(--foreground)]">BraveHeart</strong> is the operating proof.</div>
+                <div><strong className="text-[var(--foreground)]">Ripley</strong> is the private infrastructure.</div>
+                <div>Selected advisory work is where that pattern meets other companies and leaders.</div>
+                <div><strong className="text-[var(--foreground)]">Castson.com</strong> is the record.</div>
               </div>
             </div>
           </div>
-          
+
+          <aside className="order-first lg:order-none lg:col-span-5">
+            <div className="lg:sticky lg:top-28">
+              <EditorialImage
+                src="/images/editorial/eli-business-portrait.png"
+                alt="Eli Castson in a black suit leaning against concrete architecture"
+                caption="Eli Castson / Nova Scotia, Switzerland, operating work"
+                aspect="aspect-[4/5]"
+                className="mobile-bleed"
+                objectPosition="52% center"
+                sizes="(max-width: 1024px) 100vw, 36vw"
+              />
+
+              <div className="quiet-panel mt-10">
+                <span className="section-kicker">Quick Facts</span>
+                <div className="ruled-list">
+                  {quickFacts.map((fact) => (
+                    <div key={fact.label}>
+                      <span className="metadata text-[var(--primary)]">{fact.label}</span>
+                      <p className="mt-2 text-sm font-medium leading-relaxed text-[var(--foreground)]">
+                        {fact.value}
+                      </p>
+                      {fact.note ? (
+                        <p className="mt-1 text-sm leading-relaxed text-[var(--muted-foreground)]">
+                          {fact.note}
+                        </p>
+                      ) : null}
+                    </div>
+                  ))}
+                </div>
+                <div className="mt-8">
+                  <TextLink href="/contact">Get in Touch</TextLink>
+                </div>
+              </div>
+            </div>
+          </aside>
         </div>
-      </div>
+      </section>
     </div>
   );
 }

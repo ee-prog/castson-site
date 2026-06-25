@@ -7,6 +7,8 @@ const contactToEmail = process.env.CONTACT_TO_EMAIL || "ee@castson.com";
 
 // Simple email format validator
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const sanitizeEmailHeader = (value: string) =>
+  value.replace(/[\r\n\x00-\x1F\x7F]+/g, " ").replace(/\s+/g, " ").trim();
 
 export interface ContactFormState {
   success: boolean;
@@ -84,11 +86,14 @@ export async function sendContactEmail(
     // Falls back to Resend sandbox sender onboarding@resend.dev if a custom sending domain isn't ready
     const sender = process.env.CONTACT_FROM_EMAIL || "onboarding@resend.dev";
 
+    const safeSubject = sanitizeEmailHeader(subject);
+    const safeReplyTo = sanitizeEmailHeader(email);
+
     const { error } = await resend.emails.send({
       from: `Castson Contact Form <${sender}>`,
       to: contactToEmail,
-      subject: `New Inquiry: ${subject}`,
-      replyTo: email,
+      subject: `New Inquiry: ${safeSubject}`,
+      replyTo: safeReplyTo,
       text: `Name: ${name}\nEmail: ${email}\n\nSubject: ${subject}\n\nMessage:\n${message}`,
     });
 

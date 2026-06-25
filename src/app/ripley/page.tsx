@@ -1,267 +1,355 @@
-"use client";
+import { EditorialImage, PageHeader } from "@/components/editorial";
 
-import React from "react";
-import { ChevronRight } from "lucide-react";
+const operatingOutcomes = [
+  "Commercial rules",
+  "Service standards",
+  "Customer journeys",
+  "Booking and payment flows",
+  "Admin visibility",
+  "Approval gates",
+  "Repeatable launches",
+  "Owner command",
+];
 
-function ImagePlaceholder({ label }: { label: string }) {
-  const refCode = label
-    .toUpperCase()
-    .replace(/[^A-Z0-9\s]/g, "")
-    .trim()
-    .replace(/\s+/g, "-");
+const connectedOperations = [
+  {
+    label: "Revenue and customer path",
+    items: [
+      "Course pages and booking",
+      "Cart and checkout",
+      "Equipment and online training",
+      "Registration changes",
+    ],
+  },
+  {
+    label: "Delivery and standards",
+    items: [
+      "Instructor coordination",
+      "Availability and scheduling",
+      "Customer communication",
+      "Certificate reminders",
+    ],
+  },
+  {
+    label: "Management view",
+    items: [
+      "Financial visibility",
+      "Advertising performance",
+      "Company knowledge",
+      "Approval gates",
+    ],
+  },
+];
 
-  return (
-    <div className="w-full aspect-[16/10] bg-zinc-900/10 border border-white/5 rounded-sm flex flex-col justify-between p-4 relative overflow-hidden group theme-transition">
-      {/* Blueprint grid lines */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff01_1px,transparent_1px),linear-gradient(to_bottom,#ffffff01_1px,transparent_1px)] bg-[size:1.5rem_1.5rem] pointer-events-none"></div>
-      <span className="text-[8px] font-mono text-zinc-600 tracking-widest uppercase relative z-10 block">
-        REF // {refCode}
-      </span>
-      <div className="w-full h-[1px] bg-white/[0.03] relative z-10"></div>
-    </div>
-  );
-}
+const operatingModel = [
+  ["Promise", "what customers are being asked to trust"],
+  ["Standards", "how the work has to happen"],
+  ["Infrastructure", "where the work moves"],
+  ["Judgment", "what still requires approval"],
+];
 
 export default function Ripley() {
   return (
-    <div className="relative w-full min-h-screen bg-transparent overflow-hidden flex flex-col pt-20">
-      
-      {/* Structural Grid Lines */}
-      <div className="absolute inset-y-0 inset-x-0 mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 pointer-events-none z-10 flex justify-between">
-        <div className="w-[1px] h-full bg-white/[0.02] animate-grid-line delay-100 opacity-0"></div>
-        <div className="w-[1px] h-full bg-white/[0.02] hidden md:block animate-grid-line delay-300 opacity-0"></div>
-        <div className="w-[1px] h-full bg-white/[0.02] hidden md:block animate-grid-line delay-550 opacity-0"></div>
-        <div className="w-[1px] h-full bg-white/[0.02] animate-grid-line delay-700 opacity-0"></div>
-      </div>
+    <div className="site-shell">
+      <section className="section">
+        <div className="site-container">
+          <PageHeader
+            kicker="02 / Operating Layer"
+            title="Ripley"
+            lede="The private infrastructure behind faster execution, cleaner authority, and more disciplined growth."
+          />
+        </div>
+      </section>
 
-      {/* Header */}
-      <section className="relative py-12 md:py-24 border-b border-white/[0.03] theme-transition">
-        <div className="absolute top-1/4 right-1/4 -z-10 h-[500px] w-[500px] rounded-full bg-emerald-500/5 blur-[120px]" />
-        
-        <div className="mx-auto max-w-5xl w-full px-4 sm:px-6 lg:px-8 relative z-20">
-          <div className="max-w-3xl space-y-6">
-            <span className="text-[10px] font-bold uppercase tracking-widest text-emerald-400 font-mono">02 / System Architecture</span>
-            <h1 className="text-white font-display">
-              Ripley
-            </h1>
-            <p className="text-xl sm:text-2xl text-zinc-300 font-light">
-              The operating layer emerging from the work.
+      <section className="section">
+        <div className="site-container grid gap-12 lg:grid-cols-12 lg:gap-16">
+          <div className="lg:col-span-7">
+            <div className="body-copy">
+              <p className="emphasis text-xl leading-relaxed">
+                Ripley was built because BraveHeart did not need another tool. It needed the work to move.
+              </p>
+              <p>
+                It is not a story about adding AI inside a company. It is a story about making the company clear enough to know where intelligence belongs.
+              </p>
+              <p>
+                Course pages, booking, payments, customer changes, certification reminders, admin visibility, marketing performance, and management reporting all had to connect. Not in theory. In daily use.
+              </p>
+              <blockquote className="mobile-pull quiet-panel text-xl leading-relaxed text-[var(--foreground)]">
+                “The point is not an impressive machine. The point is knowing what happens next, who can approve it, and what must never be left to chance.”
+              </blockquote>
+              <p>
+                Ripley holds the rules, workflows, connected tools, operating memory, and approval gates behind the work. It exists to make execution cleaner, not to put technology at the center.
+              </p>
+            </div>
+          </div>
+          <div className="lg:col-span-5">
+            <EditorialImage
+              src="/images/editorial/light-study.webp"
+              alt="A focused beam of light falling across a circular plinth"
+              caption="Execution layer / approval-led authority"
+              aspect="aspect-[4/3] sm:aspect-[16/10]"
+              className="mobile-bleed"
+              sizes="(max-width: 1024px) 100vw, 36vw"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section className="section section-quiet">
+        <div className="site-container grid gap-10 lg:grid-cols-2 lg:gap-16">
+          <div className="quiet-panel">
+            <span className="section-kicker">What Ripley is</span>
+            <div className="body-copy">
+              <p className="emphasis">
+                Private infrastructure for a company that has to move with discipline.
+              </p>
+              <p>
+                Ripley turns standards and recurring decisions into practical infrastructure. It reduces the amount of work that depends on individual memory or manual follow-up.
+              </p>
+            </div>
+            <div className="mt-6 grid grid-cols-1 gap-x-8 sm:grid-cols-2 metadata">
+              {operatingOutcomes.map((outcome) => (
+                <div key={outcome} className="border-t border-[var(--border)] py-3">
+                  {outcome}
+                </div>
+              ))}
+            </div>
+            <p className="mt-6 text-sm font-medium leading-relaxed text-[var(--foreground)]">
+              The value is practical: less manual coordination, fewer dropped handoffs, faster launches, and more room for judgment.
+            </p>
+          </div>
+
+          <div className="quiet-panel">
+            <span className="section-kicker">What Ripley built</span>
+            <div className="body-copy">
+              <p className="emphasis text-xl leading-relaxed">
+                Fourteen days. A full production commerce and operations platform.
+              </p>
+              <p>
+                Real-time course booking, unified cart, Stripe checkout, automated fulfilment, self-serve registration management, recertification reminders, and an admin dashboard strong enough to replace Monday.com.
+              </p>
+            </div>
+            <div className="mt-7 grid grid-cols-2 gap-x-8 metadata sm:grid-cols-3">
+              {[
+                ["14", "days to launch"],
+                ["28", "course pages"],
+                ["1", "unified checkout"],
+                ["5", "connected tools"],
+                ["19", "critical payment tests"],
+                ["Live", "business platform"],
+              ].map(([value, label]) => (
+                <div key={label} className="border-t border-[var(--border)] py-3">
+                  <span className="block font-sans text-2xl font-medium leading-none text-[var(--foreground)]">
+                    {value}
+                  </span>
+                  <span className="mt-2 block">{label}</span>
+                </div>
+              ))}
+            </div>
+            <p className="mt-7 text-sm font-medium leading-relaxed text-[var(--foreground)]">
+              The site is live. Bookings, payments, equipment sales, instructor coordination, and customer communication now move through one controlled platform.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Origin Narrative */}
-      <section className="py-12 md:py-20 border-b border-white/[0.03] theme-transition">
-        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 relative z-20">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-start">
-            
-            {/* Left Col: Narrative */}
-            <div className="lg:col-span-7 space-y-6 text-zinc-300 font-light leading-relaxed text-sm sm:text-base">
-              <p className="text-lg text-white">
-                Ripley did not begin as a product. It began as a need.
-              </p>
-              
+      <section className="section">
+        <div className="site-container">
+          <div className="max-w-3xl">
+            <span className="section-kicker">Connected Operations</span>
+            <h2>One view across the work.</h2>
+            <div className="body-copy mt-7">
               <p>
-                As BraveHeart became clearer, it started asking for tools that did not exist. Not another dashboard. Not another disconnected SaaS account. Not another place for work to hide.
+                The site is only part of the picture. Ripley connects the tools BraveHeart already depends on and turns them into a coordinated management view.
               </p>
+              <p className="emphasis border-l border-[var(--border-strong)] pl-5">
+                The value is not more software. The value is fewer blind spots, fewer handoffs, and faster decisions without losing command.
+              </p>
+            </div>
+          </div>
 
-              <blockquote className="border-l-2 border-emerald-400 pl-4 italic text-zinc-400 font-light">
-                &ldquo;Something closer to an operating layer. A way for information, workflows, knowledge, and decisions to move through the company with less friction.&rdquo;
+          <div className="mt-12 grid gap-10 lg:grid-cols-3">
+            {connectedOperations.map((group) => (
+              <div key={group.label} className="quiet-panel">
+                <span className="section-kicker">{group.label}</span>
+                <div className="ruled-list metadata">
+                  {group.items.map((item) => (
+                    <div key={item}>{item}</div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section section-quiet">
+        <div className="site-container grid gap-12 lg:grid-cols-12 lg:gap-16">
+          <div className="lg:col-span-5">
+            <EditorialImage
+              src="/images/editorial/marble-operating-layer.webp"
+              alt="A marble cube in a quiet icy landscape at dawn"
+              caption="Discipline as structure"
+              aspect="aspect-[4/5]"
+              className="mobile-bleed"
+              sizes="(max-width: 1024px) 100vw, 36vw"
+            />
+          </div>
+          <div className="lg:col-span-7">
+            <span className="section-kicker">What holds it together</span>
+            <h2>Discipline is the luxury.</h2>
+            <div className="body-copy mt-7">
+              <p>
+                The useful version of speed is not chaos. It is knowing what can move, what needs approval, and what should never be touched casually.
+              </p>
+              <p>
+                Payments, credentials, customer records, financial tools, and production changes all carry explicit approval rules. Ripley can prepare, coordinate, and recommend. Judgment stays where it belongs.
+              </p>
+              <p className="mobile-pull emphasis border-l border-[var(--border-strong)] pl-5">
+                The company gets faster because the boundaries are stronger.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="site-container grid gap-12 lg:grid-cols-2 lg:gap-16">
+          <div>
+            <span className="section-kicker">The Principle</span>
+            <h2>Clarify before you accelerate.</h2>
+            <div className="body-copy mt-7">
+              <p>Most AI automation projects fail because they start automating before the company has made its own rules explicit.</p>
+              <p>Ripley works in the opposite order:</p>
+              <ol className="metadata list-decimal space-y-2 pl-5">
+                <li>Name the commercial promise.</li>
+                <li>Map how the work really happens.</li>
+                <li>Decide what can move without approval.</li>
+                <li>Define what must stop for judgment.</li>
+                <li>Remove inherited friction before automating anything.</li>
+                <li>Then build what should exist.</li>
+              </ol>
+              <p className="emphasis">That is slower for a moment. Then the business starts moving with much less drag.</p>
+            </div>
+          </div>
+
+          <div>
+            <span className="section-kicker">The Control Model</span>
+            <h2>Judgment stays at the top.</h2>
+            <div className="body-copy mt-7">
+              <p>
+                Ripley removes the coordination around leadership that should never have required executive attention in the first place.
+              </p>
+              <p>
+                Routine work can move quickly. Consequential actions stop for approval. That distinction is what makes the platform useful in a real company, not just impressive in a demo.
+              </p>
+              <p className="emphasis">
+                More pace. Better visibility. Cleaner authority.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section section-quiet">
+        <div className="site-container grid gap-12 lg:grid-cols-12 lg:gap-16">
+          <div className="lg:col-span-7">
+            <span className="section-kicker">What This Means</span>
+            <h2>A serious owner can now build like a much larger company.</h2>
+            <div className="body-copy mt-7">
+              <p>
+                One owner. A live commerce and operations platform holding the work.
+              </p>
+              <p>
+                Booking, payments, fulfilment, equipment sales, certificate tracking, admin visibility, and customer communication now move through one coordinated layer.
+              </p>
+              <p className="emphasis">That is not a technology story. It is an ownership story.</p>
+              <blockquote className="mobile-pull quiet-panel text-xl leading-relaxed text-[var(--foreground)]">
+                “The advantage is not that the platform is clever. The advantage is that the business is clear enough to execute.”
               </blockquote>
-
-              <p className="text-white font-medium">
-                Ripley is the name for that layer.
+              <p>
+                For decades, smaller operators faced a hard ceiling. Use generic software and reshape the business around it, or spend heavily on custom systems, consultants, and project management.
+              </p>
+              <p className="emphasis">
+                That ceiling is no longer fixed. The advantage goes to the owner who can see clearly and move decisively.
               </p>
             </div>
-
-            {/* Right Col: Image Placeholder */}
-            <div className="lg:col-span-5 space-y-4">
-              <ImagePlaceholder label="Ripley Operating Layer Conceptual Architecture" />
-              <div className="text-[10px] font-mono text-zinc-500 uppercase tracking-widest text-right">
-                [ Layer 0 State Engine ]
-              </div>
-            </div>
-
           </div>
-        </div>
-      </section>
-
-      {/* What Ripley is vs is not */}
-      <section className="py-12 md:py-20 border-b border-white/[0.03] bg-zinc-950/20 theme-transition">
-        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 relative z-20">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12">
-            
-            {/* What Ripley Is */}
-            <div className="border border-white/5 bg-zinc-900/30 p-8 rounded-sm space-y-6">
-              <span className="text-[9px] font-mono text-emerald-400 uppercase tracking-widest block border-b border-white/5 pb-2">
-                [ What Ripley is ]
-              </span>
-              <p className="text-sm text-zinc-200">
-                Ripley is an internal operating system being developed inside BraveHeart. It is made of:
-              </p>
-              
-              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs font-mono text-zinc-400">
-                {["Custom software", "Automation", "AI-assisted workflows", "Operational memory", "Dashboards", "Rules", "Interfaces", "Human judgment"].map((el) => (
-                  <li key={el} className="flex items-center gap-1.5">
-                    <span className="h-1.5 w-1.5 bg-emerald-500 rounded-full"></span>
-                    <span>{el}</span>
-                  </li>
-                ))}
-              </ul>
-              
-              <p className="text-xs text-zinc-400">
-                It connects the parts of the business that normally drift apart: Marketing, Scheduling, Operations, Finance, Knowledge, Customer experience, and Decision-making.
-              </p>
-
-              <p className="text-xs font-bold text-white uppercase font-mono">
-                The point is not to make the company artificially intelligent. The point is to make the company more coherent.
-              </p>
-            </div>
-
-            {/* What Ripley is NOT */}
-            <div className="border border-white/5 bg-zinc-950/40 p-8 rounded-sm space-y-6">
-              <span className="text-[9px] font-mono text-red-400 uppercase tracking-widest block border-b border-white/5 pb-2">
-                [ What Ripley is not ]
-              </span>
-              <p className="text-sm text-zinc-300 italic">
-                Ripley is not a chatbot. It is not AI decoration. It is not a thin wrapper on top of confusion. It is not a replacement for care, responsibility, leadership, or taste.
-              </p>
-
-              <div className="space-y-3 font-mono text-xs text-zinc-400">
-                <div className="flex justify-between gap-4 border-b border-white/5 pb-1">
-                  <span>Solid code</span>
-                  <span className="text-white">stable processes</span>
-                </div>
-                <div className="flex justify-between gap-4 border-b border-white/5 pb-1">
-                  <span>Human-in-the-loop</span>
-                  <span className="text-white">judgment</span>
-                </div>
-                <div className="flex justify-between gap-4 border-b border-white/5 pb-1">
-                  <span>Automation</span>
-                  <span className="text-white">repetition</span>
-                </div>
-                <div className="flex justify-between gap-4 border-b border-white/5 pb-1">
-                  <span>AI</span>
-                  <span className="text-white">leverage</span>
-                </div>
-              </div>
-
-              <p className="text-xs font-bold text-zinc-400 uppercase font-mono">
-                That distinction matters.
-              </p>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      {/* The Principle & Why Now */}
-      <section className="py-12 md:py-20 border-b border-white/[0.03] theme-transition">
-        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 relative z-20">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 items-start">
-            
-            {/* The Principle */}
-            <div className="space-y-6">
-              <span className="text-[9px] font-mono tracking-widest uppercase text-emerald-400">[ The Principle ]</span>
-              <h2 className="text-2xl font-medium text-white">
-                Do not automate confusion.
-              </h2>
-              <div className="text-zinc-300 font-light text-sm sm:text-base space-y-4">
-                <p>
-                  Clarify first. Then automate.
-                </p>
-                <p>
-                  Most organizations want speed before truth. I am trying to do the opposite:
-                </p>
-                
-                <ol className="space-y-2 text-xs font-mono text-zinc-400 list-decimal pl-4">
-                  <li>Understand the business.</li>
-                  <li>Name the real process.</li>
-                  <li>Find the bottleneck.</li>
-                  <li>Remove unnecessary complexity.</li>
-                  <li>Then build the tool.</li>
-                </ol>
-
-                <p className="text-white font-medium">
-                  This is slower at first. Then much faster later.
-                </p>
-              </div>
-            </div>
-
-            {/* Why Now */}
-            <div className="space-y-6">
-              <span className="text-[9px] font-mono tracking-widest uppercase text-emerald-400">[ Why Now ]</span>
-              <h2 className="text-2xl font-medium text-white">
-                The Shift in Boundaries
-              </h2>
-              <div className="text-zinc-300 font-light text-sm sm:text-base space-y-4">
-                <p>
-                  Small companies used to face a hard choice: use generic software and reshape the business around the tool, or spend heavily to build custom systems.
-                </p>
-                <p>
-                  That boundary is changing. AI-assisted development makes internal software more accessible. Automation tools make workflows more flexible. Modern APIs make systems more connected.
-                </p>
-                <p className="text-white font-medium border-l border-emerald-400/40 pl-4 font-mono text-xs">
-                  Small teams can now build operating leverage that used to require departments. But the advantage does not come from tools alone. It comes from clarity. Ripley is what happens when clarity meets capability.
-                </p>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      {/* What Ripley Supports */}
-      <section className="py-12 md:py-20 border-b border-white/[0.03] bg-zinc-950/20 theme-transition">
-        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 relative z-20">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-start">
-            
-            {/* Left: Diagram */}
-            <div className="lg:col-span-5 space-y-4 fade-up-element visible">
-              <ImagePlaceholder label="Ripley Modules & Integration Chart" />
-              <div className="text-[10px] font-mono text-zinc-500 uppercase tracking-widest">
-                [ Module Mapping: Course Operations & Marketing ]
-              </div>
-            </div>
-
-            {/* Right: Modules list */}
-            <div className="lg:col-span-7 space-y-6 fade-up-element visible">
-              <span className="text-[9px] font-mono tracking-widest uppercase text-emerald-400">[ Supported Operations ]</span>
-              <h2 className="text-2xl font-medium text-white">
-                What Ripley supports
-              </h2>
-              <p className="text-zinc-300 font-light text-sm sm:text-base">
-                Ripley is being developed around the actual needs of BraveHeart. Every module begins with the same question: <strong>What is the business trying to do here?</strong>
-              </p>
-              
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 sm:gap-3 text-xs font-mono text-zinc-400">
-                {[
-                  "Delivery standards",
-                  "Instructor coordination",
-                  "Communication rhythm",
-                  "Scheduling visibility",
-                  "Marketing production",
-                  "Facebook content/ads",
-                  "Demand signals",
-                  "Operating visibility",
-                  "Financial visibility",
-                  "Knowledge manager",
-                  "Decision support",
-                  "Reduced dependency"
-                ].map((mod) => (
-                  <div key={mod} className="flex items-center gap-1 p-2 bg-zinc-950/60 border border-white/5 rounded-sm">
-                    <ChevronRight className="h-4 w-4 text-emerald-500 shrink-0" strokeWidth={1.5} aria-hidden="true" />
-                    <span>{mod}</span>
+          <aside className="lg:col-span-5">
+            <div className="quiet-panel">
+              <span className="section-kicker">Operating Model</span>
+              <div className="ruled-list metadata">
+                {operatingModel.map(([layer, definition]) => (
+                  <div key={layer} className="grid gap-2 sm:grid-cols-[7rem_1fr]">
+                    <span className="text-[var(--foreground)]">{layer}</span>
+                    <span>{definition}</span>
                   </div>
                 ))}
               </div>
             </div>
-
-          </div>
+          </aside>
         </div>
       </section>
 
+      <section className="section border-b-0">
+        <div className="site-container grid gap-12 lg:grid-cols-2 lg:gap-16">
+          <div>
+            <span className="section-kicker">The Lesson</span>
+            <h2>Execution improves when the rules are clear.</h2>
+            <div className="body-copy mt-7">
+              <p>
+                Every clean launch started as a commercial call, not a technical one.
+              </p>
+              <p>
+                What promise are we making? Who owns it? What must happen next? What can move without approval? Where does judgment enter? Once those questions were answered, the right infrastructure could be built quickly and responsibly.
+              </p>
+              <p>
+                That is the real lesson. Speed is not the advantage. Clean authority is.
+              </p>
+            </div>
+          </div>
+
+          <div>
+            <span className="section-kicker">Where This Goes</span>
+            <h2>The model is ready before the move is.</h2>
+            <div className="body-copy mt-7">
+              <p>
+                The real test is not whether the platform works today. It is whether tomorrow&apos;s expansion can happen without rebuilding around every new move.
+              </p>
+              <p>
+                A new course should not become a small web project, booking project, payment project, and admin project. It should be a launch move. The page, booking path, payment flow, catalog listing, and sitemap update follow the pattern already in place.
+              </p>
+              <p>
+                A new city should not mean starting from scratch. Scheduling, availability, local search, redirects, and customer communication become configuration, not construction.
+              </p>
+              <p>
+                And if the move were to franchise, the foundation is already doing the right kind of work. Standards, approval gates, customer pathways, and management visibility are no longer scattered across people&apos;s heads and disconnected platforms.
+              </p>
+              <p className="mobile-pull emphasis border-l border-[var(--accent-emerald)] pl-5">
+                That was the key motivator from the beginning. Not just to run the company well, but to build the kind of infrastructure that makes growth a decision, not a project.
+              </p>
+              <p>
+                BraveHeart is one company. The pattern is not. Hospitality, training, wellness, tourism, and food service all run on the same physics: scheduling, coordination, communication, quality control, financial visibility, and customer experience.
+              </p>
+              <p>
+                Ripley is becoming a deployable capability for companies where service, standards, and commercial clarity matter. One layer of coordination. Strong boundaries. Connected tools. Owner command.
+              </p>
+              <p>
+                That is what Castson Inc. is building toward. Not shelf software. A capability to install where taste, service, and operational clarity are the competitive advantage.
+              </p>
+            </div>
+          </div>
+
+          <div className="mx-auto max-w-2xl py-16 text-center lg:col-span-2">
+            <p className="metadata">
+              The point was never the technology.
+            </p>
+            <p className="mt-5 text-xl font-medium leading-relaxed text-[var(--foreground)]">
+              The point was to find out how powerful one serious owner can be when the operating layer is strong enough to scale without diluting what made the company worth owning in the first place.
+            </p>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

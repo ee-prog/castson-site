@@ -2,101 +2,81 @@
 
 import React, { useActionState } from "react";
 import { ArrowRight, Send } from "lucide-react";
+import { PageHeader } from "@/components/editorial";
 import { sendContactEmail } from "./actions";
+
+const fitList = [
+  "An owner thinking about succession or transition",
+  "A property holder considering an operating partner",
+  "An operator building a service or place-based business",
+  "A founder, CEO, or CMO who needs senior outside judgment",
+  "A collaborator in hospitality, wellness, tourism, design, property, or service",
+  "An investor aligned with patient operating-led value creation",
+];
 
 export default function Contact() {
   const [state, formAction, isPending] = useActionState(sendContactEmail, null);
 
   return (
-    <div className="relative w-full min-h-screen bg-transparent overflow-hidden flex flex-col pt-20">
-      
-      {/* Structural Grid Lines */}
-      <div className="absolute inset-y-0 inset-x-0 mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 pointer-events-none z-10 flex justify-between">
-        <div className="w-[1px] h-full bg-zinc-950/[0.03] dark:bg-white/[0.02] animate-grid-line delay-100 opacity-0"></div>
-        <div className="w-[1px] h-full bg-zinc-950/[0.03] dark:bg-white/[0.02] hidden md:block animate-grid-line delay-300 opacity-0"></div>
-        <div className="w-[1px] h-full bg-zinc-950/[0.03] dark:bg-white/[0.02] hidden md:block animate-grid-line delay-550 opacity-0"></div>
-        <div className="w-[1px] h-full bg-zinc-950/[0.03] dark:bg-white/[0.02] animate-grid-line delay-700 opacity-0"></div>
-      </div>
-
-      <div className="mx-auto max-w-5xl px-4 py-10 md:py-20 sm:px-6 lg:px-8 relative z-20">
-        
-        {/* Page Header */}
-        <div className="max-w-3xl fade-up-element visible">
-          <span className="text-[10px] font-bold uppercase tracking-widest text-emerald-600 dark:text-emerald-400 font-mono">06 / Connect</span>
-          <h1 className="text-foreground font-display mt-2">
-            Contact
-          </h1>
-          <p className="mt-4 text-xl sm:text-2xl text-zinc-700 dark:text-zinc-300 font-light">
-            Start with the right conversation.
-          </p>
+    <div className="site-shell">
+      <section className="section">
+        <div className="site-container">
+          <PageHeader
+            kicker="06 / Connect"
+            title="Contact"
+            lede="Start with the real question."
+          />
         </div>
+      </section>
 
-        {/* Narrative & Profiles Grid */}
-        <div className="mt-10 md:mt-16 grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-start">
-          
-          {/* Left Column: Direct Info & Targets */}
-          <div className="lg:col-span-6 space-y-8 text-zinc-800 dark:text-zinc-300 font-light leading-relaxed text-sm sm:text-base fade-up-element visible">
-            <div className="space-y-4">
-              <p className="text-lg text-zinc-900 dark:text-white font-normal">
-                I am interested in people building, operating, selling, stewarding, or leading businesses where place, service, taste, and standards matter.
+      <section className="section border-b-0">
+        <div className="site-container grid gap-12 lg:grid-cols-12 lg:gap-16">
+          <div className="order-2 lg:order-1 lg:col-span-5">
+            <div className="body-copy">
+              <p className="emphasis text-xl leading-relaxed">
+                Reach out when there is real ownership behind the question.
+              </p>
+              <p>
+                I am interested in owners and senior leaders building, operating, selling, or stewarding businesses where place, service, taste, and standards matter.
               </p>
             </div>
-            
-            <div className="space-y-4">
-              <span className="text-[9px] font-mono text-zinc-500 dark:text-zinc-500 uppercase tracking-widest block border-b border-zinc-200 dark:border-white/5 pb-2">
-                [ Reach out if you are ]
-              </span>
-              
-              <div className="grid grid-cols-1 gap-3 font-mono text-xs text-zinc-650 dark:text-zinc-400">
-                {[
-                  "An owner thinking about succession or transition",
-                  "A property holder looking for an operating partner",
-                  "An operator building a place-based experience business",
-                  "A founder, CEO, or CMO looking for a senior outside sparring partner",
-                  "A collaborator working in hospitality, wellness, tourism, design, property, or service",
-                  "An investor aligned with patient, operating-led value creation"
-                ].map((item, idx) => (
-                  <div key={idx} className="flex items-start gap-2.5 p-3.5 border border-zinc-200 dark:border-white/5 bg-white dark:bg-zinc-900/20 rounded-sm">
-                    <span className="text-emerald-600 dark:text-emerald-400 font-bold mt-0.5">—</span>
-                    <span>{item}</span>
-                  </div>
+
+            <div className="mt-10">
+              <span className="section-kicker">Reach out if you are</span>
+              <div className="ruled-list metadata">
+                {fitList.map((item) => (
+                  <div key={item}>{item}</div>
                 ))}
               </div>
             </div>
- 
-            <div className="border-l border-emerald-500/40 dark:border-emerald-400/40 pl-4 py-1 text-xs font-mono text-zinc-500 dark:text-zinc-400">
-              I am most useful when the work is specific, consequential, and real. If something here connects with what you are building, carrying, or trying to make stronger, send a note.
-            </div>
+
+            <p className="metadata mt-10 border-l border-[var(--border-strong)] pl-5">
+              I am most useful when the work is specific, consequential, and already moving. If something here connects with what you are building, carrying, or trying to make stronger, send a note.
+            </p>
           </div>
 
-          {/* Right Column: Contact Form */}
-          <div className="lg:col-span-6 fade-up-element visible">
+          <div className="order-1 lg:order-2 lg:col-span-7">
             {state?.success ? (
-              <div className="rounded-sm border border-emerald-500/20 bg-emerald-50/50 dark:bg-emerald-500/5 p-8 text-center space-y-4 theme-transition">
-                <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400">
+              <div className="quiet-panel text-center">
+                <div className="mx-auto flex h-12 w-12 items-center justify-center text-[var(--primary)]">
                   <Send className="h-6 w-6" strokeWidth={1.5} aria-hidden="true" />
                 </div>
-                <h2 className="text-xl font-medium text-zinc-900 dark:text-white">Message received.</h2>
-                <p className="text-xs text-zinc-600 dark:text-zinc-400 max-w-sm mx-auto font-mono leading-relaxed">
+                <h2 className="mt-4 text-3xl">Message received.</h2>
+                <p className="mx-auto mt-4 max-w-sm text-sm leading-relaxed text-[var(--muted-foreground)]">
                   Thanks for the note. If it fits the kind of work I’m focused on, I’ll reply directly.
                 </p>
-                <a
-                  href="/contact"
-                  className="mt-4 inline-block text-xs font-bold text-emerald-600 dark:text-emerald-400 hover:underline uppercase font-mono tracking-widest"
-                >
+                <a href="/contact" className="editorial-link mt-8">
                   Send another message
                 </a>
               </div>
             ) : (
-              <form action={formAction} className="rounded-sm border border-zinc-200 dark:border-white/5 bg-white dark:bg-zinc-900/10 p-8 space-y-6 theme-transition">
-                
+              <form action={formAction} className="quiet-panel space-y-8">
                 {state?.error && (
-                  <div className="rounded-sm border border-red-500/20 bg-red-500/5 p-4 text-xs text-red-500 dark:text-red-400 font-mono">
+                  <div className="border border-red-500/25 bg-red-500/5 p-4 text-sm text-red-600 dark:text-red-300">
                     {state.error}
                   </div>
                 )}
 
-                {/* Honeypot field (hidden from users) */}
                 <div className="hidden" aria-hidden="true">
                   <label htmlFor="honeypot">Website</label>
                   <input
@@ -108,9 +88,9 @@ export default function Contact() {
                   />
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
                   <div>
-                    <label htmlFor="name" className="block text-[10px] font-bold uppercase tracking-wider text-zinc-500 dark:text-zinc-400 mb-2 font-mono">
+                    <label htmlFor="name" className="metadata mb-2 block text-[var(--primary)]">
                       Name
                     </label>
                     <input
@@ -119,15 +99,16 @@ export default function Contact() {
                       name="name"
                       required
                       maxLength={100}
-                      className="w-full form-input-luxury text-zinc-900 dark:text-white placeholder-zinc-450 dark:placeholder-zinc-600 focus:outline-none"
+                      className="form-input-luxury"
                       placeholder="Jane Doe"
                     />
                     {state?.fieldErrors?.name && (
-                      <p className="mt-1 text-[10px] text-red-500 dark:text-red-400 font-mono">{state.fieldErrors.name}</p>
+                      <p className="mt-2 text-xs text-red-600 dark:text-red-300">{state.fieldErrors.name}</p>
                     )}
                   </div>
+
                   <div>
-                    <label htmlFor="email" className="block text-[10px] font-bold uppercase tracking-wider text-zinc-500 dark:text-zinc-400 mb-2 font-mono">
+                    <label htmlFor="email" className="metadata mb-2 block text-[var(--primary)]">
                       Email Address
                     </label>
                     <input
@@ -136,17 +117,17 @@ export default function Contact() {
                       name="email"
                       required
                       maxLength={254}
-                      className="w-full form-input-luxury text-zinc-900 dark:text-white placeholder-zinc-450 dark:placeholder-zinc-600 focus:outline-none"
+                      className="form-input-luxury"
                       placeholder="jane@example.com"
                     />
                     {state?.fieldErrors?.email && (
-                      <p className="mt-1 text-[10px] text-red-500 dark:text-red-400 font-mono">{state.fieldErrors.email}</p>
+                      <p className="mt-2 text-xs text-red-600 dark:text-red-300">{state.fieldErrors.email}</p>
                     )}
                   </div>
                 </div>
 
                 <div>
-                  <label htmlFor="subject" className="block text-[10px] font-bold uppercase tracking-wider text-zinc-500 dark:text-zinc-400 mb-2 font-mono">
+                  <label htmlFor="subject" className="metadata mb-2 block text-[var(--primary)]">
                     Subject / Context
                   </label>
                   <input
@@ -155,16 +136,16 @@ export default function Contact() {
                     name="subject"
                     required
                     maxLength={150}
-                    className="w-full form-input-luxury text-zinc-900 dark:text-white placeholder-zinc-450 dark:placeholder-zinc-600 focus:outline-none"
-                    placeholder="e.g., succession inquiry / operator peer"
+                    className="form-input-luxury"
+                    placeholder="e.g., succession / operating partner / advisory"
                   />
                   {state?.fieldErrors?.subject && (
-                    <p className="mt-1 text-[10px] text-red-500 dark:text-red-400 font-mono">{state.fieldErrors.subject}</p>
+                    <p className="mt-2 text-xs text-red-600 dark:text-red-300">{state.fieldErrors.subject}</p>
                   )}
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-[10px] font-bold uppercase tracking-wider text-zinc-500 dark:text-zinc-400 mb-2 font-mono">
+                  <label htmlFor="message" className="metadata mb-2 block text-[var(--primary)]">
                     Message
                   </label>
                   <textarea
@@ -173,34 +154,37 @@ export default function Contact() {
                     required
                     rows={5}
                     maxLength={5000}
-                    className="w-full form-input-luxury text-zinc-900 dark:text-white placeholder-zinc-450 dark:placeholder-zinc-600 focus:outline-none resize-none"
-                    placeholder="Introduce yourself and your system questions..."
+                    className="form-input-luxury resize-none"
+                    placeholder="Introduce yourself and what you are trying to make stronger..."
                   />
                   {state?.fieldErrors?.message && (
-                    <p className="mt-1 text-[10px] text-red-500 dark:text-red-400 font-mono">{state.fieldErrors.message}</p>
+                    <p className="mt-2 text-xs text-red-600 dark:text-red-300">{state.fieldErrors.message}</p>
                   )}
                 </div>
 
-                <div className="pt-2">
-                  <button
-                    type="submit"
-                    disabled={isPending}
-                    className="group interactive-hover flex w-full items-center justify-center gap-2 rounded-sm bg-zinc-950 dark:bg-white hover:bg-emerald-500 dark:hover:bg-emerald-400 disabled:bg-zinc-800 disabled:text-zinc-650 text-white dark:text-black py-3.5 text-xs font-bold uppercase tracking-wider transition-all duration-300 cursor-pointer active:scale-95 disabled:cursor-not-allowed"
-                  >
-                    <span>{isPending ? "Sending..." : "Send Message"}</span>
-                    {!isPending && <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" strokeWidth={1.5} aria-hidden="true" />}
-                  </button>
-                </div>
+                <button
+                  type="submit"
+                  disabled={isPending}
+                  className="group inline-flex w-full items-center justify-center gap-2 border border-[var(--foreground)] bg-[var(--foreground)] px-5 py-4 text-sm font-medium uppercase tracking-[0.08em] text-[var(--background)] transition-colors hover:border-[var(--primary)] hover:bg-[var(--primary)] disabled:cursor-not-allowed disabled:opacity-50 sm:w-auto"
+                >
+                  <span>{isPending ? "Sending..." : "Send Message"}</span>
+                  {!isPending && (
+                    <ArrowRight
+                      className="h-4 w-4 transition-transform group-hover:translate-x-1"
+                      strokeWidth={1.5}
+                      aria-hidden="true"
+                    />
+                  )}
+                </button>
 
-                <p className="text-[10px] text-zinc-500 leading-relaxed font-light mt-4 pt-4 border-t border-zinc-200 dark:border-white/5">
+                <p className="border-t border-[var(--border)] pt-5 text-xs leading-relaxed text-[var(--muted-foreground)]">
                   By sending this form, you are sharing the information above so I can read and respond to your message. I do not use contact form submissions for a mailing list unless you explicitly ask.
                 </p>
               </form>
             )}
           </div>
-          
         </div>
-      </div>
+      </section>
     </div>
   );
 }

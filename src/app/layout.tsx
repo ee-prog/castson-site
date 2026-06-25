@@ -5,7 +5,6 @@ import "./globals.css";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import ThemeObserver from "@/components/theme-observer";
-import { ScrollProgressBar } from "@/components/animations";
 
 const atacama = localFont({
   src: [
@@ -51,7 +50,7 @@ export const metadata: Metadata = {
     default: "Eli Castson | Castson Inc.",
     template: "%s | Eli Castson",
   },
-  description: "Eli Castson builds and partners with place-based experience brands rooted in service, taste, and story.",
+  description: "Eli Castson acquires, builds, and selectively advises distinctive service businesses where brand, operations, and standards have to hold.",
   keywords: [
     "Eli Castson",
     "Castson Inc.",
@@ -61,7 +60,7 @@ export const metadata: Metadata = {
     "Operational Standards",
     "Tourism Succession",
     "BraveHeart First Aid",
-    "Ripley Operating Layer"
+    "Ripley Private Infrastructure"
   ],
   authors: [{ name: "Eli Castson", url: "https://castson.com" }],
   creator: "Eli Castson",
@@ -71,13 +70,13 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://castson.com",
     title: "Eli Castson | Castson Inc.",
-    description: "Eli Castson builds and partners with place-based experience brands rooted in service, taste, and story. Castson Inc. is the vehicle. BraveHeart is the operating proof. Ripley is the operating layer.",
+    description: "Eli Castson acquires, builds, and selectively advises distinctive service businesses. BraveHeart is the operating proof. Ripley is the private infrastructure.",
     siteName: "Eli Castson",
   },
   twitter: {
     card: "summary_large_image",
     title: "Eli Castson | Castson Inc.",
-    description: "Eli Castson builds and partners with place-based experience brands rooted in service, taste, and story. Castson Inc. is the vehicle. BraveHeart is the operating proof. Ripley is the operating layer.",
+    description: "Eli Castson acquires, builds, and selectively advises distinctive service businesses. BraveHeart is the operating proof. Ripley is the private infrastructure.",
   },
 };
 
@@ -100,9 +99,8 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="min-h-full flex flex-col font-sans selection:bg-emerald-500/30 selection:text-emerald-200 relative">
+      <body className="min-h-full flex flex-col font-sans relative">
         <ThemeObserver />
-        <ScrollProgressBar />
         <Navbar />
         <main className="flex-1 flex flex-col w-full">
           {children}

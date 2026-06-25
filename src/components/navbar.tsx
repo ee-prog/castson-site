@@ -1,227 +1,142 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { ArrowUpRight, Sun, Moon } from "lucide-react";
+import { ArrowUpRight, Menu, Moon, Sun, X } from "lucide-react";
 
 const navItems = [
-  { name: "Home", href: "/" },
-  { name: "BraveHeart", href: "/braveheart" },
-  { name: "Ripley", href: "/ripley" },
-  { name: "Field Notes", href: "/field-notes" },
-  { name: "Now", href: "/now" },
-  { name: "About", href: "/about" },
-  { name: "Contact", href: "/contact" },
+  { name: "Home", href: "/", meta: "Opening" },
+  { name: "BraveHeart", href: "/braveheart", meta: "Operating proof" },
+  { name: "Ripley", href: "/ripley", meta: "Private infrastructure" },
+  { name: "Field Notes", href: "/field-notes", meta: "Observations" },
+  { name: "About", href: "/about", meta: "Profile" },
+  { name: "Contact", href: "/contact", meta: "Conversation" },
 ];
 
 export default function Navbar() {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
-  const [hoveredIdx, setHoveredIdx] = useState<number | null>(null);
-  const [isDark, setIsDark] = useState(true);
+  const [isDark, setIsDark] = useState(false);
 
-  // Sync isDark state with the actual DOM class
   useEffect(() => {
-    const sync = () => setIsDark(document.documentElement.classList.contains('dark'));
+    const sync = () => setIsDark(document.documentElement.classList.contains("dark"));
     sync();
     const observer = new MutationObserver(sync);
-    observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
+    observer.observe(document.documentElement, { attributes: true, attributeFilter: ["class"] });
     return () => observer.disconnect();
   }, []);
 
-  const toggleTheme = () => {
-    const win = window as Window & { __setTheme?: (mode: string) => void };
-    if (win.__setTheme) {
-      win.__setTheme(isDark ? 'light' : 'dark');
-    }
-  };
-
-  // Disable body scroll when menu is open and toggle menu-open class
   useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = "hidden";
-      document.documentElement.classList.add("menu-open");
-    } else {
-      document.body.style.overflow = "unset";
-      document.documentElement.classList.remove("menu-open");
-    }
+    document.documentElement.classList.toggle("menu-open", isOpen);
+    document.body.style.overflow = isOpen ? "hidden" : "";
+
     return () => {
-      document.body.style.overflow = "unset";
       document.documentElement.classList.remove("menu-open");
+      document.body.style.overflow = "";
     };
   }, [isOpen]);
 
+  const toggleTheme = () => {
+    const win = window as Window & { __setTheme?: (mode: string) => void };
+    win.__setTheme?.(isDark ? "light" : "dark");
+  };
+
   return (
     <>
-      {/* 1. Header Bar */}
-      <header className="fixed top-0 left-0 w-full h-20 z-50 border-b border-white/[0.03] backdrop-blur-md bg-zinc-950/60 transition-all duration-300">
-        <div className="mx-auto max-w-5xl h-full px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-          
-          {/* Logo */}
-          <Link 
-            href="/" 
+      <header className="fixed inset-x-0 top-0 z-50 h-[4.5rem] border-b border-[var(--border)] bg-background/90 backdrop-blur-md theme-transition">
+        <div className="site-container flex h-full items-center justify-between">
+          <Link
+            href="/"
             onClick={() => setIsOpen(false)}
-            className="group flex items-center gap-2 relative z-50"
+            className="group flex items-baseline gap-2 text-[1.05rem] leading-none"
+            aria-label="Castson Inc. home"
           >
-            <span className="text-lg font-normal tracking-widest text-zinc-950 dark:text-white transition-colors group-hover:text-emerald-400 font-display">
-              Castson Inc.
-            </span>
-            <span className="flex h-1.5 w-1.5 rounded-full bg-emerald-400 group-hover:animate-ping"></span>
+            <span className="font-display text-[var(--foreground)]">Castson Inc.</span>
+            <span className="h-1.5 w-1.5 translate-y-[-0.18rem] bg-[var(--primary)]" aria-hidden="true" />
           </Link>
 
-          {/* Actions: Theme Toggle + Burger */}
-          <div className="flex items-center gap-1">
-            {/* Theme Toggle */}
+          <div className="flex items-center gap-1.5">
             <button
               onClick={toggleTheme}
               type="button"
-              className="relative z-50 flex items-center justify-center w-10 h-10 text-zinc-500 hover:text-zinc-950 dark:text-zinc-400 dark:hover:text-white transition-colors cursor-pointer focus:outline-none"
-              aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
+              className="flex h-10 w-10 items-center justify-center text-[var(--muted-foreground)] transition-colors hover:text-[var(--foreground)]"
+              aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
             >
               {isDark ? (
-                <Sun className="h-[18px] w-[18px]" strokeWidth={1.5} />
+                <Sun className="h-[18px] w-[18px]" strokeWidth={1.4} />
               ) : (
-                <Moon className="h-[18px] w-[18px]" strokeWidth={1.5} />
+                <Moon className="h-[18px] w-[18px]" strokeWidth={1.4} />
               )}
             </button>
 
-            {/* Toggle Burger Button */}
             <button
-              onClick={() => setIsOpen(!isOpen)}
+              onClick={() => setIsOpen((open) => !open)}
               type="button"
-              className="group relative z-50 flex items-center justify-center w-11 h-11 -mr-2.5 focus:outline-none cursor-pointer"
-              aria-label="Toggle menu"
+              className="flex h-10 w-10 items-center justify-center text-[var(--foreground)] transition-colors hover:text-[var(--primary)]"
+              aria-label={isOpen ? "Close menu" : "Open menu"}
+              aria-expanded={isOpen}
             >
-              <div className="flex flex-col justify-center items-end gap-1.5 w-6 h-6">
-                {/* Top Line */}
-                <span 
-                  className={`h-[1px] ${isOpen ? "bg-white" : "bg-zinc-950 dark:bg-white"} transition-all duration-300 ease-out ${
-                    isOpen ? "w-6 rotate-45 translate-y-[7px]" : "w-6 group-hover:w-6"
-                  }`}
-                />
-                {/* Middle Line */}
-                <span 
-                  className={`h-[1px] ${isOpen ? "bg-white" : "bg-zinc-950 dark:bg-white"} transition-all duration-300 ease-out ${
-                    isOpen ? "w-0 opacity-0" : "w-4 group-hover:w-6"
-                  }`}
-                />
-                {/* Bottom Line */}
-                <span 
-                  className={`h-[1px] ${isOpen ? "bg-white" : "bg-zinc-950 dark:bg-white"} transition-all duration-300 ease-out ${
-                    isOpen ? "w-6 -rotate-45 -translate-y-[7px]" : "w-5 group-hover:w-6"
-                  }`}
-                />
-              </div>
+              {isOpen ? (
+                <X className="h-5 w-5" strokeWidth={1.4} />
+              ) : (
+                <Menu className="h-5 w-5" strokeWidth={1.4} />
+              )}
             </button>
           </div>
         </div>
       </header>
 
-      {/* 2. Fullscreen Menu Overlay */}
       <div
-        className={`fixed inset-0 w-full h-screen bg-[#050505] z-40 transition-all duration-500 ease-in-out overflow-y-auto ${
-          isOpen 
-            ? "translate-y-0 opacity-100 pointer-events-auto" 
-            : "-translate-y-full opacity-0 pointer-events-none"
+        className={`fixed inset-0 z-40 overflow-y-auto bg-[var(--background)] pt-[4.5rem] theme-transition ${
+          isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
         }`}
+        aria-hidden={!isOpen}
       >
-        <div className="min-h-full flex flex-col justify-between p-6 sm:p-12 lg:p-20 max-w-5xl mx-auto w-full relative">
-          {/* Top spacer matching header height */}
-          <div className="h-20 w-full shrink-0"></div>
+        <div className="site-container flex min-h-[calc(100vh-4.5rem)] flex-col justify-between py-10 md:py-16">
+          <div className="grid gap-10 lg:grid-cols-12 lg:gap-16">
+            <div className="lg:col-span-4">
+              <p className="page-kicker">Index</p>
+              <p className="mt-5 max-w-xs text-sm leading-relaxed text-[var(--muted-foreground)]">
+                Castson Inc. is a record of ownership, operating discipline, private infrastructure, and selective advisory work.
+              </p>
+            </div>
 
-          {/* Main Content Area: Menu Links & Side Info */}
-          <div className="flex-1 flex flex-col lg:grid lg:grid-cols-12 items-center gap-8 lg:gap-12 w-full z-10 my-6 lg:my-0">
-            
-            {/* Left Column: Giant Navigation Links */}
-            <nav className="w-full lg:col-span-8 space-y-2 sm:space-y-4">
-              {navItems.map((item, idx) => {
-                const isActive = pathname === item.href || (item.href !== "/" && pathname.startsWith(item.href));
-                
-                // Calculate styling based on hover states
-                let opacityClass = "opacity-100";
-                if (hoveredIdx !== null && hoveredIdx !== idx) {
-                  opacityClass = "opacity-20 scale-95";
-                }
+            <nav className="lg:col-span-8" aria-label="Main navigation">
+              <div className="ruled-list">
+                {navItems.map((item, idx) => {
+                  const isActive = pathname === item.href || (item.href !== "/" && pathname.startsWith(item.href));
 
-                return (
-                  <div 
-                    key={item.href}
-                    className={`transform transition-all duration-500 ease-out ${opacityClass}`}
-                    onMouseEnter={() => setHoveredIdx(idx)}
-                    onMouseLeave={() => setHoveredIdx(null)}
-                  >
+                  return (
                     <Link
+                      key={item.href}
                       href={item.href}
                       onClick={() => setIsOpen(false)}
-                      className="group flex items-center gap-4 py-3 focus:outline-none w-full border-b border-white/[0.02] lg:border-b-0"
+                      className="group grid gap-3 py-5 text-[var(--foreground)] transition-colors hover:text-[var(--primary)] sm:grid-cols-[4rem_1fr_auto]"
                     >
-                      <span className="text-zinc-700 text-xs sm:text-sm font-mono tracking-wider">
-                        {String(idx).padStart(2, "0")}/
-                      </span>
-                      <span className={`text-2xl sm:text-5xl lg:text-6xl font-normal tracking-tighter font-display transition-colors duration-300 ${
-                        isActive ? "text-emerald-400" : "text-white group-hover:text-emerald-400"
-                      }`}>
+                      <span className="metadata text-[var(--primary)]">{String(idx).padStart(2, "0")}</span>
+                      <span className="font-display text-3xl leading-none sm:text-5xl">
                         {item.name}
                       </span>
+                      <span className="metadata self-end text-left text-[var(--muted-foreground)] sm:text-right">
+                        {isActive ? "Current" : item.meta}
+                      </span>
                     </Link>
-                  </div>
-                );
-              })}
+                  );
+                })}
+              </div>
             </nav>
-
-            {/* Right Column: Contact & Metadata Card (Desktop only) */}
-            <div className="hidden lg:block lg:col-span-4 lg:pl-12 lg:border-l border-white/5 space-y-8 self-center">
-              <div>
-                <span className="text-[10px] font-bold uppercase tracking-widest text-emerald-400 font-mono">
-                  [Inquiries]
-                </span>
-                <h4 className="text-white text-sm font-bold uppercase mt-2">Castson Inc.</h4>
-                <Link 
-                  href="/contact" 
-                  onClick={() => setIsOpen(false)}
-                  className="group flex items-center gap-1.5 text-zinc-400 hover:text-white transition-colors mt-2 text-sm"
-                >
-                  Get in touch
-                  <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 text-emerald-400" strokeWidth={1.5} aria-hidden="true" />
-                </Link>
-              </div>
-
-              <div>
-                <span className="text-[10px] font-bold uppercase tracking-widest text-emerald-400 font-mono">
-                  [Focus]
-                </span>
-                <p className="text-xs text-zinc-400 leading-relaxed font-light mt-2">
-                  Place-Based Brands<br />
-                  Service & Standards<br />
-                  Operating Systems
-                </p>
-              </div>
-
-              <div>
-                <span className="text-[10px] font-bold uppercase tracking-widest text-emerald-400 font-mono">
-                  [Geography]
-                </span>
-                <p className="text-xs text-zinc-400 leading-relaxed font-light mt-2">
-                  Halifax Region, NS<br />
-                  Canada
-                </p>
-              </div>
-            </div>
           </div>
 
-          {/* Bottom Bar: Copyright details */}
-          <div className="w-full shrink-0 border-t border-white/5 pt-6 flex justify-between items-center text-[10px] text-zinc-600 font-mono z-10 mt-auto">
+          <div className="mt-12 flex flex-col gap-4 border-t border-[var(--border)] pt-6 metadata sm:flex-row sm:items-center sm:justify-between">
             <span>© {new Date().getFullYear()} Castson Inc.</span>
-            <div className="flex gap-4 items-center">
-              <Link href="/contact" onClick={() => setIsOpen(false)} className="hover:text-white transition-colors">
-                Contact
-              </Link>
-              <span className="text-zinc-800">•</span>
-              <Link href="/colophon" onClick={() => setIsOpen(false)} className="hover:text-white transition-colors">
-                Colophon
-              </Link>
-            </div>
+            <Link
+              href="/contact"
+              onClick={() => setIsOpen(false)}
+              className="inline-flex items-center gap-1.5 text-[var(--foreground)] transition-colors hover:text-[var(--primary)]"
+            >
+              Contact <ArrowUpRight className="h-3.5 w-3.5" strokeWidth={1.5} aria-hidden="true" />
+            </Link>
           </div>
         </div>
       </div>

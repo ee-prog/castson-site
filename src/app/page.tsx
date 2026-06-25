@@ -1,742 +1,381 @@
-"use client";
-
-import React from "react";
+import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, ChevronRight, Check, Minus } from "lucide-react";
-import { ScrollReveal, StaggerChildren, TextReveal, CursorGlow, ParallaxLayer, GradientMesh, Magnetic } from '@/components/animations';
+import { EditorialImage, TextLink } from "@/components/editorial";
 
-function ImagePlaceholder({ label }: { label: string }) {
-  const refCode = label
-    .toUpperCase()
-    .replace(/[^A-Z0-9\s]/g, "")
-    .trim()
-    .replace(/\s+/g, "-");
+const focusTerms = ["Brand", "Service", "Systems", "Technology", "Ownership"];
 
-  return (
-    <div className="w-full aspect-[16/10] bg-zinc-900/10 border border-white/5 rounded-sm flex flex-col justify-between p-4 relative overflow-hidden group theme-transition">
-      {/* Blueprint grid lines */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff01_1px,transparent_1px),linear-gradient(to_bottom,#ffffff01_1px,transparent_1px)] bg-[size:1.5rem_1.5rem] pointer-events-none"></div>
-      <span className="text-[8px] font-mono text-zinc-600 tracking-widest uppercase relative z-10 block">
-        REF // {refCode}
-      </span>
-      <div className="w-full h-[1px] bg-white/[0.03] relative z-10"></div>
-    </div>
-  );
-}
+const advisoryAreas = [
+  "Positioning",
+  "Commercial narrative",
+  "Customer experience",
+  "Service standards",
+  "Brand and operating model",
+  "Digital infrastructure",
+  "Marketing intelligence",
+  "Founder and executive judgment",
+];
+
+const operatingPriorities = [
+  "Revenue path",
+  "Service standards",
+  "Customer handoffs",
+  "Timing & rhythm",
+  "Approval points",
+  "Operational drag",
+  "Legacy transition",
+  "Commercial pressure",
+  "Leadership judgment",
+];
+
+const questions = [
+  "What makes a place worth travelling for?",
+  "How do you scale care without making it feel standardized?",
+  "Can better systems make hospitality feel more human, not less?",
+  "How do you preserve the character of a place while making the business stronger?",
+  "What should technology handle quietly, and what should remain human?",
+  "How do you build operational leverage that makes a brand more distinctive, not more generic?",
+];
 
 export default function Home() {
   return (
-    <div className="relative w-full min-h-screen bg-transparent overflow-hidden flex flex-col pt-20">
-
-      {/* Hero Section */}
-      <CursorGlow>
-        <section className="relative py-12 md:py-32 border-b border-white/[0.03] flex items-center theme-transition">
-          {/* Ambient gradient mesh — drifting color points */}
-          <GradientMesh className="-z-10" cycleDuration={14} />
-
-          <div className="mx-auto max-w-5xl w-full px-4 sm:px-6 lg:px-8 relative z-20">
-            <ScrollReveal>
-              <div className="max-w-3xl space-y-6">
-                {/* Eyebrow status pill */}
-                <div className="inline-flex items-center gap-2.5 rounded-sm border border-emerald-500/20 bg-emerald-500/[0.02] px-3 py-1 text-[9px] font-bold uppercase tracking-widest text-emerald-400 font-mono">
-                  <span className="w-[2px] h-3 bg-emerald-400 animate-[cursor-blink_1.2s_steps(2)_infinite]"></span>
-                  <span>Eli Castson</span>
-                </div>
-
-                {/* Title */}
-                <TextReveal
-                  text="I work where taste has to become operational."
-                  as="h1"
-                  className="text-white font-display"
-                />
-
-                <div className="space-y-4 text-sm sm:text-base text-zinc-300 font-light leading-relaxed max-w-2xl pt-2">
-                  <p>
-                    Through Castson Inc., I acquire, build, and selectively advise experience-led businesses.
-                  </p>
-                  <p>
-                    The work is simple to describe and difficult to do well: clarify the promise, strengthen the service, and build the systems underneath so the business becomes more capable without becoming generic.
-                  </p>
-                </div>
-
-                <div className="flex flex-wrap items-center gap-x-3 gap-y-2 text-[10px] font-mono text-zinc-500 uppercase tracking-widest pt-4">
-                  <span>Brand</span>
-                  <span className="text-zinc-700">/</span>
-                  <span>Service</span>
-                  <span className="text-zinc-700">/</span>
-                  <span>Systems</span>
-                  <span className="text-zinc-700">/</span>
-                  <span>Ownership</span>
-                  <span className="text-zinc-700">/</span>
-                  <span>Advisory</span>
-                </div>
-
-                <div className="pt-6">
-                  <Magnetic inline strength={0.4} radius={80}>
-                    <Link 
-                      href="/contact" 
-                      className="group inline-flex items-center gap-2 text-xs font-mono font-bold uppercase text-emerald-400 hover:text-white transition-colors tracking-widest"
-                    >
-                      <span>Start a Conversation</span>
-                      <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" strokeWidth={1.5} aria-hidden="true" />
-                    </Link>
-                  </Magnetic>
-                </div>
-              </div>
-            </ScrollReveal>
-          </div>
-        </section>
-      </CursorGlow>
-
-      {/* Opening Narrative */}
-      <section className="py-12 md:py-20 border-b border-white/[0.03] theme-transition">
-        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 relative z-20">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-start">
-            {/* Left Col: Narrative */}
-            <div className="lg:col-span-7 space-y-8 text-zinc-300 font-light leading-relaxed text-sm sm:text-base">
-              <ScrollReveal>
-                <p className="text-sm text-white font-normal font-display">
-                  I spent much of my career helping organizations change from the outside.
-                </p>
-              </ScrollReveal>
-              
-                <StaggerChildren className="flex flex-wrap gap-2 py-2">
-                  {["Creative direction", "Advertising", "Digital transformation", "Technology", "Strategy"].map((tag) => (
-                    <span key={tag} className="text-[10px] font-mono tracking-wider uppercase px-2.5 py-1 border border-white/5 bg-zinc-900/30 rounded-sm text-zinc-400">
-                      {tag}
-                    </span>
-                  ))}
-                </StaggerChildren>
-
-              <ScrollReveal delay={0.15}>
-                <div className="space-y-6">
-                  <p>
-                    That gave me range. It also taught me the limits of advice without consequence.
-                  </p>
-                  
-                  <p className="border-l border-white/10 pl-4 text-zinc-400 font-light opacity-80">
-                    Ownership changed the standard.
-                  </p>
-
-                  <p>
-                    When you carry the business yourself, there is no presentation layer between the idea and the result. The customer books or they do not. The service holds or it does not. The team is supported or it is not. The business becomes clearer or heavier.
-                  </p>
-
-                  <p className="text-white font-medium">
-                    That directness now shapes the work.
-                  </p>
-
-                  <p>
-                    For eighteen years, Switzerland was home. It still is, in many ways. Much of my perspective, taste, and opportunity came from there.
-                  </p>
-
-                  <p>
-                    Now I work from Nova Scotia, with one foot in operating reality and one foot in the kind of strategic and creative conversations that require distance, judgment, and trust.
-                  </p>
-                </div>
-              </ScrollReveal>
+    <div className="site-shell">
+      <section className="relative min-h-[calc(88svh-4.5rem)] border-b border-[var(--border)] sm:min-h-[calc(92svh-4.5rem)] lg:min-h-[calc(100svh-4.5rem)]">
+        <Image
+          src="/images/editorial/eli-mountain-portrait.webp"
+          alt="Eli Castson in a mountain landscape"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
+          style={{ objectPosition: "52% center" }}
+        />
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(244,240,232,0.88)_0%,rgba(244,240,232,0.72)_42%,rgba(244,240,232,0.20)_100%)] dark:bg-[linear-gradient(90deg,rgba(21,20,17,0.88)_0%,rgba(21,20,17,0.68)_46%,rgba(21,20,17,0.20)_100%)]" />
+        <div className="site-container relative z-10 flex min-h-[calc(88svh-4.5rem)] items-end pb-14 pt-16 sm:min-h-[calc(92svh-4.5rem)] md:pb-24 lg:min-h-[calc(100svh-4.5rem)]">
+          <div className="max-w-[54rem]">
+            <span className="page-kicker">Eli Castson</span>
+            <h1 className="mt-5 max-w-[14ch] md:max-w-[18ch]">
+              I make distinctive businesses more intelligent.
+            </h1>
+            <div className="hero-copy mt-8 max-w-2xl space-y-5 body-copy">
+              <p>
+                Through Castson Inc., I acquire, build, and selectively advise distinctive service businesses.
+              </p>
+              <p>
+                I work across brand, service, systems, and technology to make the promise sharper, the operation stronger, and the business less dependent on guesswork.
+              </p>
             </div>
-
-            {/* Right Col: Image Placeholder */}
-            <div className="lg:col-span-5 lg:sticky lg:top-28 space-y-4">
-              <ScrollReveal direction="right" delay={0.2}>
-                <ImagePlaceholder label="Eli in Switzerland / Nova Scotia shore" />
-                <div className="text-[10px] font-mono text-zinc-500 uppercase tracking-widest text-right">
-                  [ Bay of Fundy, Nova Scotia ]
-                </div>
-              </ScrollReveal>
+            <div className="tag-line mt-8">
+              {focusTerms.map((term) => (
+                <span key={term}>{term}</span>
+              ))}
+            </div>
+            <div className="mt-10">
+              <TextLink href="/contact">Start a Conversation</TextLink>
             </div>
           </div>
         </div>
       </section>
 
-      {/* In Practice — BraveHeart */}
-      <section className="relative py-12 md:py-24 border-b border-white/[0.03] bg-black/[0.03] theme-transition">
-        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 relative z-20">
-          <div className="max-w-4xl space-y-12">
-            
-            <ScrollReveal>
-              <div className="border-l-2 border-emerald-400 pl-6 space-y-4">
-                <span className="text-[9px] font-mono tracking-widest uppercase text-emerald-400">[ In Practice ]</span>
-                <TextReveal
-                  text="BraveHeart First Aid"
-                  as="h2"
-                  className="font-medium text-white"
-                />
-                <p className="text-zinc-300 font-light leading-relaxed">
+      <section className="section">
+        <div className="site-container grid gap-12 lg:grid-cols-12 lg:gap-16">
+          <div className="lg:col-span-7">
+            <div className="body-copy">
+              <p className="emphasis text-xl leading-relaxed">
+                For years, I helped companies change from the outside.
+              </p>
+              <div className="tag-line py-2">
+                <span>Creative direction</span>
+                <span>Advertising</span>
+                <span>Digital transformation</span>
+                <span>Technology</span>
+                <span>Strategy</span>
+              </div>
+              <p>That gave me range. It also taught me what advice cannot do when nobody has to carry the consequence.</p>
+              <p className="emphasis border-l border-[var(--border-strong)] pl-5">
+                Ownership changed the standard.
+              </p>
+              <p>
+                When you carry the business yourself, there is no presentation layer between the idea and the result. The customer books or they do not. The service holds or it does not. The team is supported or it is not.
+              </p>
+              <p className="emphasis">That directness now shapes the work.</p>
+              <p className="thumb-stop md:hidden">Ownership made the work less abstract.</p>
+              <p>
+                For eighteen years, Switzerland was home. It still is, in many ways. Much of my perspective, taste, and opportunity came from there.
+              </p>
+              <p>
+                Now I work from Nova Scotia, close enough to the operating floor to know what holds, and far enough from inherited assumptions to see what should change.
+              </p>
+            </div>
+          </div>
+          <div className="lg:col-span-5">
+            <EditorialImage
+              src="/images/editorial/eli-business-portrait.png"
+              alt="Eli Castson in a black suit leaning against concrete architecture"
+              caption="Eli Castson / advisory, ownership, operating discipline"
+              aspect="aspect-[4/5]"
+              className="mobile-bleed"
+              objectPosition="52% center"
+              sizes="(max-width: 1024px) 100vw, 36vw"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section className="section section-quiet">
+        <div className="site-container">
+          <div className="max-w-4xl">
+            <span className="section-kicker">In Practice</span>
+            <h2>BraveHeart First Aid</h2>
+            <div className="mt-8 grid gap-8 md:grid-cols-2">
+              <div className="body-copy">
+                <p className="emphasis">
                   BraveHeart is the company I acquired and now operate.
                 </p>
-                <p className="text-zinc-300 font-light leading-relaxed">
-                  It is practical, local, and serious. Standards, timing, care, communication, and systems have to hold because people depend on them.
+                <p>
+                  It is practical, local, and serious. The promise is simple: when someone needs help, the people in the room should know what to do. That standard has to show up in the training, the booking path, and the way the company runs.
                 </p>
               </div>
-            </ScrollReveal>
-
-            <ScrollReveal delay={0.1}>
-              <div className="bg-zinc-900/30 border border-white/5 rounded-sm p-6 sm:p-10 relative overflow-hidden space-y-6">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-emerald-500/5 rounded-full blur-2xl"></div>
-                <p className="text-base sm:text-lg text-white font-medium leading-relaxed">
-                  &ldquo;Ownership made the work less abstract.&rdquo;
-                </p>
-                <p className="text-zinc-400 text-sm font-light">
+              <blockquote className="quiet-panel text-xl leading-relaxed text-[var(--foreground)]">
+                “Ownership made the work less abstract.”
+                <span className="mt-5 block text-sm text-[var(--muted-foreground)]">
                   Trust is operational.
-                </p>
+                </span>
+              </blockquote>
+            </div>
+            <div className="mt-10">
+              <TextLink href="/braveheart">Explore BraveHeart</TextLink>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="site-container grid gap-12 lg:grid-cols-12 lg:gap-16">
+          <div className="lg:col-span-5">
+            <EditorialImage
+              src="/images/editorial/scarpa-geometry.webp"
+              alt="Minimal white architectural geometry with a circular opening"
+              caption="Private infrastructure / authority before speed"
+              aspect="aspect-[4/3] sm:aspect-[16/10]"
+              className="mobile-bleed"
+              sizes="(max-width: 1024px) 100vw, 36vw"
+            />
+          </div>
+          <div className="lg:col-span-7">
+            <span className="section-kicker">Operating Layer</span>
+            <h2>Ripley</h2>
+            <div className="body-copy mt-7">
+              <p className="emphasis">Ripley is proof that the boundary between operator and builder is dissolving.</p>
+              <p>
+                Most AI automation fails when it is added before the company is legible. Ripley works because the business came first: the standards, the approval rules, the customer path, and the owner’s judgment.
+              </p>
+              <p>
+                It began inside BraveHeart when the work was clear enough to build what the business actually needed: booking, payments, fulfilment, reminders, customer changes, management visibility, and a controlled way for the work to move.
+              </p>
+              <p className="border-l border-[var(--border-strong)] pl-5">
+                The value is pace with authority: intelligence directed inside a company whose rules are clear, with explicit standards for what can move and what must stop for approval.
+              </p>
+              <p className="emphasis">The company becomes more capable because the work has somewhere to go.</p>
+            </div>
+            <div className="mt-10">
+              <TextLink href="/ripley">Explore Ripley</TextLink>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section section-quiet">
+        <div className="site-container grid gap-12 lg:grid-cols-12 lg:gap-16">
+          <div className="lg:col-span-7">
+            <span className="section-kicker">Selective Advisory</span>
+            <h2>Senior thinking beside the person carrying the consequence.</h2>
+            <div className="body-copy mt-7">
+              <p>
+                I take on a small amount of advisory and sparring-partner work with founders, CEOs, CMOs, owners, and operators responsible for brand, service, growth, or transition.
+              </p>
+              <p className="mobile-pull emphasis border-l border-[var(--border-strong)] pl-5">
+                This is not agency work. It is not outsourced execution.
+              </p>
+              <p>
+                The work is usually about the promise a company is asking customers to trust, where that trust breaks in delivery, and what has to change across brand, service, team, infrastructure, and commercial model.
+              </p>
+            </div>
+          </div>
+          <aside className="lg:col-span-5">
+            <div className="quiet-panel">
+              <span className="section-kicker">Relevant when the work involves</span>
+              <div className="ruled-list metadata">
+                {advisoryAreas.map((area) => (
+                  <div key={area}>{area}</div>
+                ))}
               </div>
-            </ScrollReveal>
+            </div>
+          </aside>
+        </div>
+      </section>
 
-            <ScrollReveal delay={0.15}>
-              <div className="pt-4">
-                <Magnetic inline strength={0.4} radius={80}>
-                  <Link 
-                    href="/braveheart" 
-                    className="group inline-flex items-center gap-2 text-xs font-mono font-bold uppercase text-emerald-400 hover:text-white transition-colors tracking-widest"
-                  >
-                    <span>Explore BraveHeart</span>
-                    <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" strokeWidth={1.5} aria-hidden="true" />
-                  </Link>
-                </Magnetic>
+      <section className="section">
+        <div className="site-container grid gap-12 lg:grid-cols-12 lg:gap-16">
+          <div className="lg:col-span-7">
+            <span className="section-kicker">Behind the Experience</span>
+            <h2>Every promise has machinery behind it.</h2>
+            <div className="body-copy mt-7">
+              <p>
+                Most people look at a hotel, a travel service, a training company, or a product business and see the front of house.
+              </p>
+              <p className="emphasis text-xl leading-relaxed">
+                I tend to see the handoffs underneath.
+              </p>
+              <p>
+                A distinct brand is not just a story. It is the operating discipline that lets the same standard show up again tomorrow.
+              </p>
+              <p className="emphasis">That is where I like to work.</p>
+            </div>
+          </div>
+          <div className="lg:col-span-5">
+            <div className="quiet-panel">
+              <span className="section-kicker">Operating Priorities</span>
+              <div className="grid grid-cols-1 gap-x-6 sm:grid-cols-2 metadata">
+                {operatingPriorities.map((priority) => (
+                  <div key={priority} className="border-t border-[var(--border)] py-3">
+                    {priority}
+                  </div>
+                ))}
               </div>
-            </ScrollReveal>
-
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Systems Layer — Ripley */}
-      <section className="py-12 md:py-24 border-b border-white/[0.03] theme-transition">
-        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 relative z-20">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-start">
-            
-            {/* Left: Image Placeholder */}
-            <div className="lg:col-span-5 space-y-4 order-last lg:order-first">
-              <ScrollReveal direction="left">
-                <ImagePlaceholder label="Ripley Operating Layer Interface" />
-                <div className="text-[10px] font-mono text-zinc-500 uppercase tracking-widest">
-                  [ Operating Layer Architecture ]
-                </div>
-              </ScrollReveal>
-            </div>
-
-            {/* Right: Narrative */}
-            <div className="lg:col-span-7 space-y-6 text-zinc-300 font-light leading-relaxed text-sm sm:text-base">
-              <ScrollReveal delay={0.1}>
-                <div className="space-y-3">
-                  <span className="text-[9px] font-mono tracking-widest uppercase text-emerald-400">[ Systems Layer ]</span>
-                  <TextReveal
-                    text="Ripley"
-                    as="h2"
-                    className="font-medium text-white"
-                  />
-                  <p className="text-sm text-zinc-200">
-                    Ripley is the operating layer emerging from the work.
-                  </p>
-                </div>
-              </ScrollReveal>
-              
-              <ScrollReveal delay={0.15}>
-                <div className="space-y-6">
-                  <p>
-                    It began inside BraveHeart as the business became clearer and started asking for tools that did not exist: better workflows, operational memory, internal software, automation, decision support, and visibility.
-                  </p>
-
-                  <p className="border-l border-white/15 pl-4 text-zinc-400 font-light opacity-80">
-                    The point is not to make the company artificially intelligent.
-                  </p>
-
-                  <p className="text-white font-medium">
-                    The point is to make it more coherent.
-                  </p>
-                </div>
-              </ScrollReveal>
-
-              <ScrollReveal delay={0.2}>
-                <div className="pt-4">
-                  <Magnetic inline strength={0.4} radius={80}>
-                    <Link 
-                      href="/ripley" 
-                      className="group inline-flex items-center gap-2 text-xs font-mono font-bold uppercase text-emerald-400 hover:text-white transition-colors tracking-widest"
-                    >
-                      <span>Explore Ripley</span>
-                      <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" strokeWidth={1.5} aria-hidden="true" />
-                    </Link>
-                  </Magnetic>
-                </div>
-              </ScrollReveal>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      {/* Selective Advisory */}
-      <section className="py-12 md:py-24 border-b border-white/[0.03] bg-black/[0.03] theme-transition">
-        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 relative z-20">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-start">
-            
-            {/* Left: Narrative */}
-            <div className="lg:col-span-7 space-y-6 text-zinc-300 font-light leading-relaxed text-sm sm:text-base">
-              <ScrollReveal>
-                <div className="space-y-3">
-                  <span className="text-[9px] font-mono tracking-widest uppercase text-emerald-400">[ Selective Advisory ]</span>
-                  <TextReveal
-                    text="Senior, direct thinking beside the person carrying the decision."
-                    as="h2"
-                    className="font-medium text-white"
-                  />
-                </div>
-              </ScrollReveal>
-              
-              <ScrollReveal delay={0.1}>
-                <div className="space-y-6">
-                  <p>
-                    I take on a small number of advisory and sparring-partner engagements with founders, CEOs, CMOs, owners, and operators working on experience-led businesses.
-                  </p>
-
-                  <p className="border-l border-white/10 pl-4 text-zinc-400 font-light opacity-80">
-                    This is not agency work. It is not outsourced execution.
-                  </p>
-
-                  <p>
-                    The work is usually about clarity: what the business is really promising, where that promise breaks operationally, and how the brand, service, team, systems, and commercial model need to align.
-                  </p>
-
-                  <p className="text-zinc-400 text-sm font-light border-l-2 border-emerald-400 pl-4">
-                    Current advisory work includes a senior strategic and creative sparring-partner engagement with the CMO of a leading European luxury wellness hospitality brand.
-                  </p>
-                </div>
-              </ScrollReveal>
-            </div>
-
-            {/* Right: Relevance Card */}
-            <div className="lg:col-span-5 space-y-4 lg:sticky lg:top-28">
-              <ScrollReveal direction="right" delay={0.2}>
-                <div className="rounded-sm border border-white/5 bg-zinc-900/30 p-6 sm:p-8 space-y-6">
-                  <span className="text-[9px] font-mono text-zinc-500 uppercase tracking-widest block border-b border-white/5 pb-2">
-                    [ Relevant when the work involves ]
-                  </span>
-                  
-                  <StaggerChildren className="space-y-3 text-xs font-mono text-zinc-400" staggerDelay={0.05}>
-                    {[
-                      "Positioning",
-                      "Commercial narrative",
-                      "Guest or customer experience",
-                      "Service standards",
-                      "Brand and operating clarity",
-                      "Digital systems",
-                      "Marketing intelligence",
-                      "Founder or executive decision support"
-                    ].map((item) => (
-                      <li key={item} className="flex items-start gap-2">
-                        <ChevronRight className="h-4 w-4 shrink-0 text-emerald-500 mt-0.5" strokeWidth={1.5} aria-hidden="true" />
-                        <span>{item}</span>
-                      </li>
-                    ))}
-                  </StaggerChildren>
-                </div>
-              </ScrollReveal>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      {/* System Mechanics */}
-      <section className="py-12 md:py-24 border-b border-white/[0.03] theme-transition">
-        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 relative z-20">
-          <div className="max-w-4xl space-y-12">
-            
-            <ScrollReveal>
-              <div className="space-y-4">
-                <span className="text-[9px] font-mono tracking-widest uppercase text-emerald-400">[ System Mechanics ]</span>
-                <TextReveal
-                  text="Every experience is supported by a system."
-                  as="h2"
-                  className="font-medium text-white"
-                />
+      <section className="section section-quiet">
+        <div className="site-container grid gap-12 lg:grid-cols-12 lg:gap-16">
+          <div className="lg:col-span-7">
+            <span className="section-kicker">Identity</span>
+            <h2>What Castson Inc. is building</h2>
+            <div className="body-copy mt-7">
+              <p className="emphasis">
+                Castson Inc. is becoming a home for service businesses with real standards and stronger operating infrastructure behind them.
+              </p>
+              <p>The pattern is deliberate:</p>
+              <div className="ruled-list">
+                {[
+                  "Find businesses with real service quality, place, reputation, or trust.",
+                  "Preserve what makes them distinct.",
+                  "Sharpen the promise and the standard.",
+                  "Build the infrastructure behind the experience.",
+                  "Make the business more capable without making it generic.",
+                ].map((item) => (
+                  <div key={item}>{item}</div>
+                ))}
               </div>
-            </ScrollReveal>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12 text-zinc-300 font-light text-sm sm:text-base leading-relaxed">
-              <ScrollReveal delay={0.1}>
-                <div className="space-y-6">
-                  <p>
-                    Most people look at a hotel, a travel service, a training company, or a product business and see the front of house.
-                  </p>
-                  <p className="text-white font-medium text-lg">
-                    I tend to see the coordination underneath.
-                  </p>
-                  <StaggerChildren className="flex flex-wrap gap-2" staggerDelay={0.05}>
-                    {["Information flows", "Service standards", "Feedback loops", "Timing & Rhythm", "Decision points", "Operational drag", "Legacy transition", "Commercial pressure", "Human judgment"].map((term) => (
-                      <span key={term} className="text-xs font-mono tracking-wide px-3 py-1 bg-white/5 border border-white/5 rounded-sm text-white">
-                        {term}
-                      </span>
-                    ))}
-                  </StaggerChildren>
-                  <p>
-                    A distinct brand is not just a logo or story. It is a living system that makes a standard of care possible.
-                  </p>
-                  <p className="text-white font-medium">
-                    That is where I like to work.
-                  </p>
-                </div>
-              </ScrollReveal>
-
-              <ScrollReveal direction="right" delay={0.15}>
-                <div className="space-y-4 border border-white/5 bg-black/[0.03] p-6 rounded-sm">
-                  <span className="text-[9px] font-mono text-zinc-500 uppercase tracking-widest block border-b border-white/5 pb-2">
-                    [ Operational Friction ]
-                  </span>
-                  <p className="text-xs text-zinc-400">
-                    And most operations drift over time:
-                  </p>
-                  <StaggerChildren className="space-y-2 text-xs font-mono text-zinc-400" staggerDelay={0.06}>
-                    <li className="flex items-start gap-1.5">
-                      <Minus className="h-4 w-4 shrink-0 text-red-500 mt-0.5" strokeWidth={1.5} aria-hidden="true" />
-                      <span>They collect assumptions.</span>
-                    </li>
-                    <li className="flex items-start gap-1.5">
-                      <Minus className="h-4 w-4 shrink-0 text-red-500 mt-0.5" strokeWidth={1.5} aria-hidden="true" />
-                      <span>They inherit old habits.</span>
-                    </li>
-                    <li className="flex items-start gap-1.5">
-                      <Minus className="h-4 w-4 shrink-0 text-red-500 mt-0.5" strokeWidth={1.5} aria-hidden="true" />
-                      <span>They compromise on standards.</span>
-                    </li>
-                    <li className="flex items-start gap-1.5">
-                      <Minus className="h-4 w-4 shrink-0 text-red-500 mt-0.5" strokeWidth={1.5} aria-hidden="true" />
-                      <span>They make simple coordination complicated.</span>
-                    </li>
-                    <li className="flex items-start gap-1.5">
-                      <Minus className="h-4 w-4 shrink-0 text-red-500 mt-0.5" strokeWidth={1.5} aria-hidden="true" />
-                      <span>They ask staff to compensate for what the system itself should handle.</span>
-                    </li>
-                  </StaggerChildren>
-                  <p className="pt-2 text-xs font-mono text-white border-t border-white/5 mt-4">
-                    I am interested in resolving that. Designing the systems that support hospitality.
-                  </p>
-                </div>
-              </ScrollReveal>
+              <p>BraveHeart is the operating proof.</p>
+              <p>Ripley turns standards and recurring work into usable infrastructure.</p>
+              <p className="emphasis">Castson.com is the record.</p>
             </div>
-
           </div>
-        </div>
-      </section>
-
-      {/* What Castson Inc. is building */}
-      <section className="py-12 md:py-24 relative theme-transition border-b border-white/[0.03]">
-        <div className="absolute inset-0 bg-gradient-to-t from-emerald-500/[0.01] via-transparent to-transparent pointer-events-none"></div>
-        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 relative z-20">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-start">
-            
-            {/* Left: Summary */}
-            <div className="lg:col-span-7 space-y-6 text-zinc-300 font-light leading-relaxed text-sm sm:text-base">
-              <ScrollReveal>
-                <div className="space-y-3">
-                  <span className="text-[9px] font-mono tracking-widest uppercase text-emerald-400">[ Identity ]</span>
-                  <TextReveal
-                    text="What Castson Inc. is building"
-                    as="h2"
-                    className="font-medium text-white"
-                  />
-                  <p className="text-sm text-zinc-200">
-                    Castson Inc. is becoming a home for experience-led businesses with character.
-                  </p>
-                </div>
-              </ScrollReveal>
-
-              <ScrollReveal delay={0.1}>
-                <div className="space-y-4">
-                  <p>
-                    The model is quiet:
-                  </p>
-                  
-                  <StaggerChildren className="space-y-3 pl-4 border-l border-white/10 text-xs font-mono text-zinc-400 list-none" staggerDelay={0.06}>
-                    <li className="flex items-start gap-2">
-                      <Check className="h-4 w-4 shrink-0 text-emerald-500 mt-0.5" strokeWidth={1.5} aria-hidden="true" />
-                      <span>Find businesses with real taste, service, place, or reputation.</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <Check className="h-4 w-4 shrink-0 text-emerald-500 mt-0.5" strokeWidth={1.5} aria-hidden="true" />
-                      <span>Preserve what makes them distinct.</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <Check className="h-4 w-4 shrink-0 text-emerald-500 mt-0.5" strokeWidth={1.5} aria-hidden="true" />
-                      <span>Strengthen the story and standards.</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <Check className="h-4 w-4 shrink-0 text-emerald-500 mt-0.5" strokeWidth={1.5} aria-hidden="true" />
-                      <span>Build the systems behind the experience.</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <Check className="h-4 w-4 shrink-0 text-emerald-500 mt-0.5" strokeWidth={1.5} aria-hidden="true" />
-                      <span>Make the business more capable without making it generic.</span>
-                    </li>
-                  </StaggerChildren>
-                </div>
-              </ScrollReveal>
-
-              <ScrollReveal delay={0.15}>
-                <div className="space-y-3 border-t border-white/5 pt-4 text-zinc-400">
-                  <p>
-                    The focus:
-                  </p>
-                  <StaggerChildren className="grid grid-cols-2 gap-x-4 gap-y-2 text-xs font-mono text-zinc-400 pl-4" staggerDelay={0.05}>
-                    <div className="flex items-center gap-2">
-                      <span className="h-1 w-1 bg-emerald-500 rounded-full shrink-0"></span>
-                      <span>Place-Based Brands</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <span className="h-1 w-1 bg-emerald-500 rounded-full shrink-0"></span>
-                      <span>Service &amp; Standards</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <span className="h-1 w-1 bg-emerald-500 rounded-full shrink-0"></span>
-                      <span>Operating Systems</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <span className="h-1 w-1 bg-emerald-500 rounded-full shrink-0"></span>
-                      <span>Story</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <span className="h-1 w-1 bg-emerald-500 rounded-full shrink-0"></span>
-                      <span>Ownership</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <span className="h-1 w-1 bg-emerald-500 rounded-full shrink-0"></span>
-                      <span>Selective Advisory</span>
-                    </div>
-                  </StaggerChildren>
-                </div>
-              </ScrollReveal>
-
-              <ScrollReveal delay={0.2}>
-                <div className="space-y-1 text-xs font-mono text-zinc-500 pt-2 border-t border-white/5">
-                  <p>BraveHeart is the acquired company under operation.</p>
-                  <p>Ripley is the operating layer being built underneath the work.</p>
-                  <p className="text-white">Castson.com is the record.</p>
-                </div>
-              </ScrollReveal>
-            </div>
-
-            {/* Right: What I am trying to learn */}
-            <div className="lg:col-span-5 space-y-4 lg:sticky lg:top-28">
-              <ScrollReveal direction="right" delay={0.2}>
-                <div className="rounded-sm border border-white/5 bg-zinc-900/30 p-6 sm:p-8 space-y-6">
-                  <span className="text-[9px] font-mono text-zinc-500 uppercase tracking-widest block border-b border-white/5 pb-2">
-                    [ What I am trying to learn ]
-                  </span>
-                  
-                  <StaggerChildren className="space-y-4 text-xs font-mono text-zinc-400" staggerDelay={0.08}>
-                    <li className="flex items-start gap-2">
-                      <span className="text-emerald-400 font-bold shrink-0">Q1 //</span>
-                      <span>What makes a place worth travelling for?</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-emerald-400 font-bold shrink-0">Q2 //</span>
-                      <span>How do you scale care without making it feel standardized?</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-emerald-400 font-bold shrink-0">Q3 //</span>
-                      <span>Can better systems make hospitality feel more human, not less?</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-emerald-400 font-bold shrink-0">Q4 //</span>
-                      <span>How do you preserve the character of a place while making the business stronger?</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-emerald-400 font-bold shrink-0">Q5 //</span>
-                      <span>What should technology handle quietly, and what should remain human?</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-emerald-400 font-bold shrink-0">Q6 //</span>
-                      <span>How do you build operational leverage that makes a brand more distinctive, not more generic?</span>
-                    </li>
-                  </StaggerChildren>
-                </div>
-              </ScrollReveal>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      {/* How I share the work */}
-      <section className="py-12 md:py-24 border-b border-white/[0.03] theme-transition">
-        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 relative z-20">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-start">
-            
-            {/* Left: Content */}
-            <div className="lg:col-span-7 space-y-6 text-zinc-300 font-light leading-relaxed text-sm sm:text-base">
-              <ScrollReveal>
-                <div className="space-y-3">
-                  <span className="text-[9px] font-mono tracking-widest uppercase text-emerald-400">[ Publication Policy ]</span>
-                  <TextReveal
-                    text="How I share the work"
-                    as="h2"
-                    className="font-medium text-white"
-                  />
-                  <p className="text-sm text-zinc-200">
-                    Castson.com is a selective public record.
-                  </p>
-                </div>
-              </ScrollReveal>
-
-              <ScrollReveal delay={0.1}>
-                <div className="space-y-6">
-                  <p>
-                    I share the shape of the work: the questions, decisions, lessons, patterns, and mistakes once they become useful.
-                  </p>
-                  <p className="border-l border-white/15 pl-4 text-zinc-400 opacity-80">
-                    I do not share private information, customer data, staff matters, operational vulnerabilities, or anything that belongs inside the company.
-                  </p>
-                  <p className="text-zinc-400 font-light">
-                    The goal is not content.
-                  </p>
-                  <p className="text-white font-medium">
-                    The goal is signal.
-                  </p>
-                </div>
-              </ScrollReveal>
-            </div>
-
-            {/* Right: Visual Checklist */}
-            <div className="lg:col-span-5 space-y-4">
-              <ScrollReveal direction="right" delay={0.15}>
-                <div className="border border-white/5 bg-black/[0.03] p-6 rounded-sm space-y-4">
-                  <span className="text-[9px] font-mono text-zinc-500 uppercase tracking-widest block border-b border-white/5 pb-2">
-                    [ Information Signal Grid ]
-                  </span>
-                  <StaggerChildren className="space-y-3 text-xs font-mono" staggerDelay={0.06}>
-                    <div className="flex justify-between gap-4 border-b border-white/5 pb-1 text-emerald-400">
-                      <span>The Questions &amp; Decisions</span>
-                      <span>[Shared]</span>
-                    </div>
-                    <div className="flex justify-between gap-4 border-b border-white/5 pb-1 text-emerald-400">
-                      <span>Lessons &amp; Patterns</span>
-                      <span>[Shared]</span>
-                    </div>
-                    <div className="flex justify-between gap-4 border-b border-white/5 pb-1 text-emerald-400">
-                      <span>Mistakes (when useful)</span>
-                      <span>[Shared]</span>
-                    </div>
-                    <div className="flex justify-between gap-4 border-b border-white/5 pb-1 text-red-400/70">
-                      <span>Private &amp; Staff Matters</span>
-                      <span>[Private]</span>
-                    </div>
-                    <div className="flex justify-between gap-4 border-b border-white/5 pb-1 text-red-400/70">
-                      <span>Customer Data</span>
-                      <span>[Private]</span>
-                    </div>
-                    <div className="flex justify-between gap-4 border-b border-white/5 pb-1 text-red-400/70">
-                      <span>Operational Vulnerabilities</span>
-                      <span>[Private]</span>
-                    </div>
-                  </StaggerChildren>
-                </div>
-              </ScrollReveal>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      {/* Connect CTA */}
-      <section className="py-12 md:py-24 bg-black/[0.03] theme-transition">
-        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 relative z-20">
-          <div className="space-y-12">
-            <ScrollReveal>
-              <div className="text-center space-y-4 max-w-2xl mx-auto">
-                <span className="text-[9px] font-mono tracking-widest uppercase text-emerald-400">[ Connect ]</span>
-                <TextReveal
-                  text="Get in Touch"
-                  as="h2"
-                  className="font-medium text-white"
-                />
-                <p className="text-zinc-400 font-light text-sm">
-                  If you own, operate, or are responsible for an experience-led business where place, service, taste, and standards matter, I would be interested in the conversation.
-                </p>
-                <p className="text-[10px] text-zinc-500 font-mono uppercase tracking-widest pt-1">
-                  Especially if the work involves hospitality, wellness, tourism, property, service, product, legacy transition, or executive decision support.
-                </p>
+          <aside className="lg:col-span-5">
+            <div className="quiet-panel">
+              <span className="section-kicker">What I am trying to learn</span>
+              <div className="ruled-list metadata">
+                {questions.map((question, idx) => (
+                  <div key={question} className="grid grid-cols-[3rem_1fr] gap-4">
+                    <span className="text-[var(--primary)]">Q{idx + 1}</span>
+                    <span>{question}</span>
+                  </div>
+                ))}
               </div>
-            </ScrollReveal>
+            </div>
+          </aside>
+        </div>
+      </section>
 
-            <StaggerChildren className="grid grid-cols-1 md:grid-cols-3 gap-6" staggerDelay={0.1}>
-              
-              {/* CTA 1: BraveHeart */}
-              <Magnetic strength={0.3} radius={120}>
-                <Link 
-                  href="/braveheart"
-                  className="group relative rounded-sm border border-white/5 bg-zinc-900/20 p-6 sm:p-8 flex flex-col justify-between min-h-56 hover:border-emerald-400/30 transition-all duration-500 overflow-hidden"
-                >
-                  <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff01_1px,transparent_1px),linear-gradient(to_bottom,#ffffff01_1px,transparent_1px)] bg-[size:1.5rem_1.5rem] pointer-events-none"></div>
-                  <div className="space-y-4 relative z-10">
-                    <span className="text-[9px] font-mono text-zinc-500 uppercase tracking-widest block">[ In Practice ]</span>
-                    <h3 className="text-lg font-medium text-white group-hover:text-emerald-400 transition-colors">
-                      BraveHeart First Aid
-                    </h3>
-                    <p className="text-xs text-zinc-400 font-light leading-relaxed">
-                      The company I acquired and now operate. Practical, local, and serious.
-                    </p>
-                  </div>
-                  <div className="flex items-center gap-1 text-[10px] font-mono font-bold uppercase text-emerald-400 group-hover:text-white transition-colors relative z-10">
-                    <span>Explore BraveHeart</span>
-                    <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" strokeWidth={1.5} aria-hidden="true" />
-                  </div>
-                </Link>
-              </Magnetic>
-
-              {/* CTA 2: Field Notes */}
-              <Magnetic strength={0.3} radius={120}>
-                <Link 
-                  href="/field-notes"
-                  className="group relative rounded-sm border border-white/5 bg-zinc-900/20 p-6 sm:p-8 flex flex-col justify-between min-h-56 hover:border-emerald-400/30 transition-all duration-500 overflow-hidden"
-                >
-                  <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff01_1px,transparent_1px),linear-gradient(to_bottom,#ffffff01_1px,transparent_1px)] bg-[size:1.5rem_1.5rem] pointer-events-none"></div>
-                  <div className="space-y-4 relative z-10">
-                    <span className="text-[9px] font-mono text-zinc-500 uppercase tracking-widest block">[ Insights ]</span>
-                    <h3 className="text-lg font-medium text-white group-hover:text-emerald-400 transition-colors">
-                      Field Notes
-                    </h3>
-                    <p className="text-xs text-zinc-400 font-light leading-relaxed">
-                      Short observations from operating, rebuilding, advising, and making businesses more coherent.
-                    </p>
-                  </div>
-                  <div className="flex items-center gap-1 text-[10px] font-mono font-bold uppercase text-emerald-400 group-hover:text-white transition-colors relative z-10">
-                    <span>Read Field Notes</span>
-                    <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" strokeWidth={1.5} aria-hidden="true" />
-                  </div>
-                </Link>
-              </Magnetic>
-
-              {/* CTA 3: Contact */}
-              <Magnetic strength={0.3} radius={120}>
-                <Link 
-                  href="/contact"
-                  className="group relative rounded-sm border border-white/5 bg-zinc-900/20 p-6 sm:p-8 flex flex-col justify-between min-h-56 hover:border-emerald-400/30 transition-all duration-500 overflow-hidden"
-                >
-                  <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff01_1px,transparent_1px),linear-gradient(to_bottom,#ffffff01_1px,transparent_1px)] bg-[size:1.5rem_1.5rem] pointer-events-none"></div>
-                  <div className="space-y-4 relative z-10">
-                    <span className="text-[9px] font-mono text-zinc-500 uppercase tracking-widest block">[ Dialog ]</span>
-                    <h3 className="text-lg font-medium text-white group-hover:text-emerald-400 transition-colors">
-                      Start a Conversation
-                    </h3>
-                    <p className="text-xs text-zinc-400 font-light leading-relaxed">
-                      Reach out if you are an owner, operator, founder, CEO, CMO, investor, or collaborator.
-                    </p>
-                  </div>
-                  <div className="flex items-center gap-1 text-[10px] font-mono font-bold uppercase text-emerald-400 group-hover:text-white transition-colors relative z-10">
-                    <span>Start a Conversation</span>
-                    <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" strokeWidth={1.5} aria-hidden="true" />
-                  </div>
-                </Link>
-              </Magnetic>
-
-            </StaggerChildren>
+      <section className="section">
+        <div className="site-container grid gap-12 lg:grid-cols-12 lg:gap-16">
+          <div className="lg:col-span-6">
+            <span className="section-kicker">Publication Policy</span>
+            <h2>How I share the work</h2>
+            <div className="body-copy mt-7">
+              <p>Castson.com is a selective public record.</p>
+              <p>
+                I share the shape of the work: the questions, moves, lessons, patterns, and mistakes once they are useful.
+              </p>
+              <p className="border-l border-[var(--border-strong)] pl-5">
+                I do not share private information, customer data, staff matters, operational vulnerabilities, or anything that belongs inside the company.
+              </p>
+              <p>The goal is not content.</p>
+              <p className="emphasis">The goal is commercial judgment.</p>
+            </div>
+          </div>
+          <div className="lg:col-span-6">
+            <EditorialImage
+              src="/images/editorial/quiet-luxury-landscape.webp"
+              alt="Quiet mountain architecture at dusk"
+              caption="Restraint, judgment, and operating discipline"
+              aspect="aspect-[16/9]"
+              className="mobile-bleed"
+              sizes="(max-width: 1024px) 100vw, 46vw"
+            />
           </div>
         </div>
       </section>
 
+      <section className="section section-quiet border-b-0">
+        <div className="site-container">
+          <div className="max-w-2xl">
+            <span className="section-kicker">Connect</span>
+            <h2>Get in Touch</h2>
+            <div className="body-copy mt-7">
+              <p>
+                If you own, operate, or are responsible for a business where place, service, taste, and standards matter, I would be interested in the conversation.
+              </p>
+              <p>
+                Especially if the work involves hospitality, wellness, tourism, property, service, product, succession, or senior decision support.
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-12 grid gap-6 md:grid-cols-3">
+            {[
+              {
+                href: "/braveheart",
+                label: "In Practice",
+                title: "BraveHeart First Aid",
+                body: "The company I acquired and operate. Practical, local, serious work.",
+                action: "Explore BraveHeart",
+              },
+              {
+                href: "/field-notes",
+                label: "Insights",
+                title: "Field Notes",
+                body: "Short observations from operating, rebuilding, advising, and making companies sharper.",
+                action: "Read Field Notes",
+              },
+              {
+                href: "/contact",
+                label: "Dialogue",
+                title: "Start a Conversation",
+                body: "For owners, operators, founders, senior leaders, investors, and serious collaborators.",
+                action: "Start a Conversation",
+              },
+            ].map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="group flex min-h-64 flex-col justify-between border-t border-[var(--border)] py-6 transition-colors hover:text-[var(--primary)]"
+              >
+                <div>
+                  <span className="section-kicker">{item.label}</span>
+                  <h3 className="mt-4">{item.title}</h3>
+                  <p className="mt-4 text-sm leading-relaxed text-[var(--muted-foreground)]">
+                    {item.body}
+                  </p>
+                </div>
+                <span className="editorial-link mt-8">{item.action}</span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

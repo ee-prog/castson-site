@@ -1,323 +1,236 @@
-"use client";
+import Image from "next/image";
+import { EditorialImage, PageHeader } from "@/components/editorial";
 
-import React from "react";
-import { ChevronRight } from "lucide-react";
+const realWork = [
+  "Customers who need confidence",
+  "Instructors who need support",
+  "Standards that hold",
+  "Schedules that work",
+  "Equipment in the room",
+  "Consequences outside the screen",
+];
 
-function ImagePlaceholder({ label }: { label: string }) {
-  const refCode = label
-    .toUpperCase()
-    .replace(/[^A-Z0-9\s]/g, "")
-    .trim()
-    .replace(/\s+/g, "-");
+const proofMarkers = [
+  "Public promise",
+  "Customer path",
+  "Schedule logic",
+  "Delivery standards",
+  "Communication rhythm",
+  "Instructor readiness",
+  "Demand patterns",
+  "Management visibility",
+];
 
-  return (
-    <div className="w-full aspect-[16/10] bg-zinc-900/10 border border-white/5 rounded-sm flex flex-col justify-between p-4 relative overflow-hidden group theme-transition">
-      {/* Blueprint grid lines */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff01_1px,transparent_1px),linear-gradient(to_bottom,#ffffff01_1px,transparent_1px)] bg-[size:1.5rem_1.5rem] pointer-events-none"></div>
-      <span className="text-[8px] font-mono text-zinc-600 tracking-widest uppercase relative z-10 block">
-        REF // {refCode}
-      </span>
-      <div className="w-full h-[1px] bg-white/[0.03] relative z-10"></div>
-    </div>
-  );
-}
+const watchQuestions = [
+  "Where is growth still being held together manually?",
+  "Which habits are useful, and which are just inherited?",
+  "Where does the customer path create trust or uncertainty?",
+  "What does the instructor need before the room begins?",
+  "How does a small service company gain leverage without lowering the human standard?",
+];
 
 export default function BraveHeart() {
   return (
-    <div className="relative w-full min-h-screen bg-transparent overflow-hidden flex flex-col pt-20">
-      
-      {/* Structural Grid Lines */}
-      <div className="absolute inset-y-0 inset-x-0 mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 pointer-events-none z-10 flex justify-between">
-        <div className="w-[1px] h-full bg-white/[0.02] animate-grid-line delay-100 opacity-0"></div>
-        <div className="w-[1px] h-full bg-white/[0.02] hidden md:block animate-grid-line delay-300 opacity-0"></div>
-        <div className="w-[1px] h-full bg-white/[0.02] hidden md:block animate-grid-line delay-550 opacity-0"></div>
-        <div className="w-[1px] h-full bg-white/[0.02] animate-grid-line delay-700 opacity-0"></div>
-      </div>
+    <div className="site-shell">
+      <section className="section">
+        <div className="site-container">
+          <PageHeader
+            kicker="01 / In Practice"
+            title="BraveHeart"
+            lede="Operating proof, not a case study."
+          />
 
-      {/* Header */}
-      <section className="relative py-12 md:py-24 border-b border-white/[0.03] theme-transition">
-        <div className="absolute top-1/4 right-1/4 -z-10 h-[500px] w-[500px] rounded-full bg-emerald-500/5 blur-[120px]" />
-        
-        <div className="mx-auto max-w-5xl w-full px-4 sm:px-6 lg:px-8 relative z-20">
-          <div className="max-w-3xl space-y-6">
-            <span className="text-[10px] font-bold uppercase tracking-widest text-emerald-400 font-mono">01 / In Practice</span>
-            <h1 className="text-white font-display">
-              BraveHeart
-            </h1>
-            <p className="text-xl sm:text-2xl text-zinc-300 font-light">
-              A real business, rebuilt from the inside.
-            </p>
+          <div className="mt-10 flex items-center justify-between gap-8 border-y border-[var(--border)] py-5 sm:mt-12 sm:py-6">
+            <div className="relative w-24 shrink-0 sm:w-28">
+              <Image
+                src="/images/braveheart/braveheart-black-vertical.png"
+                alt="BraveHeart First Aid logo"
+                width={3096}
+                height={3741}
+                priority
+                className="h-auto w-full dark:hidden"
+              />
+              <Image
+                src="/images/braveheart/braveheart-white-vertical.png"
+                alt=""
+                width={3096}
+                height={3741}
+                priority
+                className="hidden h-auto w-full dark:block"
+              />
+            </div>
+
+            <div className="metadata min-w-0 flex-1 text-right sm:max-w-xs">
+              <span className="block text-[var(--foreground)]">Operating company</span>
+              <span className="mt-1 block">First aid training / Nova Scotia / acquired 2025</span>
+            </div>
           </div>
+
+          <EditorialImage
+            src="/images/braveheart/instructor-group-session.png"
+            alt="A BraveHeart instructor in a red shirt leading a group first aid training conversation"
+            caption="BraveHeart First Aid / practical, local, serious"
+            aspect="aspect-[4/3] sm:aspect-[16/7]"
+            className="mobile-bleed mt-9 sm:mt-12"
+            objectPosition="58% center"
+            priority
+            sizes="100vw"
+          />
         </div>
       </section>
 
-      {/* Intro Narrative */}
-      <section className="py-12 md:py-20 border-b border-white/[0.03] theme-transition">
-        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 relative z-20">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-start">
-            
-            {/* Left: Narrative */}
-            <div className="lg:col-span-7 space-y-6 text-zinc-300 font-light leading-relaxed text-sm sm:text-base">
-              <p className="text-lg text-white">
-                BraveHeart is a company I acquired and now operate. The work is practical, local, and serious: standards, timing, care, and systems have to hold.
+      <section className="section">
+        <div className="site-container grid gap-12 lg:grid-cols-12 lg:gap-16">
+          <div className="lg:col-span-7">
+            <div className="body-copy">
+              <p className="emphasis text-xl leading-relaxed">
+                BraveHeart is where the work has to hold in public.
               </p>
-
               <p>
-                First aid training is serious work. The student has to be supported. The instructor has to be prepared. The timing, equipment, communication, and certification process all have to work. Ownership made those standards real.
+                First aid training is not abstract. The student has to feel ready. The instructor has to be prepared. The room, equipment, timing, communication, payment, and certification path all have to work.
               </p>
-
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-4 py-4 px-6 rounded-sm bg-zinc-900/20 border border-white/5 font-mono text-xs text-zinc-400">
-                <div className="space-y-2">
-                  <div className="flex items-center gap-2">
-                    <span className="h-1 w-1 bg-emerald-400"></span>
-                    <span>Real customers</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <span className="h-1 w-1 bg-emerald-400"></span>
-                    <span>Real instructors</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <span className="h-1 w-1 bg-emerald-400"></span>
-                    <span>Real standards</span>
-                  </div>
-                </div>
-                <div className="space-y-2">
-                  <div className="flex items-center gap-2">
-                    <span className="h-1 w-1 bg-emerald-400"></span>
-                    <span>Real timing</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <span className="h-1 w-1 bg-emerald-400"></span>
-                    <span>Real constraints</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <span className="h-1 w-1 bg-emerald-400"></span>
-                    <span className="text-white">Real consequences</span>
-                  </div>
-                </div>
+              <p>
+                Ownership changed the standard because weak execution has nowhere to hide.
+              </p>
+              <div className="ruled-list metadata">
+                <div>The customer can trust the path, or they cannot.</div>
+                <div>The instructor is ready to teach, or they are not.</div>
+                <div>The process creates confidence, or quietly creates more work.</div>
               </div>
-
-              <p className="text-white font-medium">
-                That matters.
-              </p>
-
-              <p>
-                It is easy to talk about transformation from the outside. It is different when the system either works or it does not.
-              </p>
-              
-              <ul className="space-y-2 text-xs font-mono text-zinc-400 pl-4 border-l border-white/10 list-none">
-                <li className="flex items-start gap-2">
-                  <ChevronRight className="h-4 w-4 shrink-0 text-emerald-500 mt-0.5" strokeWidth={1.5} aria-hidden="true" />
-                  <span>When a customer can trust the path, or they cannot.</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <ChevronRight className="h-4 w-4 shrink-0 text-emerald-500 mt-0.5" strokeWidth={1.5} aria-hidden="true" />
-                  <span>When an instructor is ready to teach, or they are not.</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <ChevronRight className="h-4 w-4 shrink-0 text-emerald-500 mt-0.5" strokeWidth={1.5} aria-hidden="true" />
-                  <span>When a process creates clarity, or quietly creates more work.</span>
-                </li>
-              </ul>
-
-              <p className="text-lg text-white font-medium pt-2">
-                &ldquo;Ownership removes abstraction. There is nowhere to hide.&rdquo;
+              <p className="emphasis text-xl leading-relaxed">
+                “The work is only good if it holds after class.”
               </p>
             </div>
-
-            {/* Right: Media placeholder */}
-            <div className="lg:col-span-5 space-y-4">
-              <ImagePlaceholder label="BraveHeart First Aid Classroom Session" />
-              <div className="text-[10px] font-mono text-zinc-500 uppercase tracking-widest text-right">
-                [ Operations Surface, Halifax NS ]
-              </div>
-            </div>
-
           </div>
-        </div>
-      </section>
 
-      {/* Why BraveHeart Matters */}
-      <section className="py-12 md:py-20 border-b border-white/[0.03] bg-zinc-950/20 theme-transition">
-        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 relative z-20">
-          <div className="max-w-3xl space-y-8">
-            
-            <div className="space-y-4">
-              <span className="text-[9px] font-mono tracking-widest uppercase text-emerald-400">[ Moral Centre ]</span>
-              <h2 className="text-3xl font-medium text-white">
-                Why BraveHeart matters
-              </h2>
-            </div>
-
-            <div className="space-y-6 text-zinc-300 font-light leading-relaxed text-sm sm:text-base">
-              <p className="text-lg text-zinc-200">
-                First aid training has a moral centre. The work is practical, local, and human.
-              </p>
-              
-              <blockquote className="border-l-2 border-emerald-400 pl-6 my-6 text-white text-xl font-medium">
-                &ldquo;People come to class carrying a simple hope: that if someone needs help, they won’t feel frozen.&rdquo;
-              </blockquote>
-
-              <p>
-                That gives the business a seriousness I had not felt in much of my earlier work. The systems matter because the work matters.
-              </p>
-
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-2 sm:gap-4 py-4 text-xs font-mono text-zinc-400">
-                {["Trust", "Standards", "Readiness", "Care", "Timing", "Instruction", "Confidence", "Responsibility"].map((item) => (
-                  <div key={item} className="flex items-center gap-1.5 p-3 border border-white/5 bg-zinc-900/30 rounded-sm">
-                    <span className="h-1 w-1 bg-emerald-400"></span>
-                    <span>{item}</span>
+          <aside className="lg:col-span-5">
+            <EditorialImage
+              src="/images/braveheart/classroom-first-aid-demo.png"
+              alt="A first aid instructor demonstrating infant choking response to students in a classroom"
+              caption="Training standards / timing, care, communication"
+              aspect="aspect-[4/5]"
+              className="mobile-bleed"
+              objectPosition="50% center"
+              sizes="(max-width: 1024px) 100vw, 36vw"
+            />
+            <div className="quiet-panel mt-10">
+              <span className="section-kicker">Operating proof</span>
+              <div className="grid grid-cols-1 gap-x-6 sm:grid-cols-2 metadata">
+                {realWork.map((item) => (
+                  <div key={item} className="border-t border-[var(--border)] py-3">
+                    {item}
                   </div>
                 ))}
               </div>
+            </div>
+          </aside>
+        </div>
+      </section>
 
-              <p className="text-white font-medium">
+      <section className="section section-quiet">
+        <div className="site-container grid gap-12 lg:grid-cols-12 lg:gap-16">
+          <div className="lg:col-span-6">
+            <span className="section-kicker">Moral Centre</span>
+            <h2>Why BraveHeart matters</h2>
+            <div className="body-copy mt-7">
+              <p className="emphasis">
+                First aid training has a moral centre. The work is practical, local, and human.
+              </p>
+              <blockquote className="mobile-pull quiet-panel text-xl leading-relaxed text-[var(--foreground)]">
+                “People come to class carrying a simple hope: that if someone needs help, they won’t feel frozen.”
+              </blockquote>
+              <p>
+                That gives the business a seriousness I had not felt in much of my earlier work. The operating standard matters because the outcome matters.
+              </p>
+              <p className="emphasis">
                 The company exists so people can be better prepared to help. That is enough reason to make it excellent.
               </p>
             </div>
-
+          </div>
+          <div className="lg:col-span-6">
+            <EditorialImage
+              src="/images/braveheart/babysitter-infant-training.png"
+              alt="Students smiling while holding infant training mannequins during a babysitter first aid class"
+              caption="Confidence, readiness, and care in practice"
+              aspect="aspect-[4/5]"
+              className="mobile-bleed"
+              objectPosition="50% center"
+              sizes="(max-width: 1024px) 100vw, 44vw"
+            />
           </div>
         </div>
       </section>
 
-      {/* Year One & Year Two Split */}
-      <section className="py-12 md:py-20 border-b border-white/[0.03] theme-transition">
-        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 relative z-20">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-16">
-            
-            {/* Year One: Clarification */}
-            <div className="space-y-6">
-              <span className="text-[9px] font-mono tracking-widest uppercase text-emerald-400">[ Year One ]</span>
-              <h2 className="text-2xl font-medium text-white">
-                Clarification
-              </h2>
-              
-              <div className="text-zinc-300 font-light text-sm sm:text-base space-y-4">
-                <p>
-                  The first year was mostly invisible work. Not automation. Clarification.
-                </p>
-                <p>
-                  Understanding what the business was really doing. Where information lived. Which decisions repeated. Where the owner was still holding the company together. Which processes were useful, and which were inherited.
-                </p>
-                <p>
-                  The work was to make the business legible—to itself, to me, and to the people inside it.
-                </p>
-                <p className="text-white font-mono text-xs border-t border-white/5 pt-4">
-                  &ldquo;A business cannot improve what it cannot see.&rdquo;
-                </p>
-              </div>
-
-              <div className="space-y-2 pt-4">
-                <h4 className="text-xs font-mono font-bold uppercase text-zinc-400">[ What Became Clear ]</h4>
-                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs font-mono text-zinc-400">
-                  {["Public position", "Customer path", "Schedule logic", "Delivery standards", "Communication rhythm", "Instructor readiness", "Demand signals", "Operating visibility"].map((c) => (
-                    <li key={c} className="flex items-center gap-1">
-                      <ChevronRight className="h-4 w-4 text-emerald-500" strokeWidth={1.5} aria-hidden="true" />
-                      <span>{c}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-
-            {/* Year Two: Acceleration */}
-            <div className="space-y-6">
-              <span className="text-[9px] font-mono tracking-widest uppercase text-emerald-400">[ Year Two ]</span>
-              <h2 className="text-2xl font-medium text-white">
-                Acceleration
-              </h2>
-              
-              <div className="text-zinc-300 font-light text-sm sm:text-base space-y-4">
-                <p>
-                  The next phase is underway.
-                </p>
-                <p>
-                  Now that the business is clearer, the work is to remove drag without removing judgment. Fewer repeated decisions. Better visibility. Stronger handoffs. Systems that support the people doing the work instead of asking them to carry the business in their heads.
-                </p>
-                <p className="border-l border-emerald-400/40 pl-4 text-zinc-400 opacity-80">
-                  The goal is not to replace people. The goal is to remove drag around people. To reduce manual coordination, make the right work easier to see, and support judgment instead of overwhelming it.
-                </p>
-                <p>
-                  This is the accelerated phase. The business is clearer now, so the systems can become stronger.
-                </p>
-              </div>
-
-              <div className="space-y-4 pt-4">
-                <ImagePlaceholder label="Acceleration Pipeline & Internal Sync Monitor" />
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      {/* The Constraint & What I am watching */}
-      <section className="py-12 md:py-20 border-b border-white/[0.03] bg-zinc-950/20 theme-transition">
-        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 relative z-20">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-start">
-            
-            {/* Left: The Constraint */}
-            <div className="lg:col-span-6 space-y-6 text-zinc-300 font-light leading-relaxed text-sm sm:text-base">
-              <span className="text-[9px] font-mono tracking-widest uppercase text-emerald-400">[ The Constraint Changed ]</span>
-              <h2 className="text-2xl font-medium text-white">
-                Outgrowing the Platforms
-              </h2>
+      <section className="section">
+        <div className="site-container grid gap-12 lg:grid-cols-2 lg:gap-16">
+          <div>
+            <span className="section-kicker">Year One</span>
+            <h2>Make it legible.</h2>
+            <div className="body-copy mt-7">
+              <p>The first year was mostly invisible work.</p>
               <p>
-                At first, better platforms created progress. Then the business began to outgrow them.
+                What was the company really doing? Where did information live? Which decisions repeated? Where was owner judgment still holding the company together by force of memory?
               </p>
+              <p>The work was to make BraveHeart legible to itself, to me, and to the people inside it.</p>
+              <p className="emphasis">“A business cannot improve what it cannot see.”</p>
+            </div>
+            <div className="mt-8 quiet-panel">
+              <span className="section-kicker">What Became Clear</span>
+              <div className="grid grid-cols-1 gap-x-8 sm:grid-cols-2 metadata">
+                {proofMarkers.map((marker) => (
+                  <div key={marker} className="border-t border-[var(--border)] py-3">
+                    {marker}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <span className="section-kicker">Year Two</span>
+            <h2>Make it move.</h2>
+            <div className="body-copy mt-7">
+              <p>The next phase is underway.</p>
               <p>
-                This has been one of the most useful lessons. Outgrowing a platform is not always a failure. Sometimes it means the business has become clearer than the software built to contain it.
+                Now the work is to remove drag without removing judgment. Fewer repeated decisions. Better visibility. Stronger handoffs. Infrastructure that supports the people doing the work instead of asking them to carry the company in their heads.
               </p>
-              <div className="border-l border-white/10 pl-4 text-zinc-400 text-xs font-mono space-y-4">
-                <p>
-                  Generic tools are useful when you are still learning the shape of a business. Once the shape becomes clear, the compromise becomes visible.
-                </p>
-                <p>
-                  That is where custom systems begin to make sense — not because they are impressive, but because they can be more truthful to how the business actually works.
-                </p>
-              </div>
+              <p className="mobile-pull border-l border-[var(--border-strong)] pl-5">
+                The goal is not to replace people. The goal is to remove the drag around them.
+              </p>
+              <p>BraveHeart is clearer now, so the infrastructure behind it can become stronger.</p>
             </div>
-
-            {/* Right: What I am Watching */}
-            <div className="lg:col-span-6 space-y-4">
-              <div className="border border-white/5 bg-zinc-900/30 p-6 sm:p-8 rounded-sm space-y-6">
-                <span className="text-[9px] font-mono text-zinc-500 uppercase tracking-widest block border-b border-white/5 pb-2">
-                  [ What I am watching ]
-                </span>
-                
-                <ul className="space-y-3 text-xs font-mono text-zinc-300">
-                  <li className="flex items-start gap-2">
-                    <span className="text-emerald-500 font-bold shrink-0">Q1 //</span>
-                    <span>Can BraveHeart grow without becoming harder to run?</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-emerald-500 font-bold shrink-0">Q2 //</span>
-                    <span>Can fewer decisions depend on me?</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-emerald-500 font-bold shrink-0">Q3 //</span>
-                    <span>Can the business hold more of its own intelligence?</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-emerald-500 font-bold shrink-0">Q4 //</span>
-                    <span>Can the work become easier to see before it becomes urgent?</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-white font-bold shrink-0">Q5 //</span>
-                    <span className="text-white">Can a small service company gain leverage without losing its human standard?</span>
-                  </li>
-                </ul>
-
-                <div className="text-[10px] font-mono text-zinc-500 uppercase text-center pt-2 border-t border-white/5">
-                  [ End of active log — June 2026 ]
-                </div>
-              </div>
-            </div>
-
           </div>
         </div>
       </section>
 
+      <section className="section section-quiet border-b-0">
+        <div className="site-container grid gap-12 lg:grid-cols-12 lg:gap-16">
+          <div className="lg:col-span-6">
+            <span className="section-kicker">The Constraint Changed</span>
+            <h2>The work is now about disciplined change.</h2>
+            <div className="body-copy mt-7">
+              <p>The question is no longer whether the company should change. It is which work deserves priority, and at what standard.</p>
+              <p>
+                BraveHeart is not a case study from the outside. The decisions are live, the consequences are real, and the work has to hold.
+              </p>
+            </div>
+          </div>
+
+          <aside className="lg:col-span-6">
+            <div className="quiet-panel">
+              <span className="section-kicker">What I am watching</span>
+              <div className="ruled-list metadata">
+                {watchQuestions.map((question, idx) => (
+                  <div key={question} className="grid grid-cols-[3rem_1fr] gap-4">
+                    <span className="text-[var(--primary)]">Q{idx + 1}</span>
+                    <span>{question}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
     </div>
   );
 }

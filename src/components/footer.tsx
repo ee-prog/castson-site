@@ -5,16 +5,15 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-zinc-200 dark:border-white/5 bg-background py-8 text-zinc-500 theme-transition mt-auto">
-      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col sm:flex-row justify-between items-center gap-4 text-[10px] font-mono tracking-wider">
-          <span className="text-zinc-400 dark:text-zinc-500">© {year} Castson Inc.</span>
+    <footer className="mt-auto border-t border-[var(--border)] bg-[var(--background)] py-8 theme-transition">
+      <div className="site-container">
+        <div className="flex flex-col gap-4 metadata sm:flex-row sm:items-center sm:justify-between">
+          <span>© {year} Castson Inc.</span>
           <div className="flex items-center gap-6">
-            <Link href="/contact" className="hover:text-zinc-950 dark:hover:text-white transition-colors uppercase">
+            <Link href="/contact" className="transition-colors hover:text-[var(--primary)]">
               Contact
             </Link>
-            <span className="text-zinc-300 dark:text-zinc-800">•</span>
-            <Link href="/colophon" className="hover:text-zinc-950 dark:hover:text-white transition-colors uppercase">
+            <Link href="/colophon" className="transition-colors hover:text-[var(--primary)]">
               Colophon
             </Link>
           </div>
@@ -23,4 +22,3 @@ export default function Footer() {
     </footer>
   );
 }
-

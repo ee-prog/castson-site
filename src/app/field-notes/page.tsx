@@ -1,8 +1,9 @@
 "use client";
 
 import React, { useState } from "react";
-import { ChevronRight, Plus, Minus } from "lucide-react";
+import { Minus, Plus } from "lucide-react";
 import { AccordionItem } from "@/components/animations";
+import { PageHeader } from "@/components/editorial";
 
 const themes = [
   {
@@ -17,20 +18,20 @@ const themes = [
       "The wording.",
       "The follow-up.",
       "The standard the team can actually hold.",
-      "Taste becomes real when it survives contact with operations."
-    ]
+      "Taste becomes real when it survives contact with operations.",
+    ],
   },
   {
     index: "02",
-    title: "A business has to become understandable before it can become automated.",
+    title: "Make the work legible before you make it faster.",
     content: [
       "The temptation is to automate early.",
       "Take the existing process and make it faster.",
       "But if the process is confused, automation only preserves confusion at greater speed.",
-      "The better move is slower.",
-      "Understand first.",
-      "Then automate what remains."
-    ]
+      "The better move is slower at first.",
+      "Understand what is really happening.",
+      "Then accelerate what remains.",
+    ],
   },
   {
     index: "03",
@@ -41,22 +42,22 @@ const themes = [
       "Squarespace taught us something about web presence.",
       "Each tool helped. Each eventually revealed its limits.",
       "That does not mean the tools failed.",
-      "It means the business learned."
-    ]
+      "It means the business learned.",
+    ],
   },
   {
     index: "04",
-    title: "Owner dependency is an information problem.",
+    title: "Owner dependency is usually a design problem.",
     content: [
-      "Many businesses appear to have systems until the owner steps away.",
+      "Many companies appear organized until the owner steps away.",
       "Then everything starts asking for permission.",
       "That is not only a staffing issue.",
-      "It is an information architecture issue.",
-      "A decision design issue.",
+      "It is a visibility issue.",
+      "An approval issue.",
       "A trust issue.",
       "Reducing owner dependency does not mean caring less.",
-      "It means building a company that can hold more of its own intelligence."
-    ]
+      "It means building a company that can hold more of its own intelligence.",
+    ],
   },
   {
     index: "05",
@@ -64,102 +65,66 @@ const themes = [
     content: [
       "Luxury does not mean saying more beautiful things.",
       "It means being more precise about what is allowed, what is not allowed, what must be felt, and what must never be left to chance.",
-      "The higher the promise, the less room there is for vagueness."
-    ]
+      "The higher the promise, the less room there is for vagueness.",
+    ],
   },
   {
     index: "06",
-    title: "AI is not the first layer.",
+    title: "Automation fails when the company is not yet legible.",
     content: [
-      "AI is powerful.",
-      "But it works best when the business underneath it is clear.",
-      "If the data is messy, the process is vague, and the decisions are undefined, AI becomes another confusing tool in the pile.",
-      "The first layer is not AI.",
-      "The first layer is truth."
-    ]
+      "Automation is leverage.",
+      "But it works only when the business underneath it is clear.",
+      "If the data is messy, the process is vague, and authority is undefined, AI becomes another expensive tool in the pile.",
+      "The first layer is not intelligence.",
+      "The first layer is operating truth.",
+    ],
   },
   {
     index: "07",
-    title: "Meaning changes operations.",
+    title: "Purpose changes the operating standard.",
     content: [
-      "When the function of a company is good, the boring parts become less boring.",
+      "When the function of a company matters, the boring parts become less boring.",
       "First aid training gives the work a moral weight.",
       "The booking flow is not just a booking flow.",
       "The reminder is not just a reminder.",
       "The instructor workflow is not just an internal process.",
       "Each one supports the larger purpose.",
-      "That changes how I think about the work."
-    ]
-  }
+      "That changes how I think about the work.",
+    ],
+  },
 ];
 
 export default function FieldNotes() {
   const [openIndex, setOpenIndex] = useState<number>(0);
 
   return (
-    <div className="relative w-full min-h-screen bg-transparent overflow-hidden flex flex-col pt-20">
-      
-      {/* Structural Grid Lines */}
-      <div className="absolute inset-y-0 inset-x-0 mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 pointer-events-none z-10 flex justify-between">
-        <div className="w-[1px] h-full bg-zinc-950/[0.03] dark:bg-white/[0.02] animate-grid-line delay-100 opacity-0"></div>
-        <div className="w-[1px] h-full bg-zinc-950/[0.03] dark:bg-white/[0.02] hidden md:block animate-grid-line delay-300 opacity-0"></div>
-        <div className="w-[1px] h-full bg-zinc-950/[0.03] dark:bg-white/[0.02] hidden md:block animate-grid-line delay-550 opacity-0"></div>
-        <div className="w-[1px] h-full bg-zinc-950/[0.03] dark:bg-white/[0.02] animate-grid-line delay-700 opacity-0"></div>
-      </div>
-
-      {/* Header */}
-      <section className="relative py-12 md:py-24 border-b border-zinc-200 dark:border-white/[0.03] theme-transition">
-        <div className="absolute top-1/4 right-1/4 -z-10 h-[500px] w-[500px] rounded-full bg-emerald-500/[0.02] dark:bg-emerald-500/5 blur-[120px]" />
-        
-        <div className="mx-auto max-w-5xl w-full px-4 sm:px-6 lg:px-8 relative z-20">
-          <div className="max-w-3xl space-y-6">
-            <span className="text-[10px] font-bold uppercase tracking-widest text-emerald-600 dark:text-emerald-400 font-mono">03 / The Archive</span>
-            <h1 className="text-foreground font-display">
-              Field Notes
-            </h1>
-            <p className="text-xl sm:text-2xl text-zinc-700 dark:text-zinc-300 font-light">
-              Notes from inside the work.
-            </p>
-          </div>
+    <div className="site-shell">
+      <section className="section">
+        <div className="site-container">
+          <PageHeader kicker="03 / The Archive" title="Field Notes" lede="Notes from inside the work." />
         </div>
       </section>
 
-      {/* Sub-Header / Philosophy */}
-      <section className="py-8 md:py-12 border-b border-zinc-200 dark:border-white/[0.03] bg-zinc-100/30 dark:bg-zinc-950/10 theme-transition">
-        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 relative z-20">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 text-xs font-mono text-zinc-600 dark:text-zinc-500 uppercase tracking-widest">
-            <div className="space-y-2 text-zinc-650 dark:text-zinc-400">
-              <div className="flex items-start gap-2">
-                <ChevronRight className="h-4 w-4 shrink-0 text-emerald-500 mt-0.5" strokeWidth={1.5} aria-hidden="true" />
-                <span>Not trend pieces.</span>
-              </div>
-              <div className="flex items-start gap-2">
-                <ChevronRight className="h-4 w-4 shrink-0 text-emerald-500 mt-0.5" strokeWidth={1.5} aria-hidden="true" />
-                <span>Not advice content.</span>
-              </div>
-            </div>
-            <div className="space-y-2 text-zinc-650 dark:text-zinc-400">
-              <div className="flex items-start gap-2">
-                <ChevronRight className="h-4 w-4 shrink-0 text-emerald-500 mt-0.5" strokeWidth={1.5} aria-hidden="true" />
-                <span>Not thought leadership.</span>
-              </div>
-              <div className="flex items-start gap-2">
-                <ChevronRight className="h-4 w-4 shrink-0 text-emerald-500 mt-0.5" strokeWidth={1.5} aria-hidden="true" />
-                <span>Short observations from operating, rebuilding, advising, and making businesses more coherent.</span>
-              </div>
-            </div>
+      <section className="section section-quiet">
+        <div className="site-container grid gap-10 md:grid-cols-2">
+          <div className="metadata ruled-list">
+            <div>Not trend pieces.</div>
+            <div>Not content marketing.</div>
           </div>
-          <div className="mt-6 text-xs font-mono text-zinc-500 dark:text-zinc-500">
+          <div className="metadata ruled-list">
+            <div>Not keynote material.</div>
+            <div>Short observations from operating, rebuilding, advising, and making companies sharper.</div>
+          </div>
+          <div className="md:col-span-2 body-copy max-w-2xl">
             <p>The point is not to explain everything.</p>
-            <p className="text-zinc-900 dark:text-white font-medium mt-1">The point is to leave a trail of judgment.</p>
+            <p className="emphasis">The point is to leave a trail of judgment.</p>
           </div>
         </div>
       </section>
 
-      {/* Themes List — Accordion */}
-      <section className="py-12 md:py-20 theme-transition">
-        <div className="mx-auto max-w-3xl px-4 relative z-20">
-          <div className="divide-y divide-zinc-200 dark:divide-white/[0.05] border-y border-zinc-200 dark:border-white/[0.05]">
+      <section className="section border-b-0">
+        <div className="mx-auto max-w-3xl px-5 sm:px-8">
+          <div className="border-y border-[var(--border)]">
             {themes.map((theme, i) => {
               const isOpen = openIndex === i;
 
@@ -168,25 +133,14 @@ export default function FieldNotes() {
                   key={theme.index}
                   isOpen={isOpen}
                   onToggle={() => setOpenIndex(isOpen ? -1 : i)}
-                  className="fade-up-element visible"
+                  className="border-b border-[var(--border)] last:border-b-0"
                   trigger={
-                    <div className="flex items-start gap-4 py-6 group">
-                      {/* Index number */}
-                      <span className="text-xs font-mono text-emerald-600 dark:text-emerald-400 pt-1 shrink-0">
-                        {theme.index}
-                      </span>
-
-                      {/* Title */}
-                      <h2 className={`text-lg sm:text-xl font-medium leading-tight flex-1 transition-colors duration-300 ${
-                        isOpen
-                          ? "text-zinc-900 dark:text-white"
-                          : "text-zinc-600 dark:text-zinc-400 group-hover:text-zinc-900 dark:group-hover:text-white"
-                      }`}>
+                    <div className="group flex items-start gap-4 py-6 text-left sm:gap-5 sm:py-7">
+                      <span className="metadata w-8 shrink-0 text-[var(--primary)]">{theme.index}</span>
+                      <h2 className="flex-1 text-[1.45rem] leading-tight text-[var(--foreground)] transition-colors group-hover:text-[var(--primary)] sm:text-3xl">
                         {theme.title}
                       </h2>
-
-                      {/* Toggle icon */}
-                      <span className="shrink-0 pt-1 text-emerald-500">
+                      <span className="mt-1 text-[var(--primary)]">
                         {isOpen ? (
                           <Minus className="h-4 w-4" strokeWidth={1.5} />
                         ) : (
@@ -196,11 +150,23 @@ export default function FieldNotes() {
                     </div>
                   }
                 >
-                  {/* Expanded content */}
-                  <div className="pb-8 pl-8 sm:pl-10">
-                    <div className="text-zinc-800 dark:text-zinc-300 font-light text-sm sm:text-base leading-relaxed space-y-4 border-l border-emerald-500/20 pl-5">
-                      {theme.content.map((para, j) => (
-                        <p key={j} className={para.startsWith("Then") || para.startsWith("The better") || para.startsWith("It means") || para.startsWith("The first layer") || para.startsWith("Each one") || para.startsWith("Taste becomes") || para.startsWith("The higher") ? "text-zinc-950 dark:text-white font-medium" : ""}>
+                  <div className="pb-8 pl-10 sm:pl-16">
+                    <div className="body-copy border-l border-[var(--border)] pl-5">
+                      {theme.content.map((para) => (
+                        <p
+                          key={para}
+                          className={
+                            para.startsWith("Then") ||
+                            para.startsWith("The better") ||
+                            para.startsWith("It means") ||
+                            para.startsWith("The first layer") ||
+                            para.startsWith("Each one") ||
+                            para.startsWith("Taste becomes") ||
+                            para.startsWith("The higher")
+                              ? "emphasis"
+                              : ""
+                          }
+                        >
                           {para}
                         </p>
                       ))}
@@ -212,7 +178,6 @@ export default function FieldNotes() {
           </div>
         </div>
       </section>
-
     </div>
   );
 }
