@@ -1669,6 +1669,282 @@ textarea:focus-visible {
   }
 }
 
+.about-page {
+  background: var(--background);
+}
+
+.about-page .site-container {
+  max-width: 86rem;
+}
+
+.about-page .section-kicker,
+.about-page .page-kicker,
+.about-page .metadata {
+  letter-spacing: 0;
+}
+
+.about-hero {
+  padding-block: 4.75rem 4.25rem;
+}
+
+.about-hero-grid {
+  display: grid;
+  gap: 3rem;
+}
+
+.about-hero-copy h1 {
+  margin: 0.9rem 0 0;
+  font-size: 3.55rem;
+  line-height: 0.96;
+}
+
+.about-hero-copy p {
+  margin: 1.5rem 0 0;
+  max-width: 23rem;
+  color: var(--muted-foreground);
+  font-size: 1.1rem;
+  line-height: 1.55;
+}
+
+.about-hero-media {
+  max-width: 26rem;
+}
+
+.about-hero-media .media-frame {
+  background: var(--surface-soft);
+}
+
+.about-story,
+.about-practice,
+.about-index {
+  padding-block: 5.25rem;
+}
+
+.about-story-grid,
+.about-practice-grid,
+.about-index-grid {
+  display: grid;
+  gap: 2.5rem;
+}
+
+.about-story-lede p,
+.about-practice h2,
+.about-index h2 {
+  margin: 0;
+  color: var(--foreground);
+  font-family: var(--font-heading), Georgia, serif;
+  font-weight: 400;
+  line-height: 1.08;
+  text-wrap: balance;
+}
+
+.about-story-lede p {
+  max-width: 13ch;
+  font-size: 2.7rem;
+}
+
+.about-story-copy {
+  max-width: 36rem;
+}
+
+.about-practice h2 {
+  max-width: 13ch;
+  margin-top: 0.9rem;
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.about-preferences {
+  display: grid;
+  gap: 1rem;
+}
+
+.about-preferences p {
+  margin: 0;
+  background: color-mix(in srgb, var(--surface) 62%, transparent);
+  padding: 1.25rem;
+  color: var(--foreground);
+  font-family: var(--font-heading), Georgia, serif;
+  font-size: 1.5rem;
+  line-height: 1.15;
+}
+
+.about-index {
+  background: color-mix(in srgb, var(--surface) 72%, transparent);
+}
+
+.about-index h2 {
+  max-width: 12ch;
+  margin-top: 0.9rem;
+  font-size: 2.85rem;
+  line-height: 1;
+}
+
+.about-detail-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.about-detail p {
+  margin: 0.55rem 0 0;
+  color: var(--foreground);
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.about-detail small {
+  display: block;
+  margin-top: 0.45rem;
+  color: var(--muted-foreground);
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+.about-continuity {
+  max-width: 32rem;
+}
+
+@media (max-width: 639px) {
+  .about-hero {
+    padding-block: 4.25rem 3.25rem;
+  }
+
+  .about-hero-copy h1 {
+    font-size: 3.25rem;
+  }
+
+  .about-hero-media {
+    width: min(100%, 21.5rem);
+    margin-inline: auto;
+  }
+
+  .about-hero-media .media-caption {
+    text-align: center;
+  }
+
+  .about-story,
+  .about-practice,
+  .about-index {
+    padding-block: 4.5rem;
+  }
+
+  .about-story-lede p {
+    font-size: 2.15rem;
+  }
+
+  .about-practice h2,
+  .about-index h2 {
+    font-size: 2.35rem;
+  }
+
+  .about-preferences p {
+    padding: 1.1rem;
+    font-size: 1.35rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .about-hero {
+    padding-block: 6.5rem 5.75rem;
+  }
+
+  .about-hero-grid {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    column-gap: 2rem;
+    align-items: end;
+  }
+
+  .about-hero-copy {
+    grid-column: 1 / span 7;
+  }
+
+  .about-hero-copy h1 {
+    font-size: 5.8rem;
+  }
+
+  .about-hero-copy p {
+    font-size: 1.3rem;
+  }
+
+  .about-hero-media {
+    grid-column: 9 / span 4;
+    max-width: none;
+  }
+
+  .about-story,
+  .about-practice,
+  .about-index {
+    padding-block: 7rem;
+  }
+
+  .about-story-grid,
+  .about-practice-grid,
+  .about-index-grid {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    column-gap: 2rem;
+    align-items: start;
+  }
+
+  .about-story-marker {
+    grid-column: 1 / span 2;
+  }
+
+  .about-story-lede {
+    grid-column: 3 / span 4;
+  }
+
+  .about-story-lede p {
+    font-size: 3.35rem;
+  }
+
+  .about-story-copy {
+    grid-column: 8 / span 5;
+  }
+
+  .about-practice-copy,
+  .about-index-grid > div:first-child {
+    grid-column: 1 / span 5;
+  }
+
+  .about-preferences,
+  .about-detail-grid {
+    grid-column: 7 / span 6;
+  }
+
+  .about-continuity {
+    grid-column: 7 / span 5;
+  }
+
+  .about-detail-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2.25rem 3rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .about-hero-copy {
+    grid-column: 2 / span 7;
+  }
+
+  .about-hero-copy h1 {
+    font-size: 6.8rem;
+  }
+
+  .about-hero-media {
+    grid-column: 10 / span 3;
+  }
+
+  .about-story-lede p {
+    font-size: 4rem;
+  }
+
+  .about-practice h2,
+  .about-index h2 {
+    font-size: 3.65rem;
+  }
+}
+
 @keyframes cursor-blink {
   0%, 100% {
     opacity: 1;

@@ -1,133 +1,120 @@
-import { EditorialImage, PageHeader, TextLink } from "@/components/editorial";
+import { EditorialImage, TextLink } from "@/components/editorial";
 
-const quickFacts = [
+const profileDetails = [
   {
-    label: "Focus",
-    value: "Acquiring, building, and selectively advising service businesses where standards matter.",
-  },
-  {
-    label: "Operating Company",
-    value: "BraveHeart First Aid",
-    note: "Acquired June 2025",
-  },
-  {
-    label: "Role",
-    value: "CEO / Owner",
-  },
-  {
-    label: "Applied AI",
-    value: "Systems layer",
-    note: "Applied AI work that turns standards, recurring decisions, and approval rules into usable operating infrastructure.",
-  },
-  {
-    label: "Selective Advisory",
-    value: "Senior strategic and creative sparring-partner work with leaders responsible for brand, service, growth, and transition.",
-  },
-  {
-    label: "Location",
+    label: "Base",
     value: "Nova Scotia, Canada",
-    note: "Deep professional roots in Switzerland.",
+    note: "Shaped by eighteen years in Switzerland.",
   },
+  {
+    label: "Work",
+    value: "Brand, service, systems, technology, and client experience.",
+  },
+  {
+    label: "Advisory",
+    value: "Selective work with leaders responsible for standards, growth, and transition.",
+  },
+];
+
+const workingPreferences = [
+  "Find the real constraint.",
+  "Remove what does not belong.",
+  "Build systems that make people more capable.",
 ];
 
 export default function About() {
   return (
-    <div className="site-shell">
-      <section className="section">
-        <div className="site-container">
-          <PageHeader
-            kicker="05 / Profile"
-            title="Eli Castson"
-            lede="Owner, builder, and selective advisor."
-          />
+    <div className="site-shell about-page">
+      <section className="about-hero">
+        <div className="site-container about-hero-grid">
+          <div className="about-hero-copy">
+            <span className="page-kicker">05 / Profile</span>
+            <h1>Eli Castson</h1>
+            <p>Owner, builder, and selective advisor.</p>
+          </div>
+
+          <div className="about-hero-media">
+            <EditorialImage
+              src="/images/editorial/eli-business-portrait.png"
+              alt="Eli Castson in a black suit leaning against concrete architecture"
+              caption="Nova Scotia / Switzerland / operating work"
+              aspect="aspect-[4/5]"
+              objectPosition="52% center"
+              sizes="(max-width: 768px) 86vw, 32vw"
+            />
+          </div>
         </div>
       </section>
 
-      <section className="section border-b-0">
-        <div className="site-container grid gap-12 lg:grid-cols-12 lg:gap-16">
-          <div className="lg:col-span-7">
-            <div className="body-copy">
-              <p>I am based in Nova Scotia and shaped by eighteen years in Switzerland.</p>
-              <p>
-                Before acquiring BraveHeart First Aid, I worked across creative direction, advertising, digital transformation, data, and technology.
-              </p>
-              <p>
-                The titles varied — Creative Director, Tech &amp; Data; Disruption Officer — but the work was consistent: helping serious organizations see what was changing, decide what mattered, and build new ways to move.
-              </p>
-              <p className="border-l border-[var(--border-strong)] pl-5">
-                That work moved through Swiss and international environments, including projects connected to UBS, La Prairie, and other premium or complex organizations.
-              </p>
-              <p>For years, I helped organizations change from the outside.</p>
-              <p>Ownership made the standard sharper.</p>
-              <div className="quiet-panel">
-                <span className="section-kicker">Ownership Changed the Work</span>
-                <p className="mobile-pull emphasis">There is no abstraction in operating a real company.</p>
-                <div className="mt-6 grid grid-cols-1 gap-x-8 sm:grid-cols-2 metadata">
-                  {[
-                    "The operating layer either works or it does not",
-                    "The customer trusts the path or they do not",
-                    "The team is supported or they are not",
-                    "The company becomes stronger or heavier",
-                  ].map((item) => (
-                    <div key={item} className="border-t border-[var(--border)] py-3">
-                      {item}
-                    </div>
-                  ))}
-                </div>
-              </div>
-              <p>That directness now shapes the work.</p>
-              <div className="ruled-list metadata">
-                <div>I like finding the real constraint.</div>
-                <div>I like removing what does not belong.</div>
-                <div>I like building systems that make people more capable.</div>
-              </div>
-              <p>
-                I like working with people who care about the standard of the work, not just the appearance of it.
-              </p>
-              <div className="ruled-list metadata pt-4">
-                <div><strong className="text-[var(--foreground)]">BraveHeart</strong> is the operating proof.</div>
-                <div><strong className="text-[var(--foreground)]">Applied AI</strong> is the systems layer.</div>
-                <div>Selected advisory work is where that pattern meets other companies and leaders.</div>
-                <div><strong className="text-[var(--foreground)]">Castson.com</strong> is the record.</div>
-              </div>
-            </div>
+      <section className="about-story">
+        <div className="site-container about-story-grid">
+          <div className="about-story-marker">
+            <span className="section-kicker">Background</span>
           </div>
 
-          <aside className="order-first lg:order-none lg:col-span-5">
-            <div className="lg:sticky lg:top-28">
-              <EditorialImage
-                src="/images/editorial/eli-business-portrait.png"
-                alt="Eli Castson in a black suit leaning against concrete architecture"
-                caption="Eli Castson / Nova Scotia, Switzerland, operating work"
-                aspect="aspect-[4/5]"
-                className="mobile-bleed"
-                objectPosition="52% center"
-                sizes="(max-width: 1024px) 100vw, 36vw"
-              />
+          <div className="about-story-lede">
+            <p>
+              I am based in Nova Scotia and shaped by eighteen years in Switzerland.
+            </p>
+          </div>
 
-              <div className="quiet-panel mt-10">
-                <span className="section-kicker">Quick Facts</span>
-                <div className="ruled-list">
-                  {quickFacts.map((fact) => (
-                    <div key={fact.label}>
-                      <span className="metadata text-[var(--primary)]">{fact.label}</span>
-                      <p className="mt-2 text-sm font-medium leading-relaxed text-[var(--foreground)]">
-                        {fact.value}
-                      </p>
-                      {fact.note ? (
-                        <p className="mt-1 text-sm leading-relaxed text-[var(--muted-foreground)]">
-                          {fact.note}
-                        </p>
-                      ) : null}
-                    </div>
-                  ))}
-                </div>
-                <div className="mt-8">
-                  <TextLink href="/contact">Get in Touch</TextLink>
-                </div>
+          <div className="about-story-copy body-copy">
+            <p>
+              Before acquiring BraveHeart First Aid, I worked across creative direction,
+              advertising, digital transformation, data, and technology.
+            </p>
+            <p>
+              The titles varied: Creative Director, Tech &amp; Data; Disruption Officer.
+              The work was consistent: helping serious organizations see what was changing,
+              decide what mattered, and build new ways to move.
+            </p>
+            <p>
+              That work moved through Swiss and international environments, including
+              projects connected to UBS, La Prairie, and other premium or complex organizations.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="about-practice">
+        <div className="site-container about-practice-grid">
+          <div className="about-practice-copy">
+            <span className="section-kicker">Practice</span>
+            <h2>I like working with people who care about the standard of the work.</h2>
+          </div>
+
+          <div className="about-preferences">
+            {workingPreferences.map((item) => (
+              <p key={item}>{item}</p>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="about-index section-quiet border-b-0">
+        <div className="site-container about-index-grid">
+          <div>
+            <span className="section-kicker">Profile Index</span>
+            <h2>Current shape of the work.</h2>
+          </div>
+
+          <div className="about-detail-grid">
+            {profileDetails.map((detail) => (
+              <div key={detail.label} className="about-detail">
+                <span className="metadata">{detail.label}</span>
+                <p>{detail.value}</p>
+                {detail.note ? <small>{detail.note}</small> : null}
               </div>
-            </div>
-          </aside>
+            ))}
+          </div>
+
+          <div className="about-continuity body-copy">
+            <p><strong>BraveHeart</strong> is the operating proof.</p>
+            <p><strong>Applied AI</strong> is the systems layer.</p>
+            <p>Selective advisory work is where that pattern meets other companies and leaders.</p>
+            <p><strong>Castson.com</strong> is the record.</p>
+            <TextLink href="/contact" className="mt-8">Start a conversation</TextLink>
+          </div>
         </div>
       </section>
     </div>
