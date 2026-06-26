@@ -15,9 +15,9 @@ const quickFacts = [
     value: "CEO / Owner",
   },
   {
-    label: "Private Infrastructure",
-    value: "Ripley",
-    note: "Private infrastructure that turns standards, recurring work, and approval rules into usable operating infrastructure.",
+    label: "Applied AI",
+    value: "Systems layer",
+    note: "Applied AI work that turns standards, recurring decisions, and approval rules into usable operating infrastructure.",
   },
   {
     label: "Selective Advisory",
@@ -86,7 +86,7 @@ export default function About() {
               </p>
               <div className="ruled-list metadata pt-4">
                 <div><strong className="text-[var(--foreground)]">BraveHeart</strong> is the operating proof.</div>
-                <div><strong className="text-[var(--foreground)]">Ripley</strong> is the private infrastructure.</div>
+                <div><strong className="text-[var(--foreground)]">Applied AI</strong> is the systems layer.</div>
                 <div>Selected advisory work is where that pattern meets other companies and leaders.</div>
                 <div><strong className="text-[var(--foreground)]">Castson.com</strong> is the record.</div>
               </div>

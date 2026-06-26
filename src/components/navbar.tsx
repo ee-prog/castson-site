@@ -8,10 +8,10 @@ import { ArrowUpRight, Menu, Moon, Sun, X } from "lucide-react";
 const navItems = [
   { name: "Home", href: "/", meta: "Opening" },
   { name: "BraveHeart", href: "/braveheart", meta: "Operating proof" },
-  { name: "Ripley", href: "/ripley", meta: "Private infrastructure" },
-  { name: "Field Notes", href: "/field-notes", meta: "Observations" },
+  { name: "Applied AI", href: "/applied-ai", meta: "Systems layer" },
+  { name: "Writing", href: "/writing", meta: "Notes & Essays" },
   { name: "About", href: "/about", meta: "Profile" },
-  { name: "Contact", href: "/contact", meta: "Conversation" },
+  { name: "Contact", href: "/contact", meta: "Private Advisory" },
 ];
 
 export default function Navbar() {
@@ -49,11 +49,10 @@ export default function Navbar() {
           <Link
             href="/"
             onClick={() => setIsOpen(false)}
-            className="group flex items-baseline gap-2 text-[1.05rem] leading-none"
+            className="group text-[1.05rem] leading-none"
             aria-label="Castson Inc. home"
           >
             <span className="font-display text-[var(--foreground)]">Castson Inc.</span>
-            <span className="h-1.5 w-1.5 translate-y-[-0.18rem] bg-[var(--primary)]" aria-hidden="true" />
           </Link>
 
           <div className="flex items-center gap-1.5">
@@ -98,7 +97,7 @@ export default function Navbar() {
             <div className="lg:col-span-4">
               <p className="page-kicker">Index</p>
               <p className="mt-5 max-w-xs text-sm leading-relaxed text-[var(--muted-foreground)]">
-                Castson Inc. is a record of ownership, operating discipline, private infrastructure, and selective advisory work.
+                Castson Inc. is a record of ownership, operating discipline, applied AI, and selective advisory work.
               </p>
             </div>
 

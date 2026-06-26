@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     default: "Eli Castson | Castson Inc.",
     template: "%s | Eli Castson",
   },
-  description: "Eli Castson acquires, builds, and selectively advises distinctive service businesses where brand, operations, and standards have to hold.",
+  description: "Selective advisory for distinctive service businesses where the experience has to feel as considered as the promise.",
   keywords: [
     "Eli Castson",
     "Castson Inc.",
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
     "Operational Standards",
     "Tourism Succession",
     "BraveHeart First Aid",
-    "Ripley Private Infrastructure"
+    "Applied AI Systems Layer"
   ],
   authors: [{ name: "Eli Castson", url: "https://castson.com" }],
   creator: "Eli Castson",
@@ -70,13 +70,13 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://castson.com",
     title: "Eli Castson | Castson Inc.",
-    description: "Eli Castson acquires, builds, and selectively advises distinctive service businesses. BraveHeart is the operating proof. Ripley is the private infrastructure.",
+    description: "Selective advisory for distinctive service businesses where brand, service, systems, technology, and client experience have to hold together.",
     siteName: "Eli Castson",
   },
   twitter: {
     card: "summary_large_image",
     title: "Eli Castson | Castson Inc.",
-    description: "Eli Castson acquires, builds, and selectively advises distinctive service businesses. BraveHeart is the operating proof. Ripley is the private infrastructure.",
+    description: "Selective advisory for distinctive service businesses where brand, service, systems, technology, and client experience have to hold together.",
   },
 };
 

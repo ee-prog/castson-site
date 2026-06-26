@@ -33,9 +33,9 @@ export default function Colophon() {
                 <p>Swiss-influenced, mobile-first, restrained, text-forward.</p>
               </div>
               <div>
-                <span className="section-kicker">Private Infrastructure</span>
+                <span className="section-kicker">Applied AI</span>
                 <div className="space-y-4">
-                  <p>Ripley is the private infrastructure behind the work.</p>
+                  <p>Applied AI is the systems layer behind the work.</p>
                   <p>
                     It keeps briefs, drafts, research, decisions, working files, and repeatable rules inspectable instead of scattered.
                   </p>

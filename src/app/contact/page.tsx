@@ -5,15 +5,6 @@ import { ArrowRight, Send } from "lucide-react";
 import { PageHeader } from "@/components/editorial";
 import { sendContactEmail } from "./actions";
 
-const fitList = [
-  "An owner thinking about succession or transition",
-  "A property holder considering an operating partner",
-  "An operator building a service or place-based business",
-  "A founder, CEO, or CMO who needs senior outside judgment",
-  "A collaborator in hospitality, wellness, tourism, design, property, or service",
-  "An investor aligned with patient operating-led value creation",
-];
-
 export default function Contact() {
   const [state, formAction, isPending] = useActionState(sendContactEmail, null);
 
@@ -22,9 +13,9 @@ export default function Contact() {
       <section className="section">
         <div className="site-container">
           <PageHeader
-            kicker="06 / Connect"
+            kicker="05 / Contact"
             title="Contact"
-            lede="Start with the real question."
+            lede="For private advisory, thoughtful introductions, or a conversation worth having."
           />
         </div>
       </section>
@@ -34,25 +25,12 @@ export default function Contact() {
           <div className="order-2 lg:order-1 lg:col-span-5">
             <div className="body-copy">
               <p className="emphasis text-xl leading-relaxed">
-                Reach out when there is real ownership behind the question.
+                I work selectively with people responsible for distinctive service experiences.
               </p>
               <p>
-                I am interested in owners and senior leaders building, operating, selling, or stewarding businesses where place, service, taste, and standards matter.
+                If something here feels relevant, send a note.
               </p>
             </div>
-
-            <div className="mt-10">
-              <span className="section-kicker">Reach out if you are</span>
-              <div className="ruled-list metadata">
-                {fitList.map((item) => (
-                  <div key={item}>{item}</div>
-                ))}
-              </div>
-            </div>
-
-            <p className="metadata mt-10 border-l border-[var(--border-strong)] pl-5">
-              I am most useful when the work is specific, consequential, and already moving. If something here connects with what you are building, carrying, or trying to make stronger, send a note.
-            </p>
           </div>
 
           <div className="order-1 lg:order-2 lg:col-span-7">
@@ -128,7 +106,7 @@ export default function Contact() {
 
                 <div>
                   <label htmlFor="subject" className="metadata mb-2 block text-[var(--primary)]">
-                    Subject / Context
+                    Subject
                   </label>
                   <input
                     type="text"
@@ -178,7 +156,7 @@ export default function Contact() {
                 </button>
 
                 <p className="border-t border-[var(--border)] pt-5 text-xs leading-relaxed text-[var(--muted-foreground)]">
-                  By sending this form, you are sharing the information above so I can read and respond to your message. I do not use contact form submissions for a mailing list unless you explicitly ask.
+                  Your message is only used so I can read and respond.
                 </p>
               </form>
             )}
