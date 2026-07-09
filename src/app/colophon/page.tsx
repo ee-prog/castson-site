@@ -7,15 +7,15 @@ const workspaceTools = ["Antigravity"];
 
 export default function Colophon() {
   return (
-    <div className="site-shell">
-      <section className="section">
+    <div className="site-shell colophon-page">
+      <section className="section colophon-hero">
         <div className="site-container">
           <PageHeader kicker="07 / Identity" title="Colophon" />
         </div>
       </section>
 
-      <section className="section border-b-0">
-        <div className="site-container max-w-3xl">
+      <section className="section border-b-0 colophon-body">
+        <div className="site-container">
           <div className="body-copy">
             <p className="emphasis text-xl leading-relaxed">
               This site is a working record for Eli Castson and Castson Inc.: part personal site, part company ledger, part archive of ownership, operating discipline, and direction.
@@ -23,7 +23,7 @@ export default function Colophon() {
 
             <p>Built with Next.js, TypeScript, Tailwind CSS, and Vercel.</p>
 
-            <div className="quiet-panel space-y-8">
+            <div className="colophon-panel space-y-8">
               <div>
                 <span className="section-kicker">Typography</span>
                 <p>Atacama for display. Helix for body text. Geist Mono in use for small system labels and metadata.</p>

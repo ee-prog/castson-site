@@ -40,6 +40,7 @@ export default function About() {
               caption="Nova Scotia / Switzerland / operating work"
               aspect="aspect-[4/5]"
               objectPosition="52% center"
+              priority
               sizes="(max-width: 768px) 86vw, 32vw"
             />
           </div>

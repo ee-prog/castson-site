@@ -84,11 +84,19 @@ type AiSectionProps = {
   title: string;
   children: ReactNode;
   quiet?: boolean;
+  variant?: string;
 };
 
-function AiSection({ number, kicker, title, children, quiet = false }: AiSectionProps) {
+function AiSection({
+  number,
+  kicker,
+  title,
+  children,
+  quiet = false,
+  variant = "default",
+}: AiSectionProps) {
   return (
-    <section className={`ai-section story-section ${quiet ? "section-quiet" : ""}`}>
+    <section className={`ai-section ai-section--${variant} story-section ${quiet ? "section-quiet" : ""}`}>
       <div className="site-container ai-section-grid">
         <div className="ai-section-marker">
           <span className="ai-section-number">{number}</span>
@@ -147,7 +155,7 @@ export default function AppliedAI() {
         </div>
       </section>
 
-      <AiSection number="01" kicker="Clarity First" title="Applied AI begins with clarity.">
+      <AiSection number="01" kicker="Clarity First" title="Applied AI begins with clarity." variant="opening">
         <div className="ai-negations metadata">
           <span>Not prompts.</span>
           <span>Not theatre.</span>
@@ -155,18 +163,19 @@ export default function AppliedAI() {
         </div>
         <p className="emphasis">The work begins by making the business legible.</p>
         <RuleList items={clarityQuestions} />
+        <div className="ai-subsection">
+          <span className="section-kicker">Organizational Debt</span>
+          <h3>Do not automate confusion.</h3>
+          <p className="emphasis">AI does not fix a messy business. It makes the mess move faster.</p>
+          <p>Before automation can help, the organizational debt has to be paid down.</p>
+          <RuleList items={debtWork} />
+          <p>This is the work most companies want to skip.</p>
+          <p className="emphasis">It is also the work that makes AI land.</p>
+        </div>
         <p className="mobile-pull emphasis">Only then does AI become useful.</p>
       </AiSection>
 
-      <AiSection number="02" kicker="Organizational Debt" title="Do not automate confusion." quiet>
-        <p className="emphasis">AI does not fix a messy business. It makes the mess move faster.</p>
-        <p>Before automation can help, the organizational debt has to be paid down.</p>
-        <RuleList items={debtWork} />
-        <p>This is the work most companies want to skip.</p>
-        <p className="emphasis">It is also the work that makes AI land.</p>
-      </AiSection>
-
-      <AiSection number="03" kicker="Experience Before System" title="The client experience comes first.">
+      <AiSection number="02" kicker="Experience Before System" title="The client experience comes first." variant="experience" quiet>
         <div className="ai-sequence metadata">
           <span>Then the process.</span>
           <span>Then the system.</span>
@@ -180,7 +189,7 @@ export default function AppliedAI() {
         <p className="emphasis">Not flatten them.</p>
       </AiSection>
 
-      <AiSection number="04" kicker="Standard" title="The system should carry the standard." quiet>
+      <AiSection number="03" kicker="Standard" title="The system should carry the standard." variant="standard">
         <p>A distinctive business depends on judgment.</p>
         <p>
           But too often, that judgment lives in people&apos;s heads, old habits, scattered tools, or private workarounds.
@@ -193,7 +202,7 @@ export default function AppliedAI() {
         <p className="emphasis">The point is to protect it.</p>
       </AiSection>
 
-      <AiSection number="05" kicker="Invisible Technical Work" title="The technical work should disappear into the experience.">
+      <AiSection number="04" kicker="Invisible Technical Work" title="The technical work should disappear into the experience." variant="technical" quiet>
         <p>
           Behind the scenes, the work may involve custom software, connected systems, automation, AI-assisted workflows, operational memory, dashboards, rules, approvals, APIs, and human-in-the-loop interfaces.
         </p>
@@ -205,16 +214,17 @@ export default function AppliedAI() {
           <span>The team has better context.</span>
           <span>The business keeps its standard with less noise.</span>
         </div>
+        <div className="ai-subsection">
+          <span className="section-kicker">Coherence</span>
+          <h3>The work connects what normally drifts apart.</h3>
+          <RuleList items={connectedWork} />
+          <p>Most businesses do not suffer from a lack of tools.</p>
+          <p>They suffer because the tools do not share the same understanding of the business.</p>
+          <p className="mobile-pull emphasis">Applied AI should help the business become more coherent.</p>
+        </div>
       </AiSection>
 
-      <AiSection number="06" kicker="Coherence" title="The work connects what normally drifts apart." quiet>
-        <RuleList items={connectedWork} />
-        <p>Most businesses do not suffer from a lack of tools.</p>
-        <p>They suffer because the tools do not share the same understanding of the business.</p>
-        <p className="mobile-pull emphasis">Applied AI should help the business become more coherent.</p>
-      </AiSection>
-
-      <AiSection number="07" kicker="Leverage" title="Small teams can now build serious leverage.">
+      <AiSection number="05" kicker="Leverage" title="Small teams can now build serious leverage." variant="care">
         <p className="emphasis">The boundary has changed.</p>
         <p>
           Small companies used to face a hard choice: accept generic software and reshape the business around the tool, or spend heavily to build custom systems.
@@ -225,24 +235,25 @@ export default function AppliedAI() {
         </p>
         <p>But the advantage does not come from the tools alone.</p>
         <p className="emphasis">It comes from knowing what the business is trying to become.</p>
-      </AiSection>
-
-      <AiSection number="08" kicker="Care" title="Better systems should feel like better care." quiet>
-        <p>If the work is done well, the client may never think about the technology.</p>
-        <p className="emphasis">They simply experience more clarity.</p>
-        <div className="ai-two-lists">
-          <div>
-            <span className="section-kicker">The Client Feels</span>
-            <RuleList items={clientOutcomes} />
-          </div>
-          <div>
-            <span className="section-kicker">The Team Feels</span>
-            <RuleList items={teamOutcomes} />
+        <div className="ai-subsection">
+          <span className="section-kicker">Care</span>
+          <h3>Better systems should feel like better care.</h3>
+          <p>If the work is done well, the client may never think about the technology.</p>
+          <p className="emphasis">They simply experience more clarity.</p>
+          <div className="ai-two-lists">
+            <div>
+              <span className="section-kicker">The Client Feels</span>
+              <RuleList items={clientOutcomes} />
+            </div>
+            <div>
+              <span className="section-kicker">The Team Feels</span>
+              <RuleList items={teamOutcomes} />
+            </div>
           </div>
         </div>
       </AiSection>
 
-      <AiSection number="09" kicker="Capability" title="AI should make the business more capable.">
+      <AiSection number="06" kicker="Capability" title="AI should make the business more capable." variant="closing">
         <div className="ai-negations metadata">
           <span>Not more generic.</span>
           <span>Not more complicated.</span>

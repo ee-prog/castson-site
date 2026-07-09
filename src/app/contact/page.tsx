@@ -9,8 +9,8 @@ export default function Contact() {
   const [state, formAction, isPending] = useActionState(sendContactEmail, null);
 
   return (
-    <div className="site-shell">
-      <section className="section">
+    <div className="site-shell contact-page">
+      <section className="section contact-hero">
         <div className="site-container">
           <PageHeader
             kicker="05 / Contact"
@@ -20,8 +20,8 @@ export default function Contact() {
         </div>
       </section>
 
-      <section className="section border-b-0">
-        <div className="site-container grid gap-12 lg:grid-cols-12 lg:gap-16">
+      <section className="section border-b-0 contact-body">
+        <div className="site-container contact-grid">
           <div className="order-2 lg:order-1 lg:col-span-5">
             <div className="body-copy">
               <p className="emphasis text-xl leading-relaxed">
@@ -35,7 +35,7 @@ export default function Contact() {
 
           <div className="order-1 lg:order-2 lg:col-span-7">
             {state?.success ? (
-              <div className="quiet-panel text-center">
+              <div className="contact-confirmation text-center">
                 <div className="mx-auto flex h-12 w-12 items-center justify-center text-[var(--primary)]">
                   <Send className="h-6 w-6" strokeWidth={1.5} aria-hidden="true" />
                 </div>
@@ -48,7 +48,7 @@ export default function Contact() {
                 </a>
               </div>
             ) : (
-              <form action={formAction} className="quiet-panel space-y-8">
+              <form action={formAction} className="contact-form space-y-8">
                 {state?.error && (
                   <div className="border border-red-500/25 bg-red-500/5 p-4 text-sm text-red-600 dark:text-red-300">
                     {state.error}

@@ -77,6 +77,7 @@ type BraveHeartSectionProps = {
   children: ReactNode;
   aside?: ReactNode;
   quiet?: boolean;
+  variant?: string;
 };
 
 function BraveHeartSection({
@@ -86,9 +87,10 @@ function BraveHeartSection({
   children,
   aside,
   quiet = false,
+  variant = "default",
 }: BraveHeartSectionProps) {
   return (
-    <section className={`bh-section story-section ${quiet ? "section-quiet" : ""}`}>
+    <section className={`bh-section bh-section--${variant} story-section ${quiet ? "section-quiet" : ""}`}>
       <div className="site-container bh-section-grid">
         <div className="bh-section-marker">
           <span className="bh-section-number">{number}</span>
@@ -209,6 +211,7 @@ export default function BraveHeart() {
         kicker="Standard"
         title="The standard has to be felt."
         quiet
+        variant="standard"
         aside={
           <EditorialImage
             src="/images/braveheart/classroom-first-aid-demo.png"
@@ -233,26 +236,24 @@ export default function BraveHeart() {
         <p className="emphasis">
           BraveHeart matters because the work has to hold in real life.
         </p>
+        <div className="bh-subsection">
+          <span className="section-kicker">Clarity</span>
+          <h3>The experience had to become clearer.</h3>
+          <p>The first work was not automation.</p>
+          <p className="emphasis">It was understanding.</p>
+          <NumberedList items={clarityQuestions} />
+          <p>A business cannot improve what it cannot see.</p>
+          <p className="emphasis">
+            Before anything could move faster, the experience had to become more legible.
+          </p>
+        </div>
       </BraveHeartSection>
 
       <BraveHeartSection
         number="03"
-        kicker="Clarity"
-        title="The experience had to become clearer."
-      >
-        <p>The first work was not automation.</p>
-        <p className="emphasis">It was understanding.</p>
-        <NumberedList items={clarityQuestions} />
-        <p>A business cannot improve what it cannot see.</p>
-        <p className="emphasis">
-          Before anything could move faster, the experience had to become more legible.
-        </p>
-      </BraveHeartSection>
-
-      <BraveHeartSection
-        number="04"
         kicker="Operating Path"
         title="The client path became the operating path."
+        variant="operating"
         quiet
       >
         <PlainList items={operatingPath.map((item) => `${item}.`)} />
@@ -264,41 +265,26 @@ export default function BraveHeart() {
         <p className="emphasis">
           It was to make the experience feel more considered.
         </p>
+        <div className="bh-subsection">
+          <span className="section-kicker">Systems</span>
+          <h3>The systems underneath had to catch up.</h3>
+          <p>
+            Once the business became clearer, the platform compromises became clearer too.
+          </p>
+          <p>Generic tools helped reveal the shape of the work.</p>
+          <p className="emphasis">Then the work outgrew the tools.</p>
+          <PlainList items={platformWork} />
+          <p>Not technology for display.</p>
+          <p className="emphasis">Technology in service of the standard.</p>
+        </div>
       </BraveHeartSection>
 
       <BraveHeartSection
-        number="05"
-        kicker="Systems"
-        title="The systems underneath had to catch up."
-      >
-        <p>
-          Once the business became clearer, the platform compromises became clearer too.
-        </p>
-        <p>Generic tools helped reveal the shape of the work.</p>
-        <p className="emphasis">Then the work outgrew the tools.</p>
-        <PlainList items={platformWork} />
-        <p>Not technology for display.</p>
-        <p className="emphasis">Technology in service of the standard.</p>
-      </BraveHeartSection>
-
-      <BraveHeartSection
-        number="06"
+        number="04"
         kicker="Team"
         title="The team should not have to carry the business in their heads."
+        variant="team"
         quiet
-      >
-        <p className="emphasis">Good systems reduce the wrong kind of effort.</p>
-        <PlainList items={lessEffort} />
-        <p>The goal is not to remove judgment.</p>
-        <p>The goal is to give judgment better support.</p>
-        <p>A clearer business is easier to operate.</p>
-        <p className="emphasis">It is also easier to trust.</p>
-      </BraveHeartSection>
-
-      <BraveHeartSection
-        number="07"
-        kicker="Care"
-        title="Better operations should feel like better care."
         aside={
           <EditorialImage
             src="/images/braveheart/babysitter-infant-training.png"
@@ -311,19 +297,30 @@ export default function BraveHeart() {
           />
         }
       >
-        <p>The client may never see the operating system.</p>
-        <p className="emphasis">They feel it anyway.</p>
-        <PlainList items={careMoments} />
-        <p>That is the point of the work.</p>
-        <p className="emphasis">
-          The machinery underneath should make the human experience stronger.
-        </p>
+        <p className="emphasis">Good systems reduce the wrong kind of effort.</p>
+        <PlainList items={lessEffort} />
+        <p>The goal is not to remove judgment.</p>
+        <p>The goal is to give judgment better support.</p>
+        <p>A clearer business is easier to operate.</p>
+        <p className="emphasis">It is also easier to trust.</p>
+        <div className="bh-subsection">
+          <span className="section-kicker">Care</span>
+          <h3>Better operations should feel like better care.</h3>
+          <p>The client may never see the operating system.</p>
+          <p className="emphasis">They feel it anyway.</p>
+          <PlainList items={careMoments} />
+          <p>That is the point of the work.</p>
+          <p className="emphasis">
+            The machinery underneath should make the human experience stronger.
+          </p>
+        </div>
       </BraveHeartSection>
 
       <BraveHeartSection
-        number="08"
+        number="05"
         kicker="Consequence"
         title="The business has to open tomorrow."
+        variant="consequence"
         quiet
       >
         <p>
@@ -335,20 +332,17 @@ export default function BraveHeart() {
         <PlainList items={dailyPressure} />
         <p>BraveHeart sharpened the work because it removed abstraction.</p>
         <p className="emphasis">The standard had to survive the day.</p>
-      </BraveHeartSection>
-
-      <BraveHeartSection
-        number="09"
-        kicker="Handoff"
-        title="The proof is in the handoff."
-      >
-        <p>A better business is felt in ordinary moments.</p>
-        <NumberedList items={handoffProof} />
-        <p>None of this is dramatic.</p>
-        <p>That is why it matters.</p>
-        <p className="emphasis">
-          The experience becomes calmer, clearer, and easier to trust.
-        </p>
+        <div className="bh-subsection">
+          <span className="section-kicker">Handoff</span>
+          <h3>The proof is in the handoff.</h3>
+          <p>A better business is felt in ordinary moments.</p>
+          <NumberedList items={handoffProof} />
+          <p>None of this is dramatic.</p>
+          <p>That is why it matters.</p>
+          <p className="emphasis">
+            The experience becomes calmer, clearer, and easier to trust.
+          </p>
+        </div>
       </BraveHeartSection>
 
       <section className="bh-closing section section-quiet border-b-0">

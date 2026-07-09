@@ -69,7 +69,7 @@ export default function Home() {
           priority
           sizes="100vw"
           className="object-cover"
-          style={{ objectPosition: "52% center" }}
+          style={{ objectPosition: "64% center" }}
         />
         <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(244,240,232,0.90)_0%,rgba(244,240,232,0.74)_42%,rgba(244,240,232,0.20)_100%)] dark:bg-[linear-gradient(90deg,rgba(21,20,17,0.88)_0%,rgba(21,20,17,0.68)_46%,rgba(21,20,17,0.20)_100%)]" />
         <div className="site-container relative z-10 flex min-h-[calc(88svh-4.5rem)] items-end pb-14 pt-16 sm:min-h-[calc(92svh-4.5rem)] md:pb-24 lg:min-h-[calc(100svh-4.5rem)]">
@@ -101,7 +101,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section story-section">
+      <section className="section story-section home-intro-section">
         <div className="site-container">
           <div className="grid gap-12 lg:grid-cols-12 lg:gap-20">
             <div className="lg:col-span-8">
@@ -140,7 +140,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section section-quiet story-section">
+      <section className="section section-quiet story-section home-experience-section">
         <div className="site-container">
           <div className="grid gap-12 lg:grid-cols-12 lg:gap-20">
             <div className="lg:col-span-5">
@@ -183,7 +183,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section story-section">
+      <section className="section story-section home-trust-section">
         <div className="site-container">
           <div className="grid gap-12 lg:grid-cols-12 lg:gap-20">
             <div className="lg:col-span-5">
@@ -213,7 +213,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section story-section">
+      <section className="section story-section home-consequence-section">
         <div className="site-container grid gap-12 lg:grid-cols-12 lg:gap-16">
           <div className="lg:col-span-6">
             <span className="section-kicker">Where Advice Becomes Real</span>
@@ -254,7 +254,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section section-quiet story-section">
+      <section className="section section-quiet story-section home-promise-section">
         <div className="site-container grid gap-12 lg:grid-cols-12 lg:gap-16">
           <div className="lg:col-span-7">
             <span className="section-kicker">Promise and Delivery</span>
@@ -286,7 +286,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section story-section">
+      <section className="section story-section home-proof-section">
         <div className="site-container">
           <div className="max-w-4xl">
             <span className="section-kicker">Operating Proof</span>
@@ -326,7 +326,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section section-quiet story-section">
+      <section className="section section-quiet story-section home-systems-section">
         <div className="site-container grid gap-12 lg:grid-cols-12 lg:gap-16">
           <div className="lg:col-span-5">
             <EditorialImage
@@ -365,7 +365,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section story-section">
+      <section className="section story-section home-technology-section">
         <div className="site-container grid gap-12 lg:grid-cols-12 lg:gap-16">
           <div className="lg:col-span-7">
             <span className="section-kicker">Technology</span>
@@ -401,7 +401,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section section-quiet story-section border-b-0">
+      <section className="section section-quiet story-section border-b-0 home-closing-section">
         <div className="site-container grid gap-12 lg:grid-cols-12 lg:gap-16">
           <div className="lg:col-span-7">
             <span className="section-kicker">Distinctive Businesses</span>
