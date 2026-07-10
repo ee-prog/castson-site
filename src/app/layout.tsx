@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Geist_Mono } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "@/components/navbar";
@@ -38,11 +37,6 @@ const helix = localFont({
   ],
   variable: "--font-body",
   display: "swap",
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
@@ -89,14 +83,14 @@ export default function RootLayout({
     <html
       lang="en"
       data-scroll-behavior="smooth"
-      className={`${atacama.variable} ${helix.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${atacama.variable} ${helix.variable} h-full antialiased`}
       suppressHydrationWarning
     >
       <head>
         {/* Inline FOUC-prevention: resolve theme before first paint */}
         <script
           dangerouslySetInnerHTML={{
-            __html: `(function(){try{var t=localStorage.getItem('theme');if(t==='dark'||t==='light'){document.documentElement.classList.toggle('dark',t==='dark')}else{var d=window.matchMedia('(prefers-color-scheme:dark)').matches;document.documentElement.classList.toggle('dark',d)}}catch(e){document.documentElement.classList.add('dark')}})()`,
+            __html: `(function(){try{var t=localStorage.getItem('theme');document.documentElement.classList.toggle('dark',t==='light'?false:true)}catch(e){document.documentElement.classList.add('dark')}})()`,
           }}
         />
       </head>

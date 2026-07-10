@@ -15,7 +15,7 @@ export default function Contact() {
           <PageHeader
             kicker="05 / Contact"
             title="Contact"
-            lede="For private advisory, thoughtful introductions, or a conversation worth having."
+            lede="For thoughtful notes, introductions, and private conversations about the work."
           />
         </div>
       </section>
@@ -25,11 +25,18 @@ export default function Contact() {
           <div className="order-2 lg:order-1 lg:col-span-5">
             <div className="body-copy">
               <p className="emphasis text-xl leading-relaxed">
-                I work selectively with people responsible for distinctive service experiences.
+                I work with owners, leaders, and senior teams when the question touches
+                more than one part of the business.
               </p>
-              <p>
-                If something here feels relevant, send a note.
-              </p>
+              <div className="ruled-list metadata">
+                <div>Brand.</div>
+                <div>Service.</div>
+                <div>Operations.</div>
+                <div>Technology.</div>
+                <div>Client experience.</div>
+              </div>
+              <p>If something here feels relevant to what you are carrying, you are welcome to send a note.</p>
+              <p>I read every message myself.</p>
             </div>
           </div>
 
@@ -78,7 +85,6 @@ export default function Contact() {
                       required
                       maxLength={100}
                       className="form-input-luxury"
-                      placeholder="Jane Doe"
                     />
                     {state?.fieldErrors?.name && (
                       <p className="mt-2 text-xs text-red-600 dark:text-red-300">{state.fieldErrors.name}</p>
@@ -96,7 +102,6 @@ export default function Contact() {
                       required
                       maxLength={254}
                       className="form-input-luxury"
-                      placeholder="jane@example.com"
                     />
                     {state?.fieldErrors?.email && (
                       <p className="mt-2 text-xs text-red-600 dark:text-red-300">{state.fieldErrors.email}</p>
@@ -115,7 +120,6 @@ export default function Contact() {
                     required
                     maxLength={150}
                     className="form-input-luxury"
-                    placeholder="e.g., succession / operating partner / advisory"
                   />
                   {state?.fieldErrors?.subject && (
                     <p className="mt-2 text-xs text-red-600 dark:text-red-300">{state.fieldErrors.subject}</p>
@@ -133,7 +137,6 @@ export default function Contact() {
                     rows={5}
                     maxLength={5000}
                     className="form-input-luxury resize-none"
-                    placeholder="Introduce yourself and what you are trying to make stronger..."
                   />
                   {state?.fieldErrors?.message && (
                     <p className="mt-2 text-xs text-red-600 dark:text-red-300">{state.fieldErrors.message}</p>

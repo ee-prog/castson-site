@@ -1,5 +1,7 @@
 import type { ReactNode } from "react";
 
+const heroThemes = ["Clarity", "Standards", "Handoffs", "Memory", "Capability"];
+
 const clarityQuestions = [
   "What is the client supposed to feel?",
   "Where does trust get built?",
@@ -18,64 +20,66 @@ const debtWork = [
 ];
 
 const experienceMoments = [
-  "The welcome",
-  "The timing",
-  "The follow-up",
-  "The handoff",
-  "The moment someone needs help",
-  "The moment someone needs confidence",
-  "The feeling that someone thought ahead",
+  "The welcome.",
+  "The timing.",
+  "The follow-up.",
+  "The handoff.",
+  "The moment someone needs help.",
+  "The moment someone needs confidence.",
+  "The quiet sense that someone thought ahead.",
 ];
 
 const standardCarriers = [
-  "Rules",
-  "Context",
-  "Approvals",
-  "Memory",
-  "Signals",
-  "Interfaces",
-  "Escalation points",
-  "Human oversight",
+  "Rules.",
+  "Context.",
+  "Approvals.",
+  "Memory.",
+  "Signals.",
+  "Interfaces.",
+  "Escalation points.",
+  "Human oversight.",
 ];
 
 const connectedWork = [
-  "Marketing",
-  "Scheduling",
-  "Operations",
-  "Finance",
-  "Knowledge",
-  "Client experience",
-  "Team communication",
-  "Decision-making",
+  "Marketing.",
+  "Scheduling.",
+  "Operations.",
+  "Finance.",
+  "Knowledge.",
+  "Client experience.",
+  "Team communication.",
+  "Decision-making.",
+];
+
+const leverageQuestions = [
+  "What should be easier.",
+  "What should be more consistent.",
+  "What should be remembered.",
+  "What should be escalated.",
+  "What should stay deeply human.",
 ];
 
 const clientOutcomes = [
-  "Better timing",
-  "Cleaner communication",
-  "Fewer dropped handoffs",
-  "More consistent standards",
-  "More thoughtful follow-up",
-  "Less friction when something changes",
+  "More clarity.",
+  "Better timing.",
+  "Cleaner communication.",
+  "Fewer dropped handoffs.",
+  "More consistent standards.",
+  "More thoughtful follow-up.",
+  "Less friction when something changes.",
 ];
 
 const teamOutcomes = [
-  "Less noise",
-  "Less guessing",
-  "Less repeated work",
-  "More room for the human parts of the service",
+  "Less noise.",
+  "Less guessing.",
+  "Less repeated work.",
+  "More room for the parts of service that actually need a person.",
 ];
 
-const technicalWork = [
-  "Custom software",
-  "Connected systems",
-  "Automation",
-  "AI-assisted workflows",
-  "Operational memory",
-  "Dashboards",
-  "Rules",
-  "Approvals",
-  "APIs",
-  "Human-in-the-loop interfaces",
+const capabilityNegations = [
+  "Not more generic.",
+  "Not more complicated.",
+  "Not more dependent on another platform nobody fully understands.",
 ];
 
 type AiSectionProps = {
@@ -137,104 +141,142 @@ function TermGrid({ items }: { items: string[] }) {
 export default function AppliedAI() {
   return (
     <div className="site-shell home-story ai-page">
-      <section className="ai-hero">
+      <section className="ai-hero ai-hero--statement">
         <div className="site-container ai-hero-grid">
           <div className="ai-hero-label">
             <span className="page-kicker">02 / Applied AI</span>
           </div>
-          <h1>Applied AI</h1>
+          <h1>AI is useful only when the business is clear enough to use it.</h1>
           <div className="ai-hero-copy">
-            <p>Systems that make the business more human, not less.</p>
+            <p>
+              Systems, workflows, and applied intelligence in service of the standard
+              the business is here to keep.
+            </p>
           </div>
           <div className="ai-hero-index metadata" aria-label="Applied AI themes">
-            <span>Clarity</span>
-            <span>Standard</span>
-            <span>Care</span>
-            <span>Capability</span>
+            {heroThemes.map((theme) => (
+              <span key={theme}>{theme}</span>
+            ))}
           </div>
         </div>
       </section>
 
-      <AiSection number="01" kicker="Clarity First" title="Applied AI begins with clarity." variant="opening">
+      <AiSection number="01" kicker="Operator's View" title="Most companies do not have a tool problem." variant="opening">
         <div className="ai-negations metadata">
-          <span>Not prompts.</span>
-          <span>Not theatre.</span>
-          <span>Not automation layered over confusion.</span>
+          <span>They have standards living in people&apos;s heads.</span>
+          <span>Decisions depending on memory.</span>
+          <span>Teams chasing context.</span>
+          <span>Clients repeating information.</span>
+          <span>Leaders becoming the system because the system does not quite hold.</span>
         </div>
-        <p className="emphasis">The work begins by making the business legible.</p>
-        <RuleList items={clarityQuestions} />
-        <div className="ai-subsection">
-          <span className="section-kicker">Organizational Debt</span>
-          <h3>Do not automate confusion.</h3>
-          <p className="emphasis">AI does not fix a messy business. It makes the mess move faster.</p>
-          <p>Before automation can help, the organizational debt has to be paid down.</p>
-          <RuleList items={debtWork} />
-          <p>This is the work most companies want to skip.</p>
-          <p className="emphasis">It is also the work that makes AI land.</p>
-        </div>
-        <p className="mobile-pull emphasis">Only then does AI become useful.</p>
+        <p>AI does not solve that by itself.</p>
+        <p>It makes the need for clarity harder to avoid.</p>
+        <p className="mobile-pull emphasis">The useful work begins before the tool.</p>
       </AiSection>
 
-      <AiSection number="02" kicker="Experience Before System" title="The client experience comes first." variant="experience" quiet>
-        <div className="ai-sequence metadata">
-          <span>Then the process.</span>
-          <span>Then the system.</span>
-          <span>Then the automation.</span>
+      <AiSection number="02" kicker="Clarity First" title="Do not automate what the business has not understood.">
+        <p className="emphasis">The first questions are simple.</p>
+        <RuleList items={clarityQuestions} />
+        <p>A business cannot automate its way out of confusion.</p>
+        <p className="emphasis">The work begins by making the business easier to see.</p>
+        <div className="ai-subsection">
+          <span className="section-kicker">Organizational Debt</span>
+          <h3>The debt has to be paid down first.</h3>
+          <p>Before AI can help, the basic operating questions need answers.</p>
+          <RuleList items={debtWork} />
+          <p>This is the work most companies want to skip.</p>
+          <p className="emphasis">It is also the work that makes applied AI useful.</p>
         </div>
+      </AiSection>
+
+      <AiSection
+        number="03"
+        kicker="Experience Before System"
+        title="The client path becomes the operating map."
+        variant="experience"
+        quiet
+      >
+        <p>A good AI project does not start with the tool.</p>
         <p className="emphasis">
-          A good AI project does not start with the tool. It starts with the experience the business is trying to create.
+          It starts with the experience the business is trying to protect.
         </p>
         <RuleList items={experienceMoments} />
         <p>Technology should support those moments.</p>
         <p className="emphasis">Not flatten them.</p>
       </AiSection>
 
-      <AiSection number="03" kicker="Standard" title="The system should carry the standard." variant="standard">
-        <p>A distinctive business depends on judgment.</p>
+      <AiSection number="04" kicker="Standard" title="The system should carry more of the standard." variant="standard">
+        <p>Distinctive businesses depend on judgment.</p>
         <p>
-          But too often, that judgment lives in people&apos;s heads, old habits, scattered tools, or private workarounds.
+          But judgment often lives in old habits, private workarounds, scattered tools,
+          and the memory of a few capable people.
         </p>
+        <p>That creates strain.</p>
         <p className="emphasis">
-          Applied AI becomes useful when the standard is clear enough to be carried by the system.
+          Applied AI becomes useful when the standard is clear enough for the system to
+          help carry it.
         </p>
         <TermGrid items={standardCarriers} />
         <p>The point is not to replace judgment.</p>
         <p className="emphasis">The point is to protect it.</p>
       </AiSection>
 
-      <AiSection number="04" kicker="Invisible Technical Work" title="The technical work should disappear into the experience." variant="technical" quiet>
+      <AiSection
+        number="05"
+        kicker="Invisible Technical Work"
+        title="The technical work should disappear into the experience."
+        variant="technical"
+        quiet
+      >
         <p>
-          Behind the scenes, the work may involve custom software, connected systems, automation, AI-assisted workflows, operational memory, dashboards, rules, approvals, APIs, and human-in-the-loop interfaces.
+          Behind the scenes, the work may involve custom software, connected systems,
+          automation, AI-assisted workflows, operational memory, dashboards, rules,
+          approvals, APIs, and human-in-the-loop interfaces.
         </p>
-        <TermGrid items={technicalWork} />
         <p className="emphasis">But the point is never the stack.</p>
-        <p>The point is that the right thing happens earlier, cleaner, and with more care.</p>
+        <p>The point is that the right thing happens earlier, cleaner, and with less force.</p>
         <div className="ai-outcome-row metadata">
           <span>The client feels better timing.</span>
           <span>The team has better context.</span>
-          <span>The business keeps its standard with less noise.</span>
+          <span>The business holds its standard with less noise.</span>
         </div>
         <div className="ai-subsection">
           <span className="section-kicker">Coherence</span>
           <h3>The work connects what normally drifts apart.</h3>
           <RuleList items={connectedWork} />
-          <p>Most businesses do not suffer from a lack of tools.</p>
-          <p>They suffer because the tools do not share the same understanding of the business.</p>
-          <p className="mobile-pull emphasis">Applied AI should help the business become more coherent.</p>
+          <p>Most businesses do not suffer because they lack tools.</p>
+          <p>
+            They suffer because the tools do not share the same understanding of the
+            business.
+          </p>
+          <p className="emphasis">So people fill the gaps.</p>
+          <div className="ai-negations metadata">
+            <span>The coordinator remembers.</span>
+            <span>The manager chases.</span>
+            <span>The founder decides again.</span>
+            <span>The CEO becomes the operating system.</span>
+          </div>
+          <p>Applied AI should reduce that dependency.</p>
+          <p>Not by removing people from the work.</p>
+          <p className="emphasis">By giving the work a better structure to live in.</p>
         </div>
       </AiSection>
 
-      <AiSection number="05" kicker="Leverage" title="Small teams can now build serious leverage." variant="care">
+      <AiSection number="06" kicker="Leverage" title="Small teams can now build serious operating leverage." variant="care">
         <p className="emphasis">The boundary has changed.</p>
         <p>
-          Small companies used to face a hard choice: accept generic software and reshape the business around the tool, or spend heavily to build custom systems.
+          Small companies no longer have to choose only between generic software and
+          expensive custom builds.
         </p>
-        <p>That is no longer the whole story.</p>
         <p>
-          Modern APIs, automation platforms, AI-assisted development, and better internal tools make more tailored systems possible.
+          Better APIs, automation platforms, AI-assisted development, and internal tools
+          have changed what is possible.
         </p>
         <p>But the advantage does not come from the tools alone.</p>
         <p className="emphasis">It comes from knowing what the business is trying to become.</p>
+        <RuleList items={leverageQuestions} />
+        <p>The system follows the standard.</p>
+        <p className="emphasis">Not the other way around.</p>
         <div className="ai-subsection">
           <span className="section-kicker">Care</span>
           <h3>Better systems should feel like better care.</h3>
@@ -253,18 +295,24 @@ export default function AppliedAI() {
         </div>
       </AiSection>
 
-      <AiSection number="06" kicker="Capability" title="AI should make the business more capable." variant="closing">
+      <AiSection number="07" kicker="Capability" title="AI should make the business more capable." variant="closing">
         <div className="ai-negations metadata">
-          <span>Not more generic.</span>
-          <span>Not more complicated.</span>
-          <span>Not more dependent on another platform nobody fully understands.</span>
+          {capabilityNegations.map((line) => (
+            <span key={line}>{line}</span>
+          ))}
         </div>
         <p>
-          The goal is a cleaner business with stronger standards, better timing, clearer information, and more room for care.
+          The goal is a cleaner business with stronger standards, better timing, clearer
+          information, and less force required from the top.
         </p>
-        <p className="mobile-pull emphasis">
-          That is the promise of applied AI. Not artificial intelligence as performance. Intelligence applied to the work.
-        </p>
+        <div className="ai-sequence metadata">
+          <span>More room for judgment.</span>
+          <span>More room for service.</span>
+          <span>More room for care.</span>
+        </div>
+        <p>That is the applied AI work I care about.</p>
+        <p>Not artificial intelligence as performance.</p>
+        <p className="mobile-pull emphasis">Intelligence applied to the work.</p>
       </AiSection>
     </div>
   );

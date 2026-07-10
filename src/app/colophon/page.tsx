@@ -26,7 +26,7 @@ export default function Colophon() {
             <div className="colophon-panel space-y-8">
               <div>
                 <span className="section-kicker">Typography</span>
-                <p>Atacama for display. Helix for body text. Geist Mono in use for small system labels and metadata.</p>
+                <p>Atacama for display. Helix for everything else.</p>
               </div>
               <div>
                 <span className="section-kicker">Design Direction</span>

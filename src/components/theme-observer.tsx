@@ -8,10 +8,9 @@ import { usePathname } from "next/navigation";
  *
  * Manages the site-wide dark/light theme:
  * 1. Reads the user's stored preference from localStorage('theme')
- * 2. Falls back to OS-level prefers-color-scheme
- * 3. Listens for OS preference changes (e.g. macOS auto dark mode at sunset)
- * 4. Exposes window.__setTheme('dark'|'light'|'system') for toggle buttons
- * 5. Re-runs scroll animation observer on route change
+ * 2. Defaults to dark mode when no preference has been stored
+ * 3. Exposes window.__setTheme('dark'|'light'|'system') for toggle buttons
+ * 4. Re-runs scroll animation observer on route change
  */
 export default function ThemeObserver() {
   const pathname = usePathname();
@@ -19,9 +18,6 @@ export default function ThemeObserver() {
   // Core theme resolver
   const applyTheme = useCallback(() => {
     const stored = localStorage.getItem("theme");
-    const prefersDark = window.matchMedia(
-      "(prefers-color-scheme: dark)"
-    ).matches;
 
     let isDark: boolean;
     if (stored === "dark") {
@@ -29,26 +25,16 @@ export default function ThemeObserver() {
     } else if (stored === "light") {
       isDark = false;
     } else {
-      // 'system' or no preference — follow OS
-      isDark = prefersDark;
+      // 'system' or no preference defaults to the site's dark presentation.
+      isDark = true;
     }
 
     document.documentElement.classList.toggle("dark", isDark);
   }, []);
 
-  // Set up theme + OS media query listener
+  // Set up theme preference handling
   useEffect(() => {
     applyTheme();
-
-    const mq = window.matchMedia("(prefers-color-scheme: dark)");
-    const onChange = () => {
-      // Only react to OS changes if user hasn't locked a preference
-      const stored = localStorage.getItem("theme");
-      if (!stored || stored === "system") {
-        applyTheme();
-      }
-    };
-    mq.addEventListener("change", onChange);
 
     // Expose a global setter for toggle buttons
     // Usage: window.__setTheme('dark') / window.__setTheme('light') / window.__setTheme('system')
@@ -61,10 +47,6 @@ export default function ThemeObserver() {
         localStorage.setItem("theme", mode);
       }
       applyTheme();
-    };
-
-    return () => {
-      mq.removeEventListener("change", onChange);
     };
   }, [applyTheme]);
 
