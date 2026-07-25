@@ -5115,3 +5115,42 @@ h3,
     font-size: 1.4rem;
   }
 }
+
+/* Braveheart cinematic hero — scoped so text reliably reads light over the photo
+   (Tailwind color utilities can't beat the unlayered global h1 color rule). */
+.bh-cinema-hero {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  align-items: flex-end;
+  min-height: 72svh;
+  overflow: hidden;
+  border-bottom: 1px solid var(--border);
+}
+
+.bh-cinema-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    linear-gradient(180deg, rgba(10, 9, 8, 0.10) 0%, rgba(10, 9, 8, 0.46) 56%, rgba(10, 9, 8, 0.84) 100%),
+    linear-gradient(100deg, rgba(10, 9, 8, 0.72) 0%, rgba(10, 9, 8, 0.24) 46%, transparent 78%);
+}
+
+.bh-cinema-hero > .site-container {
+  position: relative;
+  z-index: 2;
+}
+
+.bh-cinema-hero,
+.bh-cinema-hero h1,
+.bh-cinema-hero p,
+.bh-cinema-hero a {
+  color: #f7f1e7;
+}
+
+.bh-cinema-hero .cinema-dim {
+  color: rgba(247, 241, 231, 0.76);
+}

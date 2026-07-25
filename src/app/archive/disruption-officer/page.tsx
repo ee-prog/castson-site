@@ -201,7 +201,7 @@ export default function DisruptionOfficerPage() {
               <p className="emphasis">It was the job.</p>
             </div>
             <div className="mt-10">
-              <TextLink href="/braveheart">Next chapter — BraveHeart</TextLink>
+              <TextLink href="/braveheart">Next chapter — Braveheart</TextLink>
             </div>
           </div>
         </div>

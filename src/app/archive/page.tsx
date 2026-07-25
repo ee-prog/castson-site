@@ -5,7 +5,7 @@ import { ArrowUpRight } from "lucide-react";
 export const metadata: Metadata = {
   title: "Archive",
   description:
-    "Four chapters in how Eli Castson thinks, builds and leads: disruption, ownership, applied technology, and the executive questions shaping the work now.",
+    "Three chapters in how Eli Castson thinks, builds and leads: disruption, ownership, and applied technology.",
 };
 
 const chapters = [
@@ -20,7 +20,7 @@ const chapters = [
   {
     href: "/braveheart",
     index: "02",
-    title: "BraveHeart",
+    title: "Braveheart",
     subtitle: "The ownership chapter.",
     line: "A real operating company acquired, rebuilt and run — with financial, human and client consequences attached to every decision.",
     tags: ["Ownership", "Operations", "Software", "Consequence"],
@@ -33,14 +33,6 @@ const chapters = [
     line: "Automated reporting, institutional memory, repetitive work removed and applications designed around how the organization actually operates.",
     tags: ["Automation", "Reporting", "AI", "Applications"],
   },
-  {
-    href: "/archive/current-work",
-    index: "04",
-    title: "Current Work",
-    subtitle: "Where the work lives now.",
-    line: "Strategy, growth, operating model and technology — working beside leaders on the questions that determine what the organization becomes next.",
-    tags: ["Strategy", "Growth", "Transformation", "Canadian–Swiss"],
-  },
 ];
 
 export default function ArchivePage() {
@@ -51,8 +43,8 @@ export default function ArchivePage() {
           <span className="page-kicker">Archive</span>
           <h1>The work.</h1>
           <p className="archive-hero-lede">
-            Four chapters in how I think, build and lead: disruption, ownership,
-            applied technology and the executive questions shaping the work now.
+            Three chapters in how I think, build and lead: disruption, ownership and
+            applied technology.
           </p>
         </div>
       </section>

@@ -153,7 +153,7 @@ export default function About() {
           </div>
           <div className="about-story-copy body-copy">
             <p>
-              BraveHeart is a workplace training company I acquired, rebuilt, and now
+              Braveheart is a workplace training company I acquired, rebuilt, and now
               operate.
             </p>
             <div className="ruled-list metadata">

@@ -232,7 +232,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 7 — BraveHeart */}
+      {/* 7 — Braveheart */}
       <section className="section section-quiet story-section">
         <div className="site-container grid gap-12 lg:grid-cols-12 lg:gap-20">
           <div className="lg:col-span-5">
@@ -244,7 +244,7 @@ export default function Home() {
           <div className="lg:col-span-7">
             <div className="body-copy">
               <p>
-                I acquired, transformed and now operate BraveHeart, a workplace-training
+                I acquired, transformed and now operate Braveheart, a workplace-training
                 company in Nova Scotia.
               </p>
               <p>
@@ -259,12 +259,12 @@ export default function Home() {
                 ))}
               </div>
               <p className="emphasis">
-                BraveHeart is not the centre of my identity. It is operating proof that
+                Braveheart is not the centre of my identity. It is operating proof that
                 the thinking has survived contact with a real business.
               </p>
             </div>
             <div className="mt-8">
-              <TextLink href="/braveheart">Explore BraveHeart</TextLink>
+              <TextLink href="/braveheart">Explore Braveheart</TextLink>
             </div>
           </div>
         </div>
@@ -323,9 +323,6 @@ export default function Home() {
                 experience-led businesses navigating legacy systems, changing
                 expectations and urgent technological change.
               </p>
-            </div>
-            <div className="mt-8">
-              <TextLink href="/archive/current-work">Explore current work</TextLink>
             </div>
           </div>
         </div>
