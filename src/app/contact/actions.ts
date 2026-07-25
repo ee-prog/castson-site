@@ -16,7 +16,6 @@ export interface ContactFormState {
   fieldErrors?: {
     name?: string;
     email?: string;
-    subject?: string;
     message?: string;
   };
 }
@@ -35,7 +34,6 @@ export async function sendContactEmail(
   // 2. Extract fields
   const name = formData.get("name")?.toString().trim() || "";
   const email = formData.get("email")?.toString().trim() || "";
-  const subject = formData.get("subject")?.toString().trim() || "";
   const message = formData.get("message")?.toString().trim() || "";
 
   // 3. Validation
@@ -53,12 +51,6 @@ export async function sendContactEmail(
     fieldErrors.email = "Please enter a valid email address.";
   } else if (email.length > 254) {
     fieldErrors.email = "Email must be less than 254 characters.";
-  }
-
-  if (!subject) {
-    fieldErrors.subject = "Subject / Context is required.";
-  } else if (subject.length > 150) {
-    fieldErrors.subject = "Subject must be less than 150 characters.";
   }
 
   if (!message) {
@@ -86,15 +78,15 @@ export async function sendContactEmail(
     // Falls back to Resend sandbox sender onboarding@resend.dev if a custom sending domain isn't ready
     const sender = process.env.CONTACT_FROM_EMAIL || "onboarding@resend.dev";
 
-    const safeSubject = sanitizeEmailHeader(subject);
+    const safeName = sanitizeEmailHeader(name);
     const safeReplyTo = sanitizeEmailHeader(email);
 
     const { error } = await resend.emails.send({
       from: `Castson Contact Form <${sender}>`,
       to: contactToEmail,
-      subject: `New Inquiry: ${safeSubject}`,
+      subject: `New note from ${safeName}`,
       replyTo: safeReplyTo,
-      text: `Name: ${name}\nEmail: ${email}\n\nSubject: ${subject}\n\nMessage:\n${message}`,
+      text: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
     });
 
     if (error) {

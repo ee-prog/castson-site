@@ -14,8 +14,8 @@ export default function Contact() {
         <div className="site-container">
           <PageHeader
             kicker="Contact"
-            title="Contact"
-            lede="For thoughtful notes, introductions, and senior conversations about the work."
+            title="Tell me what is changing."
+            lede="For conversations about organizational transformation, technology, client experience, or executive leadership, send a note."
           />
         </div>
       </section>
@@ -24,21 +24,15 @@ export default function Contact() {
         <div className="site-container contact-grid">
           <div className="order-2 lg:order-1 lg:col-span-5">
             <div className="body-copy">
-              <p className="emphasis text-xl leading-relaxed">
-                For transformation, advisory, or executive conversations, send a note.
+              <p className="emphasis text-lg leading-relaxed">
+                A few lines on the situation, what feels stuck, and what you are
+                weighing is enough.
               </p>
-              <div className="ruled-list metadata">
-                <div>Significant organizational transformation.</div>
-                <div>Senior advisory mandates.</div>
-                <div>Fractional or embedded executive leadership.</div>
-                <div>Operating roles.</div>
-                <div>Introductions from owners, CEOs, boards, and recruiters.</div>
-              </div>
               <p>
-                A line about the situation and what you&rsquo;re weighing is plenty to
-                start.
+                The conversation may concern an advisory mandate, embedded leadership,
+                an executive role, or a thoughtful introduction.
               </p>
-              <p>I read every message myself, and I reply personally.</p>
+              <p className="emphasis">I read every note and reply personally.</p>
             </div>
           </div>
 
@@ -50,10 +44,11 @@ export default function Contact() {
                 </div>
                 <h2 className="mt-4 text-3xl">Thank you.</h2>
                 <p className="mx-auto mt-4 max-w-sm text-sm leading-relaxed text-[var(--muted-foreground)]">
-                  I’ve received your note and will reply personally.
+                  Your note has been received. I’ll read it personally and reply
+                  directly.
                 </p>
                 <a href="/contact" className="editorial-link mt-8">
-                  Send another message
+                  Send another note
                 </a>
               </div>
             ) : (
@@ -95,7 +90,7 @@ export default function Contact() {
 
                   <div>
                     <label htmlFor="email" className="metadata mb-2 block text-[var(--primary)]">
-                      Email Address
+                      Email
                     </label>
                     <input
                       type="email"
@@ -112,31 +107,14 @@ export default function Contact() {
                 </div>
 
                 <div>
-                  <label htmlFor="subject" className="metadata mb-2 block text-[var(--primary)]">
-                    Subject
-                  </label>
-                  <input
-                    type="text"
-                    id="subject"
-                    name="subject"
-                    required
-                    maxLength={150}
-                    className="form-input-luxury"
-                  />
-                  {state?.fieldErrors?.subject && (
-                    <p className="mt-2 text-xs text-red-600 dark:text-red-300">{state.fieldErrors.subject}</p>
-                  )}
-                </div>
-
-                <div>
                   <label htmlFor="message" className="metadata mb-2 block text-[var(--primary)]">
-                    Message
+                    What are you working through?
                   </label>
                   <textarea
                     id="message"
                     name="message"
                     required
-                    rows={5}
+                    rows={6}
                     maxLength={5000}
                     className="form-input-luxury resize-none"
                   />
@@ -150,7 +128,7 @@ export default function Contact() {
                   disabled={isPending}
                   className="group inline-flex w-full items-center justify-center gap-2 border border-[var(--foreground)] bg-[var(--foreground)] px-5 py-4 text-sm font-medium uppercase tracking-[0.08em] text-[var(--background)] transition-colors hover:border-[var(--primary)] hover:bg-[var(--primary)] disabled:cursor-not-allowed disabled:opacity-50 sm:w-auto"
                 >
-                  <span>{isPending ? "Sending..." : "Send Message"}</span>
+                  <span>{isPending ? "Sending..." : "Send note"}</span>
                   {!isPending && (
                     <ArrowRight
                       className="h-4 w-4 transition-transform group-hover:translate-x-1"
@@ -161,7 +139,7 @@ export default function Contact() {
                 </button>
 
                 <p className="text-xs leading-relaxed text-[var(--muted-foreground)]">
-                  Your message is only used so I can read and respond.
+                  Your details are used only to read and respond to your message.
                 </p>
               </form>
             )}
