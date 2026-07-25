@@ -78,8 +78,7 @@ export default function Home() {
           fill
           priority
           sizes="100vw"
-          className="object-cover"
-          style={{ objectPosition: "64% center" }}
+          className="object-cover object-[55%_50%] sm:object-[64%_50%]"
         />
         <div className="absolute inset-0" />
         <div className="site-container relative z-10 flex min-h-[calc(88svh-4.5rem)] items-end pb-14 pt-16 sm:min-h-[calc(92svh-4.5rem)] md:pb-24 lg:min-h-[calc(100svh-4.5rem)]">
