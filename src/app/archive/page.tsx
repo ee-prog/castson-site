@@ -5,7 +5,7 @@ import { ArrowUpRight } from "lucide-react";
 export const metadata: Metadata = {
   title: "Archive",
   description:
-    "A curated record of operating judgment — the Disruption Officer mandate, the BraveHeart ownership, applied AI and systems, and current work.",
+    "Four chapters in how Eli Castson thinks, builds and leads: disruption, ownership, applied technology, and the executive questions shaping the work now.",
 };
 
 const chapters = [
@@ -13,29 +13,33 @@ const chapters = [
     href: "/archive/disruption-officer",
     index: "01",
     title: "Disruption Officer",
-    line: "The origin mandate. Redesign the system, modernize the technology, restructure the teams, and lead the cultural shift required to make the new model work.",
+    subtitle: "The defining mandate.",
+    line: "Redesign the operating model. Modernize the technology. Restructure the teams. Lead the cultural shift required to make the new system work.",
     tags: ["Operating model", "Technology", "Teams", "Culture"],
   },
   {
     href: "/braveheart",
     index: "02",
     title: "BraveHeart",
-    line: "The ownership chapter. A real operating company acquired, rebuilt, and run — with financial and human consequence attached to every decision.",
+    subtitle: "The ownership chapter.",
+    line: "A real operating company acquired, rebuilt and run — with financial, human and client consequences attached to every decision.",
     tags: ["Ownership", "Operations", "Software", "Consequence"],
   },
   {
     href: "/applied-ai",
     index: "03",
     title: "Applied AI and Systems",
-    line: "AI as one component of organizational redesign — automation, reporting, institutional memory, and custom applications inside real work.",
-    tags: ["Automation", "Reporting", "Memory", "Applications"],
+    subtitle: "Technology inside the operating model.",
+    line: "Automated reporting, institutional memory, repetitive work removed and applications designed around how the organization actually operates.",
+    tags: ["Automation", "Reporting", "AI", "Applications"],
   },
   {
     href: "/archive/current-work",
     index: "04",
     title: "Current Work",
-    line: "Executive alignment, marketing transformation, client experience, and operating systems across Canadian and Swiss organizations.",
-    tags: ["Advisory", "Transformation", "Canadian–Swiss"],
+    subtitle: "Where the work lives now.",
+    line: "Strategy, growth, operating model and technology — working beside leaders on the questions that determine what the organization becomes next.",
+    tags: ["Strategy", "Growth", "Transformation", "Canadian–Swiss"],
   },
 ];
 
@@ -47,8 +51,8 @@ export default function ArchivePage() {
           <span className="page-kicker">Archive</span>
           <h1>The work.</h1>
           <p className="archive-hero-lede">
-            A clear, living record of executive judgment and operating work. Read any
-            chapter cold — each one stands on its own.
+            Four chapters in how I think, build and lead: disruption, ownership,
+            applied technology and the executive questions shaping the work now.
           </p>
         </div>
       </section>
@@ -68,12 +72,9 @@ export default function ArchivePage() {
                       aria-hidden="true"
                     />
                   </h2>
+                  <p className="archive-chapter-subtitle">{chapter.subtitle}</p>
                   <p className="archive-chapter-line">{chapter.line}</p>
-                  <div className="archive-chapter-tags">
-                    {chapter.tags.map((tag) => (
-                      <span key={tag}>{tag}</span>
-                    ))}
-                  </div>
+                  <div className="archive-chapter-tags">{chapter.tags.join(" · ")}</div>
                 </div>
               </Link>
             ))}

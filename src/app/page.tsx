@@ -1,81 +1,48 @@
 import Image from "next/image";
-import Link from "next/link";
 import { TextLink } from "@/components/editorial";
-import { ArtifactFrame } from "@/components/artifact";
 
-const method = ["People.", "Business.", "Technology."];
-
-const mandate = [
-  "Systems that no longer speak to each other.",
-  "Ways of working built for a company that has since changed.",
-  "Responsibilities that no longer match the actual work.",
-  "Technology bought faster than it was understood.",
-  "Reporting that arrives too late to change a decision.",
-  "Repetitive work no one has had time to remove.",
-  "Teams too consumed by the current model to redesign it.",
-];
-
-const proof = [
-  "Led disruption and transformation as a mandate, not a project.",
-  "Acquired, rebuilt, and now operate a real company.",
-  "Advised senior leaders through decisions with consequence.",
-  "Designed the systems and software underneath the change.",
-  "Carried responsibility for whether it held.",
-];
-
-const builds = [
-  "Executive reporting",
-  "Marketing technology",
-  "Automation",
-  "AI systems",
-  "Custom applications",
-  "Operating models",
-  "Team structures",
-  "Client experiences",
-];
-
-const chapters = [
+const methodBlocks = [
   {
-    href: "/archive/disruption-officer",
-    title: "Disruption Officer",
-    body: "The mandate that named the work.",
+    label: "People",
+    question: "How are people doing?",
+    body: "Do they understand their roles, decisions and responsibilities? Where are they frustrated, unclear or compensating for a system that no longer works?",
   },
   {
-    href: "/braveheart",
-    title: "BraveHeart",
-    body: "A company owned and operated.",
+    label: "Business",
+    question: "What is the organization trying to achieve?",
+    body: "What should the product, service or client experience become? What is preventing the business from delivering it consistently?",
   },
   {
-    href: "/applied-ai",
-    title: "Applied AI and Systems",
-    body: "Intelligence applied to real work.",
-  },
-  {
-    href: "/archive/current-work",
-    title: "Current Work",
-    body: "Canadian and Swiss organizations, now.",
+    label: "Technology",
+    question: "What should connect, disappear, automate or be rebuilt?",
+    body: "Where can reporting, software and AI make the organization more capable without making it less human?",
   },
 ];
 
-const recentThinking = [
-  {
-    title: "Transformation is mostly subtraction.",
-    body: "The hardest work is deciding what should stop.",
-  },
-  {
-    title: "Reporting is a leadership instrument.",
-    body: "If a number arrives too late to change a decision, it is history.",
-  },
-  {
-    title: "Decision rights are cheaper to change than org charts.",
-    body: "Often the structure is fine. The clarity is missing.",
-  },
+const recurringQuestions = [
+  "How leaders see and steer the company.",
+  "How teams, decisions and technology work together.",
+  "What should be simplified, automated or rebuilt.",
+  "Where AI can improve the operating model.",
+  "How the organization delivers its product, service or client experience.",
+];
+
+const titlePath = [
+  "Creative Director, Tech & Data.",
+  "Disruption Officer.",
+  "Advisor.",
+  "Owner.",
+];
+
+const ownershipGains = [
+  "Urgency to test and improve sooner.",
+  "Compassion for the pressure carried by the person responsible for the outcome.",
 ];
 
 export default function Home() {
   return (
     <div className="site-shell home-story">
-      {/* 1 — Hero: name, category, the system he changes, breadth */}
+      {/* 1 — Position */}
       <section className="home-hero relative min-h-[calc(88svh-4.5rem)] border-b border-[var(--border)] sm:min-h-[calc(92svh-4.5rem)] lg:min-h-[calc(100svh-4.5rem)]">
         <Image
           src="/images/editorial/eli-mountain-portrait.webp"
@@ -90,244 +57,334 @@ export default function Home() {
         <div className="site-container relative z-10 flex min-h-[calc(88svh-4.5rem)] items-end pb-14 pt-16 sm:min-h-[calc(92svh-4.5rem)] md:pb-24 lg:min-h-[calc(100svh-4.5rem)]">
           <div className="max-w-[55rem]">
             <span className="page-kicker">Eli Castson</span>
-            <h1 className="mt-5 max-w-[16ch] md:max-w-[20ch]">
-              I redesign how organizations work when technology changes what is
-              possible.
-            </h1>
+            <h1 className="mt-5">Transformation across people, business and technology.</h1>
             <div className="hero-copy mt-8 max-w-2xl space-y-5 body-copy">
               <p className="emphasis">
-                A transformation executive. Former Disruption Officer.
+                I help organizations redesign how they operate when their systems,
+                teams and culture have fallen behind what the business now needs.
               </p>
               <p>
-                I help organizations redesign how they operate when technology,
-                systems, and culture have to change together.
+                Canadian–Swiss transformation executive, former Disruption Officer,
+                owner and advisor.
               </p>
             </div>
-            <div className="tag-line mt-8">
-              {method.map((term) => (
-                <span key={term}>{term.replace(".", "")}</span>
-              ))}
-            </div>
             <div className="mt-10">
-              <TextLink href="/archive">See the work</TextLink>
+              <TextLink href="/archive">Explore the archive</TextLink>
             </div>
           </div>
         </div>
       </section>
 
-      {/* 2 — The recurring mandate: what he finds and changes */}
-      <section className="section story-section home-intro-section">
+      {/* 2 — Problem */}
+      <section className="section story-section">
         <div className="site-container grid gap-12 lg:grid-cols-12 lg:gap-20">
           <div className="lg:col-span-5">
-            <span className="section-kicker">The recurring mandate</span>
+            <span className="section-kicker">When the organization has outgrown its system</span>
+            <h2 className="story-heading">The company changed. The way it works did not.</h2>
+          </div>
+          <div className="lg:col-span-7">
+            <div className="body-copy">
+              <p>Systems no longer connect.</p>
+              <p>Roles reflect an earlier version of the organization.</p>
+              <p>
+                Technology overlaps. Reporting is fragmented. Repetitive work consumes
+                capable people. Valuable automation remains untouched because everyone
+                is too busy managing the existing complexity.
+              </p>
+              <p>The answer is rarely another isolated tool or initiative.</p>
+              <p className="emphasis">It is usually a clearer operating system.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 3 — Method */}
+      <section className="section section-quiet story-section">
+        <div className="site-container">
+          <div className="grid gap-8 lg:grid-cols-12 lg:gap-20">
+            <div className="lg:col-span-5">
+              <span className="section-kicker">People · Business · Technology</span>
+              <h2 className="story-heading">Changed together.</h2>
+            </div>
+            <div className="lg:col-span-7 lg:flex lg:items-end">
+              <p className="body-copy">
+                I move continuously between all three until the organization begins to
+                work as one system.
+              </p>
+            </div>
+          </div>
+          <div className="mt-14 grid gap-10 md:grid-cols-3 md:gap-8">
+            {methodBlocks.map((block) => (
+              <div key={block.label} className="border-t border-[var(--border)] pt-6">
+                <span className="section-kicker">{block.label}</span>
+                <p className="mt-4 font-display text-xl leading-snug text-[var(--foreground)]">
+                  {block.question}
+                </p>
+                <p className="body-copy mt-4">{block.body}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 4 — Recurring work */}
+      <section className="section story-section">
+        <div className="site-container grid gap-12 lg:grid-cols-12 lg:gap-20">
+          <div className="lg:col-span-5">
+            <span className="section-kicker">What changes</span>
             <h2 className="story-heading">
-              I keep finding the same thing, in different companies.
+              The same organizational questions, redrawn for each business.
             </h2>
           </div>
           <div className="lg:col-span-7">
             <div className="body-copy">
-              <p>An organization held back by its own operating system.</p>
               <div className="ruled-list metadata">
-                {mandate.map((item) => (
-                  <div key={item}>{item}</div>
+                {recurringQuestions.map((q) => (
+                  <div key={q}>{q}</div>
                 ))}
               </div>
-              <p className="mobile-pull emphasis">
-                The work is to redesign that system — and to make the new one
-                actually run.
+              <p>
+                The visible result may be an executive dashboard, a modernized
+                technology stack, an automated workflow, a new application or a
+                redesigned team.
+              </p>
+              <p className="emphasis">
+                The real work is the operating system underneath the organization.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* 3 — The method */}
-      <section className="section section-quiet story-section home-experience-section">
+      {/* 5 — Range */}
+      <section className="section section-quiet story-section">
         <div className="site-container grid gap-12 lg:grid-cols-12 lg:gap-20">
           <div className="lg:col-span-5">
-            <span className="section-kicker">The method</span>
-            <h2 className="story-heading">People. Business. Technology.</h2>
+            <span className="section-kicker">The range</span>
+            <h2 className="story-heading">
+              The titles changed. The question kept getting bigger.
+            </h2>
           </div>
           <div className="lg:col-span-7">
             <div className="body-copy">
-              <p>I begin with the people. How are they doing? Where is the work
-                harder than it should be?</p>
               <p>
-                I connect that to the business. What is it trying to become, and what
-                operating model would support that?
+                I trained in psychology and moved directly into marketing, drawn by how
+                people think, decide and experience a brand.
               </p>
               <p>
-                Then the technology. What should connect, what should disappear, what
-                should be automated, what needs to be built.
+                From there, I went deeper into the machinery behind that experience —
+                from websites and data platforms to motion, automation and the broader
+                marketing technology stack.
               </p>
-              <p className="mobile-pull emphasis">
-                Not three workstreams. One system, changed together.
+              <p>
+                I later completed an MBA at the University of Zurich, focused on digital
+                transformation.
               </p>
+              <p>
+                By then, the question had outgrown marketing. It had become how the
+                whole organization should work: its people, systems, technology,
+                operating model and culture.
+              </p>
+              <div className="ruled-list metadata">
+                {titlePath.map((title) => (
+                  <div key={title}>{title}</div>
+                ))}
+              </div>
+              <p>Different roles. One recurring mandate:</p>
+              <p className="emphasis">
+                Understand the whole system, find the simpler answer, and move people,
+                business and technology together.
+              </p>
+            </div>
+            <div className="mt-8">
+              <TextLink href="/about">Read the story</TextLink>
             </div>
           </div>
         </div>
       </section>
 
-      {/* 4 — The operating proof */}
-      <section className="section story-section home-trust-section">
-        <div className="site-container grid gap-12 lg:grid-cols-12 lg:gap-16">
+      {/* 6 — Disruption Officer */}
+      <section className="section story-section">
+        <div className="site-container grid gap-12 lg:grid-cols-12 lg:gap-20">
           <div className="lg:col-span-5">
-            <span className="section-kicker">The operating proof</span>
-            <h2 className="story-heading">I have carried the responsibility, not only the advice.</h2>
+            <span className="section-kicker">A defining role</span>
+            <h2 className="story-heading">Redesign the system.</h2>
           </div>
           <div className="lg:col-span-7">
-            <div className="body-copy mt-7">
+            <div className="body-copy">
+              <p>
+                As Disruption Officer, my mandate was broader than adopting new
+                technology.
+              </p>
+              <p>
+                It was to rethink how the organization worked: restructure teams,
+                modernize systems, remove outdated practices and lead the cultural shift
+                toward a more capable, technology-literate business.
+              </p>
+              <p className="emphasis">
+                That mandate still describes much of my work today.
+              </p>
+            </div>
+            <div className="mt-8">
+              <TextLink href="/archive/disruption-officer">Read the chapter</TextLink>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 7 — BraveHeart */}
+      <section className="section section-quiet story-section">
+        <div className="site-container grid gap-12 lg:grid-cols-12 lg:gap-20">
+          <div className="lg:col-span-5">
+            <span className="section-kicker">Ownership</span>
+            <h2 className="story-heading">
+              Strategy changes when you carry the consequence.
+            </h2>
+          </div>
+          <div className="lg:col-span-7">
+            <div className="body-copy">
+              <p>
+                I acquired, transformed and now operate BraveHeart, a workplace-training
+                company in Nova Scotia.
+              </p>
+              <p>
+                It became a live environment for rebuilding systems, automating work,
+                designing software, improving the client experience and leading people
+                through change.
+              </p>
+              <p>Ownership added two things to my work:</p>
               <div className="ruled-list metadata">
-                {proof.map((item) => (
-                  <div key={item}>{item}</div>
+                {ownershipGains.map((gain) => (
+                  <div key={gain}>{gain}</div>
                 ))}
               </div>
               <p className="emphasis">
-                The range is not a market invention. It was the job.
+                BraveHeart is not the centre of my identity. It is operating proof that
+                the thinking has survived contact with a real business.
               </p>
+            </div>
+            <div className="mt-8">
+              <TextLink href="/braveheart">Explore BraveHeart</TextLink>
             </div>
           </div>
         </div>
       </section>
 
-      {/* 5 — What Eli repeatedly builds */}
-      <section className="section section-quiet story-section home-systems-section">
-        <div className="site-container grid gap-12 lg:grid-cols-12 lg:gap-16">
+      {/* 8 — Applied AI */}
+      <section className="section story-section">
+        <div className="site-container grid gap-12 lg:grid-cols-12 lg:gap-20">
           <div className="lg:col-span-5">
-            <ArtifactFrame
-              variant="dashboard"
-              index="01"
-              label="Executive reporting"
-              caption="Systems built to change the next decision"
-              aspect="aspect-[4/3] sm:aspect-[16/10]"
-              className="mobile-bleed"
-              sizes="(max-width: 1024px) 100vw, 36vw"
-            />
+            <span className="section-kicker">Applied AI</span>
+            <h2 className="story-heading">AI belongs inside the operating model.</h2>
           </div>
           <div className="lg:col-span-7">
-            <span className="section-kicker">What I keep building</span>
-            <h2 className="story-heading">
-              The same pieces, redrawn for each organization.
-            </h2>
-            <div className="mt-8 grid grid-cols-2 gap-x-8 metadata">
-              {builds.map((item) => (
-                <div key={item} className="border-t border-[var(--border)] py-3 text-[var(--foreground)]">
-                  {item}
-                </div>
-              ))}
-            </div>
-            <p className="body-copy mt-8">
-              Rarely a single deliverable. Usually the operating system underneath
-              the work.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* 6 — Selected chapters */}
-      <section className="section story-section home-proof-section">
-        <div className="site-container">
-          <span className="section-kicker">Selected chapters</span>
-          <h2 className="story-heading max-w-2xl">Chapters in a career, read as evidence.</h2>
-          <div className="mt-10 ruled-list">
-            {chapters.map((chapter) => (
-              <Link
-                key={chapter.href}
-                href={chapter.href}
-                className="group grid gap-2 py-5 text-[var(--foreground)] transition-colors hover:text-[var(--primary)] sm:grid-cols-[1fr_auto] sm:items-baseline sm:gap-6"
-              >
-                <span className="font-display text-2xl leading-tight sm:text-3xl">
-                  {chapter.title}
-                </span>
-                <span className="metadata text-[var(--muted-foreground)] sm:text-right">
-                  {chapter.body}
-                </span>
-              </Link>
-            ))}
-          </div>
-          <div className="mt-10">
-            <TextLink href="/archive">Open the archive</TextLink>
-          </div>
-        </div>
-      </section>
-
-      {/* 7 — Recent thinking */}
-      <section className="section section-quiet story-section home-technology-section">
-        <div className="site-container grid gap-12 lg:grid-cols-12 lg:gap-16">
-          <div className="lg:col-span-4">
-            <span className="section-kicker">Recent thinking</span>
-            <h2 className="story-heading">Notes from inside the work.</h2>
-            <div className="mt-8 hidden lg:block">
-              <TextLink href="/notes">Read the notes</TextLink>
-            </div>
-          </div>
-          <div className="lg:col-span-8">
-            <div className="ruled-list">
-              {recentThinking.map((note) => (
-                <Link
-                  key={note.title}
-                  href="/notes"
-                  className="group block py-5 transition-colors hover:text-[var(--primary)]"
-                >
-                  <span className="block font-display text-xl leading-snug text-[var(--foreground)] transition-colors group-hover:text-[var(--primary)] sm:text-2xl">
-                    {note.title}
-                  </span>
-                  <span className="mt-2 block text-sm leading-relaxed text-[var(--muted-foreground)]">
-                    {note.body}
-                  </span>
-                </Link>
-              ))}
-            </div>
-            <div className="mt-8 lg:hidden">
-              <TextLink href="/notes">Read the notes</TextLink>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 8 — Quiet close */}
-      <section className="section story-section border-b-0 home-closing-section">
-        <div className="site-container grid gap-12 lg:grid-cols-12 lg:gap-16">
-          <div className="lg:col-span-7">
-            <span className="section-kicker">Start a conversation</span>
-            <h2 className="story-heading">
-              Here is how to begin the right conversation.
-            </h2>
-            <div className="body-copy mt-7">
+            <div className="body-copy">
+              <p>The useful question is not where an organization can add AI.</p>
               <p>
-                If a transformation, senior advisory, or executive conversation makes
-                sense, the simplest step is a direct note.
+                It is where better information, clearer ownership, stronger memory or
+                less repetitive work would materially improve how the organization
+                operates.
               </p>
-              <p className="emphasis">You will hear back from me personally.</p>
+              <p>
+                That may involve automation, decision support, knowledge systems or an
+                application built for the work itself.
+              </p>
+              <p className="emphasis">
+                AI is one part of the system — not a layer placed over confusion.
+              </p>
             </div>
-            <div className="mt-9">
-              <TextLink href="/contact">Contact Eli</TextLink>
+            <div className="mt-8">
+              <TextLink href="/applied-ai">Explore Applied AI</TextLink>
             </div>
           </div>
-          <aside className="lg:col-span-5">
-            <div className="quiet-panel">
-              <span className="section-kicker">When my involvement is useful</span>
-              <div className="ruled-list metadata">
-                <div>Significant organizational transformation.</div>
-                <div>Senior advisory mandates.</div>
-                <div>Fractional or embedded executive leadership.</div>
-                <div>Operating roles.</div>
-                <div>Introductions from owners, CEOs, boards, and recruiters.</div>
-              </div>
-              <p className="mt-7 text-sm font-medium leading-relaxed text-[var(--foreground)]">
-                No position needs to be named. The range is enough to imagine one.
-              </p>
-            </div>
-          </aside>
         </div>
       </section>
 
+      {/* 9 — Current work */}
+      <section className="section section-quiet story-section">
+        <div className="site-container grid gap-12 lg:grid-cols-12 lg:gap-20">
+          <div className="lg:col-span-5">
+            <span className="section-kicker">Current work</span>
+            <h2 className="story-heading">Close to consequential change.</h2>
+          </div>
+          <div className="lg:col-span-7">
+            <div className="body-copy">
+              <p>
+                Through Castson, I work with senior leaders on organizational
+                transformation, client experience, marketing systems, applied AI and
+                operating-model change.
+              </p>
+              <p>
+                The work ranges from strategic advisory to embedded transformation and
+                operating responsibility.
+              </p>
+              <p>
+                Current engagements span Canadian and Swiss organizations, particularly
+                experience-led businesses navigating legacy systems, changing
+                expectations and urgent technological change.
+              </p>
+            </div>
+            <div className="mt-8">
+              <TextLink href="/archive/current-work">Explore current work</TextLink>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 10 — Notes */}
+      <section className="section story-section">
+        <div className="site-container grid gap-12 lg:grid-cols-12 lg:gap-20">
+          <div className="lg:col-span-5">
+            <span className="section-kicker">From the work</span>
+            <h2 className="story-heading">Notes on organizations in motion.</h2>
+          </div>
+          <div className="lg:col-span-7">
+            <div className="body-copy">
+              <p>
+                Short observations on transformation, technology, operating systems,
+                leadership and the human consequences of change.
+              </p>
+              <p className="emphasis">
+                Not theory from a distance. Notes from inside the work.
+              </p>
+            </div>
+            <div className="mt-8">
+              <TextLink href="/notes">Read the notes</TextLink>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 11 — Contact */}
+      <section className="section section-quiet story-section border-b-0">
+        <div className="site-container grid gap-12 lg:grid-cols-12 lg:gap-20">
+          <div className="lg:col-span-5">
+            <span className="section-kicker">Contact</span>
+            <h2 className="story-heading">Tell me what is changing.</h2>
+          </div>
+          <div className="lg:col-span-7">
+            <div className="body-copy">
+              <p>
+                For conversations about organizational transformation, technology,
+                client experience or executive leadership, send a note.
+              </p>
+              <p className="emphasis">
+                A few lines on the situation, what feels stuck and what you are weighing
+                is enough.
+              </p>
+            </div>
+            <div className="mt-8">
+              <TextLink href="/contact">Start a conversation</TextLink>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Sign-off */}
       <section className="home-signoff">
         <div className="site-container">
           <p className="home-signoff-mark">Castson Inc.</p>
-          <p className="home-signoff-line">
-            Transformation across people, business, and technology.
-          </p>
+          <p className="home-signoff-line">Canadian–Swiss transformation executive.</p>
         </div>
       </section>
     </div>

@@ -5094,3 +5094,24 @@ h3,
     aspect-ratio: auto;
   }
 }
+
+/* Archive chapter: subtitle line + consistent mobile spacing */
+@media (max-width: 767px) {
+  .archive-chapter-body {
+    display: grid;
+    gap: 0.7rem;
+  }
+}
+
+.archive-chapter-subtitle {
+  color: var(--foreground);
+  font-family: var(--font-heading), Georgia, serif;
+  font-size: 1.15rem;
+  line-height: 1.3;
+}
+
+@media (min-width: 768px) {
+  .archive-chapter-subtitle {
+    font-size: 1.4rem;
+  }
+}

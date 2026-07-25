@@ -22,14 +22,6 @@ const ownershipReality = [
   "The business opens again tomorrow.",
 ];
 
-const currentFields = [
-  "Executive alignment.",
-  "Marketing transformation.",
-  "Client experience.",
-  "Applied AI.",
-  "Operating systems.",
-];
-
 const vantagePoints = ["The boardroom.", "The operating system.", "The client-facing reality."];
 
 export default function About() {
@@ -196,15 +188,27 @@ export default function About() {
           </div>
           <div className="about-story-copy body-copy">
             <p>
-              Today the work is senior advisory and transformation across Canadian and
-              Swiss organizations — the kind of engagements where the direction is
-              changing and the operating model has to change with it.
+              Today, I work at the level where strategy, growth, operating model and
+              technology meet.
             </p>
-            <div className="ruled-list metadata">
-              {currentFields.map((field) => (
-                <div key={field}>{field}</div>
-              ))}
-            </div>
+            <p>
+              The questions may concern how an organization should scale, where it
+              should invest, what it should automate, how its teams should be
+              structured, or whether its current model can support the next stage of
+              growth.
+            </p>
+            <p>
+              Sometimes I work beside an executive team. Sometimes I am carrying the
+              decision as an owner.
+            </p>
+            <p>
+              The work may surface through transformation, AI, marketing, client
+              experience or expansion. The underlying question is broader:
+            </p>
+            <p className="emphasis">
+              What should this organization become — and what must change to make that
+              real?
+            </p>
           </div>
         </div>
       </section>
