@@ -7,11 +7,10 @@ import { ArrowUpRight, Menu, Moon, Sun, X } from "lucide-react";
 
 const navItems = [
   { name: "Home", href: "/", meta: "Opening" },
-  { name: "BraveHeart", href: "/braveheart", meta: "Operating proof" },
-  { name: "Applied AI", href: "/applied-ai", meta: "Systems layer" },
-  { name: "Writing", href: "/writing", meta: "Notes & Essays" },
+  { name: "Archive", href: "/archive", meta: "The work" },
+  { name: "Notes", href: "/notes", meta: "Thinking" },
   { name: "About", href: "/about", meta: "Profile" },
-  { name: "Contact", href: "/contact", meta: "Private Advisory" },
+  { name: "Contact", href: "/contact", meta: "Start here" },
 ];
 
 export default function Navbar() {
@@ -97,7 +96,8 @@ export default function Navbar() {
             <div className="lg:col-span-4">
               <p className="page-kicker">Index</p>
               <p className="mt-5 max-w-xs text-sm leading-relaxed text-[var(--muted-foreground)]">
-                Castson Inc. is a record of ownership, operating discipline, applied AI, and selective advisory work.
+                Eli Castson leads transformation across people, business, and
+                technology. Former Disruption Officer. Canadian–Swiss.
               </p>
             </div>
 

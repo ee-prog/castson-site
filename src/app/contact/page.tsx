@@ -13,9 +13,9 @@ export default function Contact() {
       <section className="section contact-hero">
         <div className="site-container">
           <PageHeader
-            kicker="05 / Contact"
+            kicker="Contact"
             title="Contact"
-            lede="For thoughtful notes, introductions, and private conversations about the work."
+            lede="For thoughtful notes, introductions, and senior conversations about the work."
           />
         </div>
       </section>
@@ -25,18 +25,20 @@ export default function Contact() {
           <div className="order-2 lg:order-1 lg:col-span-5">
             <div className="body-copy">
               <p className="emphasis text-xl leading-relaxed">
-                I work with owners, leaders, and senior teams when the question touches
-                more than one part of the business.
+                For transformation, advisory, or executive conversations, send a note.
               </p>
               <div className="ruled-list metadata">
-                <div>Brand.</div>
-                <div>Service.</div>
-                <div>Operations.</div>
-                <div>Technology.</div>
-                <div>Client experience.</div>
+                <div>Significant organizational transformation.</div>
+                <div>Senior advisory mandates.</div>
+                <div>Fractional or embedded executive leadership.</div>
+                <div>Operating roles.</div>
+                <div>Introductions from owners, CEOs, boards, and recruiters.</div>
               </div>
-              <p>If something here feels relevant to what you are carrying, you are welcome to send a note.</p>
-              <p>I read every message myself.</p>
+              <p>
+                A line about the situation and what you&rsquo;re weighing is plenty to
+                start.
+              </p>
+              <p>I read every message myself, and I reply personally.</p>
             </div>
           </div>
 
@@ -158,7 +160,7 @@ export default function Contact() {
                   )}
                 </button>
 
-                <p className="border-t border-[var(--border)] pt-5 text-xs leading-relaxed text-[var(--muted-foreground)]">
+                <p className="text-xs leading-relaxed text-[var(--muted-foreground)]">
                   Your message is only used so I can read and respond.
                 </p>
               </form>

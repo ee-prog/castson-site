@@ -8,7 +8,7 @@ import { usePathname } from "next/navigation";
  *
  * Manages the site-wide dark/light theme:
  * 1. Reads the user's stored preference from localStorage('theme')
- * 2. Defaults to dark mode when no preference has been stored
+ * 2. Defaults to light mode when no preference has been stored
  * 3. Exposes window.__setTheme('dark'|'light'|'system') for toggle buttons
  * 4. Re-runs scroll animation observer on route change
  */
@@ -25,8 +25,8 @@ export default function ThemeObserver() {
     } else if (stored === "light") {
       isDark = false;
     } else {
-      // 'system' or no preference defaults to the site's dark presentation.
-      isDark = true;
+      // 'system' or no preference defaults to the site's light presentation.
+      isDark = false;
     }
 
     document.documentElement.classList.toggle("dark", isDark);

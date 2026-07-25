@@ -1487,7 +1487,7 @@ textarea:focus-visible {
   color: var(--primary);
 }
 
-.writing-note h3 {
+.writing-note :is(h2, h3) {
   max-width: 17ch;
   margin: 0 0 1.5rem;
   font-family: var(--font-heading), Georgia, serif;
@@ -1539,7 +1539,7 @@ textarea:focus-visible {
     padding-block: 3rem;
   }
 
-  .writing-note h3 {
+  .writing-note :is(h2, h3) {
     max-width: 13ch;
     font-size: 2.35rem;
     line-height: 1.02;
@@ -1590,7 +1590,7 @@ textarea:focus-visible {
     padding-block: 4rem;
   }
 
-  .writing-note h3 {
+  .writing-note :is(h2, h3) {
     font-size: 3rem;
   }
 }
@@ -1668,7 +1668,7 @@ textarea:focus-visible {
     column-gap: 2rem;
   }
 
-  .writing-note h3 {
+  .writing-note :is(h2, h3) {
     grid-column: 1 / span 4;
     margin-bottom: 0;
     font-size: 3.4rem;
@@ -2770,7 +2770,7 @@ header.fixed {
   padding-block: clamp(4rem, 8vw, 8.5rem);
 }
 
-.writing-note h3 {
+.writing-note :is(h2, h3) {
   max-width: 13ch;
   font-size: clamp(2.65rem, 4.4vw, 5.25rem);
   line-height: 0.94;
@@ -2860,13 +2860,17 @@ header.fixed {
   gap: clamp(3rem, 7vw, 7rem);
 }
 
-.contact-form,
-.contact-confirmation,
 .colophon-panel {
   border-top: 1px solid var(--border-strong);
   border-bottom: 1px solid var(--border);
   background: transparent;
   padding-block: clamp(2rem, 4vw, 3.5rem);
+}
+
+/* The form needs no framing lines — the fields and the section rhythm carry it. */
+.contact-form,
+.contact-confirmation {
+  background: transparent;
 }
 
 .contact-form .grid {
@@ -3534,7 +3538,7 @@ header.fixed {
     padding-block: clamp(2.25rem, 9vw, 3rem);
   }
 
-  .writing-note h3 {
+  .writing-note :is(h2, h3) {
     max-width: min(100%, 22rem);
     margin-bottom: 1.1rem;
     font-size: clamp(1.85rem, 8vw, 2.1rem);
@@ -3591,7 +3595,7 @@ h3,
 .about-story-lede p,
 .about-practice h2,
 .about-index h2,
-.writing-note h3,
+.writing-note :is(h2, h3),
 .writing-notes-header h2,
 .writing-coming h2,
 .ai-subsection h3,
@@ -3678,7 +3682,7 @@ h3,
 
 .ai-subsection h3,
 .bh-subsection h3,
-.writing-note h3 {
+.writing-note :is(h2, h3) {
   max-width: min(100%, 20ch);
   font-size: clamp(1.5rem, 1.85vw, 2.15rem);
   line-height: 1.12;
@@ -3750,7 +3754,7 @@ h3,
 
   .ai-subsection h3,
   .bh-subsection h3,
-  .writing-note h3 {
+  .writing-note :is(h2, h3) {
     max-width: 100%;
     font-size: clamp(1.38rem, 5.8vw, 1.75rem);
     line-height: 1.14;
@@ -4547,5 +4551,546 @@ h3,
   .bh-subsection::before,
   .writing-note::before {
     margin-bottom: 1.2rem;
+  }
+}
+
+/* ============================================================
+   Operating artifacts — editorial placeholders for dashboards,
+   diagrams, interfaces, process maps and org structures.
+   Swap a real asset in via the `src` prop and the schematic is
+   replaced with no other change.
+   ============================================================ */
+.artifact-frame {
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(
+      158deg,
+      color-mix(in srgb, var(--surface) 82%, var(--background)) 0%,
+      var(--surface-soft) 100%
+    );
+}
+
+/* A fine inset mat, the way a photograph would be matted before framing. */
+.artifact-frame::after {
+  content: "";
+  position: absolute;
+  inset: 1.15rem;
+  border: 1px solid color-mix(in srgb, var(--foreground) 8%, transparent);
+  pointer-events: none;
+}
+
+/* A single quiet registration mark, centred — the position is held, not filled. */
+.artifact-mark {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 20px;
+  height: 20px;
+  opacity: 0.55;
+}
+
+.artifact-mark::before,
+.artifact-mark::after {
+  content: "";
+  position: absolute;
+  background: var(--muted-foreground);
+}
+
+.artifact-mark::before {
+  left: 50%;
+  top: 0;
+  width: 1px;
+  height: 100%;
+  transform: translateX(-0.5px);
+}
+
+.artifact-mark::after {
+  top: 50%;
+  left: 0;
+  height: 1px;
+  width: 100%;
+  transform: translateY(-0.5px);
+}
+
+.artifact-index {
+  position: absolute;
+  top: 1.6rem;
+  left: 1.6rem;
+  z-index: 1;
+  display: flex;
+  gap: 0.7rem;
+  color: var(--muted-foreground);
+  font-family: var(--font-body), system-ui, sans-serif;
+  font-size: 0.625rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.artifact-index em {
+  color: color-mix(in srgb, var(--primary) 85%, var(--muted-foreground));
+  font-style: normal;
+}
+
+.artifact-caption {
+  letter-spacing: 0.14em;
+}
+
+/* ============================================================
+   Archive — the evidence layer. A restrained chapter index and
+   a shared chapter template (breadcrumb + hero).
+   ============================================================ */
+.archive-page {
+  background: var(--background);
+}
+
+.archive-page .site-container {
+  max-width: 86rem;
+}
+
+.archive-hero {
+  border-bottom: 1px solid var(--border);
+  padding-block: 4.75rem 4.25rem;
+}
+
+.archive-hero-grid {
+  display: grid;
+  gap: 1.75rem;
+}
+
+.archive-hero h1 {
+  margin: 0;
+  font-size: 3.65rem;
+  line-height: 0.94;
+}
+
+.archive-hero-lede {
+  margin: 0;
+  max-width: 32rem;
+  color: var(--foreground);
+  font-family: var(--font-heading), Georgia, serif;
+  font-size: 1.3rem;
+  line-height: 1.35;
+}
+
+.archive-index {
+  border-top: 1px solid var(--border-strong);
+}
+
+.archive-chapter {
+  display: grid;
+  gap: 0.85rem 2rem;
+  border-bottom: 1px solid var(--border);
+  padding-block: 2.75rem;
+  color: var(--foreground);
+  transition: color 180ms ease;
+}
+
+.archive-chapter:hover {
+  color: var(--primary);
+}
+
+.archive-chapter-index {
+  color: var(--primary);
+}
+
+.archive-chapter h2 {
+  margin: 0;
+  font-family: var(--font-heading), Georgia, serif;
+  font-size: 2.5rem;
+  font-weight: 400;
+  line-height: 1;
+  text-wrap: balance;
+}
+
+.archive-chapter-line {
+  max-width: 40rem;
+  color: var(--muted-foreground);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.archive-chapter-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.15rem;
+  color: var(--muted-foreground);
+  font-family: var(--font-body), system-ui, sans-serif;
+  font-size: 0.625rem;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+  .archive-hero {
+    padding-block: 6rem 5rem;
+  }
+
+  .archive-hero h1 {
+    font-size: 5.5rem;
+  }
+
+  .archive-hero-lede {
+    font-size: 1.55rem;
+  }
+
+  .archive-chapter {
+    grid-template-columns: 4rem 1fr;
+    align-items: start;
+  }
+
+  .archive-chapter-body {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .archive-chapter h2 {
+    font-size: 3.25rem;
+  }
+}
+
+/* Chapter template — breadcrumb + hero shared by Archive chapter pages. */
+.chapter-breadcrumb {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--muted-foreground);
+  font-family: var(--font-body), system-ui, sans-serif;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  transition: color 180ms ease;
+}
+
+.chapter-breadcrumb:hover {
+  color: var(--primary);
+}
+
+.chapter-hero {
+  border-bottom: 1px solid var(--border);
+  padding-block: 3.5rem 4rem;
+}
+
+.chapter-hero h1 {
+  margin: 1.5rem 0 0;
+  max-width: 16ch;
+  font-size: 3.4rem;
+  line-height: 0.98;
+}
+
+.chapter-hero-lede {
+  margin-top: 1.75rem;
+  max-width: 34rem;
+  color: var(--foreground);
+  font-family: var(--font-heading), Georgia, serif;
+  font-size: 1.35rem;
+  line-height: 1.4;
+}
+
+@media (min-width: 768px) {
+  .chapter-hero {
+    padding-block: 4.5rem 5.5rem;
+  }
+
+  .chapter-hero h1 {
+    font-size: 5rem;
+  }
+
+  .chapter-hero-lede {
+    font-size: 1.6rem;
+  }
+}
+
+/* ================================================================
+   CREATIVE DIRECTION — second pass
+   Quieter typography, fewer rules, more air, intentional imagery.
+   Appended as an override layer so it wins the cascade.
+   Governing idea: one type register at a time, and generous space.
+   ================================================================ */
+
+/* — Palette: fainter hairlines; the metal becomes a whisper — */
+:root {
+  --border: rgba(25, 23, 20, 0.08);
+  --border-strong: rgba(25, 23, 20, 0.15);
+}
+
+.dark {
+  --border: rgba(241, 236, 226, 0.07);
+  --border-strong: rgba(241, 236, 226, 0.13);
+}
+
+/* — Labels: one restrained system. Neutral, not bronze. — */
+.page-kicker,
+.section-kicker {
+  color: var(--muted-foreground);
+  font-weight: 500;
+  font-size: 0.625rem;
+  letter-spacing: 0.22em;
+}
+
+.section-kicker {
+  margin-bottom: 1.5rem;
+}
+
+.metadata {
+  color: var(--muted-foreground);
+  letter-spacing: 0.015em;
+}
+
+.tag-line {
+  color: var(--muted-foreground);
+  font-size: 0.625rem;
+  letter-spacing: 0.22em;
+}
+
+/* — Generous vertical rhythm; let each idea stand alone — */
+.section {
+  padding-block: 6rem;
+}
+
+@media (min-width: 768px) {
+  .section {
+    padding-block: 9rem;
+  }
+}
+
+/* — Lists: airy, not ruled. Space replaces the borders. — */
+.ruled-list {
+  border-top: none;
+}
+
+.ruled-list > * {
+  border-bottom: none;
+  padding-block: 0.5rem;
+}
+
+/* Small label groups (metadata) breathe a little more. */
+.ruled-list.metadata > * {
+  padding-block: 0.42rem;
+}
+
+/* — Quiet panel: a tonal field, no hard border box — */
+.quiet-panel {
+  border: none;
+  border-radius: 0;
+  background: color-mix(in srgb, var(--surface-soft) 45%, transparent);
+  padding: 2rem 1.75rem;
+}
+
+.dark .quiet-panel {
+  background: color-mix(in srgb, var(--surface-soft) 55%, transparent);
+}
+
+@media (min-width: 640px) {
+  .quiet-panel {
+    border: none;
+    padding: 2.5rem 2.25rem;
+  }
+}
+
+/* — Body copy: a touch more generous for reading — */
+.body-copy {
+  line-height: 1.82;
+}
+
+.body-copy > * + * {
+  margin-top: 1.5rem;
+}
+
+/* — Editorial links keep the bronze; the one place the metal shows — */
+.editorial-link {
+  font-weight: 550;
+  letter-spacing: 0.16em;
+}
+
+/* — Media captions: quieter, wider set — */
+.media-caption {
+  color: var(--muted-foreground);
+  letter-spacing: 0.14em;
+}
+
+/* — Section-quiet: barely-there tonal shift, no heavy fill — */
+.section-quiet {
+  background: color-mix(in srgb, var(--surface) 35%, transparent);
+}
+
+.dark .section-quiet {
+  background: rgba(255, 255, 255, 0.014);
+}
+
+/* ---- Mobile: remove the busy heading counters and boxed pull-quotes ---- */
+@media (max-width: 639px) {
+  .section {
+    padding-block: 4.75rem;
+  }
+
+  .home-story .story-section {
+    padding-block: 4.75rem;
+  }
+
+  .home-story .story-heading {
+    padding-top: 0;
+    margin-top: 0.5rem;
+  }
+
+  .home-story .story-heading::before,
+  .home-story .story-heading::after {
+    content: none;
+    display: none;
+  }
+
+  /* Pull-quote loses the box; it becomes a quiet, larger line. */
+  .mobile-pull {
+    margin-block: 2.4rem !important;
+    border: 0 !important;
+    padding: 0 !important;
+    font-size: 1.28rem !important;
+    line-height: 1.42 !important;
+  }
+}
+
+/* — Extend the calm treatment to the long Archive-chapter pages.
+     Same idea: remove the administrative dividers, quiet the numbers. — */
+.ai-negations span,
+.ai-sequence span,
+.ai-outcome-row span,
+.ai-term-grid > div,
+.ai-rule-list > div,
+.bh-plain-list > div,
+.bh-rule-list > div,
+.bh-proof-list > div,
+.bh-statement-list p {
+  border-bottom: none;
+  padding-block: 0.5rem;
+}
+
+.ai-outcome-row {
+  border-top: none;
+  padding-top: 0.5rem;
+}
+
+.ai-rule-list > div > span:first-child,
+.bh-rule-list > div > span:first-child,
+.bh-section-number,
+.ai-section-number {
+  color: var(--muted-foreground);
+}
+
+/* Archive index: quieter chapter tags, faint row rule only. */
+.archive-chapter {
+  border-bottom: 1px solid var(--border);
+}
+
+.archive-chapter-tags {
+  letter-spacing: 0.16em;
+}
+
+/* — Home sign-off: a centred signature that lands the page — */
+.home-signoff {
+  border-top: 1px solid var(--border);
+  padding-block: 6.5rem 7.5rem;
+  text-align: center;
+}
+
+.home-signoff-mark {
+  margin: 0;
+  font-family: var(--font-heading), Georgia, serif;
+  font-weight: 400;
+  font-size: clamp(2.5rem, 7vw, 4.5rem);
+  line-height: 1;
+  color: var(--foreground);
+}
+
+.home-signoff-line {
+  margin: 1.35rem auto 0;
+  max-width: 26rem;
+  color: var(--muted-foreground);
+  font-size: 0.8125rem;
+  letter-spacing: 0.02em;
+}
+
+@media (min-width: 768px) {
+  .home-signoff {
+    padding-block: 8.5rem 9.5rem;
+  }
+}
+
+/* — Hero category line: the hero forces all its text to a fixed light color so
+     it reads over the dark photo in BOTH themes. A more-specific rule elsewhere
+     wrongly reverts this one line to theme-flipping --foreground (near-black in
+     light mode → invisible). Pin it back to the hero's cinema colour. — */
+.home-hero .hero-copy .emphasis {
+  color: var(--cinema-foreground);
+  font-weight: 500;
+}
+
+/* — About: one consistent section rhythm + pull-quote breaks — */
+.about-story {
+  border-top: 1px solid var(--border);
+}
+
+.about-quote {
+  border-top: 1px solid var(--border);
+  padding-block: 5rem;
+}
+
+.about-quote blockquote {
+  margin: 0;
+  max-width: 30rem;
+  color: var(--foreground);
+  font-family: var(--font-heading), Georgia, serif;
+  font-weight: 400;
+  font-size: clamp(1.85rem, 4vw, 2.7rem);
+  line-height: 1.16;
+  text-wrap: balance;
+}
+
+.about-quote blockquote::before {
+  content: "\201C";
+  display: block;
+  margin-bottom: 0.25rem;
+  color: var(--primary);
+  font-family: var(--font-heading), Georgia, serif;
+  font-size: 3rem;
+  line-height: 0.5;
+}
+
+@media (min-width: 768px) {
+  .about-quote {
+    padding-block: 6.5rem;
+  }
+
+  .about-quote .site-container {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    column-gap: 2rem;
+  }
+
+  .about-quote blockquote {
+    grid-column: 3 / span 9;
+    max-width: 40rem;
+  }
+}
+
+/* — Bio portrait: the source is a tight crop of a 600px original, so it must
+     display small to stay crisp. The About hero carries many older, conflicting
+     media-frame rules, so pin EXPLICIT dimensions on both the item and the frame
+     (definite width kills the aspect-ratio+fill ballooning) and win on specificity
+     via the .about-page prefix. — */
+@media (min-width: 768px) {
+  .about-page .about-hero-media {
+    width: 16rem;
+    max-width: 16rem;
+    margin-left: auto;
+  }
+
+  .about-page .about-hero-media .media-frame {
+    width: 16rem;
+    height: 20rem;
+    min-height: 0;
+    aspect-ratio: auto;
   }
 }

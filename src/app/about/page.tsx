@@ -1,68 +1,36 @@
+import type { Metadata } from "next";
 import { EditorialImage, TextLink } from "@/components/editorial";
+
+export const metadata: Metadata = {
+  title: "About",
+  description:
+    "A transformation executive who understands the boardroom, the operating system, and the client-facing reality. A dual Canadian and Swiss citizen, based in Nova Scotia and shaped by eighteen years in Switzerland. Former Disruption Officer.",
+};
 
 const titlePath = [
   "Creative Director, Tech & Data.",
   "Disruption Officer.",
   "Advisor.",
-  "Builder.",
   "Owner.",
 ];
 
 const ownershipReality = [
+  "Payroll runs.",
   "Clients book.",
   "Teams coordinate.",
-  "Instructors teach.",
-  "Payroll runs.",
   "Systems break.",
-  "People ask questions.",
   "The business opens again tomorrow.",
 ];
 
-const workQuestions = [
-  "Something has become too complex.",
-  "A standard is harder to hold.",
-  "The client experience has drifted.",
-  "A team is carrying too much in memory.",
-  "Technology has been added faster than the business has been clarified.",
-  "The leader can feel the issue, but the shape of it is not yet clear.",
+const currentFields = [
+  "Executive alignment.",
+  "Marketing transformation.",
+  "Client experience.",
+  "Applied AI.",
+  "Operating systems.",
 ];
 
-const usefulMoves = [
-  "I help find the real constraint.",
-  "Remove what does not belong.",
-  "Make the standard visible.",
-  "Build systems that help capable people do better work with less unnecessary force.",
-];
-
-const currentShape = [
-  {
-    label: "BraveHeart",
-    value: "The company I carry end to end.",
-  },
-  {
-    label: "Applied AI",
-    value:
-      "The systems work: making standards, handoffs, memory, and judgment easier for the business to hold.",
-  },
-  {
-    label: "Private work",
-    value:
-      "Where I sit beside owners and senior leaders facing questions that touch more than one part of the business.",
-  },
-];
-
-const businessAreas = ["Brand.", "Service.", "Operations.", "Technology.", "Client experience."];
-
-const quietWork = [
-  "The standard.",
-  "The handoff.",
-  "The room.",
-  "The system.",
-  "The decision.",
-  "The person who has to carry it.",
-];
-
-const simpleStandard = ["Clearer.", "Warmer.", "More capable.", "Easier to hold."];
+const vantagePoints = ["The boardroom.", "The operating system.", "The client-facing reality."];
 
 export default function About() {
   return (
@@ -70,22 +38,22 @@ export default function About() {
       <section className="about-hero">
         <div className="site-container about-hero-grid">
           <div className="about-hero-copy">
-            <span className="page-kicker">04 / About</span>
+            <span className="page-kicker">About</span>
             <h1>Eli Castson</h1>
-            <p>Owner, operator, builder, and private advisor.</p>
+            <p>A transformation executive.</p>
             <p>
-              I work with people who care about the standard of the work — and who have
-              to make that standard hold in real life.
+              I redesign how organizations work — across strategy, technology, and the
+              people who carry it.
             </p>
           </div>
 
           <div className="about-hero-media">
             <EditorialImage
-              src="/images/editorial/eli-business-portrait.png"
+              src="/images/editorial/eli-portrait-bio.png"
               alt="Eli Castson in a black suit leaning against concrete architecture"
-              caption="Nova Scotia / Switzerland / owned businesses / private work"
+              caption="Canadian / Swiss / operator / advisor"
               aspect="aspect-[4/5]"
-              objectPosition="52% center"
+              objectPosition="center"
               priority
               sizes="(max-width: 768px) 86vw, 32vw"
             />
@@ -96,42 +64,26 @@ export default function About() {
       <section className="about-story">
         <div className="site-container about-story-grid">
           <div className="about-story-marker">
-            <span className="section-kicker">Background</span>
+            <span className="section-kicker">The range</span>
           </div>
-
           <div className="about-story-lede">
-            <p>I have always worked close to change.</p>
+            <p>The titles changed. The work stayed the same.</p>
           </div>
-
           <div className="about-story-copy body-copy">
+            <p>I began with people: how they think, decide and experience an organization.</p>
             <p>
-              I am based in Nova Scotia and shaped by eighteen years in Switzerland.
+              From there, the scope widened — to brand, client experience, technology,
+              teams and the operating model behind them.
             </p>
-            <p>
-              Before acquiring BraveHeart First Aid, I worked across creative direction,
-              advertising, digital transformation, data, and technology.
-            </p>
-            <p>The titles changed.</p>
             <div className="ruled-list metadata">
               {titlePath.map((title) => (
                 <div key={title}>{title}</div>
               ))}
             </div>
-            <p>The work underneath stayed consistent:</p>
+            <p>Different roles. One recurring mandate:</p>
             <p className="emphasis">
-              Help serious people see what is changing, decide what matters, and build
-              the conditions for better work to happen.
-            </p>
-            <p>
-              That work moved through Swiss and international environments, including
-              projects connected to UBS, La Prairie, and other premium or complex
-              organizations.
-            </p>
-            <p>It taught me to care about precision.</p>
-            <p>Not as decoration.</p>
-            <p>
-              As respect for the people who have to make decisions, deliver the
-              experience, and live with the consequences.
+              Understand the whole system, find the simpler answer, and move people,
+              business and technology together.
             </p>
           </div>
         </div>
@@ -140,120 +92,143 @@ export default function About() {
       <section className="about-story">
         <div className="site-container about-story-grid">
           <div className="about-story-marker">
-            <span className="section-kicker">Owned Work</span>
+            <span className="section-kicker">Canadian–Swiss</span>
           </div>
-
           <div className="about-story-lede">
-            <p>BraveHeart changed the weight of the work.</p>
+            <p>Two places, one working perspective.</p>
           </div>
+          <div className="about-story-copy body-copy">
+            <p>I hold both nationalities — Canadian and Swiss.</p>
+            <p>
+              I am based in Nova Scotia and shaped by eighteen years in Switzerland,
+              which is an active professional market for me, not a line on a map.
+            </p>
+            <p>
+              That work moved through Swiss and international environments, including
+              projects connected to UBS, La Prairie, and other premium or complex
+              organizations.
+            </p>
+            <p>It taught me precision.</p>
+            <p className="emphasis">
+              Not as decoration — as respect for the people who make the decisions and
+              live with them.
+            </p>
+          </div>
+        </div>
+      </section>
 
+      <section className="about-quote">
+        <div className="site-container">
+          <blockquote>
+            The range is not several careers. It is one point of view, built from
+            several directions.
+          </blockquote>
+        </div>
+      </section>
+
+      <section className="about-story">
+        <div className="site-container about-story-grid">
+          <div className="about-story-marker">
+            <span className="section-kicker">Disruption Officer</span>
+          </div>
+          <div className="about-story-lede">
+            <p>The mandate had a name.</p>
+          </div>
+          <div className="about-story-copy body-copy">
+            <p className="emphasis">
+              For a time, that was my title, and it was meant literally.
+            </p>
+            <p>
+              Redesign the operating model. Modernize the technology. Restructure the
+              teams and decision rights. Lead the cultural shift required to make the
+              new model work.
+            </p>
+            <p>It is still the clearest description of what I do.</p>
+            <TextLink href="/archive/disruption-officer" className="mt-6">
+              Read the chapter
+            </TextLink>
+          </div>
+        </div>
+      </section>
+
+      <section className="about-story">
+        <div className="site-container about-story-grid">
+          <div className="about-story-marker">
+            <span className="section-kicker">Ownership</span>
+          </div>
+          <div className="about-story-lede">
+            <p>Then I bought a company.</p>
+          </div>
           <div className="about-story-copy body-copy">
             <p>
-              BraveHeart is a workplace training company I acquired, transformed, and
-              now operate.
+              BraveHeart is a workplace training company I acquired, rebuilt, and now
+              operate.
             </p>
-            <p className="emphasis">That distinction matters.</p>
-            <p>It is one thing to advise a business.</p>
-            <p>It is another to carry one.</p>
             <div className="ruled-list metadata">
               {ownershipReality.map((item) => (
                 <div key={item}>{item}</div>
               ))}
             </div>
-            <p>Ownership changes the conversation.</p>
-            <p>It keeps language honest.</p>
-            <p>It makes vague ideas expensive.</p>
-            <p>
-              It teaches you very quickly which recommendations are useful and which
-              ones only sounded good in the room.
+            <p className="emphasis">
+              It teaches you quickly which recommendations are useful, and which only
+              sounded good in the room.
             </p>
+            <TextLink href="/braveheart" className="mt-6">
+              Read the chapter
+            </TextLink>
           </div>
         </div>
       </section>
 
-      <section className="about-practice">
-        <div className="site-container about-practice-grid">
-          <div className="about-practice-copy">
-            <span className="section-kicker">How I Work</span>
-            <h2>I like working with people who care.</h2>
-          </div>
-
-          <div className="about-detail-grid body-copy">
-            <p className="emphasis">The work usually begins with a real question.</p>
-            <div className="ruled-list metadata">
-              {workQuestions.map((question) => (
-                <div key={question}>{question}</div>
-              ))}
-            </div>
-          </div>
-
-          <div className="about-continuity body-copy">
-            <p className="emphasis">That is where I am useful.</p>
-            <div className="ruled-list metadata">
-              {usefulMoves.map((move) => (
-                <div key={move}>{move}</div>
-              ))}
-            </div>
-          </div>
+      <section className="about-quote">
+        <div className="site-container">
+          <blockquote>Ownership keeps language honest. It makes vague ideas expensive.</blockquote>
         </div>
       </section>
 
-      <section className="about-index">
-        <div className="site-container about-index-grid">
-          <div>
-            <span className="section-kicker">Current Shape</span>
-            <h2>The work now lives in three places.</h2>
+      <section className="about-story">
+        <div className="site-container about-story-grid">
+          <div className="about-story-marker">
+            <span className="section-kicker">Now</span>
           </div>
-
-          <div className="about-detail-grid">
-            {currentShape.map((detail) => (
-              <div key={detail.label} className="about-detail">
-                <span className="metadata">{detail.label}</span>
-                <p>{detail.value}</p>
-              </div>
-            ))}
+          <div className="about-story-lede">
+            <p>Where the work lives now.</p>
           </div>
-
-          <div className="about-continuity body-copy">
-            <div className="ruled-list metadata">
-              {businessAreas.map((area) => (
-                <div key={area}>{area}</div>
-              ))}
-            </div>
-            <p>I am not interested in business as theatre.</p>
-            <p>I am interested in the quieter work underneath.</p>
-            <div className="ruled-list metadata">
-              {quietWork.map((item) => (
-                <div key={item}>{item}</div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="about-practice border-b-0">
-        <div className="site-container about-practice-grid">
-          <div className="about-practice-copy">
-            <span className="section-kicker">A Simple Standard</span>
-            <h2>Make the business easier to trust.</h2>
-          </div>
-
-          <div className="about-preferences">
-            {simpleStandard.map((standard) => (
-              <p key={standard}>{standard}</p>
-            ))}
-          </div>
-
-          <div className="about-continuity body-copy">
-            <p>That is the thread through the work.</p>
+          <div className="about-story-copy body-copy">
             <p>
-              A business becomes stronger when the promise, the people, the process,
-              and the systems underneath are brought closer together.
+              Today the work is senior advisory and transformation across Canadian and
+              Swiss organizations — the kind of engagements where the direction is
+              changing and the operating model has to change with it.
             </p>
-            <p>Not louder.</p>
-            <p>Not more complicated.</p>
-            <p>Not more generic.</p>
-            <p className="emphasis">That is the work I keep returning to.</p>
+            <div className="ruled-list metadata">
+              {currentFields.map((field) => (
+                <div key={field}>{field}</div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="about-story">
+        <div className="site-container about-story-grid">
+          <div className="about-story-marker">
+            <span className="section-kicker">The underlying point</span>
+          </div>
+          <div className="about-story-lede">
+            <p>I make organizations easier to change, and easier to trust.</p>
+          </div>
+          <div className="about-story-copy body-copy">
+            <div className="ruled-list metadata">
+              {vantagePoints.map((point) => (
+                <div key={point}>{point}</div>
+              ))}
+            </div>
+            <p>
+              Most people who do this work know one of those three worlds. The value is
+              in holding all of them at once — and knowing how a decision in one shows
+              up in the others.
+            </p>
+            <p className="emphasis">That is the thread through everything above.</p>
             <TextLink href="/contact" className="mt-8">
               Start a conversation
             </TextLink>

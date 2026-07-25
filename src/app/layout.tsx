@@ -41,20 +41,22 @@ const helix = localFont({
 
 export const metadata: Metadata = {
   title: {
-    default: "Eli Castson | Castson Inc.",
-    template: "%s | Eli Castson",
+    default: "Eli Castson — Transformation Executive",
+    template: "%s — Eli Castson",
   },
-  description: "Selective advisory for distinctive service businesses where the experience has to feel as considered as the promise.",
+  description:
+    "Eli Castson redesigns how organizations work when people, business, and technology have to change together. A Canadian–Swiss transformation executive. Former Disruption Officer.",
   keywords: [
     "Eli Castson",
     "Castson Inc.",
-    "Experience Brands",
-    "Hospitality Operations",
-    "Service Design",
-    "Operational Standards",
-    "Tourism Succession",
-    "BraveHeart First Aid",
-    "Applied AI Systems Layer"
+    "Transformation Executive",
+    "Disruption Officer",
+    "Organizational Change",
+    "Operating Systems",
+    "Applied AI",
+    "Executive Advisory",
+    "Fractional Executive",
+    "Canadian Swiss Executive",
   ],
   authors: [{ name: "Eli Castson", url: "https://castson.com" }],
   creator: "Eli Castson",
@@ -63,14 +65,16 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://castson.com",
-    title: "Eli Castson | Castson Inc.",
-    description: "Selective advisory for distinctive service businesses where brand, service, systems, technology, and client experience have to hold together.",
+    title: "Eli Castson — Transformation Executive",
+    description:
+      "Redesigning how organizations work when technology changes what is possible. People, business, and technology, changed together. Canadian–Swiss. Former Disruption Officer.",
     siteName: "Eli Castson",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Eli Castson | Castson Inc.",
-    description: "Selective advisory for distinctive service businesses where brand, service, systems, technology, and client experience have to hold together.",
+    title: "Eli Castson — Transformation Executive",
+    description:
+      "Redesigning how organizations work when technology changes what is possible. People, business, and technology, changed together.",
   },
 };
 
@@ -90,7 +94,7 @@ export default function RootLayout({
         {/* Inline FOUC-prevention: resolve theme before first paint */}
         <script
           dangerouslySetInnerHTML={{
-            __html: `(function(){try{var t=localStorage.getItem('theme');document.documentElement.classList.toggle('dark',t==='light'?false:true)}catch(e){document.documentElement.classList.add('dark')}})()`,
+            __html: `(function(){try{var t=localStorage.getItem('theme');document.documentElement.classList.toggle('dark',t==='dark')}catch(e){}})()`,
           }}
         />
       </head>

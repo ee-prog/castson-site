@@ -1,4 +1,11 @@
+import type { Metadata } from "next";
 import { PageHeader } from "@/components/editorial";
+
+export const metadata: Metadata = {
+  title: "Colophon",
+  description:
+    "How this site is built — typography, design direction, and the stack behind it.",
+};
 
 const buildTools = ["Next.js", "TypeScript", "Tailwind CSS"];
 const infrastructure = ["Vercel", "GitHub", "Resend"];
@@ -10,7 +17,7 @@ export default function Colophon() {
     <div className="site-shell colophon-page">
       <section className="section colophon-hero">
         <div className="site-container">
-          <PageHeader kicker="07 / Identity" title="Colophon" />
+          <PageHeader kicker="Colophon" title="Colophon" />
         </div>
       </section>
 
@@ -18,7 +25,8 @@ export default function Colophon() {
         <div className="site-container">
           <div className="body-copy">
             <p className="emphasis text-xl leading-relaxed">
-              This site is a working record for Eli Castson and Castson Inc.: part personal site, part company ledger, part archive of ownership, operating discipline, and direction.
+              The personal site of Eli Castson — built with the same attention I bring
+              to the work it describes.
             </p>
 
             <p>Built with Next.js, TypeScript, Tailwind CSS, and Vercel.</p>
@@ -45,7 +53,7 @@ export default function Colophon() {
               <div>
                 <span className="section-kicker">Intent</span>
                 <p>
-                  This is not a portfolio in the usual sense. It is a record of ownership, operating discipline, and the move toward service and experience businesses with stronger operating infrastructure behind them.
+                  Not a portfolio in the usual sense. A place to confirm an instinct: that the person you met leads transformation across people, business, and technology — and could take on a significant executive mandate.
                 </p>
               </div>
             </div>
