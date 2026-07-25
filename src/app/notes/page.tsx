@@ -73,6 +73,16 @@ const notes = [
     ],
   },
   {
+    title: "Agent memory belongs in files a human can read.",
+    body: [
+      "The instinct is to let AI manage its own memory — embeddings, vector stores, hidden state.",
+      "Developers are learning the hard way that this fails quietly. Memory you cannot read, you cannot audit, correct or trust.",
+      "The discipline that works is plainer: flat files, clear names, version control, an append-only log.",
+      "The model reads them. The human reads them. Corrections are edits, and history is kept.",
+      "The model will change. The files remain.",
+    ],
+  },
+  {
     title: "Most software is a temporary teacher.",
     body: [
       "Each tool a company adopts teaches it something.",
@@ -103,6 +113,7 @@ const emphasisStarts = [
   "It means building a company",
   "Understand first.",
   "The first layer is truth.",
+  "The model will change.",
   "It means the business learned.",
   "The rest of the diagnosis follows.",
 ];

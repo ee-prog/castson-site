@@ -6,7 +6,7 @@ import { EditorialImage, TextLink } from "@/components/editorial";
 export const metadata: Metadata = {
   title: "Disruption Officer",
   description:
-    "The defining mandate — responsible for changing how a global media organization worked. Redesign the operating model, modernize the technology, restructure the teams, and lead the cultural shift.",
+    "The defining mandate — responsible for changing how a global media agency worked. Redesign the operating model, modernize the technology, restructure the teams, and lead the cultural shift.",
 };
 
 export default function DisruptionOfficerPage() {
@@ -58,8 +58,8 @@ export default function DisruptionOfficerPage() {
           <div className="lg:col-span-7">
             <div className="body-copy">
               <p>
-                By then, I had already moved from psychology into marketing, technology,
-                data and client experience.
+                By then, my work had already crossed marketing, technology, data and
+                client experience.
               </p>
               <p className="emphasis">
                 The boundaries between those disciplines had become the problem.
@@ -73,8 +73,11 @@ export default function DisruptionOfficerPage() {
               <p>The organization had changed.</p>
               <p className="emphasis">Its operating model had not.</p>
               <p>
-                Disruption Officer was the first role that formally brought the whole
-                question together.
+                The setting was a global media agency — brand, strategy and analytics
+                converging under one roof. Disruption Officer was the first role that
+                formally brought the whole question together — carried alongside the
+                CEO and CHRO, with the authority to change how the company actually
+                worked.
               </p>
             </div>
           </div>
@@ -131,8 +134,9 @@ export default function DisruptionOfficerPage() {
                 people could participate in it rather than defend themselves from it.
               </p>
               <p>
-                The visible work included executive reporting, data consolidation,
-                project delivery, team design and new operating practices.
+                The visible work included executive reporting, data consolidation
+                across platforms, a new project-tracking system, team design, and
+                coaching that ran from line managers to the board.
               </p>
               <p>They were not separate projects.</p>
               <p className="emphasis">

@@ -41,10 +41,10 @@ export default function ArchivePage() {
       <section className="archive-hero">
         <div className="site-container archive-hero-grid">
           <span className="page-kicker">Archive</span>
-          <h1>The work.</h1>
+          <h1>The work, in three chapters.</h1>
           <p className="archive-hero-lede">
-            Three chapters in how I think, build and lead: disruption, ownership and
-            applied technology.
+            Disruption, ownership and applied technology — how I think, build and
+            lead.
           </p>
         </div>
       </section>

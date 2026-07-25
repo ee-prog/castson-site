@@ -7,28 +7,17 @@ import { EditorialImage, TextLink } from "@/components/editorial";
 export const metadata: Metadata = {
   title: "Applied AI and Systems",
   description:
-    "Systems, workflows and applied intelligence designed around how the organization is actually meant to work. AI is useful only when the business is clear enough to use it.",
+    "Systems, workflows and applied intelligence designed around how the organization is actually meant to work — from global martech and clienteling systems to AI-enabled operating infrastructure. AI is useful only when the business is clear enough to use it.",
 };
 
 const heroThemes = ["Clarity", "Memory", "Decisions", "Handoffs", "Capability"];
 
-const memoryItems = [
-  "Decisions and their rationale.",
-  "Operating standards.",
-  "Policies and processes.",
-  "Client and project history.",
-  "Exceptions and escalation paths.",
-];
-
-const standardCarriers = [
-  "Rules.",
-  "Context.",
-  "Approvals.",
-  "Memory.",
-  "Signals.",
-  "Interfaces.",
-  "Escalation points.",
-  "Human oversight.",
+const trackRecord = [
+  "A retail operations audit across roughly 50 countries and thousands of boutiques.",
+  "A clienteling application for a Swiss luxury skincare house — high-touch service translated into frontline workflows.",
+  "Salesforce CRM and marketing systems built for frontline sales and service teams.",
+  "MongoDB and Power BI reporting environments built for decisions, not dashboards.",
+  "Enterprise martech, analytics and data platforms across a global media agency.",
 ];
 
 const capabilityOutcomes = [
@@ -36,7 +25,6 @@ const capabilityOutcomes = [
   "Prepare decisions with better context.",
   "Coordinate work with less chasing.",
   "Carry its standards more consistently.",
-  "Recognize important signals earlier.",
   "Improve without depending on one person to hold the entire system together.",
 ];
 
@@ -107,11 +95,11 @@ export default function AppliedAIPage() {
         title="Most companies do not have a tool problem."
         quiet
       >
-        <p>They have standards living in people&rsquo;s heads.</p>
-        <p>Decisions depending on memory.</p>
-        <p>Knowledge scattered across documents, inboxes and software.</p>
-        <p>Teams chasing context the organization already possesses.</p>
-        <p>Leaders becoming the system because the system does not quite hold.</p>
+        <p>
+          They have standards living in people&rsquo;s heads. Decisions depending on
+          memory. Knowledge scattered across documents, inboxes and software.
+        </p>
+        <p>Leaders become the system because the system does not quite hold.</p>
         <p>AI does not solve that by itself.</p>
         <p className="emphasis">The useful work begins before the tool.</p>
       </Section>
@@ -121,42 +109,17 @@ export default function AppliedAIPage() {
         name="Clarity First"
         title="Do not automate what the business has not understood."
       >
-        <p>The first questions are operating questions.</p>
-        <p>What is supposed to happen?</p>
-        <p>Who owns the decision?</p>
-        <p>What does the team need to know?</p>
-        <p>Where is judgment required?</p>
-        <p>What should technology handle quietly?</p>
-        <p>What should remain human?</p>
-        <p>A business cannot automate its way out of confusion.</p>
-        <p>The process has to be understood.</p>
-        <p>The handoffs have to be clear.</p>
-        <p>The standards have to be usable.</p>
-        <p>The decisions need owners.</p>
-        <p>This is the work many organizations want to skip.</p>
-        <p className="emphasis">
-          It is also the work that makes applied AI useful.
-        </p>
-      </Section>
-
-      <Section
-        number="03"
-        name="Memory and Decisions"
-        title="The organization should retain more of what it learns."
-        quiet
-      >
-        <p>Most companies know more than they can consistently use.</p>
         <p>
-          The knowledge is fragmented across policies, systems, conversations and the
-          memories of capable people.
+          The first questions are operating questions. What is supposed to happen?
+          Who owns the decision? Where is judgment required? What should technology
+          handle quietly?
         </p>
-        <p>A decision is made, but its reasoning disappears.</p>
-        <p>A process changes, but the old instructions remain in circulation.</p>
-        <p>A client or project history exists, but not where the next person needs it.</p>
-        <p>Applied intelligence can help preserve and connect that context.</p>
-        <List items={memoryItems} />
-        <p>The purpose is not to record everything.</p>
-        <p>It is to prepare the next action or decision with better context.</p>
+        <p>A business cannot automate its way out of confusion.</p>
+        <p>
+          Once the work is understood, the system can begin to carry it: the
+          decisions and their rationale, the operating standards, the client and
+          project history, the exceptions.
+        </p>
         <p>The judgment remains human.</p>
         <p className="emphasis">
           The system makes it easier to see the situation clearly.
@@ -177,74 +140,100 @@ export default function AppliedAIPage() {
       </section>
 
       <Section
-        number="04"
-        name="The Standard"
-        title="The system should carry more of the standard."
+        number="03"
+        name="The Record"
+        title="This pattern is older than the current AI moment."
+        quiet
       >
-        <p>Distinctive organizations depend on judgment.</p>
         <p>
-          But judgment is often forced to compensate for weak operating structure.
+          The work of connecting systems, data and frontline reality has run through
+          my whole career.
         </p>
-        <p>A capable employee remembers the exception.</p>
-        <p>A manager notices what has been missed.</p>
-        <p>A founder holds the full context in their head.</p>
+        <List items={trackRecord} />
         <p>
-          Applied AI becomes useful when the standard is clear enough for the system to
-          help carry it.
+          Different industries, one discipline: connect what is fragmented, clean the
+          data, and design around how people actually work.
         </p>
-        <List items={standardCarriers} />
-        <p>The point is not to replace judgment.</p>
+        <p className="emphasis">The systems changed. The discipline did not.</p>
+      </Section>
+
+      <Section
+        number="04"
+        name="The Current Build"
+        title="Now the systems can reason."
+      >
+        <p>
+          Today that discipline produces AI-enabled operating systems. The deepest
+          example is the one I built for myself.
+        </p>
+        <p>
+          Ripley is an AI system I built for my own work. It is my assistant across
+          both halves of the job — the executive work and the building of systems
+          and software — and it runs against the real operation: accounting,
+          payroll, email, scheduling, deployments. Not a demo.
+        </p>
+        <p>
+          Architecturally, it is a scaffold, not a harness. The durable structure is
+          a version-controlled operating law, a strict filesystem doctrine, a
+          registry of reusable skills, and structured memory. The model and runtime
+          underneath are interchangeable — the system is built to outlive them.
+        </p>
         <p className="emphasis">
-          It is to protect it from work the system should already understand.
+          AI expands the execution. The architecture and the judgment remain mine.
         </p>
       </Section>
 
       <Section
         number="05"
-        name="Connected Work"
-        title="Context should travel with the work."
+        name="Memory"
+        title="Nothing important dies with a conversation."
         quiet
       >
-        <p>Marketing has one part of the picture.</p>
-        <p>Operations has another.</p>
-        <p>Finance holds the transaction.</p>
-        <p>Scheduling holds the timing.</p>
-        <p>Email contains the conversation.</p>
-        <p>Documents contain the rules.</p>
-        <p>Individual people carry the exceptions.</p>
         <p>
-          The organization possesses the information, but its systems do not share a
-          coherent understanding of the work.
+          Memory was the first hard problem: a model starts every session knowing
+          nothing about yesterday.
         </p>
-        <p>So people fill the gaps.</p>
-        <p>The coordinator remembers.</p>
-        <p>The manager chases.</p>
-        <p>The founder decides again.</p>
-        <p>The CEO becomes the operating system.</p>
-        <p>Applied AI should reduce that dependency.</p>
-        <p>Not by removing people from the work.</p>
-        <p className="emphasis">By giving the work a better structure to live in.</p>
+        <p>
+          Ripley solves this structurally — session state that bridges
+          conversations, an append-only log that keeps the record, corrections that
+          become standing rules the moment they are made.
+        </p>
+        <p>
+          All of it lives in plain, versioned files a human can read — not an opaque
+          store the model manages for itself. Corrections are edits. History is
+          kept.
+        </p>
+        <p>
+          The memory is still evolving: from holding what happened toward retrieving
+          exactly what the next decision needs.
+        </p>
+        <p className="emphasis">
+          Memory you cannot read is memory you cannot trust.
+        </p>
       </Section>
 
       <Section
         number="06"
-        name="Invisible Technical Work"
-        title="The technology should disappear into the operation."
+        name="Governance"
+        title="It knows what it must not touch."
       >
+        <p>An assistant with hands needs rules.</p>
         <p>
-          Behind the scenes, the work may involve custom software, connected systems,
-          automation, AI-assisted workflows, company knowledge, dashboards, rules,
-          approvals, APIs and human-in-the-loop interfaces.
+          Every action is classified against a tiered risk policy: what Ripley may
+          execute directly, what it must draft for approval, what it may never
+          touch. Production, money, payroll and credentials sit behind explicit
+          human approval.
         </p>
-        <p>But the point is never the stack.</p>
-        <p className="emphasis">
-          The point is that the right information reaches the right person — or the right
-          system — at the right moment.
+        <p>
+          The direction is set: the capability layer is standardizing on MCP, and a
+          purpose-built runtime will come when autonomous operation earns it.
         </p>
-        <p>The team has better context.</p>
-        <p>The business carries its standard with less noise.</p>
-        <p>Decisions require less preparation.</p>
-        <p>Work moves with less chasing and less force.</p>
+        <p>
+          Ripley is not finished and not for sale. It is proprietary infrastructure
+          — knowledge, standards and judgment living in the system the business
+          runs on.
+        </p>
+        <p className="emphasis">Trust is an architecture decision.</p>
       </Section>
 
       <section className="bh-image-section">
@@ -267,12 +256,12 @@ export default function AppliedAIPage() {
         title="AI should make the organization more capable."
         quiet
       >
-        <p>Not more generic.</p>
-        <p>Not more complicated.</p>
-        <p>Not more dependent on another platform nobody fully understands.</p>
+        <p>Not more generic. Not more complicated.</p>
+        <p>
+          What Ripley proves in miniature is what an organization needs at scale.
+        </p>
         <p>The objective is an organization that can:</p>
         <List items={capabilityOutcomes} />
-        <p>That is the applied AI and systems work I care about.</p>
         <p>Not artificial intelligence as performance.</p>
         <p className="emphasis">Intelligence applied to real work.</p>
         <div className="mt-9">

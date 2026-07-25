@@ -67,6 +67,10 @@ export default function About() {
               From there, the scope widened — to brand, client experience, technology,
               teams and the operating model behind them.
             </p>
+            <p>
+              Along the way: a degree in psychology, then an MBA at the University of
+              Zurich, focused on digital transformation.
+            </p>
             <div className="ruled-list metadata">
               {titlePath.map((title) => (
                 <div key={title}>{title}</div>
@@ -96,8 +100,8 @@ export default function About() {
               which is an active professional market for me, not a line on a map.
             </p>
             <p>
-              That work moved through Swiss and international environments, including
-              projects connected to UBS, La Prairie, and other premium or complex
+              That work moved through Swiss and international environments — private
+              banking, luxury skincare, global media and other premium or complex
               organizations.
             </p>
             <p>It taught me precision.</p>

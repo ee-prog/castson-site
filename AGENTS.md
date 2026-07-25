@@ -15,6 +15,7 @@
 - Tone: [TBD]
 - Banned CTAs: [TBD]
 - Required CTAs: [TBD]
+- Never name client or employer companies anywhere on the site (past or current). Describe the industry precisely instead ("a global media agency", "a Swiss luxury skincare house", "private banking"). This is not a LinkedIn profile or an online CV. Exceptions: Braveheart (owned company) and Ripley (own build).
 
 ## 4. CANONICAL DATA
 - Address: [TBD]

@@ -45,7 +45,8 @@ export default function Contact() {
                 <h2 className="mt-4 text-3xl">Thank you.</h2>
                 <p className="mx-auto mt-4 max-w-sm text-sm leading-relaxed text-[var(--muted-foreground)]">
                   Your note has been received. I’ll read it personally and reply
-                  directly.
+                  directly. If it makes sense to talk, my reply will include a clear
+                  next step.
                 </p>
                 <a href="/contact" className="editorial-link mt-8">
                   Send another note

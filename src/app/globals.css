@@ -2182,7 +2182,17 @@ header.fixed {
 .home-hero > .absolute.inset-0 {
   background:
     linear-gradient(180deg, rgba(10, 10, 9, 0.16) 0%, rgba(10, 10, 9, 0.42) 48%, rgba(10, 10, 9, 0.76) 100%),
-    linear-gradient(90deg, rgba(10, 10, 9, 0.62) 0%, rgba(10, 10, 9, 0.25) 45%, rgba(10, 10, 9, 0.08) 100%) !important;
+    linear-gradient(90deg, rgba(10, 10, 9, 0.62) 0%, rgba(10, 10, 9, 0.25) 45%, rgba(10, 10, 9, 0.08) 100%);
+}
+
+/* On phones the copy block is taller and sits over the image's busiest area —
+   deepen the lower gradient so the last lines stay legible. */
+@media (max-width: 639px) {
+  .home-hero > .absolute.inset-0 {
+    background:
+      linear-gradient(180deg, rgba(10, 10, 9, 0.2) 0%, rgba(10, 10, 9, 0.52) 42%, rgba(10, 10, 9, 0.84) 100%),
+      linear-gradient(90deg, rgba(10, 10, 9, 0.5) 0%, rgba(10, 10, 9, 0.22) 45%, rgba(10, 10, 9, 0.1) 100%);
+  }
 }
 
 .home-hero .site-container {

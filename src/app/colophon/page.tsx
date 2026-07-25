@@ -9,8 +9,8 @@ export const metadata: Metadata = {
 
 const buildTools = ["Next.js", "TypeScript", "Tailwind CSS"];
 const infrastructure = ["Vercel", "GitHub", "Resend"];
-const designTools = ["Figma", "Lucide icons"];
-const workspaceTools = ["Antigravity"];
+const designTools = ["Lucide icons"];
+const workspaceTools = ["Ripley", "Claude Code", "Fable 5"];
 
 export default function Colophon() {
   return (
@@ -43,18 +43,17 @@ export default function Colophon() {
               <div>
                 <span className="section-kicker">Applied AI</span>
                 <div className="space-y-4">
-                  <p>Applied AI is the systems layer behind the work.</p>
                   <p>
-                    It keeps briefs, drafts, research, decisions, working files, and repeatable rules inspectable instead of scattered.
+                    This site is written, revised and maintained through Ripley — the
+                    AI scaffold described in the archive. Today it mostly runs on
+                    Claude; by design, it is agnostic to model and runtime.
+                  </p>
+                  <p>
+                    The briefs, drafts, decisions and repeatable rules behind it stay
+                    inspectable instead of scattered.
                   </p>
                   <p>The point is continuity: work held, revised, improved, and made visible over time.</p>
                 </div>
-              </div>
-              <div>
-                <span className="section-kicker">Intent</span>
-                <p>
-                  Not a portfolio in the usual sense. A place to confirm an instinct: that the person you met leads transformation across people, business, and technology — and could take on a significant executive mandate.
-                </p>
               </div>
             </div>
           </div>
