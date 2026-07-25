@@ -48,9 +48,9 @@ export default function Contact() {
                 <div className="mx-auto flex h-12 w-12 items-center justify-center text-[var(--primary)]">
                   <Send className="h-6 w-6" strokeWidth={1.5} aria-hidden="true" />
                 </div>
-                <h2 className="mt-4 text-3xl">Message received.</h2>
+                <h2 className="mt-4 text-3xl">Thank you.</h2>
                 <p className="mx-auto mt-4 max-w-sm text-sm leading-relaxed text-[var(--muted-foreground)]">
-                  Thanks for the note. If it fits the kind of work I’m focused on, I’ll reply directly.
+                  I’ve received your note and will reply personally.
                 </p>
                 <a href="/contact" className="editorial-link mt-8">
                   Send another message
