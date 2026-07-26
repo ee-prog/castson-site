@@ -7,14 +7,14 @@ import { EditorialImage, TextLink } from "@/components/editorial";
 export const metadata: Metadata = {
   title: "Applied AI and Systems",
   description:
-    "Systems, workflows and applied intelligence designed around how the organization is actually meant to work — from global martech and clienteling systems to AI-enabled operating infrastructure. AI is useful only when the business is clear enough to use it.",
+    "Systems, workflows and applied intelligence designed around how the organization is actually meant to work, from global martech and clienteling systems to AI-enabled operating infrastructure. AI is useful only when the business is clear enough to use it.",
 };
 
 const heroThemes = ["Clarity", "Memory", "Decisions", "Handoffs", "Capability"];
 
 const trackRecord = [
   "A retail operations audit across roughly 50 countries and thousands of boutiques.",
-  "A clienteling application for a Swiss luxury skincare house — high-touch service translated into frontline workflows.",
+  "A clienteling application for a Swiss luxury skincare house: high-touch service translated into frontline workflows.",
   "Salesforce CRM and marketing systems built for frontline sales and service teams.",
   "MongoDB and Power BI reporting environments built for decisions, not dashboards.",
   "Enterprise martech, analytics and data platforms across a global media agency.",
@@ -168,15 +168,15 @@ export default function AppliedAIPage() {
         </p>
         <p>
           Ripley is an AI system I built for my own work. It is my assistant across
-          both halves of the job — the executive work and the building of systems
-          and software — and it runs against the real operation: accounting,
+          both halves of the job: the executive work and the building of systems
+          and software. It runs against the real operation: accounting,
           payroll, email, scheduling, deployments. Not a demo.
         </p>
         <p>
           Architecturally, it is a scaffold, not a harness. The durable structure is
           a version-controlled operating law, a strict filesystem doctrine, a
           registry of reusable skills, and structured memory. The model and runtime
-          underneath are interchangeable — the system is built to outlive them.
+          underneath are interchangeable; the system is built to outlive them.
         </p>
         <p className="emphasis">
           AI expands the execution. The architecture and the judgment remain mine.
@@ -194,12 +194,12 @@ export default function AppliedAIPage() {
           nothing about yesterday.
         </p>
         <p>
-          Ripley solves this structurally — session state that bridges
+          Ripley solves this structurally: session state that bridges
           conversations, an append-only log that keeps the record, corrections that
           become standing rules the moment they are made.
         </p>
         <p>
-          All of it lives in plain, versioned files a human can read — not an opaque
+          All of it lives in plain, versioned files a human can read, not an opaque
           store the model manages for itself. Corrections are edits. History is
           kept.
         </p>
@@ -229,9 +229,9 @@ export default function AppliedAIPage() {
           purpose-built runtime will come when autonomous operation earns it.
         </p>
         <p>
-          Ripley is not finished and not for sale. It is proprietary infrastructure
-          — knowledge, standards and judgment living in the system the business
-          runs on.
+          Ripley is not finished and not for sale. It is proprietary
+          infrastructure: knowledge, standards and judgment living in the system
+          the business runs on.
         </p>
         <p className="emphasis">Trust is an architecture decision.</p>
       </Section>

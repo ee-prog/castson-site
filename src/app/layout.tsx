@@ -41,8 +41,8 @@ const helix = localFont({
 
 export const metadata: Metadata = {
   title: {
-    default: "Eli Castson — Transformation Executive",
-    template: "%s — Eli Castson",
+    default: "Eli Castson, Transformation Executive",
+    template: "%s · Eli Castson",
   },
   description:
     "Eli Castson redesigns how organizations work when people, business, and technology have to change together. A Canadian–Swiss transformation executive. Former Disruption Officer.",
@@ -65,14 +65,14 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://castson.com",
-    title: "Eli Castson — Transformation Executive",
+    title: "Eli Castson, Transformation Executive",
     description:
       "Redesigning how organizations work when technology changes what is possible. People, business, and technology, changed together. Canadian–Swiss. Former Disruption Officer.",
     siteName: "Eli Castson",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Eli Castson — Transformation Executive",
+    title: "Eli Castson, Transformation Executive",
     description:
       "Redesigning how organizations work when technology changes what is possible. People, business, and technology, changed together.",
   },

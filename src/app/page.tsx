@@ -36,19 +36,19 @@ const chapters = [
     href: "/archive/disruption-officer",
     index: "01",
     title: "Disruption Officer",
-    line: "Responsible for changing how a global media organization worked — teams, systems and culture together.",
+    line: "Responsible for changing how a global media organization worked: teams, systems and culture together.",
   },
   {
     href: "/braveheart",
     index: "02",
     title: "Braveheart",
-    line: "A workplace-training company acquired, rebuilt and operated — with every consequence attached.",
+    line: "A workplace-training company acquired, rebuilt and operated, with every consequence attached.",
   },
   {
     href: "/applied-ai",
     index: "03",
     title: "Applied AI and Systems",
-    line: "Automation, reporting and applications built into real operations — not layered over confusion.",
+    line: "Automation, reporting and applications built into real operations, not layered over confusion.",
   },
 ];
 
@@ -184,7 +184,7 @@ export default function Home() {
           <div className="lg:col-span-7">
             <div className="body-copy">
               <p>
-                Psychology first, then marketing, then the machinery behind it —
+                Psychology first, then marketing, then the machinery behind it:
                 technology, data and automation.
               </p>
               <p>
@@ -251,7 +251,7 @@ export default function Home() {
                 operating-model change.
               </p>
               <p>
-                Current engagements span Canadian and Swiss organizations —
+                Current engagements span Canadian and Swiss organizations:
                 experience-led businesses navigating legacy systems, changing
                 expectations and urgent technological change.
               </p>

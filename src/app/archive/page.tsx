@@ -22,7 +22,7 @@ const chapters = [
     index: "02",
     title: "Braveheart",
     subtitle: "The ownership chapter.",
-    line: "A real operating company acquired, rebuilt and run — with financial, human and client consequences attached to every decision.",
+    line: "A real operating company acquired, rebuilt and run, with financial, human and client consequences attached to every decision.",
     tags: ["Ownership", "Operations", "Software", "Consequence"],
   },
   {
@@ -43,7 +43,7 @@ export default function ArchivePage() {
           <span className="page-kicker">Archive</span>
           <h1>The work, in three chapters.</h1>
           <p className="archive-hero-lede">
-            Disruption, ownership and applied technology — how I think, build and
+            Disruption, ownership and applied technology: how I think, build and
             lead.
           </p>
         </div>

@@ -7,7 +7,7 @@ import { EditorialImage, TextLink } from "@/components/editorial";
 export const metadata: Metadata = {
   title: "Braveheart",
   description:
-    "The ownership chapter. An established Nova Scotia training company acquired, transformed and operated — rebuilding the systems while protecting the human experience, and now growing without losing the standard.",
+    "The ownership chapter. An established Nova Scotia training company acquired, transformed and operated, rebuilding the systems while protecting the human experience, and now growing without losing the standard.",
 };
 
 const keepRunning = [
@@ -101,7 +101,7 @@ export default function BraveheartPage() {
               </div>
               <p>
                 The business had to keep delivering while the operation underneath it
-                was being rebuilt — stewardship and transformation at the same time.
+                was being rebuilt: stewardship and transformation at the same time.
               </p>
             </div>
           </div>
@@ -171,7 +171,7 @@ export default function BraveheartPage() {
               </p>
               <p>
                 So I rebuilt how information moved, how work became visible, where
-                decisions sat and what could happen automatically — from registration
+                decisions sat and what could happen automatically, from registration
                 and scheduling through communication, reporting, certification and
                 follow-up. Some of it meant integrating existing systems, some meant
                 designing software around the company&rsquo;s actual work, and some meant
@@ -241,7 +241,7 @@ export default function BraveheartPage() {
               <p>Growth is not simply more courses, instructors or locations.</p>
               <p className="emphasis">
                 The operating model has to carry the reputation. The next stage is to
-                make Braveheart more scalable without making it less human — or less
+                make Braveheart more scalable without making it less human, or less
                 Braveheart.
               </p>
             </div>
@@ -302,7 +302,7 @@ export default function BraveheartPage() {
               <p className="emphasis">That is the work.</p>
             </div>
             <div className="mt-10">
-              <TextLink href="/applied-ai">Next chapter — Applied AI and Systems</TextLink>
+              <TextLink href="/applied-ai">Next chapter: Applied AI and Systems</TextLink>
             </div>
           </div>
         </div>

@@ -6,7 +6,7 @@ import { EditorialImage, TextLink } from "@/components/editorial";
 export const metadata: Metadata = {
   title: "Disruption Officer",
   description:
-    "The defining mandate — responsible for changing how a global media agency worked. Redesign the operating model, modernize the technology, restructure the teams, and lead the cultural shift.",
+    "The defining mandate: responsible for changing how a global media agency worked. Redesign the operating model, modernize the technology, restructure the teams, and lead the cultural shift.",
 };
 
 export default function DisruptionOfficerPage() {
@@ -29,7 +29,7 @@ export default function DisruptionOfficerPage() {
       <section className="section story-section">
         <div className="site-container">
           <p className="story-heading max-w-4xl">
-            I was responsible for changing how a global media organization worked — not
+            I was responsible for changing how a global media organization worked, not
             improving one isolated function from the side.
           </p>
         </div>
@@ -73,9 +73,9 @@ export default function DisruptionOfficerPage() {
               <p>The organization had changed.</p>
               <p className="emphasis">Its operating model had not.</p>
               <p>
-                The setting was a global media agency — brand, strategy and analytics
+                The setting was a global media agency: brand, strategy and analytics
                 converging under one roof. Disruption Officer was the first role that
-                formally brought the whole question together — carried alongside the
+                formally brought the whole question together, carried alongside the
                 CEO and CHRO, with the authority to change how the company actually
                 worked.
               </p>
@@ -205,7 +205,7 @@ export default function DisruptionOfficerPage() {
               <p className="emphasis">It was the job.</p>
             </div>
             <div className="mt-10">
-              <TextLink href="/braveheart">Next chapter — Braveheart</TextLink>
+              <TextLink href="/braveheart">Next chapter: Braveheart</TextLink>
             </div>
           </div>
         </div>

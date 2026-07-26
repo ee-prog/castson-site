@@ -4,7 +4,7 @@ import { PageHeader } from "@/components/editorial";
 export const metadata: Metadata = {
   title: "Colophon",
   description:
-    "How this site is built — typography, design direction, and the stack behind it.",
+    "How this site is built: typography, design direction, and the stack behind it.",
 };
 
 const buildTools = ["Next.js", "TypeScript", "Tailwind CSS"];
@@ -25,7 +25,7 @@ export default function Colophon() {
         <div className="site-container">
           <div className="body-copy">
             <p className="emphasis text-xl leading-relaxed">
-              The personal site of Eli Castson — built with the same attention I bring
+              The personal site of Eli Castson, built with the same attention I bring
               to the work it describes.
             </p>
 
@@ -44,7 +44,7 @@ export default function Colophon() {
                 <span className="section-kicker">Applied AI</span>
                 <div className="space-y-4">
                   <p>
-                    This site is written, revised and maintained through Ripley — the
+                    This site is written, revised and maintained through Ripley, the
                     AI scaffold described in the archive. Today it mostly runs on
                     Claude; by design, it is agnostic to model and runtime.
                   </p>

@@ -34,7 +34,7 @@ export default function About() {
             <h1>Eli Castson</h1>
             <p>A transformation executive.</p>
             <p>
-              I redesign how organizations work — across strategy, technology, and the
+              I redesign how organizations work, across strategy, technology, and the
               people who carry it.
             </p>
           </div>
@@ -64,7 +64,7 @@ export default function About() {
           <div className="about-story-copy body-copy">
             <p>I began with people: how they think, decide and experience an organization.</p>
             <p>
-              From there, the scope widened — to brand, client experience, technology,
+              From there, the scope widened to brand, client experience, technology,
               teams and the operating model behind them.
             </p>
             <p>
@@ -94,20 +94,20 @@ export default function About() {
             <p>Two places, one working perspective.</p>
           </div>
           <div className="about-story-copy body-copy">
-            <p>I hold both nationalities — Canadian and Swiss.</p>
+            <p>I hold both nationalities: Canadian and Swiss.</p>
             <p>
               I am based in Nova Scotia and shaped by eighteen years in Switzerland,
               which is an active professional market for me, not a line on a map.
             </p>
             <p>
-              That work moved through Swiss and international environments — private
+              That work moved through Swiss and international environments: private
               banking, luxury skincare, global media and other premium or complex
               organizations.
             </p>
             <p>It taught me precision.</p>
             <p className="emphasis">
-              Not as decoration — as respect for the people who make the decisions and
-              live with them.
+              Not as decoration, but as respect for the people who make the decisions
+              and live with them.
             </p>
           </div>
         </div>
@@ -210,7 +210,7 @@ export default function About() {
               experience or expansion. The underlying question is broader:
             </p>
             <p className="emphasis">
-              What should this organization become — and what must change to make that
+              What should this organization become, and what must change to make that
               real?
             </p>
           </div>
@@ -233,7 +233,7 @@ export default function About() {
             </div>
             <p>
               Most people who do this work know one of those three worlds. The value is
-              in holding all of them at once — and knowing how a decision in one shows
+              in holding all of them at once, and knowing how a decision in one shows
               up in the others.
             </p>
             <p className="emphasis">That is the thread through everything above.</p>

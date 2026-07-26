@@ -3,14 +3,14 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Notes",
   description:
-    "Short observations from inside transformation work — organizational change, technology adoption, executive reporting, operating models, and the human consequences of change.",
+    "Short observations from inside transformation work: organizational change, technology adoption, executive reporting, operating models, and the human consequences of change.",
 };
 
 const notes = [
   {
     title: "Transformation is mostly subtraction.",
     body: [
-      "The instinct is to add — a tool, a role, a process, a dashboard.",
+      "The instinct is to add: a tool, a role, a process, a dashboard.",
       "But most organizations are not short of activity.",
       "They are buried in it.",
       "The hardest and most valuable work is deciding what should stop.",
@@ -75,7 +75,7 @@ const notes = [
   {
     title: "Agent memory belongs in files a human can read.",
     body: [
-      "The instinct is to let AI manage its own memory — embeddings, vector stores, hidden state.",
+      "The instinct is to let AI manage its own memory: embeddings, vector stores, hidden state.",
       "Developers are learning the hard way that this fails quietly. Memory you cannot read, you cannot audit, correct or trust.",
       "The discipline that works is plainer: flat files, clear names, version control, an append-only log.",
       "The model reads them. The human reads them. Corrections are edits, and history is kept.",
@@ -130,7 +130,7 @@ export default function NotesPage() {
           <span className="page-kicker">Notes</span>
           <h1>Notes</h1>
           <p className="writing-hero-lede">
-            Short observations from inside the work — change, technology, operating
+            Short observations from inside the work: change, technology, operating
             models, and the human consequences of both.
           </p>
         </div>
