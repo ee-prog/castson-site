@@ -1,183 +1,152 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useActionState } from "react";
 import { ArrowRight, Send } from "lucide-react";
+import { PageHeader } from "@/components/editorial";
+import { sendContactEmail } from "./actions";
 
 export default function Contact() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
-  });
-  const [submitted, setSubmitted] = useState(false);
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setSubmitted(true);
-  };
+  const [state, formAction, isPending] = useActionState(sendContactEmail, null);
 
   return (
-    <div className="relative w-full min-h-screen bg-transparent overflow-hidden flex flex-col pt-20">
-      
-      {/* Structural Grid Lines */}
-      <div className="absolute inset-y-0 inset-x-0 mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 pointer-events-none z-10 flex justify-between">
-        <div className="w-[1px] h-full bg-white/[0.02] animate-grid-line delay-100 opacity-0"></div>
-        <div className="w-[1px] h-full bg-white/[0.02] hidden md:block animate-grid-line delay-300 opacity-0"></div>
-        <div className="w-[1px] h-full bg-white/[0.02] hidden md:block animate-grid-line delay-550 opacity-0"></div>
-        <div className="w-[1px] h-full bg-white/[0.02] animate-grid-line delay-700 opacity-0"></div>
-      </div>
-
-      <div className="mx-auto max-w-5xl px-4 py-10 md:py-20 sm:px-6 lg:px-8 relative z-20">
-        
-        {/* Page Header */}
-        <div className="max-w-3xl fade-up-element visible">
-          <span className="text-[10px] font-bold uppercase tracking-widest text-emerald-400 font-mono">06 / Connect</span>
-          <h1 className="text-4xl sm:text-6xl font-extrabold uppercase tracking-tighter text-white leading-none font-display mt-2">
-            Contact
-          </h1>
-          <p className="mt-4 text-xl sm:text-2xl text-zinc-300 font-light font-display">
-            Start a conversation.
-          </p>
+    <div className="site-shell contact-page">
+      <section className="section contact-hero">
+        <div className="site-container">
+          <PageHeader
+            kicker="Contact"
+            title="Tell me what is changing."
+            lede="For conversations about organizational transformation, technology, client experience, or executive leadership, send a note."
+          />
         </div>
+      </section>
 
-        {/* Narrative & Profiles Grid */}
-        <div className="mt-10 md:mt-16 grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-start">
-          
-          {/* Left Column: Direct Info & Targets */}
-          <div className="lg:col-span-6 space-y-8 text-zinc-300 font-light leading-relaxed text-sm sm:text-base fade-up-element visible">
-            <div className="space-y-4">
-              <p className="text-lg text-white font-normal">
-                I am not trying to build a large audience.
+      <section className="section border-b-0 contact-body">
+        <div className="site-container contact-grid">
+          <div className="order-2 lg:order-1 lg:col-span-5">
+            <div className="body-copy">
+              <p className="emphasis text-lg leading-relaxed">
+                A few lines on the situation, what feels stuck, and what you are
+                weighing is enough.
               </p>
-              <p className="text-zinc-300">
-                But I am interested in the right conversations.
+              <p>
+                The conversation may concern an advisory mandate, embedded leadership,
+                an executive role, or a thoughtful introduction.
               </p>
-            </div>
-            
-            <div className="space-y-4">
-              <span className="text-[9px] font-mono text-zinc-500 uppercase tracking-widest block border-b border-white/5 pb-2">
-                [ Reach out if you are ]
-              </span>
-              
-              <div className="grid grid-cols-1 gap-3 font-mono text-xs text-zinc-400">
-                {[
-                  "A business owner thinking about succession or transition.",
-                  "A property holder or operator looking for a strategic partner.",
-                  "An investor interested in place-based experience brands.",
-                  "An operator exploring operations behind premium service.",
-                  "A creative collaborator who shares this taste for place.",
-                  "A builder interested in hospitality, tourism, and legacy brands."
-                ].map((item, idx) => (
-                  <div key={idx} className="flex items-start gap-2.5 p-3.5 border border-white/5 bg-zinc-900/20 rounded-sm">
-                    <span className="text-emerald-400 font-bold mt-0.5">—</span>
-                    <span>{item}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div className="border-l border-emerald-400/40 pl-4 py-1 text-xs font-mono text-zinc-400">
-              If something here connects with something you are building, operating, buying, or trying to understand, I would be glad to hear from you.
+              <p className="emphasis">I read every note and reply personally.</p>
             </div>
           </div>
 
-          {/* Right Column: Contact Form */}
-          <div className="lg:col-span-6 fade-up-element visible">
-            {submitted ? (
-              <div className="rounded-sm border border-emerald-500/20 bg-emerald-500/5 p-8 text-center space-y-4 theme-transition">
-                <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-emerald-500/10 text-emerald-400">
+          <div className="order-1 lg:order-2 lg:col-span-7">
+            {state?.success ? (
+              <div className="contact-confirmation text-center">
+                <div className="mx-auto flex h-12 w-12 items-center justify-center text-[var(--primary)]">
                   <Send className="h-6 w-6" strokeWidth={1.5} aria-hidden="true" />
                 </div>
-                <h2 className="text-xl font-bold text-white font-display uppercase">Message Sent Successfully</h2>
-                <p className="text-xs text-zinc-400 max-w-sm mx-auto font-mono">
-                  Thank you for reaching out. We will review your message and connect if there is a mutual fit.
+                <h2 className="mt-4 text-3xl">Thank you.</h2>
+                <p className="mx-auto mt-4 max-w-sm text-sm leading-relaxed text-[var(--muted-foreground)]">
+                  Your note has been received. I’ll read it personally and reply
+                  directly. If it makes sense to talk, my reply will include a clear
+                  next step.
                 </p>
-                <button
-                  onClick={() => setSubmitted(false)}
-                  className="mt-4 text-xs font-bold text-emerald-400 hover:underline uppercase font-mono tracking-widest"
-                >
-                  Send another message
-                </button>
+                <a href="/contact" className="editorial-link mt-8">
+                  Send another note
+                </a>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="rounded-sm border border-white/5 bg-zinc-900/10 p-8 space-y-6 theme-transition">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <form action={formAction} className="contact-form space-y-8">
+                {state?.error && (
+                  <div className="border border-red-500/25 bg-red-500/5 p-4 text-sm text-red-600 dark:text-red-300">
+                    {state.error}
+                  </div>
+                )}
+
+                <div className="hidden" aria-hidden="true">
+                  <label htmlFor="honeypot">Website</label>
+                  <input
+                    type="text"
+                    id="honeypot"
+                    name="honeypot"
+                    tabIndex={-1}
+                    autoComplete="off"
+                  />
+                </div>
+
+                <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
                   <div>
-                    <label htmlFor="name" className="block text-[10px] font-bold uppercase tracking-wider text-zinc-400 mb-2 font-mono">
+                    <label htmlFor="name" className="metadata mb-2 block text-[var(--primary)]">
                       Name
                     </label>
                     <input
                       type="text"
                       id="name"
+                      name="name"
                       required
-                      value={formData.name}
-                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className="w-full rounded-sm border border-white/10 bg-zinc-950 px-4 py-3 text-sm text-white placeholder-zinc-700 focus:border-emerald-500 focus:outline-none transition-colors font-sans"
-                      placeholder="Jane Doe"
+                      maxLength={100}
+                      className="form-input-luxury"
                     />
+                    {state?.fieldErrors?.name && (
+                      <p className="mt-2 text-xs text-red-600 dark:text-red-300">{state.fieldErrors.name}</p>
+                    )}
                   </div>
+
                   <div>
-                    <label htmlFor="email" className="block text-[10px] font-bold uppercase tracking-wider text-zinc-400 mb-2 font-mono">
-                      Email Address
+                    <label htmlFor="email" className="metadata mb-2 block text-[var(--primary)]">
+                      Email
                     </label>
                     <input
                       type="email"
                       id="email"
+                      name="email"
                       required
-                      value={formData.email}
-                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="w-full rounded-sm border border-white/10 bg-zinc-950 px-4 py-3 text-sm text-white placeholder-zinc-700 focus:border-emerald-500 focus:outline-none transition-colors font-sans"
-                      placeholder="jane@example.com"
+                      maxLength={254}
+                      className="form-input-luxury"
                     />
+                    {state?.fieldErrors?.email && (
+                      <p className="mt-2 text-xs text-red-600 dark:text-red-300">{state.fieldErrors.email}</p>
+                    )}
                   </div>
                 </div>
 
                 <div>
-                  <label htmlFor="subject" className="block text-[10px] font-bold uppercase tracking-wider text-zinc-400 mb-2 font-mono">
-                    Subject / Context
-                  </label>
-                  <input
-                    type="text"
-                    id="subject"
-                    required
-                    value={formData.subject}
-                    onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                    className="w-full rounded-sm border border-white/10 bg-zinc-950 px-4 py-3 text-sm text-white placeholder-zinc-700 focus:border-emerald-500 focus:outline-none transition-colors font-sans"
-                    placeholder="e.g., succession inquiry / operator peer"
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="message" className="block text-[10px] font-bold uppercase tracking-wider text-zinc-400 mb-2 font-mono">
-                    Message
+                  <label htmlFor="message" className="metadata mb-2 block text-[var(--primary)]">
+                    What are you working through?
                   </label>
                   <textarea
                     id="message"
+                    name="message"
                     required
-                    rows={5}
-                    value={formData.message}
-                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    className="w-full rounded-sm border border-white/10 bg-zinc-950 px-4 py-3 text-sm text-white placeholder-zinc-700 focus:border-emerald-500 focus:outline-none transition-colors resize-none font-sans"
-                    placeholder="Introduce yourself and your system questions..."
+                    rows={6}
+                    maxLength={5000}
+                    className="form-input-luxury resize-none"
                   />
+                  {state?.fieldErrors?.message && (
+                    <p className="mt-2 text-xs text-red-600 dark:text-red-300">{state.fieldErrors.message}</p>
+                  )}
                 </div>
 
-                <div className="pt-2">
-                  <button
-                    type="submit"
-                    className="group interactive-hover flex w-full items-center justify-center gap-2 rounded-sm bg-white hover:bg-emerald-400 text-black py-3.5 text-xs font-bold uppercase tracking-wider transition-all duration-300 cursor-pointer active:scale-95"
-                  >
-                    <span>Send Message</span>
-                    <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" strokeWidth={1.5} aria-hidden="true" />
-                  </button>
-                </div>
+                <button
+                  type="submit"
+                  disabled={isPending}
+                  className="group inline-flex w-full items-center justify-center gap-2 border border-[var(--foreground)] bg-[var(--foreground)] px-5 py-4 text-sm font-medium uppercase tracking-[0.08em] text-[var(--background)] transition-colors hover:border-[var(--primary)] hover:bg-[var(--primary)] disabled:cursor-not-allowed disabled:opacity-50 sm:w-auto"
+                >
+                  <span>{isPending ? "Sending..." : "Send note"}</span>
+                  {!isPending && (
+                    <ArrowRight
+                      className="h-4 w-4 transition-transform group-hover:translate-x-1"
+                      strokeWidth={1.5}
+                      aria-hidden="true"
+                    />
+                  )}
+                </button>
+
+                <p className="text-xs leading-relaxed text-[var(--muted-foreground)]">
+                  Your details are used only to read and respond to your message.
+                </p>
               </form>
             )}
           </div>
-          
         </div>
-      </div>
+      </section>
     </div>
   );
 }

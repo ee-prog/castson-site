@@ -1,176 +1,248 @@
-"use client";
+import type { Metadata } from "next";
+import { EditorialImage, TextLink } from "@/components/editorial";
 
-import React from "react";
-import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
+export const metadata: Metadata = {
+  title: "About",
+  description:
+    "A transformation executive who understands the boardroom, the operating system, and the client-facing reality. A dual Canadian and Swiss citizen, based in Nova Scotia and shaped by eighteen years in Switzerland. Former Disruption Officer.",
+};
+
+const titlePath = [
+  "Creative Director, Tech & Data.",
+  "Disruption Officer.",
+  "Advisor.",
+  "Owner.",
+];
+
+const ownershipReality = [
+  "Payroll runs.",
+  "Clients book.",
+  "Teams coordinate.",
+  "Systems break.",
+  "The business opens again tomorrow.",
+];
+
+const vantagePoints = ["The boardroom.", "The operating system.", "The client-facing reality."];
 
 export default function About() {
   return (
-    <div className="relative w-full min-h-screen bg-transparent overflow-hidden flex flex-col pt-20">
-      
-      {/* Structural Grid Lines */}
-      <div className="absolute inset-y-0 inset-x-0 mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 pointer-events-none z-10 flex justify-between">
-        <div className="w-[1px] h-full bg-white/[0.02] animate-grid-line delay-100 opacity-0"></div>
-        <div className="w-[1px] h-full bg-white/[0.02] hidden md:block animate-grid-line delay-300 opacity-0"></div>
-        <div className="w-[1px] h-full bg-white/[0.02] hidden md:block animate-grid-line delay-550 opacity-0"></div>
-        <div className="w-[1px] h-full bg-white/[0.02] animate-grid-line delay-700 opacity-0"></div>
-      </div>
-
-      <div className="mx-auto max-w-5xl px-4 py-10 md:py-20 sm:px-6 lg:px-8 relative z-20">
-        
-        {/* Page Header */}
-        <div className="max-w-3xl fade-up-element visible">
-          <span className="text-[10px] font-bold uppercase tracking-widest text-emerald-400 font-mono">05 / Profile</span>
-          <h1 className="text-4xl sm:text-6xl font-extrabold uppercase tracking-tighter text-white leading-none font-display mt-2">
-            Eli Castson
-          </h1>
-          <p className="mt-4 text-xl sm:text-2xl text-zinc-300 font-light font-display">
-            Operator, builder, and creative technologist.
-          </p>
-        </div>
-
-        {/* Main Narrative */}
-        <div className="mt-10 md:mt-16 grid grid-cols-1 gap-6 lg:grid-cols-12 items-start">
-          
-          {/* Left Columns - Story */}
-          <div className="lg:col-span-8 space-y-8 text-zinc-300 font-light leading-relaxed text-sm sm:text-base fade-up-element visible">
-            
+    <div className="site-shell about-page">
+      <section className="about-hero">
+        <div className="site-container about-hero-grid">
+          <div className="about-hero-copy">
+            <span className="page-kicker">About</span>
+            <h1>Eli Castson</h1>
+            <p>A transformation executive.</p>
             <p>
-              I am an operator, builder, and creative technologist based in Nova Scotia and shaped by eighteen years in Switzerland.
+              I redesign how organizations work, across strategy, technology, and the
+              people who carry it.
             </p>
-            
-            <p>
-              Before acquiring BraveHeart First Aid, I worked across creative direction, advertising, programmatic media, consulting, digital transformation, and technology. For years, I helped organizations change from the outside.
-            </p>
-
-            <p className="border-l border-white/10 pl-4 text-zinc-400 opacity-80">
-              That gave me range. But ownership changed the work.
-            </p>
-
-            <div className="bg-zinc-900/20 border border-white/5 p-6 rounded-sm space-y-4">
-              <span className="text-[9px] font-mono text-emerald-400 uppercase tracking-widest block border-b border-white/5 pb-2">
-                [ The Reality of Ownership ]
-              </span>
-              <p className="text-sm font-medium text-white">
-                There is no presentation layer between the idea and the consequence.
-              </p>
-              
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs font-mono text-zinc-400 pt-2">
-                <div className="flex items-center gap-1.5">
-                  <span className="h-1.5 w-1.5 bg-emerald-500 rounded-full"></span>
-                  <span>The system either works or it doesn&apos;t</span>
-                </div>
-                <div className="flex items-center gap-1.5">
-                  <span className="h-1.5 w-1.5 bg-emerald-500 rounded-full"></span>
-                  <span>The customer books or they don&apos;t</span>
-                </div>
-                <div className="flex items-center gap-1.5">
-                  <span className="h-1.5 w-1.5 bg-emerald-500 rounded-full"></span>
-                  <span>The instructor is supported or they aren&apos;t</span>
-                </div>
-                <div className="flex items-center gap-1.5">
-                  <span className="h-1.5 w-1.5 bg-emerald-500 rounded-full"></span>
-                  <span>The business gets clearer or heavier</span>
-                </div>
-              </div>
-            </div>
-
-            <p>
-              That directness has become important to me.
-            </p>
-
-            <div className="space-y-2 pt-2">
-              <p className="text-white font-medium font-display text-lg">
-                I like bringing things back to first principles:
-              </p>
-              
-              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs font-mono text-zinc-400 pl-4">
-                <li className="list-disc">I like finding the real shape of a problem.</li>
-                <li className="list-disc">I like removing what does not belong.</li>
-                <li className="list-disc">I like building systems that make people more capable.</li>
-              </ul>
-            </div>
-
-            <div className="space-y-2 pt-6 border-t border-white/5 text-zinc-400 text-xs font-mono">
-              <div className="flex items-center gap-2">
-                <span className="h-1.5 w-1.5 bg-emerald-500 rounded-full shrink-0"></span>
-                <span><strong>BraveHeart</strong> is the initial proof.</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="h-1.5 w-1.5 bg-emerald-500 rounded-full shrink-0"></span>
-                <span><strong>Ripley</strong> is the operating layer.</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="h-1.5 w-1.5 bg-emerald-500 rounded-full shrink-0"></span>
-                <span><strong>castson.com</strong> is the record.</span>
-              </div>
-            </div>
-
           </div>
 
-          {/* Right Column - Side Info Card */}
-          <div className="lg:col-span-4 lg:sticky lg:top-28 space-y-6 fade-up-element visible">
-            <div className="rounded-sm border border-white/5 bg-zinc-900/20 p-6 space-y-6 theme-transition">
-              <h3 className="text-xs font-bold uppercase tracking-wider text-zinc-300 font-mono">[ QUICK FACTS ]</h3>
-              
-              <div className="space-y-6">
-                
-                {/* Focus */}
-                <div className="space-y-1">
-                  <span className="text-[9px] font-mono text-emerald-400 uppercase tracking-widest block">FOCUS</span>
-                  <p className="text-xs text-white font-medium leading-relaxed">
-                    Acquiring and building experience brands rooted in place
-                  </p>
-                </div>
-
-                {/* First Proof */}
-                <div className="space-y-1">
-                  <span className="text-[9px] font-mono text-emerald-400 uppercase tracking-widest block">FIRST PROOF</span>
-                  <p className="text-xs text-white font-medium">
-                    BraveHeart First Aid
-                  </p>
-                  <p className="text-[11px] text-zinc-400 font-light">
-                    Acquired June 2025
-                  </p>
-                </div>
-
-                {/* Operating Layer */}
-                <div className="space-y-1">
-                  <span className="text-[9px] font-mono text-emerald-400 uppercase tracking-widest block">OPERATING LAYER</span>
-                  <p className="text-xs text-white font-medium">
-                    Ripley
-                  </p>
-                  <p className="text-[11px] text-zinc-400 font-light leading-relaxed">
-                    Custom software, automation, and systems
-                  </p>
-                </div>
-
-                {/* Location */}
-                <div className="space-y-1">
-                  <span className="text-[9px] font-mono text-emerald-400 uppercase tracking-widest block">LOCATION</span>
-                  <p className="text-xs text-white font-medium">
-                    Nova Scotia, Canada
-                  </p>
-                  <p className="text-[11px] text-zinc-400 font-light leading-relaxed">
-                    Deep professional roots in Switzerland
-                  </p>
-                </div>
-
-              </div>
-
-              <div className="pt-6 border-t border-white/5">
-                <Link
-                  href="/contact"
-                  className="interactive-hover flex w-full items-center justify-center gap-1.5 rounded-sm bg-white text-black py-3 text-center text-xs font-bold uppercase tracking-wider hover:bg-emerald-400 transition-all duration-300"
-                >
-                  START A CONVERSATION <ArrowUpRight className="h-4 w-4" strokeWidth={1.5} aria-hidden="true" />
-                </Link>
-              </div>
-            </div>
+          <div className="about-hero-media">
+            <EditorialImage
+              src="/images/editorial/eli-portrait-bio.png"
+              alt="Eli Castson in a black suit leaning against concrete architecture"
+              caption="Canadian / Swiss / operator / advisor"
+              aspect="aspect-[4/5]"
+              objectPosition="center"
+              preload
+              sizes="(max-width: 768px) 86vw, 32vw"
+            />
           </div>
-          
         </div>
-      </div>
+      </section>
+
+      <section className="about-story">
+        <div className="site-container about-story-grid">
+          <div className="about-story-marker">
+            <span className="section-kicker">The range</span>
+          </div>
+          <div className="about-story-lede">
+            <p>The titles changed. The work stayed the same.</p>
+          </div>
+          <div className="about-story-copy body-copy">
+            <p>I began with people: how they think, decide and experience an organization.</p>
+            <p>
+              From there, the scope widened to brand, client experience, technology,
+              teams and the operating model behind them.
+            </p>
+            <p>
+              Along the way: a degree in psychology, then an MBA at the University of
+              Zurich, focused on digital transformation.
+            </p>
+            <div className="ruled-list metadata">
+              {titlePath.map((title) => (
+                <div key={title}>{title}</div>
+              ))}
+            </div>
+            <p>Different roles. One recurring mandate:</p>
+            <p className="emphasis">
+              Understand the whole system, find the simpler answer, and move people,
+              business and technology together.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="about-story">
+        <div className="site-container about-story-grid">
+          <div className="about-story-marker">
+            <span className="section-kicker">Canadian–Swiss</span>
+          </div>
+          <div className="about-story-lede">
+            <p>Two places, one working perspective.</p>
+          </div>
+          <div className="about-story-copy body-copy">
+            <p>I hold both nationalities: Canadian and Swiss.</p>
+            <p>
+              I am based in Nova Scotia and shaped by eighteen years in Switzerland,
+              which is an active professional market for me, not a line on a map.
+            </p>
+            <p>
+              That work moved through Swiss and international environments: private
+              banking, luxury skincare, global media and other premium or complex
+              organizations.
+            </p>
+            <p>It taught me precision.</p>
+            <p className="emphasis">
+              Not as decoration, but as respect for the people who make the decisions
+              and live with them.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="about-quote">
+        <div className="site-container">
+          <blockquote>
+            The range is not several careers. It is one point of view, built from
+            several directions.
+          </blockquote>
+        </div>
+      </section>
+
+      <section className="about-story">
+        <div className="site-container about-story-grid">
+          <div className="about-story-marker">
+            <span className="section-kicker">Disruption Officer</span>
+          </div>
+          <div className="about-story-lede">
+            <p>The mandate had a name.</p>
+          </div>
+          <div className="about-story-copy body-copy">
+            <p className="emphasis">
+              For a time, that was my title, and it was meant literally.
+            </p>
+            <p>
+              Redesign the operating model. Modernize the technology. Restructure the
+              teams and decision rights. Lead the cultural shift required to make the
+              new model work.
+            </p>
+            <p>It is still the clearest description of what I do.</p>
+            <TextLink href="/archive/disruption-officer" className="mt-6">
+              Read the chapter
+            </TextLink>
+          </div>
+        </div>
+      </section>
+
+      <section className="about-story">
+        <div className="site-container about-story-grid">
+          <div className="about-story-marker">
+            <span className="section-kicker">Ownership</span>
+          </div>
+          <div className="about-story-lede">
+            <p>Then I bought a company.</p>
+          </div>
+          <div className="about-story-copy body-copy">
+            <p>
+              Braveheart is a workplace training company I acquired, rebuilt, and now
+              operate.
+            </p>
+            <div className="ruled-list metadata">
+              {ownershipReality.map((item) => (
+                <div key={item}>{item}</div>
+              ))}
+            </div>
+            <p className="emphasis">
+              It teaches you quickly which recommendations are useful, and which only
+              sounded good in the room.
+            </p>
+            <TextLink href="/braveheart" className="mt-6">
+              Read the chapter
+            </TextLink>
+          </div>
+        </div>
+      </section>
+
+      <section className="about-quote">
+        <div className="site-container">
+          <blockquote>Ownership keeps language honest. It makes vague ideas expensive.</blockquote>
+        </div>
+      </section>
+
+      <section className="about-story">
+        <div className="site-container about-story-grid">
+          <div className="about-story-marker">
+            <span className="section-kicker">Now</span>
+          </div>
+          <div className="about-story-lede">
+            <p>Where the work lives now.</p>
+          </div>
+          <div className="about-story-copy body-copy">
+            <p>
+              Today, I work at the level where strategy, growth, operating model and
+              technology meet.
+            </p>
+            <p>
+              The questions may concern how an organization should scale, where it
+              should invest, what it should automate, how its teams should be
+              structured, or whether its current model can support the next stage of
+              growth.
+            </p>
+            <p>
+              Sometimes I work beside an executive team. Sometimes I am carrying the
+              decision as an owner.
+            </p>
+            <p>
+              The work may surface through transformation, AI, marketing, client
+              experience or expansion. The underlying question is broader:
+            </p>
+            <p className="emphasis">
+              What should this organization become, and what must change to make that
+              real?
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="about-story">
+        <div className="site-container about-story-grid">
+          <div className="about-story-marker">
+            <span className="section-kicker">The underlying point</span>
+          </div>
+          <div className="about-story-lede">
+            <p>I make organizations easier to change, and easier to trust.</p>
+          </div>
+          <div className="about-story-copy body-copy">
+            <div className="ruled-list metadata">
+              {vantagePoints.map((point) => (
+                <div key={point}>{point}</div>
+              ))}
+            </div>
+            <p>
+              Most people who do this work know one of those three worlds. The value is
+              in holding all of them at once, and knowing how a decision in one shows
+              up in the others.
+            </p>
+            <p className="emphasis">That is the thread through everything above.</p>
+            <TextLink href="/contact" className="mt-8">
+              Start a conversation
+            </TextLink>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

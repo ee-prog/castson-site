@@ -1,36 +1,62 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import ThemeObserver from "@/components/theme-observer";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+const atacama = localFont({
+  src: [
+    {
+      path: "../../public/fonts/atacama/atacama-var.woff2",
+      weight: "100 900",
+      style: "normal",
+    },
+  ],
+  variable: "--font-heading",
+  display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const helix = localFont({
+  src: [
+    {
+      path: "../../public/fonts/helix/helix-regular.woff2",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/helix/helix-medium.woff2",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/helix/helix-bold.woff2",
+      weight: "700",
+      style: "normal",
+    },
+  ],
+  variable: "--font-body",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
   title: {
-    default: "Eli Castson | Castson Inc.",
-    template: "%s | Eli Castson",
+    default: "Eli Castson, Transformation Executive",
+    template: "%s · Eli Castson",
   },
-  description: "Eli Castson builds and partners with place-based experience brands rooted in service, taste, and story.",
+  description:
+    "Eli Castson redesigns how organizations work when people, business, and technology have to change together. A Canadian–Swiss transformation executive. Former Disruption Officer.",
   keywords: [
     "Eli Castson",
     "Castson Inc.",
-    "Experience Brands",
-    "Hospitality Operations",
-    "Service Design",
-    "Operational Standards",
-    "Tourism Succession",
-    "BraveHeart First Aid",
-    "Ripley Operating Layer"
+    "Transformation Executive",
+    "Disruption Officer",
+    "Organizational Change",
+    "Operating Systems",
+    "Applied AI",
+    "Executive Advisory",
+    "Fractional Executive",
+    "Canadian Swiss Executive",
   ],
   authors: [{ name: "Eli Castson", url: "https://castson.com" }],
   creator: "Eli Castson",
@@ -39,14 +65,16 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://castson.com",
-    title: "Eli Castson | Castson Inc.",
-    description: "Eli Castson builds and partners with place-based experience brands rooted in service, taste, and story. Castson Inc. is the vehicle. BraveHeart is the first proof. Ripley is the operating layer.",
+    title: "Eli Castson, Transformation Executive",
+    description:
+      "Redesigning how organizations work when technology changes what is possible. People, business, and technology, changed together. Canadian–Swiss. Former Disruption Officer.",
     siteName: "Eli Castson",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Eli Castson | Castson Inc.",
-    description: "Eli Castson builds and partners with place-based experience brands rooted in service, taste, and story. Castson Inc. is the vehicle. BraveHeart is the first proof. Ripley is the operating layer.",
+    title: "Eli Castson, Transformation Executive",
+    description:
+      "Redesigning how organizations work when technology changes what is possible. People, business, and technology, changed together.",
   },
 };
 
@@ -58,9 +86,27 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased dark`}
+      data-scroll-behavior="smooth"
+      className={`${atacama.variable} ${helix.variable} h-full antialiased`}
+      suppressHydrationWarning
     >
-      <body className="min-h-full flex flex-col font-sans selection:bg-emerald-500/30 selection:text-emerald-200 relative">
+      <head>
+        <meta name="color-scheme" content="light dark" />
+        <link
+          id="castson-favicon"
+          rel="icon"
+          href="/favicon-light.svg"
+          type="image/svg+xml"
+          sizes="any"
+        />
+        {/* Inline FOUC-prevention: resolve theme before first paint */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var d=localStorage.getItem('theme')==='dark';document.documentElement.classList.toggle('dark',d);var f=document.getElementById('castson-favicon');if(f)f.setAttribute('href',d?'/favicon-dark.svg':'/favicon-light.svg')}catch(e){}})()`,
+          }}
+        />
+      </head>
+      <body className="min-h-full flex flex-col font-sans relative">
         <ThemeObserver />
         <Navbar />
         <main className="flex-1 flex flex-col w-full">

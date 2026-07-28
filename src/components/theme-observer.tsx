@@ -1,58 +1,57 @@
 "use client";
 
-import { useEffect } from "react";
-import { usePathname } from "next/navigation";
+import { useEffect, useCallback } from "react";
 
+/**
+ * ThemeObserver
+ *
+ * Manages the site-wide dark/light theme:
+ * 1. Reads the user's stored preference from localStorage('theme')
+ * 2. Defaults to light mode when no preference has been stored
+ * 3. Exposes window.__setTheme('dark'|'light'|'system') for toggle buttons
+ */
 export default function ThemeObserver() {
-  const pathname = usePathname();
+  // Core theme resolver
+  const applyTheme = useCallback(() => {
+    const stored = localStorage.getItem("theme");
 
-  useEffect(() => {
-    // 1. Apply theme immediately based on route pathname
-    const lightThemeRoutes: string[] = [];
-    const isLight = lightThemeRoutes.some(
-      (route) => pathname === route || pathname.startsWith(route + "/")
-    );
-
-    if (isLight) {
-      document.documentElement.classList.remove("dark");
+    let isDark: boolean;
+    if (stored === "dark") {
+      isDark = true;
+    } else if (stored === "light") {
+      isDark = false;
     } else {
-      document.documentElement.classList.add("dark");
+      // 'system' or no preference defaults to the site's light presentation.
+      isDark = false;
     }
 
-    // 2. Scroll Animation Observer Setup (tiny delay to ensure route renders)
-    const timeoutId = setTimeout(() => {
-      const fadeUpElements = document.querySelectorAll(".fade-up-element");
-      let animationObserver: IntersectionObserver | null = null;
+    document.documentElement.classList.toggle("dark", isDark);
+    document.documentElement.style.colorScheme = isDark ? "dark" : "light";
 
-      if (fadeUpElements.length > 0) {
-        const animationOptions = {
-          root: null,
-          rootMargin: "0px 0px -12% 0px", // Trigger when elements are 12% in view
-          threshold: 0.05,
-        };
+    const favicon = document.querySelector<HTMLLinkElement>("#castson-favicon");
+    favicon?.setAttribute(
+      "href",
+      isDark ? "/favicon-dark.svg" : "/favicon-light.svg"
+    );
+  }, []);
 
-        animationObserver = new IntersectionObserver((entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add("visible");
-              // Unobserve once animated for performance
-              animationObserver?.unobserve(entry.target);
-            }
-          });
-        }, animationOptions);
+  // Set up theme preference handling
+  useEffect(() => {
+    applyTheme();
 
-        fadeUpElements.forEach((el) => animationObserver?.observe(el));
+    // Expose a global setter for toggle buttons
+    // Usage: window.__setTheme('dark') / window.__setTheme('light') / window.__setTheme('system')
+    (window as Window & { __setTheme?: (mode: string) => void }).__setTheme = (
+      mode: string
+    ) => {
+      if (mode === "system") {
+        localStorage.removeItem("theme");
+      } else {
+        localStorage.setItem("theme", mode);
       }
-
-      return () => {
-        if (animationObserver) {
-          fadeUpElements.forEach((el) => animationObserver?.unobserve(el));
-        }
-      };
-    }, 100);
-
-    return () => clearTimeout(timeoutId);
-  }, [pathname]);
+      applyTheme();
+    };
+  }, [applyTheme]);
 
   return null;
 }

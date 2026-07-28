@@ -1,311 +1,340 @@
-"use client";
+import type { Metadata } from "next";
+import Image from "next/image";
+import Link from "next/link";
+import { ArrowLeft } from "lucide-react";
+import { TextLink } from "@/components/editorial";
+import styles from "./page.module.css";
 
-import React from "react";
-import { ChevronRight } from "lucide-react";
+export const metadata: Metadata = {
+  title: "Braveheart",
+  description:
+    "The ownership chapter. An established Nova Scotia training company acquired, transformed and operated, rebuilding the systems while protecting the human experience, and now growing without losing the standard.",
+};
 
-function ImagePlaceholder({ label }: { label: string }) {
-  const refCode = label
-    .toUpperCase()
-    .replace(/[^A-Z0-9\s]/g, "")
-    .trim()
-    .replace(/\s+/g, "-");
+const keepRunning = [
+  "Courses still had to run.",
+  "Clients still needed answers.",
+  "Instructors still needed support.",
+  "Payroll still had to be met.",
+];
 
+const scaleQuestions = [
+  "How should the course portfolio evolve?",
+  "How should instructors be recruited, developed and supported?",
+  "Which decisions should remain central, and which should move closer to the work?",
+  "How can technology support a larger operation without making the experience impersonal?",
+  "Could a model such as franchising extend the company responsibly?",
+];
+
+const compassionFor = [
+  "For the people expected to work inside changing systems.",
+  "For the leaders carrying responsibility for the outcome.",
+  "For the client who experiences every internal decision as a moment of clarity, confidence, friction or doubt.",
+];
+
+const fullChain = [
+  "The direction of the company.",
+  "The model for growth.",
+  "The systems underneath it.",
+  "The people doing the work.",
+  "The experience delivered in the room.",
+];
+
+export default function BraveheartPage() {
   return (
-    <div className="w-full aspect-[16/10] bg-zinc-900/10 border border-white/5 rounded-sm flex flex-col justify-between p-4 relative overflow-hidden group theme-transition">
-      {/* Blueprint grid lines */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff01_1px,transparent_1px),linear-gradient(to_bottom,#ffffff01_1px,transparent_1px)] bg-[size:1.5rem_1.5rem] pointer-events-none"></div>
-      <span className="text-[8px] font-mono text-zinc-600 tracking-widest uppercase relative z-10 block">
-        REF // {refCode}
-      </span>
-      <div className="w-full h-[1px] bg-white/[0.03] relative z-10"></div>
-    </div>
-  );
-}
+    <article className={`${styles.page} site-shell`}>
+      <header className={styles.hero}>
+        <Image
+          src="/images/braveheart/editorial/hero-instructor.avif"
+          alt="A BraveHeart instructor in a red polo leading a relaxed group discussion"
+          fill
+          preload
+          sizes="100vw"
+          className={styles.heroImage}
+        />
+        <div className={styles.heroScrim} aria-hidden="true" />
 
-export default function BraveHeart() {
-  return (
-    <div className="relative w-full min-h-screen bg-transparent overflow-hidden flex flex-col pt-20">
-      
-      {/* Structural Grid Lines */}
-      <div className="absolute inset-y-0 inset-x-0 mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 pointer-events-none z-10 flex justify-between">
-        <div className="w-[1px] h-full bg-white/[0.02] animate-grid-line delay-100 opacity-0"></div>
-        <div className="w-[1px] h-full bg-white/[0.02] hidden md:block animate-grid-line delay-300 opacity-0"></div>
-        <div className="w-[1px] h-full bg-white/[0.02] hidden md:block animate-grid-line delay-550 opacity-0"></div>
-        <div className="w-[1px] h-full bg-white/[0.02] animate-grid-line delay-700 opacity-0"></div>
-      </div>
+        <div className={styles.heroInner}>
+          <Link href="/archive" className={styles.backLink}>
+            <ArrowLeft aria-hidden="true" />
+            Archive
+          </Link>
 
-      {/* Header */}
-      <section className="relative py-12 md:py-24 border-b border-white/[0.03] theme-transition">
-        <div className="absolute top-1/4 right-1/4 -z-10 h-[500px] w-[500px] rounded-full bg-emerald-500/5 blur-[120px]" />
-        
-        <div className="mx-auto max-w-5xl w-full px-4 sm:px-6 lg:px-8 relative z-20">
-          <div className="max-w-3xl space-y-6">
-            <span className="text-[10px] font-bold uppercase tracking-widest text-emerald-400 font-mono">01 / The Active Sandbox</span>
-            <h1 className="text-4xl sm:text-6xl font-extrabold uppercase tracking-tighter text-white leading-none font-display">
-              The BraveHeart Experiment
-            </h1>
-            <p className="text-xl sm:text-2xl text-zinc-300 font-light font-display">
-              A real business, rebuilt from the inside.
+          <div className={styles.heroCopy}>
+            <p className={styles.kickerLight}>Chapter 02</p>
+            <h1 className={styles.heroTitle}>Braveheart</h1>
+            <p className={styles.heroLede}>
+              An established Nova Scotia training company I acquired, transformed and
+              continue to operate.
+            </p>
+            <p className={styles.heroFacts}>
+              18 years established &nbsp;·&nbsp; Tens of thousands trained each year
+              &nbsp;·&nbsp; A broad roster of courses and instructors
+            </p>
+          </div>
+        </div>
+      </header>
+
+      <section className={`${styles.section} ${styles.stewardship}`}>
+        <div className={styles.grid}>
+          <header className={styles.chapterHeader}>
+            <p className={styles.kicker}>Stewardship</p>
+            <h2 className={styles.sectionTitle}>The company was already trusted.</h2>
+          </header>
+
+          <div className={`${styles.body} ${styles.stewardshipBody}`}>
+            <p>Braveheart was not a blank page.</p>
+            <p>
+              It came with an excellent reputation, established clients, experienced
+              instructors and a standard people already valued.
+            </p>
+            <p className={styles.emphasis}>
+              The responsibility was to change the company without losing what had
+              made it trusted.
+            </p>
+            <ul className={styles.obligationList}>
+              {keepRunning.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+            <p>
+              The business had to keep delivering while the operation underneath it
+              was being rebuilt: stewardship and transformation at the same time.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Intro Narrative */}
-      <section className="py-12 md:py-20 border-b border-white/[0.03] theme-transition">
-        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 relative z-20">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-start">
-            
-            {/* Left: Narrative */}
-            <div className="lg:col-span-7 space-y-6 text-zinc-300 font-light leading-relaxed text-sm sm:text-base">
-              <p className="text-lg text-white">
-                BraveHeart First Aid is the first full expression of this work. It is not a simulation.
-              </p>
+      <section className={`${styles.section} ${styles.performance}`}>
+        <div className={`${styles.grid} ${styles.performanceGrid}`}>
+          <header className={styles.performanceHeader}>
+            <p className={styles.kickerDark}>The performance</p>
+            <h2 className={`${styles.sectionTitle} ${styles.titleOnDark}`}>
+              The system should protect the human experience.
+            </h2>
+          </header>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-4 py-4 px-6 rounded-sm bg-zinc-900/20 border border-white/5 font-mono text-xs text-zinc-400">
-                <div className="space-y-2">
-                  <div className="flex items-center gap-2">
-                    <span className="h-1 w-1 bg-emerald-400"></span>
-                    <span>Real customers</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <span className="h-1 w-1 bg-emerald-400"></span>
-                    <span>Real instructors</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <span className="h-1 w-1 bg-emerald-400"></span>
-                    <span>Real schedules</span>
-                  </div>
-                </div>
-                <div className="space-y-2">
-                  <div className="flex items-center gap-2">
-                    <span className="h-1 w-1 bg-emerald-400"></span>
-                    <span>Real revenue</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <span className="h-1 w-1 bg-emerald-400"></span>
-                    <span>Real constraints</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <span className="h-1 w-1 bg-emerald-400"></span>
-                    <span className="text-white">Real consequences</span>
-                  </div>
-                </div>
-              </div>
+          <figure className={styles.performanceFigure}>
+            <div className={styles.performanceImageFrame}>
+              <Image
+                src="/images/braveheart/editorial/instructor-room.avif"
+                alt="An instructor laughing with learners during a first aid class"
+                fill
+                sizes="(max-width: 767px) 100vw, (max-width: 1199px) 58vw, 52vw"
+                className={styles.coverImage}
+              />
+            </div>
+            <figcaption className={styles.captionDark}>
+              The instructor&apos;s attention belongs in the room
+            </figcaption>
+          </figure>
 
-              <p className="text-white font-medium">
-                That matters.
-              </p>
+          <div className={`${styles.body} ${styles.bodyOnDark} ${styles.performanceBody}`}>
+            <p>Training is delivered person to person.</p>
+            <p>
+              I think of an instructor much like a performer. Their attention belongs
+              in the room: reading the learners, adjusting the pace, building
+              confidence and helping people feel ready to act.
+            </p>
+            <p className={styles.emphasisOnDark}>
+              The operation is everything backstage.
+            </p>
+            <p>
+              Registration, scheduling, materials, learner information, certification
+              and follow-up should not occupy the instructor&rsquo;s attention while
+              they are preparing to teach.
+            </p>
+            <p className={styles.emphasisOnDark}>
+              The system should carry what surrounds the performance so the instructor
+              can focus on the work only a human can do.
+            </p>
+          </div>
+        </div>
+      </section>
 
+      <section className={`${styles.section} ${styles.clientPath}`}>
+        <div className={styles.grid}>
+          <header className={styles.clientHeader}>
+            <p className={styles.kicker}>The client path</p>
+            <h2 className={styles.sectionTitle}>
+              The client path became the operating map.
+            </h2>
+          </header>
+
+          <div className={`${styles.body} ${styles.clientBody}`}>
+            <p>
+              From the first enquiry through booking, training, certification and
+              follow-up, each handoff reveals something about the organization beneath
+              it.
+            </p>
+            <p>
+              Unclear communication may point to uncertain ownership. A delayed
+              certificate may reveal disconnected information. Repeated questions often
+              indicate that a process has been designed around the company rather than
+              the client.
+            </p>
+            <p>
+              So I rebuilt how information moved, how work became visible, where
+              decisions sat and what could happen automatically, from registration
+              and scheduling through communication, reporting, certification and
+              follow-up. Some of it meant integrating existing systems, some meant
+              designing software around the company&rsquo;s actual work, and some meant
+              changing roles and responsibilities.
+            </p>
+            <p className={styles.emphasis}>The visible result is technology.</p>
+            <p>
+              The deeper result is more room for people to think, notice, respond and
+              care. Technology should return people to the human work that matters
+              most.
+            </p>
+          </div>
+
+          <div className={styles.detailSequence}>
+            <div className={styles.detailLandscape}>
+              <Image
+                src="/images/braveheart/editorial/bandaging-training.avif"
+                alt="Gloved hands guiding a learner through bandaging a wrist"
+                fill
+                sizes="(max-width: 767px) 100vw, 47vw"
+                className={styles.coverImage}
+              />
+            </div>
+            <div className={styles.detailPortrait}>
+              <Image
+                src="/images/braveheart/editorial/tourniquet-training.avif"
+                alt="An instructor fitting a training tourniquet to a learner's arm"
+                fill
+                sizes="(max-width: 767px) 72vw, 31vw"
+                className={styles.coverImage}
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <figure className={styles.humanPause}>
+        <div className={styles.humanPauseFrame}>
+          <Image
+            src="/images/braveheart/editorial/classroom-preparation.avif"
+            alt="An instructor preparing first aid equipment while learners get ready around the room"
+            fill
+            sizes="100vw"
+            className={styles.humanPauseImage}
+          />
+        </div>
+        <figcaption className={styles.pauseCaption}>
+          More room for people to think, notice, respond and care
+        </figcaption>
+      </figure>
+
+      <section className={`${styles.section} ${styles.scale}`}>
+        <div className={styles.grid}>
+          <header className={styles.scaleHeader}>
+            <p className={styles.kicker}>Scale</p>
+            <h2 className={styles.sectionTitle}>The next question is scale.</h2>
+          </header>
+
+          <div className={styles.scaleImageFrame}>
+            <Image
+              src="/images/braveheart/editorial/marine-class.avif"
+              alt="A marine first aid instructor teaching a small working crew aboard a vessel"
+              fill
+              sizes="(max-width: 767px) 92vw, (max-width: 1199px) 56vw, 50vw"
+              className={styles.scaleImage}
+            />
+          </div>
+
+          <div className={styles.scaleContent}>
+            <div className={styles.body}>
               <p>
-                It is easy to talk about transformation from the outside. It is different when the system either works or it does not.
+                Braveheart now trains tens of thousands of people each year through a
+                broad portfolio of courses and instructors.
               </p>
-              
-              <ul className="space-y-2 text-xs font-mono text-zinc-400 pl-4 border-l border-white/10 list-none">
-                <li className="flex items-start gap-2">
-                  <span className="text-emerald-500 font-bold shrink-0">—</span>
-                  <span>When a customer can book or they cannot.</span>
+              <p>
+                The first challenge was to modernize the operation without weakening the
+                experience.
+              </p>
+              <p className={styles.emphasis}>
+                The challenge now is to grow without weakening the standard.
+              </p>
+            </div>
+
+            <ol className={styles.questionList}>
+              {scaleQuestions.map((question, index) => (
+                <li key={question}>
+                  <span>{String(index + 1).padStart(2, "0")}</span>
+                  <p>{question}</p>
                 </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-emerald-500 font-bold shrink-0">—</span>
-                  <span>When an instructor has what they need or they do not.</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-emerald-500 font-bold shrink-0">—</span>
-                  <span>When a process saves time or quietly creates more work.</span>
-                </li>
-              </ul>
+              ))}
+            </ol>
 
-              <p className="text-lg text-white font-medium pt-2">
-                &ldquo;Ownership removes abstraction. There is nowhere to hide.&rdquo;
+            <div className={styles.body}>
+              <p>Growth is not simply more courses, instructors or locations.</p>
+              <p className={styles.emphasis}>
+                The operating model has to carry the reputation. The next stage is to
+                make Braveheart more scalable without making it less human, or less
+                Braveheart.
               </p>
             </div>
-
-            {/* Right: Media placeholder */}
-            <div className="lg:col-span-5 space-y-4">
-              <ImagePlaceholder label="BraveHeart First Aid Classroom Session" />
-              <div className="text-[10px] font-mono text-zinc-500 uppercase tracking-widest text-right">
-                [ Operations Surface, Halifax NS ]
-              </div>
-            </div>
-
           </div>
         </div>
       </section>
 
-      {/* Why BraveHeart Matters */}
-      <section className="py-12 md:py-20 border-b border-white/[0.03] bg-zinc-950/20 theme-transition">
-        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 relative z-20">
-          <div className="max-w-3xl space-y-8">
-            
-            <div className="space-y-4">
-              <span className="text-[9px] font-mono tracking-widest uppercase text-emerald-400">[ Moral Centre ]</span>
-              <h2 className="text-3xl font-bold uppercase text-white font-display">
-                Why BraveHeart matters
-              </h2>
-            </div>
+      <section className={`${styles.section} ${styles.ownership}`}>
+        <div className={`${styles.grid} ${styles.ownershipGrid}`}>
+          <header className={styles.ownershipHeader}>
+            <p className={styles.kickerDark}>Ownership</p>
+            <h2 className={`${styles.sectionTitle} ${styles.titleOnDark}`}>
+              Ownership changed the judgment.
+            </h2>
+          </header>
 
-            <div className="space-y-6 text-zinc-300 font-light leading-relaxed text-sm sm:text-base">
-              <p className="text-lg text-zinc-200">
-                First aid training has a moral centre. The work is practical, local, and human.
-              </p>
-              
-              <blockquote className="border-l-2 border-emerald-400 pl-6 my-6 text-white text-xl font-medium">
-                &ldquo;People come to class carrying a simple hope: that if someone needs help, they won’t feel frozen.&rdquo;
-              </blockquote>
-
-              <p>
-                That gives the business a seriousness I had not felt in much of my earlier work. The systems matter because the work matters.
-              </p>
-
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-2 sm:gap-4 py-4 text-xs font-mono text-zinc-400">
-                {["Website", "Booking flow", "Reminders", "Instructor flow", "Follow-ups", "Advertising", "Daily operations", "Student safety"].map((item) => (
-                  <div key={item} className="flex items-center gap-1.5 p-3 border border-white/5 bg-zinc-900/30 rounded-sm">
-                    <span className="h-1 w-1 bg-emerald-400"></span>
-                    <span>{item}</span>
-                  </div>
-                ))}
-              </div>
-
-              <p className="text-white font-medium">
-                The company exists so people can be better prepared to help. That is enough reason to make it excellent.
-              </p>
-            </div>
-
+          <div className={`${styles.body} ${styles.bodyOnDark} ${styles.ownershipBody}`}>
+            <p className={styles.emphasisOnDark}>Ownership adds urgency.</p>
+            <p>
+              Plans cannot remain theoretical when decisions affect clients,
+              instructors, employees, cash flow and what happens the following
+              morning. Test sooner. Learn sooner. Improve the plan before the cost of
+              being wrong becomes larger.
+            </p>
+            <p className={styles.emphasisOnDark}>Ownership also adds compassion.</p>
+            <ul className={styles.compassionList}>
+              {compassionFor.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
           </div>
         </div>
       </section>
 
-      {/* Year One & Year Two Split */}
-      <section className="py-12 md:py-20 border-b border-white/[0.03] theme-transition">
-        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 relative z-20">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-16">
-            
-            {/* Year One: Clarification */}
-            <div className="space-y-6">
-              <span className="text-[9px] font-mono tracking-widest uppercase text-emerald-400">[ Year One ]</span>
-              <h2 className="text-2xl font-bold uppercase text-white font-display">
-                Clarification
-              </h2>
-              
-              <div className="text-zinc-300 font-light text-sm sm:text-base space-y-4">
-                <p>
-                  The first year was mostly invisible work. Not automation. Clarification.
-                </p>
-                <p>
-                  Understanding what the business was really doing. Where information lived. Which decisions repeated. Where the owner was still holding the company together. Which processes were useful, and which were inherited.
-                </p>
-                <p>
-                  The work was to make the business legible—to itself, to me, and to the people inside it.
-                </p>
-                <p className="text-white font-mono text-xs border-t border-white/5 pt-4">
-                  &ldquo;A business cannot improve what it cannot see.&rdquo;
-                </p>
-              </div>
+      <section className={`${styles.section} ${styles.finalSection}`}>
+        <div className={styles.grid}>
+          <header className={styles.finalHeader}>
+            <p className={styles.kicker}>The whole chain</p>
+            <h2 className={styles.finalTitle}>
+              At Braveheart, I hold the full chain together.
+            </h2>
+          </header>
 
-              <div className="space-y-2 pt-4">
-                <h4 className="text-xs font-mono font-bold uppercase text-zinc-400">[ What Changed First ]</h4>
-                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs font-mono text-zinc-400">
-                  {["A clearer website", "Better booking flow", "Improved scheduling", "Course operations", "Customer emails", "Cleaner workflows", "SEO & Paid search", "Operational dashboards"].map((c) => (
-                    <li key={c} className="flex items-center gap-1">
-                      <ChevronRight className="h-4 w-4 text-emerald-500" strokeWidth={1.5} aria-hidden="true" />
-                      <span>{c}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
+          <div className={styles.chainList}>
+            {fullChain.map((item) => (
+              <p key={item}>{item}</p>
+            ))}
+          </div>
 
-            {/* Year Two: Acceleration */}
-            <div className="space-y-6">
-              <span className="text-[9px] font-mono tracking-widest uppercase text-emerald-400">[ Year Two ]</span>
-              <h2 className="text-2xl font-bold uppercase text-white font-display">
-                Acceleration
-              </h2>
-              
-              <div className="text-zinc-300 font-light text-sm sm:text-base space-y-4">
-                <p>
-                  The next phase is underway. Automation, custom software, AI-assisted workflows, decision support, knowledge infrastructure, marketing systems, reporting, and internal tools.
-                </p>
-                <p className="border-l border-emerald-400/40 pl-4 text-zinc-400 opacity-80">
-                  The goal is not to replace people. The goal is to remove drag around people. To reduce manual coordination, make the right work easier to see, and support judgment instead of overwhelming it.
-                </p>
-                <p>
-                  This is the accelerated phase. The business is clearer now, so the systems can become stronger.
-                </p>
-              </div>
+          <div className={`${styles.body} ${styles.finalBody}`}>
+            <p>
+              The company has to grow. The system has to hold. And the person in the
+              room still has to feel cared for.
+            </p>
+            <p className={styles.emphasis}>That is the work.</p>
+          </div>
 
-              <div className="space-y-4 pt-4">
-                <ImagePlaceholder label="Acceleration Pipeline & Internal Sync Monitor" />
-              </div>
-            </div>
-
+          <div className={styles.nextChapter}>
+            <TextLink href="/applied-ai">Next chapter: Applied AI and Systems</TextLink>
           </div>
         </div>
       </section>
-
-      {/* The Constraint & What I am watching */}
-      <section className="py-12 md:py-20 border-b border-white/[0.03] bg-zinc-950/20 theme-transition">
-        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 relative z-20">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-start">
-            
-            {/* Left: The Constraint */}
-            <div className="lg:col-span-6 space-y-6 text-zinc-300 font-light leading-relaxed text-sm sm:text-base">
-              <span className="text-[9px] font-mono tracking-widest uppercase text-emerald-400">[ The Constraint Changed ]</span>
-              <h2 className="text-2xl font-bold uppercase text-white font-display">
-                Outgrowing the Platforms
-              </h2>
-              <p>
-                At first, better platforms created progress. Then the business began to outgrow them.
-              </p>
-              <p>
-                This has been one of the most useful lessons. Outgrowing a platform is not always a failure. Sometimes it means the business has become clearer than the software built to contain it.
-              </p>
-              <p className="border-l border-white/10 pl-4 text-zinc-400 text-xs font-mono">
-                Generic tools are useful when you are learning the shape of the business. But once the shape becomes clear, the compromise becomes visible. That is where custom systems begin to make sense. Not because they are impressive, but because they can be more truthful.
-              </p>
-            </div>
-
-            {/* Right: What I am Watching */}
-            <div className="lg:col-span-6 space-y-4">
-              <div className="border border-white/5 bg-zinc-900/30 p-6 sm:p-8 rounded-sm space-y-6">
-                <span className="text-[9px] font-mono text-zinc-500 uppercase tracking-widest block border-b border-white/5 pb-2">
-                  [ What I am watching ]
-                </span>
-                
-                <ul className="space-y-3 text-xs font-mono text-zinc-300">
-                  <li className="flex items-start gap-2">
-                    <span className="text-emerald-500 font-bold shrink-0">Q1 //</span>
-                    <span>Can BraveHeart grow without becoming more complicated?</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-emerald-500 font-bold shrink-0">Q2 //</span>
-                    <span>Can fewer decisions depend on me?</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-emerald-500 font-bold shrink-0">Q3 //</span>
-                    <span>Can the business hold more of its own intelligence?</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-emerald-500 font-bold shrink-0">Q4 //</span>
-                    <span>Can marketing, operations, finance, scheduling, and customer experience become part of the same living picture?</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-white font-bold shrink-0">Q5 //</span>
-                    <span className="text-white">Can a small service company operate with the leverage of a much larger one while staying human?</span>
-                  </li>
-                </ul>
-
-                <div className="text-[10px] font-mono text-zinc-500 uppercase text-center pt-2 border-t border-white/5">
-                  [ End of active log — June 2026 ]
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-    </div>
+    </article>
   );
 }
