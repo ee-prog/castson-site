@@ -91,10 +91,18 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <head>
+        <meta name="color-scheme" content="light dark" />
+        <link
+          id="castson-favicon"
+          rel="icon"
+          href="/favicon-light.svg"
+          type="image/svg+xml"
+          sizes="any"
+        />
         {/* Inline FOUC-prevention: resolve theme before first paint */}
         <script
           dangerouslySetInnerHTML={{
-            __html: `(function(){try{var t=localStorage.getItem('theme');document.documentElement.classList.toggle('dark',t==='dark')}catch(e){}})()`,
+            __html: `(function(){try{var d=localStorage.getItem('theme')==='dark';document.documentElement.classList.toggle('dark',d);var f=document.getElementById('castson-favicon');if(f)f.setAttribute('href',d?'/favicon-dark.svg':'/favicon-light.svg')}catch(e){}})()`,
           }}
         />
       </head>

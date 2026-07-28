@@ -26,6 +26,13 @@ export default function ThemeObserver() {
     }
 
     document.documentElement.classList.toggle("dark", isDark);
+    document.documentElement.style.colorScheme = isDark ? "dark" : "light";
+
+    const favicon = document.querySelector<HTMLLinkElement>("#castson-favicon");
+    favicon?.setAttribute(
+      "href",
+      isDark ? "/favicon-dark.svg" : "/favicon-light.svg"
+    );
   }, []);
 
   // Set up theme preference handling
