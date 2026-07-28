@@ -110,6 +110,7 @@ export default function Navbar() {
                     <Link
                       key={item.href}
                       href={item.href}
+                      prefetch={isOpen ? null : false}
                       onClick={() => setIsOpen(false)}
                       className="group grid gap-3 py-5 text-[var(--foreground)] transition-colors hover:text-[var(--primary)] sm:grid-cols-[4rem_1fr_auto]"
                     >
@@ -131,6 +132,7 @@ export default function Navbar() {
             <span>© {new Date().getFullYear()} Castson Inc.</span>
             <Link
               href="/contact"
+              prefetch={isOpen ? null : false}
               onClick={() => setIsOpen(false)}
               className="inline-flex items-center gap-1.5 text-[var(--foreground)] transition-colors hover:text-[var(--primary)]"
             >

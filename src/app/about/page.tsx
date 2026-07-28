@@ -46,7 +46,7 @@ export default function About() {
               caption="Canadian / Swiss / operator / advisor"
               aspect="aspect-[4/5]"
               objectPosition="center"
-              priority
+              preload
               sizes="(max-width: 768px) 86vw, 32vw"
             />
           </div>

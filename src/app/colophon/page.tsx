@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { PageHeader } from "@/components/editorial";
 
 export const metadata: Metadata = {
@@ -16,6 +17,14 @@ export default function Colophon() {
   return (
     <div className="site-shell colophon-page">
       <section className="section colophon-hero">
+        <Image
+          src="/images/editorial/light-study.webp"
+          alt=""
+          fill
+          preload
+          sizes="100vw"
+          className="editorial-hero-image colophon-hero-image"
+        />
         <div className="site-container">
           <PageHeader kicker="Colophon" title="Colophon" />
         </div>

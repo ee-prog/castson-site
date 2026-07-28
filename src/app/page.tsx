@@ -76,7 +76,7 @@ export default function Home() {
           src="/images/editorial/eli-mountain-portrait.webp"
           alt="Eli Castson in a mountain landscape"
           fill
-          priority
+          preload
           sizes="100vw"
           className="object-cover object-[55%_50%] sm:object-[64%_50%]"
         />

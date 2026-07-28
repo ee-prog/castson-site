@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Notes",
@@ -126,6 +127,14 @@ export default function NotesPage() {
   return (
     <div className="site-shell home-story writing-page">
       <section className="writing-hero">
+        <Image
+          src="/images/editorial/marble-operating-layer.webp"
+          alt=""
+          fill
+          preload
+          sizes="100vw"
+          className="editorial-hero-image writing-hero-image"
+        />
         <div className="site-container writing-hero-grid">
           <span className="page-kicker">Notes</span>
           <h1>Notes</h1>

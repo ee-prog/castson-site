@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useCallback } from "react";
-import { usePathname } from "next/navigation";
 
 /**
  * ThemeObserver
@@ -10,11 +9,8 @@ import { usePathname } from "next/navigation";
  * 1. Reads the user's stored preference from localStorage('theme')
  * 2. Defaults to light mode when no preference has been stored
  * 3. Exposes window.__setTheme('dark'|'light'|'system') for toggle buttons
- * 4. Re-runs scroll animation observer on route change
  */
 export default function ThemeObserver() {
-  const pathname = usePathname();
-
   // Core theme resolver
   const applyTheme = useCallback(() => {
     const stored = localStorage.getItem("theme");
@@ -49,42 +45,6 @@ export default function ThemeObserver() {
       applyTheme();
     };
   }, [applyTheme]);
-
-  // Scroll Animation Observer — re-run on route change
-  useEffect(() => {
-    const timeoutId = setTimeout(() => {
-      const fadeUpElements = document.querySelectorAll(".fade-up-element");
-      let animationObserver: IntersectionObserver | null = null;
-
-      if (fadeUpElements.length > 0) {
-        const animationOptions = {
-          root: null,
-          rootMargin: "0px 0px -12% 0px", // Trigger when elements are 12% in view
-          threshold: 0.05,
-        };
-
-        animationObserver = new IntersectionObserver((entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add("visible");
-              // Unobserve once animated for performance
-              animationObserver?.unobserve(entry.target);
-            }
-          });
-        }, animationOptions);
-
-        fadeUpElements.forEach((el) => animationObserver?.observe(el));
-      }
-
-      return () => {
-        if (animationObserver) {
-          fadeUpElements.forEach((el) => animationObserver?.unobserve(el));
-        }
-      };
-    }, 100);
-
-    return () => clearTimeout(timeoutId);
-  }, [pathname]);
 
   return null;
 }

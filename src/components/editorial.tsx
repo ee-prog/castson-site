@@ -10,7 +10,7 @@ type EditorialImageProps = {
   aspect?: string;
   className?: string;
   imageClassName?: string;
-  priority?: boolean;
+  preload?: boolean;
   sizes?: string;
   objectPosition?: string;
 };
@@ -22,7 +22,7 @@ export function EditorialImage({
   aspect = "aspect-[4/5]",
   className = "",
   imageClassName = "",
-  priority = false,
+  preload = false,
   sizes = "(max-width: 768px) 100vw, 44vw",
   objectPosition = "center",
 }: EditorialImageProps) {
@@ -33,7 +33,7 @@ export function EditorialImage({
           src={src}
           alt={alt}
           fill
-          priority={priority}
+          preload={preload}
           sizes={sizes}
           className={imageClassName}
           style={{ objectPosition }}

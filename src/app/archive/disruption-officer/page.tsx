@@ -43,7 +43,6 @@ export default function DisruptionOfficerPage() {
             caption="The organization was the system"
             aspect="aspect-[4/3] sm:aspect-[16/7]"
             className="mobile-bleed"
-            priority
             sizes="100vw"
           />
         </div>
